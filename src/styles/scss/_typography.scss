@@ -42,7 +42,7 @@ h1 {
 
   // Half size for phone
   @include breakpoint(phone) {
-    font-size: ($text__size--xxl /2 /10) + em;
+    @include font-size($text__size--xxl /2 /10);
   }
 }
 
