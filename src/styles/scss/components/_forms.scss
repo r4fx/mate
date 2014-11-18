@@ -1,0 +1,144 @@
+// ============================================================
+// FORMS
+// ============================================================
+
+// ROWS, FIELDS GROUP
+// ============================================================
+
+form,
+.form {
+
+  .row {
+    margin: 0 0 $grid__rowGutter 0;
+  }
+}
+
+.labelInside {
+  position: relative;
+
+  label {
+    color: $text__color--second;
+    margin-bottom: 0;
+    position: absolute;
+  }
+}
+
+label,
+.label {
+  color: $text__color--first;
+  font-family: $font__base--light;
+  display: block;
+  margin-bottom: 10px;
+  @include font-size(18px);
+}
+
+// TEXT INPUTS
+// ============================================================
+
+input[type="text"],
+input[type="password"],
+input[type="tel"],
+input[type="email"],
+textarea {
+  border-radius: $border__radius;
+  border: 1px solid $border__color--second;
+  padding: 10px;
+  width: 100%;
+  height: 60px;
+  color: $text__color--first;
+  @include font-size(18px, 1);
+}
+
+textarea {
+  height: auto;
+}
+
+// CHECKBOXES, RADIOS
+// ============================================================
+
+.fields {
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    float: left;
+    margin-right: 20px;
+  }
+
+  label,
+  .label {
+    position: static;
+    overflow: hidden;
+    cursor: pointer;
+    font-size: 11px;
+
+    a {
+      color: #fff;
+      text-decoration: underline;
+    }
+  }
+}
+
+// Pretty radios & checkboxes
+.input-radio,
+.input-checkbox {
+  display: inline-block;
+
+  label {
+    display: inline-block;
+    margin: 0 40px;
+    cursor: pointer;
+  }
+
+  span {
+    vertical-align: middle;
+    margin-left: 5px;
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+    padding: 2px;
+    border: 1px solid $border__color--second;
+    color: transparent;
+    @include font-size(18px);
+  }
+
+  input {
+    display: none;
+
+    // Toggled state
+    &:checked {
+      ~ .icon {
+        color: #000;
+      }
+    }
+  }
+}
+
+.input-radio .icon {
+  border-radius: 50%;
+}
+
+// VALIDATION
+// ============================================================
+
+.form-error {
+  position: relative;
+
+  .form-field,
+  input[type="text"],
+  input[type="password"],
+  input[type="tel"],
+  input[type="email"],
+  textarea {
+    border-color: $color__message--alert;
+  }
+
+  label, .label {
+    color: $color__message--alert;
+  }
+
+  &__message {
+    color: $color__message--alert;
+  }
+}

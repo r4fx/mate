@@ -1,0 +1,155 @@
+/*============================================================
+* GRID SYSTEM
+* ============================================================*/
+
+@function grid-calc($colNumber, $grid__columns) {
+  @return percentage(($colNumber / $grid__columns));
+}
+
+// COLUMNS
+// ============================================================
+@mixin grid-cols {
+  @for $i from 1 through $grid__columns {
+    &__#{$i} {
+      width: grid-calc($i, $grid__columns);
+    }
+  }
+}
+
+// RWD COLUMNS FOR TABLET
+@mixin grid-cols-tablet {
+  @include breakpoint(tablet) {
+    @for $i from 1 through $grid__columns {
+      &__#{$i}--tablet {
+        width: grid-calc($i, $grid__columns);
+      }
+    }
+  }
+}
+
+// RWD COLUMNS FOR PHONE
+@mixin grid-cols-phone {
+  @include breakpoint(phone) {
+    @for $i from 1 through $grid__columns {
+      &__#{$i}--phone {
+        width: grid-calc($i, $grid__columns);
+
+        // IF col is 100% width then add bottom gutter
+        @if $i == 12 {
+          margin-bottom: $grid__colGutter;
+        }
+      }
+    }
+  }
+}
+
+// OFFSETS
+// ============================================================
+@mixin grid-cols-offset {
+  @for $i from 1 through $grid__columns {
+    &--offset-#{$i} {
+      margin-left: grid-calc($i, $grid__columns);
+    }
+  }
+}
+
+// GRID HELPERS
+// ============================================================
+%dbl-margin-top {
+  margin-top: $grid__rowGutter*2;
+}
+
+%dbl-margin {
+  margin: 0 (-$grid__documentGutter) $grid__rowGutter*2 (-$grid__documentGutter);
+
+  @include breakpoint(phone) {
+    margin-bottom: $grid__rowGutter;
+  }
+}
+
+%row--no-gutter {
+  margin: 0 (-$grid__documentGutter) 0 (-$grid__documentGutter);
+}
+
+// MOUNTING GRID
+// ============================================================
+.grid {
+  width: 100%;
+  max-width: $page__width--maxsize;
+  min-width: $page__width--minsize;
+  margin: 0 auto;
+
+  &--add-margin {
+    margin-bottom: $grid__colGutter;
+  }
+
+  @include clear-fix;
+}
+
+.col {
+  float: left;
+  padding: 0 $grid__colGutter;
+
+  &--no-gutter {
+    padding: 0;
+  }
+
+  @include grid-cols;
+  @include grid-cols-tablet;
+  @include grid-cols-phone;
+  @include grid-cols-offset;
+
+  .row {
+    margin: 0 (-$grid__colGutter);
+  }
+}
+
+.row {
+  margin: 0 (-$grid__documentGutter) $grid__rowGutter (-$grid__documentGutter);
+  //@include row-helpers;
+
+  &.row--dbl-margin {
+    @extend %dbl-margin;
+  }
+
+  &.row--dbl-margin-top {
+    @extend %dbl-margin-top;
+  }
+
+  &.row--no-gutter {
+    @extend %row--no-gutter;
+  }
+
+  .row {
+    clear: both;
+
+    &.row--dbl-margin-top {
+      margin-top: 0;
+
+      > .col {
+        margin-top: $grid__rowGutter*2;
+
+        @include breakpoint(phone) {
+          margin-top: $grid__rowGutter;
+        }
+      }
+    }
+
+    &.row--dbl-margin {
+      margin-top: 0;
+      margin-bottom: 0;
+
+      > .col {
+        margin-top: $grid__rowGutter*2;
+        margin-bottom: $grid__rowGutter*2;
+
+        @include breakpoint(phone) {
+          margin-top: $grid__rowGutter;
+          margin-bottom: $grid__rowGutter;
+        }
+      }
+    }
+  }
+
+  @include clear-fix;
+}

@@ -1,0 +1,98 @@
+//TODO: zmienic nazewnictwo dla rozmiarow, tak jak w specyfikacji css (sprawdzic dev tools i w3c)
+
+
+// SIZES
+// ============================================================
+$page__width--maxsize: 1024px;
+$page__width--minsize: 320px;
+
+$breakPoint__desktop: 1024px;
+$breakPoint__tablet: 768px;
+$breakPoint__phone: 719px;
+
+
+// FONTS
+// ============================================================
+// [i] --file should contain the names of the files in the specified --dir
+$font__base--dir: "../../fonts/lato/";
+$font__base--file: lato-regular, lato-semibold, lato-bold, lato-italic, lato-thin, lato-light; // (1,2,3,4,x)
+$font__base--safeFamily: Arial;
+$font__base--generic: sans-serif;
+
+$font__base--simple: Arial, $font__base--generic;
+$font__base--regular: quote(nth($font__base--file, 1)), $font__base--safeFamily, $font__base--generic;
+$font__base--medium: quote(nth($font__base--file, 2)), $font__base--safeFamily, $font__base--generic;
+$font__base--bold: quote(nth($font__base--file, 3)), $font__base--safeFamily, $font__base--generic;
+$font__base--italic: quote(nth($font__base--file, 4)), $font__base--safeFamily, $font__base--generic;
+$font__base--thin: quote(nth($font__base--file, 5)), $font__base--safeFamily, $font__base--generic;
+$font__base--light: quote(nth($font__base--file, 6)), $font__base--safeFamily, $font__base--generic;
+
+
+// COLORS BASE PALETTE
+// get your palette for quick start: https://color.adobe.com/pl/create/color-wheel/
+// ============================================================
+$color__base--first: #3c3c3c;
+$color__base--second: #4BBE6B;
+
+$color__message--alert: #ff3724;
+$color__message--warning: #ffb82d;
+$color__message--info: #249cff;
+$color__message--success: #0fce47;
+
+// TEXTS
+// ============================================================
+
+//+ sizes
+$text__size--xxl: 42px;
+$text__size--xl: 32px;
+$text__size--l: 20px;
+$text__size--m: 16px;
+$text__size--s: 14px;
+
+
+//+ colors
+$text__color--first: #3c3c3c;
+$text__color--second: #fff;
+$text__color--third: $color__base--first;
+$text__color--link: #213a82;
+
+//+ lines
+$text__line--base: 20;
+
+
+// BLOCKS
+// ============================================================
+
+//+ colors
+$block__color--first: #F4F5F7;
+$block__color--second: #353535;
+
+
+// BORDERS
+// ============================================================
+$border__size: 1px;
+$border__style: solid;
+$border__color--first: $color__base--second;
+$border__color--second: #fff;
+$border__radius: 5px;
+
+
+// MARGINS
+// ============================================================
+$margin--image: 15px;
+$margin--section: 50px;
+
+
+// GRID
+// ============================================================
+$grid__columns: 12;
+$grid__colGutter: 15px;
+$grid__rowGutter: 30px;
+$grid__documentGutter: 15px;
+
+
+// TRANSITIONS
+// ============================================================
+$trans__base--duration: 0.4s !default;
+$trans__base--timing: ease !default;
+$trans__base--delay: 0s !default;

@@ -1,0 +1,143 @@
+// ============================================================
+// TYPOGRAPHY
+// ============================================================
+
+// FONT FACE
+// [i] only woff & svg is needed today, see http://caniuse.com/#feat=fontface
+// ============================================================
+@mixin font-face($dir, $file) {
+  @each $faceFile in $file {
+    @font-face {
+      font-family: quote($faceFile);
+      font-style: normal;
+      font-weight: normal;
+      src: url($dir + $faceFile + ".woff") format('woff'),
+        //url($dir + $faceFile + ".woff2") format('woff2'), // FUTURE USE url($dir + $faceFile + ".svg#" + $faceFile + "") format('svg');
+    }
+  }
+}
+
+// TYPOGRAPHY: BASE FONT FACE
+// ============================================================
+@include font-face($font__base--dir, $font__base--file);
+
+// TYPOGRAPHY: PARAGRAPHS
+// ============================================================
+p {
+  margin: 15px 0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// TYPOGRAPHY: HEADERS
+// ============================================================
+h1 {
+  @include font-size($text__size--xxl);
+  font-family: $font__base--regular;
+  margin: 0 0 $text__size--xxl;
+  line-height: 1;
+  font-weight: normal;
+
+  // Half size for phone
+  @include breakpoint(phone) {
+    font-size: ($text__size--xxl /2 /10) + em;
+  }
+}
+
+h2 {
+  @include font-size($text__size--xl);
+  font-family: $font__base--regular;
+  margin: 0 0 $text__size--xl;
+  font-weight: normal;
+  line-height: 1;
+}
+
+h3 {
+  @include font-size($text__size--l);
+  font-family: $font__base--regular;
+  margin: 0 0 20px;
+  font-weight: normal;
+  line-height: 1;
+}
+
+h4 {
+  @include font-size($text__size--m);
+  font-family: $font__base--regular;
+  margin: 0 0 20px;
+  font-weight: normal;
+  line-height: 1;
+}
+
+h5 {
+  @include font-size($text__size--s);
+  font-family: $font__base--regular;
+  margin: 0 0 18px;
+  font-weight: normal;
+}
+
+h6 {
+  @include font-size($text__size--s);
+  margin: 0 0 18px;
+  font-weight: normal;
+}
+
+.page-header {
+
+  &__main {
+    margin-bottom: 30px;
+  }
+
+  &__lead {
+    @include font-size(17px);
+  }
+}
+
+// TYPOGRAPHY: LISTS
+// ============================================================
+.list {
+
+  &--unstyled {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+}
+
+ul, ol, {
+  margin-top: 0;
+  margin-bottom: 10px;
+
+  li {
+    margin-bottom: 7px;
+  }
+}
+
+dl {
+  margin-top: 0;
+  margin-bottom: 10px;
+
+  dt {
+    margin-bottom: 7px;
+  }
+}
+
+// TEXT SIZES
+// examples:
+// <p class="text-size--24">Lorem ipsum</p>
+// ============================================================
+@for $i from $text__size--xxl through $text__size--s {
+  .text-size--#{strip-units($i)} {
+    @include font-size($i);
+
+    // Half size text for phone
+    @include breakpoint(phone) {
+      font-size: ($i /1px /10 /2)+em;
+    }
+
+    @if $i > $text__size--l {
+      font-family: $font__base--light;
+    }
+  }
+}

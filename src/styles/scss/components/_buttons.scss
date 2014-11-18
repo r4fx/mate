@@ -1,0 +1,201 @@
+/* ============================================================
+* BUTTONS
+* ============================================================*/
+
+// TODO: calc line height, http://www.mathayward.com/modular-css-with-sass-and-bem/
+// TODO: przerobic sizez i inne na extends, aby mozna bylo includowac styl w rozne miejsca bez dublowania
+
+//+ SIZES
+// ============================================================
+%button-sizes {
+  &.btn {
+    &--s {
+      line-height: 30px;
+      padding: 0 15px;
+      @include font-size(20px);
+    }
+
+    &--m {
+
+    }
+
+    &--xl {
+      line-height: 50px;
+      padding: 0 20px;
+      @include font-size(20px);
+    }
+
+    &--xxl {
+
+      &.btn--circle {
+        width: 140px;
+        height: 140px;
+        line-height: 22px;
+        text-transform: uppercase;
+
+        &:hover {
+          border-width: 63px;
+        }
+      }
+    }
+  }
+}
+
+//+ COLORS
+// ============================================================
+%button-colors {
+  &.btn {
+    &--color-first {
+      color: $text__color--second;
+      background-color: $color__base--first;
+
+      &:hover {
+        background-color: lighten($color__base--first, 7%);
+      }
+    }
+
+    &--color-second {
+      color: $color__base--first;
+      background-color: #fff;
+
+      &:hover {
+        background-color: darken(#fff, 45%);
+      }
+    }
+  }
+}
+
+.btn {
+  font-family: $font__base--regular;
+  color: #fff;
+  text-decoration: none;
+  padding: 0 7px;
+  border-radius: $border__radius;
+  border: 0;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+  @include font-size(15px, 60px);
+  @include transition-free(0.4s ease);
+
+  // INCLUDE PLACEHOLDERS
+  @extend %button-sizes;
+  @extend %button-colors;
+
+  // TYPES
+  // ============================================================
+  &--block {
+    display: block;
+    width: 100%;
+  }
+
+  &--txt {
+    padding: 0;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      color: inherit;
+    }
+  }
+
+  &--circle {
+    position: relative;
+    border-radius: 50%;
+    border-width: 5px;
+    border-style: solid;
+
+    span {
+      @include centerer;
+    }
+  }
+
+  // VARIANTS
+  // ============================================================
+
+  //+ ARROWS
+  // ============================================================
+  &--arrow-r,
+  &--arrow-l {
+    position: relative;
+
+    &:after,
+    &:before {
+      content: '';
+      width: 0;
+      height: 0;
+      position: absolute;
+      top: 50%;
+      margin-top: -5px;
+      border-style: solid;
+    }
+  }
+
+  &--arrow-r {
+    padding-right: 50px;
+
+    &:after {
+      border-width: 5px 0 5px 10px;
+      border-color: transparent transparent transparent white;
+      right: 20px;
+    }
+  }
+
+  &--arrow-l {
+    padding-left: 50px;
+
+    &:before {
+      border-width: 5px 10px 0 5px;
+      border-color: transparent white transparent transparent;
+      left: 20px;
+    }
+  }
+
+  //ICONS POSITION FIX
+  .icon {
+    top: -3px;
+    position: relative;
+  }
+
+}
+
+// STATES
+// ============================================================
+.btn, .btn-group {
+
+  &:hover {
+    //color: inherit;
+  }
+
+  &:active {
+
+  }
+
+  &:focus {
+
+  }
+}
+
+// GROUPED BUTTONS
+// ============================================================
+.btn-group {
+  display: inline-block;
+
+  // INCLUDE PLACEHOLDERS
+  @extend %button-sizes;
+  //@extend %colors;
+
+  .btn {
+    float: left;
+
+    &:first-child {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &:last-child {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      padding: 0 10px;
+    }
+  }
+}

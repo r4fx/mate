@@ -1,0 +1,155 @@
+// BORDERS
+// ============================================================
+@mixin border($radius: $border__radius, $style: $border__size $border__style $border__color--first) {
+  border-radius: $radius;
+  border: $style;
+}
+
+// GRADIENTS
+// ============================================================
+@mixin gradient-silver {
+  $from: #fafafa;
+  $to: #ececec;
+  background-color: $from;
+  background-image: -moz-linear-gradient($from, $to);
+  background-image: -webkit-linear-gradient($from, $to);
+  background-image: -o-linear-gradient($from, $to);
+  background-image: -ms-linear-gradient($from, $to);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#{ie-hex-str($from)}', endColorstr='#{ie-hex-str($to)}');";
+}
+
+// REM SIZES
+// ============================================================
+@function calculateRem($size) {
+  $remSize: $size / 1px / 10;
+  @return $remSize + rem;
+}
+
+// REM FONT SIZE
+// Examples:
+// @include font-size(14px, 60px); - general
+// @include font-size(14px, 1); - for text inputs
+
+@mixin font-size($size, $line-height: null) {
+  font-size: $size; // fallback for old browsers
+  font-size: calculateRem($size);
+
+  // Optional unitless line heights http://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/
+  @if $line-height {
+    line-height: ceil($size / $line-height) * ($line-height / $size);
+  }
+
+  //margin-bottom: 0px + $line-height;
+  //margin-bottom: ($line-height / $doc-font-size)+rem;
+}
+
+// REM LINE HEIGHT
+
+// Examples:
+// @include lineheight-size(18px)
+@mixin line-height($height) {
+  line-height: $height; // fallback for old browsers
+  line-height: calculateRem($height);
+}
+
+// TRANSFORMS
+// ============================================================
+
+// Examples:
+// @include transform-free(rotate(180deg) scale(1.4));
+// @include transform-free(scale(1.4));
+@mixin transform-free($args...) {
+  -webkit-transform: $args;
+  transform: $args;
+}
+
+@mixin rotate($val) {
+  -webkit-transform: rotate($val+deg);
+  transform: rotate($val+deg);
+}
+
+// TRANSITIONS
+// ============================================================
+
+// Examples:
+// @include transition-free(background-color .4s ease, width 1s ease-out);
+// @include transition-free(0.5s ease);
+@mixin transition-free($args...) {
+  -webkit-transition: $args;
+  transition: $args;
+}
+
+// Examples:
+// @include transition( (height, padding, top));
+// @include transition( (height, padding, top), .25s, ease, .5s );
+// @include transition;
+
+@mixin transition($list: all, $duration: $trans__base--duration, $timing: $trans__base--timing, $delay: $trans__base--delay) {
+  $properties: ();
+
+  @each $property in $list {
+    $transition: unquote($property $duration $timing $delay);
+    $properties: append($properties, $transition, comma);
+  }
+
+  @include transition-free(#{$properties});
+}
+
+// FLEX BOX
+// ============================================================
+@mixin flexWrap {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-flow: row wrap;
+  -webkit-flex-direction: row;
+
+  -ms-flex-direction: row;
+  -ms-flex-flow: row wrap;
+
+  flex-flow: row wrap;
+  flex-direction: row;
+}
+
+@mixin flexItem {
+  -webkit-flex: 1 auto;
+  -ms-flex: 1 auto;
+  flex: 1 auto;
+}
+
+// MEDIA QUERIES BREAKPOINT
+// [i] breakpoints inpired by
+// http://blog.uxpin.com/4596/responsive-web-design-cheat-sheet/
+// and Chrome Dev Tools devices
+// ============================================================
+@mixin breakpoint($point) {
+
+  // DESKTOPS, LAPTOPS
+  @if $point == desktop {
+    @media (min-width: $breakPoint__desktop) {
+      @content;
+    }
+  }
+
+    // GENERIC MOBILE (TABLETS & SMARTPHONES)
+  @else if $point == mobile {
+    @media (max-width: $breakPoint__desktop - 1) {
+      @content;
+    }
+  }
+
+    // TABLETS
+  @else if $point == tablet {
+    @media (min-width: $breakPoint__phone + 1) and (max-width: $breakPoint__desktop - 1) {
+      @content;
+    }
+  }
+
+    // SMARTPHONES
+  @else if $point == phone {
+    @media (max-width: $breakPoint__phone) {
+      @content;
+    }
+  }
+}

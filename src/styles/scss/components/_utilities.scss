@@ -1,0 +1,51 @@
+// ============================================================
+// POSITIONING
+// ============================================================
+
+.inline-left {
+  text-align: left;
+}
+
+.inline-center {
+  text-align: center;
+}
+
+.inline-right {
+  text-align: right;
+}
+
+.inline-justify {
+  text-align: justify;
+}
+
+.block-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// [i] Use floats for positioning image with text
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
+}
+
+// TODO: zrobic dynamiczna wartosc marginesow np. (top,50)
+.margin-top-50 {
+  margin-top: 50px;
+}
+
+.no-margin{
+  margin: 0;
+}
+
+// ============================================================
+// MISC
+// ============================================================
+
+.img-circle{
+  border-radius: 50%;
+}

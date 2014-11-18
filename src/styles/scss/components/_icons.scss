@@ -1,0 +1,65 @@
+// ============================================================
+// ICON FONT
+// ============================================================
+
+@font-face {
+  font-family: 'icomoon';
+  src: url('../../fonts/icomoon/icomoon.woff') format('woff'),
+  url('../../fonts/icomoon/icomoon.svg#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// ICON SIZES
+// ============================================================
+$iconSizeMin: 25px;
+$iconSizeMax: 75px;
+
+$icon-sizes: ("s": 18px, "m": 25px, "l": 35px, "xl": 50px, "xxl": 75px);
+@each $name, $size in $icon-sizes {
+  .icon--#{$name} {
+    &:before {
+      @include font-size($size);
+    }
+  }
+}
+
+// ICON TYPES
+// ============================================================
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: 'icomoon';
+  @include font-size(25px);
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  //@include transition-free(0.4s ease);
+}
+
+.icon--checkmark:before {
+  content: "\e600";
+}
+
+.icon--file-pdf:before {
+  content: "\e601";
+}
+
+.icon--facebook:before {
+  content: "\e602";
+}
+
+.icon--arrow-left:before {
+  content: "\e603";
+}
+
+.icon--arrow-right:before {
+  content: "\e604";
+}

@@ -1,0 +1,11 @@
+{
+  "name": "mate",
+  "description": "mate packages definition",
+  "version": "0.1.1",
+  "devDependencies": {
+    "gulp": "^3.8.10",
+    "gulp-inject": "^1.0.2",
+    "gulp-sass": "^1.1.0",
+    "gulp-todo": "^1.2.0"
+  }
+}

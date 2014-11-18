@@ -1,0 +1,24 @@
+/*============================================================
+* TABELS
+* ============================================================*/
+
+.table {
+  display: table;
+
+  .row {
+    display: table-row;
+    margin: inherit;
+
+    &--vertical-middle {
+
+      .col {
+        vertical-align: middle;
+      }
+    }
+  }
+
+  .col {
+    display: table-cell;
+    float: none;
+  }
+}
