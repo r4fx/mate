@@ -5,12 +5,20 @@ var gulp = require('gulp');
 var inject = require("gulp-inject");
 var todo = require('gulp-todo');
 var sass = require('gulp-ruby-sass');
+var assemble = require('gulp-assemble');
 
 // sass maps problem: https://github.com/dlmanning/gulp-sass/issues/71
 //var sass = require('gulp-sass');
 
 //var concat = require('gulp-concat');
 //var uglify = require('gulp-uglify');
+
+var assemble_options = {
+    layout: 'default',
+    data: ['site.yml', 'test/fixtures/data/*.{json,yml}'],
+    layouts: ['test/fixtures/layouts/*.hbs'],
+    partials: ['test/fixtures/includes/*.hbs']
+};
 
 
 var pathsBase = {
@@ -39,27 +47,35 @@ var paths = {
     }
 };
 
-function injectTransform (filePath, file) {
+function transform (filePath, file) {
     return file.contents.toString('utf8')
 }
 
-gulp.task('inject', function () {
+// build some sample pages based on the templates in test/fixtures
+gulp.task('assemble', function () {
+    gulp.src('test/fixtures/pages/*.hbs')
+        .pipe(assemble(assemble_options))
+        //.pipe(htmlmin({collapseWhitespace: true}))
+        .pipe(gulp.dest('_gh_pages/'));
+});
+
+/*gulp.task('inject', function () {
     gulp.src(paths.dev.html)
         .pipe(inject(gulp.src([paths.dev.partialsDir + '/head.html']), {
             starttag: '<!-- inject:head:{{ext}} -->',
-            transform: injectTransform
+            transform: transform
         }))
         .pipe(inject(gulp.src([paths.dev.partialsDir + '/header.html']), {
             starttag: '<!-- inject:header:{{ext}} -->',
-            transform: injectTransform
+            transform: transform
         }))
         .pipe(inject(gulp.src([paths.dev.partialsDir + '/aside.html']), {
             starttag: '<!-- inject:aside:{{ext}} -->',
-            transform: injectTransform
+            transform: transform
         }))
         .pipe(inject(gulp.src([paths.dev.partialsDir + '/footer.html']), {
             starttag: '<!-- inject:footer:{{ext}} -->',
-            transform: injectTransform
+            transform: transform
         }))
         .pipe(inject(gulp.src([paths.build.stylesFiles], {read: false}, {relative: true}), {
                 ignorePath: 'doc/build'
@@ -67,7 +83,7 @@ gulp.task('inject', function () {
             }
         ))
         .pipe(gulp.dest(pathsBase.build));
-});
+});*/
 
 gulp.task('copy', function () {
 
@@ -111,7 +127,7 @@ gulp.task('sass', function () {
 
 // Watch for changes
 gulp.task('watch', function () {
-    var client = ['inject', 'copy'];
+    var client = [/*'inject',*/ 'copy'];
 
     // Watch .js files
     //gulp.watch(paths.dev.scripts, client);
@@ -130,7 +146,7 @@ gulp.task('watch', function () {
 });
 
 // Default task
-gulp.task('default', ['sass', 'copy', 'inject', 'watch'], function () {
+gulp.task('default', ['assemble', 'sass', 'copy', /*'inject',*/ 'watch'], function () {
     // Callback
 
     // Watch .scss files
