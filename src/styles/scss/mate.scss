@@ -12,12 +12,18 @@
 // ============================================================
 // BASE IMPORTANT FILES
 // ============================================================
-@import "settings", "functions/all";
-@import "normalize", "base", "typography", "components/all";
+@import "settings";
+@import "functions/all";
+
+@import "normalize";
+@import "base";
+@import "typography";
+@import "components/all";
 
 
 // ============================================================
 // SPECIFIC STYLES FOR PROJECT
 // ============================================================
 
-@import /*"plugins",*/ "custom";
+//@import "plugins";
+@import "custom";

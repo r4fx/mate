@@ -1,3 +1,39 @@
+// MEDIA QUERIES BREAKPOINT
+// [i] breakpoints inpired by
+// http://blog.uxpin.com/4596/responsive-web-design-cheat-sheet/
+// and Chrome Dev Tools devices
+// ============================================================
+@mixin breakpoint($point) {
+
+  // DESKTOPS, LAPTOPS
+  @if $point == desktop {
+    @media (min-width: $breakPoint__desktop) {
+      @content;
+    }
+  }
+
+    // GENERIC MOBILE (TABLETS & SMARTPHONES)
+  @else if $point == mobile {
+    @media (max-width: $breakPoint__desktop - 1) {
+      @content;
+    }
+  }
+
+    // TABLETS
+  @else if $point == tablet {
+    @media (min-width: $breakPoint__phone + 1) and (max-width: $breakPoint__desktop - 1) {
+      @content;
+    }
+  }
+
+    // SMARTPHONES
+  @else if $point == phone {
+    @media (max-width: $breakPoint__phone) {
+      @content;
+    }
+  }
+}
+
 // BORDERS
 // ============================================================
 @mixin border($radius: $border__radius, $style: $border__size $border__style $border__color--first) {
@@ -118,38 +154,21 @@
   flex: 1 auto;
 }
 
-// MEDIA QUERIES BREAKPOINT
-// [i] breakpoints inpired by
-// http://blog.uxpin.com/4596/responsive-web-design-cheat-sheet/
-// and Chrome Dev Tools devices
+// TEXT SIZES
+// examples:
+// <p class="text-size--24">Lorem ipsum</p>
 // ============================================================
-@mixin breakpoint($point) {
+@for $i from $text__size--xxl through $text__size--s {
+  .text-size--#{strip-units($i)} {
+    @include font-size($i);
 
-  // DESKTOPS, LAPTOPS
-  @if $point == desktop {
-    @media (min-width: $breakPoint__desktop) {
-      @content;
+    // Half size text for phone
+    @include breakpoint(phone) {
+      font-size: ($i /1px /10 /2)+em;
     }
-  }
 
-    // GENERIC MOBILE (TABLETS & SMARTPHONES)
-  @else if $point == mobile {
-    @media (max-width: $breakPoint__desktop - 1) {
-      @content;
-    }
-  }
-
-    // TABLETS
-  @else if $point == tablet {
-    @media (min-width: $breakPoint__phone + 1) and (max-width: $breakPoint__desktop - 1) {
-      @content;
-    }
-  }
-
-    // SMARTPHONES
-  @else if $point == phone {
-    @media (max-width: $breakPoint__phone) {
-      @content;
+    @if $i > $text__size--l {
+      font-family: $font__base--light;
     }
   }
 }

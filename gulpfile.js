@@ -3,10 +3,15 @@
 
 var gulp = require('gulp');
 var inject = require("gulp-inject");
-var sass = require('gulp-sass');
+var todo = require('gulp-todo');
+var sass = require('gulp-ruby-sass');
+
+// sass maps problem: https://github.com/dlmanning/gulp-sass/issues/71
+//var sass = require('gulp-sass');
+
 //var concat = require('gulp-concat');
 //var uglify = require('gulp-uglify');
-var todo = require('gulp-todo');
+
 
 var pathsBase = {
     dev: './doc/src',
@@ -92,8 +97,14 @@ gulp.task('scripts', function () {
         .pipe(gulp.dest(pathsBase.build));
 });
 
+//gulp.task('sass', function () {
+//    return gulp.src('./doc/src/styles/scss/*.scss')
+//        .pipe(sass())
+//        .pipe(gulp.dest(paths.build.stylesDir));
+//});
+
 gulp.task('sass', function () {
-    return gulp.src('./doc/src/styles/scss/*.scss')
+    gulp.src('./doc/src/styles/scss/*.scss')
         .pipe(sass())
         .pipe(gulp.dest(paths.build.stylesDir));
 });
@@ -109,7 +120,7 @@ gulp.task('watch', function () {
     gulp.watch(paths.dev.htmlWatch, ['inject']);
 
     // Watch .scss files
-    gulp.watch('./src/styles/**/*.scss', ['sass']);
+    //gulp.watch('./src/styles/**/*.scss', ['sass']);
 
     // Watch css files
     gulp.watch(paths.dev.stylesFiles,  function (event) {
