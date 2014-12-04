@@ -4,6 +4,7 @@
   "version": "0.1.1",
   "devDependencies": {
     "gulp": "^3.8.10",
+    "gulp-assemble": "^0.1.8",
     "gulp-inject": "^1.0.2",
     "gulp-ruby-sass": "^0.7.1",
     "gulp-sass": "^1.1.0",

@@ -13,13 +13,6 @@ var assemble = require('gulp-assemble');
 //var concat = require('gulp-concat');
 //var uglify = require('gulp-uglify');
 
-var assemble_options = {
-    layout: 'default',
-    data: ['site.yml', 'test/fixtures/data/*.{json,yml}'],
-    layouts: ['test/fixtures/layouts/*.hbs'],
-    partials: ['test/fixtures/includes/*.hbs']
-};
-
 
 var pathsBase = {
     dev: './doc/src',
@@ -31,7 +24,6 @@ var paths = {
     dev: dev = {
         html: [pathsBase.dev + '/**/*.html', '!' + pathsBase.dev + '/_partials/*.html'],
         htmlWatch: [pathsBase.dev + '/**/*.html'],
-        partialsDir: pathsBase.dev + '/_partials',
         scripts: pathsBase.dev + '/js/**/*.js',
         stylesDir: pathsBase.dev + '/styles/css',
         stylesFiles: pathsBase.dev + '/styles/css/*.css',
@@ -51,39 +43,19 @@ function transform (filePath, file) {
     return file.contents.toString('utf8')
 }
 
+var assemble_options = {
+    data: ['site.yml', 'doc/src/data/*.{json,yml}'],
+    layout: 'default',
+    layouts: ['doc/src/layouts/**/*.hbs'],
+    partials: ['doc/src/includes/**/*.hbs']
+};
+
 // build some sample pages based on the templates in test/fixtures
 gulp.task('assemble', function () {
-    gulp.src('test/fixtures/pages/*.hbs')
+    gulp.src('doc/src/pages/**/*.hbs')
         .pipe(assemble(assemble_options))
-        //.pipe(htmlmin({collapseWhitespace: true}))
-        .pipe(gulp.dest('_gh_pages/'));
+        .pipe(gulp.dest('doc/build/'));
 });
-
-/*gulp.task('inject', function () {
-    gulp.src(paths.dev.html)
-        .pipe(inject(gulp.src([paths.dev.partialsDir + '/head.html']), {
-            starttag: '<!-- inject:head:{{ext}} -->',
-            transform: transform
-        }))
-        .pipe(inject(gulp.src([paths.dev.partialsDir + '/header.html']), {
-            starttag: '<!-- inject:header:{{ext}} -->',
-            transform: transform
-        }))
-        .pipe(inject(gulp.src([paths.dev.partialsDir + '/aside.html']), {
-            starttag: '<!-- inject:aside:{{ext}} -->',
-            transform: transform
-        }))
-        .pipe(inject(gulp.src([paths.dev.partialsDir + '/footer.html']), {
-            starttag: '<!-- inject:footer:{{ext}} -->',
-            transform: transform
-        }))
-        .pipe(inject(gulp.src([paths.build.stylesFiles], {read: false}, {relative: true}), {
-                ignorePath: 'doc/build'
-                //addRootSlash: false
-            }
-        ))
-        .pipe(gulp.dest(pathsBase.build));
-});*/
 
 gulp.task('copy', function () {
 
@@ -133,7 +105,7 @@ gulp.task('watch', function () {
     //gulp.watch(paths.dev.scripts, client);
 
     // Watch html files
-    gulp.watch(paths.dev.htmlWatch, ['inject']);
+    //gulp.watch(paths.dev.htmlWatch, ['assemble']);
 
     // Watch .scss files
     //gulp.watch('./src/styles/**/*.scss', ['sass']);
@@ -146,7 +118,8 @@ gulp.task('watch', function () {
 });
 
 // Default task
-gulp.task('default', ['assemble', 'sass', 'copy', /*'inject',*/ 'watch'], function () {
+//gulp.task('default', ['assemble', 'sass', 'copy', 'watch'], function () {
+gulp.task('default', ['assemble'], function () {
     // Callback
 
     // Watch .scss files
