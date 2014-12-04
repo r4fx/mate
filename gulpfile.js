@@ -43,18 +43,21 @@ function transform (filePath, file) {
     return file.contents.toString('utf8')
 }
 
-var assemble_options = {
+var assembleOptions = {
     data: ['site.yml', 'doc/src/data/*.{json,yml}'],
     layout: 'default',
     layouts: ['doc/src/layouts/**/*.hbs'],
-    partials: ['doc/src/partials/**/*.hbs']
+    partials: ['doc/src/partials/**/*.hbs'],
+    log: {
+        level: 'verbose' // verbose, debug, info, warning, error, critical
+    }
 };
 
 // build some sample pages based on the templates in test/fixtures
 gulp.task('assemble', function () {
     gulp.src('doc/src/pages/**/*.hbs')
-        .pipe(assemble(assemble_options))
-        .pipe(gulp.dest('doc/build/'));
+        .pipe(assemble(assembleOptions))
+        .pipe(gulp.dest('doc/www/'));
 });
 
 gulp.task('copy', function () {

@@ -1,5 +1,6 @@
 // ============================================================
-// Global mate components
+// Global mate toolbox
 // ============================================================
 
-@import "../toolbox/utilities", "grid", "tables", "buttons", "icons", "forms";
+@import "toolbox";
+@import "mixins";
