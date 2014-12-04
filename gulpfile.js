@@ -47,7 +47,7 @@ var assemble_options = {
     data: ['site.yml', 'doc/src/data/*.{json,yml}'],
     layout: 'default',
     layouts: ['doc/src/layouts/**/*.hbs'],
-    partials: ['doc/src/includes/**/*.hbs']
+    partials: ['doc/src/partials/**/*.hbs']
 };
 
 // build some sample pages based on the templates in test/fixtures
