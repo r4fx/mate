@@ -1,2 +1,3 @@
 # Mate
-## Mate is a simple front end framework based on BEM methodology
+
+Mate is a simple front end framework based on BEM methodology
