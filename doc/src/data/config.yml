@@ -1,0 +1,22 @@
+# =============================================
+# Build config
+# =============================================
+
+root:
+dest:
+assets:
+
+# Templates
+templates:
+includes:
+layouts:
+layout:
+pages:
+
+
+# =============================================
+# Site metadata
+# =============================================
+
+title:             Mate front-end framework
+description:       Mate front-end framework

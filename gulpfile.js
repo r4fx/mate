@@ -13,79 +13,71 @@ var assemble = require('gulp-assemble');
 //var concat = require('gulp-concat');
 //var uglify = require('gulp-uglify');
 
-
-var pathsBase = {
-    dev: './doc/src',
-    build: './doc/build',
-    orygin: './src'
-};
-
 var paths = {
-    dev: dev = {
-        html: [pathsBase.dev + '/**/*.html', '!' + pathsBase.dev + '/_partials/*.html'],
-        htmlWatch: [pathsBase.dev + '/**/*.html'],
-        scripts: pathsBase.dev + '/js/**/*.js',
-        stylesDir: pathsBase.dev + '/styles/css',
-        stylesFiles: pathsBase.dev + '/styles/css/*.css',
-        fontsDir: pathsBase.dev + '/fonts',
-        fontsFiles: pathsBase.dev + '/fonts/**/*',
-        images: pathsBase.dev + '/img/**/*'
+    sources: {
+        html: ['doc/src/**/*.html', '!doc/src/_partials/*.html'],
+        htmlWatch: 'doc/src/**/*.html',
+        scripts: 'doc/src/js/**/*.js',
+        stylesDir: 'doc/src/styles/css',
+        stylesFiles: 'doc/src/styles/css/*.css',
+        fontsDir: 'doc/src/fonts',
+        fontsFiles: 'doc/src/fonts/**/*',
+        images: 'doc/src/images/**/*'
     },
-    build: build = {
-        stylesDir: pathsBase.build + '/styles/css',
-        stylesFiles: pathsBase.build + '/styles/css/*.css',
-        fontsDir: pathsBase.build + '/fonts',
-        images: pathsBase.build + '/img'
+    build: {
+        stylesDir: 'doc/www/styles/css',
+        stylesFiles: 'doc/www/styles/css/*.css',
+        fontsDir: 'doc/www/fonts',
+        images: 'doc/www/images',
+        www: 'doc/www/'
     }
 };
 
 function transform (filePath, file) {
     return file.contents.toString('utf8')
 }
-
-var assembleOptions = {
-    data: ['site.yml', 'doc/src/data/*.{json,yml}'],
-    layout: 'default',
+var options = {
+    data: ['doc/src/data/*.{json,yml}'],
+    assets: 'doc/www/',
     layouts: ['doc/src/layouts/**/*.hbs'],
-    partials: ['doc/src/partials/**/*.hbs'],
-    log: {
-        level: 'verbose' // verbose, debug, info, warning, error, critical
-    }
+    layout: 'default',
+    partials: ['doc/src/partials/**/*.hbs']
 };
-
-// build some sample pages based on the templates in test/fixtures
+// build documentation site
 gulp.task('assemble', function () {
+
+
     gulp.src('doc/src/pages/**/*.hbs')
-        .pipe(assemble(assembleOptions))
-        .pipe(gulp.dest('doc/www/'));
+        .pipe(assemble(options))
+        .pipe(gulp.dest(paths.build.www));
 });
 
 gulp.task('copy', function () {
 
     // Copy css files compiled by IDE
-    gulp.src([paths.dev.stylesFiles])
+    gulp.src([paths.sources.stylesFiles])
         .pipe(gulp.dest(paths.build.stylesDir));
 
     // Copy fonts files
-    gulp.src([paths.dev.fontsFiles])
+    gulp.src([paths.sources.fontsFiles])
         .pipe(gulp.dest(paths.build.fontsDir));
 
     // Copy images
-    gulp.src([paths.dev.images])
+    gulp.src([paths.sources.images])
         .pipe(gulp.dest(paths.build.images));
 });
 
 gulp.task('todo', function () {
-    gulp.src(paths.scripts)
+    gulp.src(paths.sources.scripts)
         .pipe(todo())
         .pipe(gulp.dest('./'));
 });
 
 gulp.task('scripts', function () {
-    return gulp.src([paths.dev.scripts])
+    return gulp.src([paths.sources.scripts])
         .pipe(concat('all.min.js'))
         .pipe(uglify())
-        .pipe(gulp.dest(pathsBase.build));
+        .pipe(gulp.dest(paths.build.www));
 });
 
 //gulp.task('sass', function () {
