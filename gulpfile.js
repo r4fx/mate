@@ -1,120 +1,106 @@
-// some faqs:
+// Faqs:
 // https://github.com/gulpjs/gulp/blob/master/docs/recipes/running-tasks-in-series.md
 
 var gulp = require('gulp');
-var inject = require("gulp-inject");
-var todo = require('gulp-todo');
-var sass = require('gulp-ruby-sass');
 var assemble = require('gulp-assemble');
-
-// sass maps problem: https://github.com/dlmanning/gulp-sass/issues/71
-//var sass = require('gulp-sass');
-
+var todo = require('gulp-todo');
+var sass = require('gulp-sass');
+//var sass = require('gulp-ruby-sass');
 //var concat = require('gulp-concat');
 //var uglify = require('gulp-uglify');
 
+
+/* Configuration
+ / ===========================================*/
 var paths = {
     sources: {
-        html: ['doc/src/**/*.html', '!doc/src/_partials/*.html'],
-        htmlWatch: 'doc/src/**/*.html',
-        scripts: 'doc/src/js/**/*.js',
-        stylesDir: 'doc/src/styles/css',
-        stylesFiles: 'doc/src/styles/css/*.css',
-        fontsDir: 'doc/src/fonts',
-        fontsFiles: 'doc/src/fonts/**/*',
-        images: 'doc/src/images/**/*'
+        docScripts: 'doc/www/js/**/*.js',
+        docStylesDir: 'doc/www/styles/css',
+        docStylesFiles: 'doc/www/styles/css/*.css',
+        docPages: 'doc/src/pages/**/*.hbs'
     },
     build: {
-        stylesDir: 'doc/www/styles/css',
-        stylesFiles: 'doc/www/styles/css/*.css',
-        fontsDir: 'doc/www/fonts',
-        images: 'doc/www/images',
+        docStylesDir: 'doc/www/styles/css',
         www: 'doc/www/'
     }
 };
 
+/* Helpers
+/ ===========================================*/
+
+// UTF8 file coding
 function transform (filePath, file) {
     return file.contents.toString('utf8')
 }
-var options = {
-    data: ['doc/src/data/*.{json,yml}'],
-    assets: 'doc/www/',
-    layouts: ['doc/src/layouts/**/*.hbs'],
-    layout: 'default',
-    partials: ['doc/src/partials/**/*.hbs']
-};
-// build documentation site
+
+
+/* Tasks
+/ ===========================================*/
+
+// Assemble Mate documentation page
 gulp.task('assemble', function () {
+    var options = {
+        data: 'doc/src/data/*.{json,yml}',
+        layouts: 'doc/src/layouts/**/*.hbs',
+        layout: 'default',
+        partials: 'doc/src/partials/**/*.hbs'
+    };
 
-
-    gulp.src('doc/src/pages/**/*.hbs')
+    gulp.src(paths.sources.docPages)
         .pipe(assemble(options))
         .pipe(gulp.dest(paths.build.www));
 });
 
-gulp.task('copy', function () {
-
-    // Copy css files compiled by IDE
-    gulp.src([paths.sources.stylesFiles])
-        .pipe(gulp.dest(paths.build.stylesDir));
-
-    // Copy fonts files
-    gulp.src([paths.sources.fontsFiles])
-        .pipe(gulp.dest(paths.build.fontsDir));
-
-    // Copy images
-    gulp.src([paths.sources.images])
-        .pipe(gulp.dest(paths.build.images));
+// Compile SASS files
+gulp.task('sass', function () {
+    gulp.src('doc/www/styles/scss/*.scss')
+        .pipe(sass())
+        .pipe(gulp.dest(paths.build.docStylesDir));
 });
 
-gulp.task('todo', function () {
-    gulp.src(paths.sources.scripts)
-        .pipe(todo())
-        .pipe(gulp.dest('./'));
-});
-
+// Concat & uglify js files
 gulp.task('scripts', function () {
-    return gulp.src([paths.sources.scripts])
+    return gulp.src([paths.sources.docScripts])
         .pipe(concat('all.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest(paths.build.www));
 });
 
-//gulp.task('sass', function () {
-//    return gulp.src('./doc/src/styles/scss/*.scss')
-//        .pipe(sass())
-//        .pipe(gulp.dest(paths.build.stylesDir));
+// Copy files
+//gulp.task('copy', function () {
+//    // Copy css files compiled by IDE
+//    gulp.src([paths.sources.docStylesFiles])
+//        .pipe(gulp.dest(paths.build.docStylesDir));
 //});
 
-gulp.task('sass', function () {
-    gulp.src('./doc/src/styles/scss/*.scss')
-        .pipe(sass())
-        .pipe(gulp.dest(paths.build.stylesDir));
+// Generate todo list (mate/src/TODO.md)
+gulp.task('todo', function () {
+    gulp.src([
+        'src/js/**/*.js',
+        'src/styles/scss/**/*.scss'
+        ])
+        .pipe(todo())
+        .pipe(gulp.dest('src/'));
 });
 
 // Watch for changes
 gulp.task('watch', function () {
-    var client = [/*'inject',*/ 'copy'];
 
-    // Watch .js files
-    //gulp.watch(paths.dev.scripts, client);
-
-    // Watch html files
-    //gulp.watch(paths.dev.htmlWatch, ['assemble']);
-
-    // Watch .scss files
-    //gulp.watch('./src/styles/**/*.scss', ['sass']);
-
-    // Watch css files
-    gulp.watch(paths.dev.stylesFiles,  function (event) {
+    // Watch Documentation WWW files (pages & config)
+    gulp.watch('doc/src/**/*', function (event) {
         console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
-        gulp.start('copy');
+        gulp.start('assemble');
+    });
+
+    // Watch Mate source styles and recompile Documentation WWW styles
+    gulp.watch('src/styles/css/*.css', function (event) {
+        console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
+        gulp.start('sass');
     });
 });
 
 // Default task
-//gulp.task('default', ['assemble', 'sass', 'copy', 'watch'], function () {
-gulp.task('default', ['assemble'], function () {
+gulp.task('default', ['assemble', 'sass', 'watch'], function () {
     // Callback
 
     // Watch .scss files
