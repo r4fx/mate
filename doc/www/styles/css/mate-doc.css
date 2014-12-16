@@ -281,6 +281,8 @@ h6 {
   list-style-type: none;
   margin-left: 0;
   padding-left: 0; }
+.list-inline li {
+  display: inline; }
 
 ul, ol {
   margin-top: 0;
@@ -354,10 +356,10 @@ dl {
   .grid:after {
     clear: both; }
 
-[class^="col__"], [class*=" col__"] {
+[class*="col"] {
   float: left;
   padding: 0 15px; }
-  [class^="col__"] .row, [class*=" col__"] .row {
+  [class*="col"] .row {
     margin: 0 -15px; }
 
 .col--no-gutter {
@@ -780,30 +782,31 @@ header {
     header .col:after {
       clear: both; }
 
-aside {
+main > section[class*="col"] {
+  padding: 30px; }
+main > aside[class*="col"] {
   position: fixed;
   left: 0;
   top: 0;
   bottom: 0;
   background-color: #353535;
-  padding-bottom: 30px;
+  padding: 30px;
   color: #fff; }
-  aside a {
+  main > aside[class*="col"] a {
     color: #fff;
     text-decoration: none;
     display: block;
     padding: 5px 10px;
     -webkit-transition: background-color 0.4s ease 0s, color 0.4s ease 0s;
     transition: background-color 0.4s ease 0s, color 0.4s ease 0s; }
-    aside a:hover {
+    main > aside[class*="col"] a:hover {
       background-color: #4BBE6B; }
-  aside ul {
-    padding: 20px;
+  main > aside[class*="col"] ul {
     font-size: 15px;
     font-size: 1.5rem; }
-    aside ul li {
+    main > aside[class*="col"] ul li {
       margin-bottom: 0; }
-  aside .aside__footer {
+  main > aside[class*="col"] .aside__footer {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -812,10 +815,10 @@ aside {
     color: #fff;
     padding-top: 20px;
     padding-bottom: 20px; }
-  aside figure img {
+  main > aside[class*="col"] figure img {
     display: inline-block;
     vertical-align: middle; }
-  aside figure span {
+  main > aside[class*="col"] figure span {
     vertical-align: middle;
     font-size: 30px;
     font-size: 3rem;

@@ -535,6 +535,8 @@ h6 {
   list-style-type: none;
   margin-left: 0;
   padding-left: 0; }
+.list-inline li {
+  display: inline; }
 
 ul, ol {
   margin-top: 0;
@@ -608,12 +610,10 @@ dl {
   .grid:after {
     clear: both; }
 
-[class^="col__"],
-[class*=" col__"] {
+[class*="col"] {
   float: left;
   padding: 0 15px; }
-  [class^="col__"] .row,
-  [class*=" col__"] .row {
+  [class*="col"] .row {
     margin: 0 -15px; }
 
 .col--no-gutter {

@@ -88,8 +88,7 @@
 
 // COLUMNS
 // ------------------------------------------------------------
-[class^="col__"],
-[class*=" col__"]{
+[class*="col"]{
   float: left;
   padding: 0 $grid__colGutter;
 

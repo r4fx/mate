@@ -1,5 +1,8 @@
 ---
 title: Structure & conventions
+tags:
+- howto 1
+- howto 2
 ---
 
 <h2>Struktura i źródło kodu</h2>
@@ -58,3 +61,9 @@ mate/
 // ROWS
 // ------------------------------------------------------------
 </pre>
+
+<ul class="tags">
+    {{#each tags}}
+        <li class="tag">{{this}}</li>
+    {{/each}}
+</ul>
