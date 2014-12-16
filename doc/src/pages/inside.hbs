@@ -2,10 +2,59 @@
 title: Structure & conventions
 ---
 
-## Struktura
+<h2>Struktura i źródło kodu</h2>
 
-<p>
+<pre>
+mate/
+├── styles/
+│   ├── css/
+│   │   ├── mate.css
+│   │   └── mate.min.css
+│   ├── scss/
+│   │   └── mate.scss
+├── js/
+│   ├── mate.js
+│   └── mate.min.js
+└── fonts/
+    ├── icomoon/
+    │   ├── icomoon.svg
+    │   ├── icomoon.woff
+    │   └── mate.json
+    └── lato/
+        ├── lato-black.svg
+        ├── lato-black.woff
+        └── lato-...
+</pre>
 
-</p>
+<h2>Komentarze wewnątrz kodu</h2>
 
-## Komentarze wewnątrz kodu
+<h3>Komentarz dla sekcji</h3>
+
+<ul>
+    <li>Linia 1 - nazwa/tytuł sekcji</li>
+    <li>Linia 2 - 30 znaków =</li>
+    <li>Linia 3 - opcjonalne instrukcja, wskazówki jak używać</li>
+</ul>
+
+<p>Przykład:</p>
+
+<pre>
+// FONTS
+// ============================================================
+// [i] --file should contain the names of the files in the specified --dir
+</pre>
+
+
+<h3>Komentarz dla podsekcji (sekcja wewnątrz innej sekcji)</h3>
+
+<ul>
+    <li>Linia 1 - nazwa/tytuł podsekcji</li>
+    <li>Linia 2 - 30 znaków -</li>
+</ul>
+
+<p>Przykład:</p>
+
+<pre>
+// ROWS
+// ------------------------------------------------------------
+</pre>
