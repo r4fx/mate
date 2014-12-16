@@ -86,10 +86,19 @@
   @include clear-fix;
 }
 
-.col {
+// COLUMNS
+// ------------------------------------------------------------
+[class^="col__"],
+[class*=" col__"]{
   float: left;
   padding: 0 $grid__colGutter;
 
+  .row {
+    margin: 0 (-$grid__colGutter);
+  }
+}
+
+.col{
   &--no-gutter {
     padding: 0;
   }
@@ -98,12 +107,10 @@
   @include grid-cols-tablet;
   @include grid-cols-phone;
   @include grid-cols-offset;
-
-  .row {
-    margin: 0 (-$grid__colGutter);
-  }
 }
 
+// ROWS
+// ------------------------------------------------------------
 .row {
   margin: 0 (-$grid__documentGutter) $grid__rowGutter (-$grid__documentGutter);
   //@include row-helpers;

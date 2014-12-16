@@ -354,136 +354,137 @@ dl {
   .grid:after {
     clear: both; }
 
-.col {
+[class^="col__"], [class*=" col__"] {
   float: left;
   padding: 0 15px; }
-  .col--no-gutter {
-    padding: 0; }
-  .col__1 {
-    width: 8.33333%; }
-  .col__2 {
-    width: 16.66667%; }
-  .col__3 {
-    width: 25%; }
-  .col__4 {
-    width: 33.33333%; }
-  .col__5 {
-    width: 41.66667%; }
-  .col__6 {
-    width: 50%; }
-  .col__7 {
-    width: 58.33333%; }
-  .col__8 {
-    width: 66.66667%; }
-  .col__9 {
-    width: 75%; }
-  .col__10 {
-    width: 83.33333%; }
-  .col__11 {
-    width: 91.66667%; }
-  .col__12 {
-    width: 100%; }
-  @media (min-width: 720px) and (max-width: 1023px) {
-    .col__1--tablet {
-      width: 8.33333%; }
-
-    .col__2--tablet {
-      width: 16.66667%; }
-
-    .col__3--tablet {
-      width: 25%; }
-
-    .col__4--tablet {
-      width: 33.33333%; }
-
-    .col__5--tablet {
-      width: 41.66667%; }
-
-    .col__6--tablet {
-      width: 50%; }
-
-    .col__7--tablet {
-      width: 58.33333%; }
-
-    .col__8--tablet {
-      width: 66.66667%; }
-
-    .col__9--tablet {
-      width: 75%; }
-
-    .col__10--tablet {
-      width: 83.33333%; }
-
-    .col__11--tablet {
-      width: 91.66667%; }
-
-    .col__12--tablet {
-      width: 100%; }
- }
-  @media (max-width: 719px) {
-    .col__1--phone {
-      width: 8.33333%; }
-
-    .col__2--phone {
-      width: 16.66667%; }
-
-    .col__3--phone {
-      width: 25%; }
-
-    .col__4--phone {
-      width: 33.33333%; }
-
-    .col__5--phone {
-      width: 41.66667%; }
-
-    .col__6--phone {
-      width: 50%; }
-
-    .col__7--phone {
-      width: 58.33333%; }
-
-    .col__8--phone {
-      width: 66.66667%; }
-
-    .col__9--phone {
-      width: 75%; }
-
-    .col__10--phone {
-      width: 83.33333%; }
-
-    .col__11--phone {
-      width: 91.66667%; }
-
-    .col__12--phone {
-      width: 100%;
-      margin-bottom: 15px; }
- }
-  .col--offset-1 {
-    margin-left: 8.33333%; }
-  .col--offset-2 {
-    margin-left: 16.66667%; }
-  .col--offset-3 {
-    margin-left: 25%; }
-  .col--offset-4 {
-    margin-left: 33.33333%; }
-  .col--offset-5 {
-    margin-left: 41.66667%; }
-  .col--offset-6 {
-    margin-left: 50%; }
-  .col--offset-7 {
-    margin-left: 58.33333%; }
-  .col--offset-8 {
-    margin-left: 66.66667%; }
-  .col--offset-9 {
-    margin-left: 75%; }
-  .col--offset-10 {
-    margin-left: 83.33333%; }
-  .col--offset-11 {
-    margin-left: 91.66667%; }
-  .col--offset-12 {
-    margin-left: 100%; }
-  .col .row {
+  [class^="col__"] .row, [class*=" col__"] .row {
     margin: 0 -15px; }
+
+.col--no-gutter {
+  padding: 0; }
+.col__1 {
+  width: 8.33333%; }
+.col__2 {
+  width: 16.66667%; }
+.col__3 {
+  width: 25%; }
+.col__4 {
+  width: 33.33333%; }
+.col__5 {
+  width: 41.66667%; }
+.col__6 {
+  width: 50%; }
+.col__7 {
+  width: 58.33333%; }
+.col__8 {
+  width: 66.66667%; }
+.col__9 {
+  width: 75%; }
+.col__10 {
+  width: 83.33333%; }
+.col__11 {
+  width: 91.66667%; }
+.col__12 {
+  width: 100%; }
+@media (min-width: 720px) and (max-width: 1023px) {
+  .col__1--tablet {
+    width: 8.33333%; }
+
+  .col__2--tablet {
+    width: 16.66667%; }
+
+  .col__3--tablet {
+    width: 25%; }
+
+  .col__4--tablet {
+    width: 33.33333%; }
+
+  .col__5--tablet {
+    width: 41.66667%; }
+
+  .col__6--tablet {
+    width: 50%; }
+
+  .col__7--tablet {
+    width: 58.33333%; }
+
+  .col__8--tablet {
+    width: 66.66667%; }
+
+  .col__9--tablet {
+    width: 75%; }
+
+  .col__10--tablet {
+    width: 83.33333%; }
+
+  .col__11--tablet {
+    width: 91.66667%; }
+
+  .col__12--tablet {
+    width: 100%; }
+ }
+@media (max-width: 719px) {
+  .col__1--phone {
+    width: 8.33333%; }
+
+  .col__2--phone {
+    width: 16.66667%; }
+
+  .col__3--phone {
+    width: 25%; }
+
+  .col__4--phone {
+    width: 33.33333%; }
+
+  .col__5--phone {
+    width: 41.66667%; }
+
+  .col__6--phone {
+    width: 50%; }
+
+  .col__7--phone {
+    width: 58.33333%; }
+
+  .col__8--phone {
+    width: 66.66667%; }
+
+  .col__9--phone {
+    width: 75%; }
+
+  .col__10--phone {
+    width: 83.33333%; }
+
+  .col__11--phone {
+    width: 91.66667%; }
+
+  .col__12--phone {
+    width: 100%;
+    margin-bottom: 15px; }
+ }
+.col--offset-1 {
+  margin-left: 8.33333%; }
+.col--offset-2 {
+  margin-left: 16.66667%; }
+.col--offset-3 {
+  margin-left: 25%; }
+.col--offset-4 {
+  margin-left: 33.33333%; }
+.col--offset-5 {
+  margin-left: 41.66667%; }
+.col--offset-6 {
+  margin-left: 50%; }
+.col--offset-7 {
+  margin-left: 58.33333%; }
+.col--offset-8 {
+  margin-left: 66.66667%; }
+.col--offset-9 {
+  margin-left: 75%; }
+.col--offset-10 {
+  margin-left: 83.33333%; }
+.col--offset-11 {
+  margin-left: 91.66667%; }
+.col--offset-12 {
+  margin-left: 100%; }
 
 .row {
   margin: 0 -15px 30px -15px; }
