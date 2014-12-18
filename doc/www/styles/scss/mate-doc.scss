@@ -6,8 +6,19 @@
 @import "../../../../src/styles/scss/mate";
 
 // ============================================================
-// mate DOCUMENTATION
+// MATE DOCUMENTATION
 // ============================================================
+
+a:before {
+  vertical-align: -2px;
+  margin-right: 5px;
+  width: 16px;
+  height: 16px;
+}
+
+a[href^="https://github.com"]:before {
+  content: url("../../images/github.png");
+}
 
 header{
   @include font-size(15px);
