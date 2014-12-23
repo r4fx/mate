@@ -478,7 +478,7 @@ h1 {
   font-size: 42px;
   font-size: 4.2rem;
   font-family: "lato-regular", Arial, sans-serif;
-  margin: 0 0 42px;
+  margin: 42px 0;
   line-height: 1;
   font-weight: normal; }
   @media (max-width: 719px) {
@@ -490,7 +490,7 @@ h2 {
   font-size: 32px;
   font-size: 3.2rem;
   font-family: "lato-regular", Arial, sans-serif;
-  margin: 0 0 32px;
+  margin: 32px 0;
   font-weight: normal;
   line-height: 1; }
 
@@ -498,7 +498,7 @@ h3 {
   font-size: 20px;
   font-size: 2rem;
   font-family: "lato-regular", Arial, sans-serif;
-  margin: 0 0 20px;
+  margin: 20px 0;
   font-weight: normal;
   line-height: 1; }
 
@@ -506,7 +506,7 @@ h4 {
   font-size: 16px;
   font-size: 1.6rem;
   font-family: "lato-regular", Arial, sans-serif;
-  margin: 0 0 20px;
+  margin: 20px 0;
   font-weight: normal;
   line-height: 1; }
 
@@ -514,20 +514,14 @@ h5 {
   font-size: 14px;
   font-size: 1.4rem;
   font-family: "lato-regular", Arial, sans-serif;
-  margin: 0 0 18px;
+  margin: 18px 0;
   font-weight: normal; }
 
 h6 {
   font-size: 14px;
   font-size: 1.4rem;
-  margin: 0 0 18px;
+  margin: 18px 0;
   font-weight: normal; }
-
-.page-header__main {
-  margin-bottom: 30px; }
-.page-header__lead {
-  font-size: 17px;
-  font-size: 1.7rem; }
 
 .list-unstyled {
   list-style-type: none;
@@ -537,14 +531,12 @@ h6 {
   display: inline; }
 
 ul, ol {
-  margin-top: 0;
-  margin-bottom: 10px; }
+  margin: 15px 0; }
   ul li, ol li {
     margin-bottom: 7px; }
 
 dl {
-  margin-top: 0;
-  margin-bottom: 10px; }
+  margin: 15px 0; }
   dl dt {
     margin-bottom: 7px; }
 

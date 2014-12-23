@@ -34,6 +34,13 @@ header{
 main {
   > section[class*="col"]{
     padding: $grid__rowGutter;
+
+    h1{
+      margin-top: 0;
+      text-transform: uppercase;
+      color: $color__base--second;
+      @include font-size(35px);
+    }
   }
 
   > aside[class*="col"] {
@@ -41,7 +48,7 @@ main {
     left: 0;
     top: 0;
     bottom: 0;
-    background-color: $block__color--second;
+    background-color: $color__base--second;
     padding: $grid__rowGutter;
     color: $text__color--second;
 
@@ -53,7 +60,7 @@ main {
       @include transition((background-color, color));
 
       &:hover {
-        background-color: $color__base--second;
+        background-color: $block__color--second;
       }
     }
 
@@ -69,7 +76,7 @@ main {
       position: fixed;
       bottom: 0;
       left: 0;
-      background-color: $block__color--second;
+      background-color: $color__base--second;
       line-height: 30px;
       color: $text__color--second;
       padding-top: 20px;
@@ -93,7 +100,19 @@ main {
 
 
 
-.page-header{
-  padding: 0 0 20px;
-  border-bottom: 2px solid $color__base--second;
+.tags{
+  border-top: 1px solid $border__color--first;
+  margin-top: 50px;
+  padding-top: 15px;
+  padding-left: 0;
+
+  li{
+    display: inline-block;
+    list-style-type: none;
+    margin: 0 5px 0 0;
+    padding: 2px 10px;
+    background-color: $color__base--second;
+    color: $text__color--second;
+    @include font-size(14px);
+  }
 }
