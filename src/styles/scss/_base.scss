@@ -13,8 +13,6 @@ html {
 body {
   color: $text__color--first;
   font-family: $font__base--light;
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
   @include font-size($text__size--m);
 }
 
