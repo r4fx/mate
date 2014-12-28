@@ -36,7 +36,7 @@
 
         // IF col is 100% width then add bottom gutter
         @if $i == 12 {
-          margin-bottom: $grid__colGutter;
+          margin-bottom: $grid__col--gutter;
         }
       }
     }
@@ -56,19 +56,19 @@
 // GRID HELPERS
 // ============================================================
 %dbl-margin-top {
-  margin-top: $grid__rowGutter*2;
+  margin-top: $grid__row--gutter*2;
 }
 
 %dbl-margin {
-  margin: 0 (-$grid__documentGutter) $grid__rowGutter*2 (-$grid__documentGutter);
+  margin: 0 (-$grid__document--gutter) $grid__row--gutter*2 (-$grid__document--gutter);
 
   @include breakpoint(phone) {
-    margin-bottom: $grid__rowGutter;
+    margin-bottom: $grid__row--gutter;
   }
 }
 
 %row--no-gutter {
-  margin: 0 (-$grid__documentGutter) 0 (-$grid__documentGutter);
+  margin: 0 (-$grid__document--gutter) 0 (-$grid__document--gutter);
 }
 
 // MOUNTING GRID
@@ -80,7 +80,7 @@
   margin: 0 auto;
 
   &--add-margin {
-    margin-bottom: $grid__colGutter;
+    margin-bottom: $grid__col--gutter;
   }
 
   @include clear-fix;
@@ -90,10 +90,10 @@
 // ------------------------------------------------------------
 [class*="col"]{
   float: left;
-  padding: 0 $grid__colGutter;
+  padding: 0 $grid__col--gutter;
 
   .row {
-    margin: 0 (-$grid__colGutter);
+    margin: 0 (-$grid__col--gutter);
   }
 }
 
@@ -111,7 +111,7 @@
 // ROWS
 // ------------------------------------------------------------
 .row {
-  margin: 0 (-$grid__documentGutter) $grid__rowGutter (-$grid__documentGutter);
+  margin: 0 (-$grid__document--gutter) $grid__row--gutter (-$grid__document--gutter);
   //@include row-helpers;
 
   &.row--dbl-margin {
@@ -133,10 +133,10 @@
       margin-top: 0;
 
       > .col {
-        margin-top: $grid__rowGutter*2;
+        margin-top: $grid__row--gutter*2;
 
         @include breakpoint(phone) {
-          margin-top: $grid__rowGutter;
+          margin-top: $grid__row--gutter;
         }
       }
     }
@@ -146,12 +146,12 @@
       margin-bottom: 0;
 
       > .col {
-        margin-top: $grid__rowGutter*2;
-        margin-bottom: $grid__rowGutter*2;
+        margin-top: $grid__row--gutter*2;
+        margin-bottom: $grid__row--gutter*2;
 
         @include breakpoint(phone) {
-          margin-top: $grid__rowGutter;
-          margin-bottom: $grid__rowGutter;
+          margin-top: $grid__row--gutter;
+          margin-bottom: $grid__row--gutter;
         }
       }
     }

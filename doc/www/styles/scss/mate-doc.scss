@@ -9,15 +9,10 @@
 // MATE DOCUMENTATION
 // ============================================================
 
-a:before {
-  vertical-align: -2px;
-  margin-right: 5px;
-  width: 16px;
-  height: 16px;
-}
-
 a[href^="https://github.com"]:before {
-  content: url("../../images/github.png");
+  content: "\e605";
+  font-family: 'icomoon';
+  margin-right: 5px;
 }
 
 header{
@@ -33,7 +28,7 @@ header{
 
 main {
   > section[class*="col"]{
-    padding: $grid__rowGutter;
+    padding: $grid__row--gutter*2;
 
     h1{
       margin-top: 0;
@@ -49,19 +44,16 @@ main {
     top: 0;
     bottom: 0;
     background-color: $color__base--second;
-    padding: $grid__rowGutter;
+    padding: $grid__row--gutter*2;
     color: $text__color--second;
 
-    a {
+    figure{
+      text-align: right;
+    }
+
+    a{
       color: $text__color--second;
       text-decoration: none;
-      display: block;
-      padding: 5px 10px;
-      @include transition((background-color, color));
-
-      &:hover {
-        background-color: $block__color--second;
-      }
     }
 
     ul {
@@ -69,11 +61,27 @@ main {
 
       li {
         margin-bottom: 0;
+
+        >hr{
+          background-color: white;
+        }
+      }
+
+      a {
+        display: block;
+        padding: 5px 10px;
+        @include transition((background-color, color));
+
+        &.act,
+        &:hover {
+          background-color: darken($color__base--second, 12);
+        }
       }
     }
 
     .aside__footer {
-      position: fixed;
+      position: absolute;
+      width: 100%;
       bottom: 0;
       left: 0;
       background-color: $color__base--second;
@@ -81,6 +89,7 @@ main {
       color: $text__color--second;
       padding-top: 20px;
       padding-bottom: 20px;
+      text-align: center;
     }
 
     figure {
@@ -98,8 +107,6 @@ main {
   }
 }
 
-
-
 .tags{
   border-top: 1px solid $border__color--first;
   margin-top: 50px;
@@ -114,5 +121,24 @@ main {
     background-color: $color__base--second;
     color: $text__color--second;
     @include font-size(14px);
+  }
+}
+
+
+// MATE GRID EXAMPLES
+// ============================================================
+.grid{
+  &--example{
+    margin: $grid__col--gutter;
+
+    [class*="col"] {
+      background-color: $block__color--first;
+      padding: 15px;
+      border: 1px solid #fff;
+    }
+
+    .row{
+      margin-bottom: $grid__row--gutter;
+    }
   }
 }

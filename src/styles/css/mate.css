@@ -10,6 +10,240 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+body,
+figure {
+  margin: 0; }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block; }
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden],
+template {
+  display: none; }
+
+a {
+  background: transparent; }
+
+a:active,
+a:hover {
+  outline: 0; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+dfn {
+  font-style: italic; }
+
+mark {
+  background: #ff0;
+  color: #000; }
+
+small {
+  font-size: 80%; }
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+pre {
+  overflow: auto; }
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0; }
+
+button {
+  overflow: visible; }
+
+button,
+select {
+  text-transform: none; }
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+input {
+  line-height: normal; }
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0; }
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+legend {
+  border: 0;
+  padding: 0; }
+
+optgroup {
+  font-weight: bold; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td,
+th {
+  padding: 0; }
+
+html {
+  font-size: 62.5%;
+  /* Sets up the root font size to 10px */ }
+
+body {
+  color: #3c3c3c;
+  font-family: "lato-light", Arial, sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem; }
+
+.box {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1024px; }
+  @media (max-width: 1023px) {
+    .box {
+      width: 100%; } }
+
+hr {
+  border: 0;
+  height: 1px;
+  background-color: #4BBE6B;
+  margin: 15px auto; }
+  hr.mini {
+    width: 150px;
+    margin: 50px auto; }
+
+a {
+  color: #213a82; }
+  a:hover {
+    text-decoration: none; }
+
+nav a {
+  padding: 5px; }
+nav ul {
+  padding: 0;
+  margin: 0; }
+  nav ul li {
+    display: inline-block;
+    margin: 0;
+    list-style-type: none; }
+    nav ul li:first-child:before {
+      content: none; }
+    nav ul li:before {
+      content: '';
+      border-left: 1px solid #3c3c3c;
+      margin: 0 5px;
+      font-size: 70%;
+      vertical-align: middle; }
+
+@font-face {
+  font-family: "lato-regular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../fonts/lato/lato-regular.woff") format("woff"), url("../../fonts/lato/lato-regular.svg#lato-regular") format("svg"); }
+@font-face {
+  font-family: "lato-semibold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../fonts/lato/lato-semibold.woff") format("woff"), url("../../fonts/lato/lato-semibold.svg#lato-semibold") format("svg"); }
+@font-face {
+  font-family: "lato-bold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../fonts/lato/lato-bold.woff") format("woff"), url("../../fonts/lato/lato-bold.svg#lato-bold") format("svg"); }
+@font-face {
+  font-family: "lato-italic";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../fonts/lato/lato-italic.woff") format("woff"), url("../../fonts/lato/lato-italic.svg#lato-italic") format("svg"); }
+@font-face {
+  font-family: "lato-thin";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../fonts/lato/lato-thin.woff") format("woff"), url("../../fonts/lato/lato-thin.svg#lato-thin") format("svg"); }
+@font-face {
+  font-family: "lato-light";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../fonts/lato/lato-light.woff") format("woff"), url("../../fonts/lato/lato-light.svg#lato-light") format("svg"); }
 .text-size--42 {
   font-size: 42px;
   font-size: 4.2rem;
@@ -235,240 +469,6 @@
     .text-size--14 {
       font-size: 0.7em; } }
 
-html {
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%; }
-
-body,
-figure {
-  margin: 0; }
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-nav,
-section,
-summary {
-  display: block; }
-
-audio,
-canvas,
-progress,
-video {
-  display: inline-block;
-  vertical-align: baseline; }
-
-audio:not([controls]) {
-  display: none;
-  height: 0; }
-
-[hidden],
-template {
-  display: none; }
-
-a {
-  background: transparent; }
-
-a:active,
-a:hover {
-  outline: 0; }
-
-abbr[title] {
-  border-bottom: 1px dotted; }
-
-dfn {
-  font-style: italic; }
-
-mark {
-  background: #ff0;
-  color: #000; }
-
-small {
-  font-size: 80%; }
-
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline; }
-
-sup {
-  top: -0.5em; }
-
-sub {
-  bottom: -0.25em; }
-
-pre {
-  overflow: auto; }
-
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, monospace;
-  font-size: 1em; }
-
-button,
-input,
-optgroup,
-select,
-textarea {
-  color: inherit;
-  font: inherit;
-  margin: 0; }
-
-button {
-  overflow: visible; }
-
-button,
-select {
-  text-transform: none; }
-
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  -webkit-appearance: button;
-  cursor: pointer; }
-
-button[disabled],
-html input[disabled] {
-  cursor: default; }
-
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0; }
-
-input {
-  line-height: normal; }
-
-input[type="checkbox"],
-input[type="radio"] {
-  box-sizing: border-box;
-  padding: 0; }
-
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  height: auto; }
-
-input[type="search"] {
-  -webkit-appearance: textfield;
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box; }
-
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none; }
-
-fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em; }
-
-legend {
-  border: 0;
-  padding: 0; }
-
-optgroup {
-  font-weight: bold; }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-td,
-th {
-  padding: 0; }
-
-html {
-  font-size: 62.5%;
-  /* Sets up the root font size to 10px */ }
-
-body {
-  color: #3c3c3c;
-  font-family: "lato-light", Arial, sans-serif;
-  font-size: 16px;
-  font-size: 1.6rem; }
-
-.box {
-  margin: 0 auto;
-  padding: 0 15px;
-  max-width: 1024px; }
-  @media (max-width: 1023px) {
-    .box {
-      width: 100%; } }
-
-hr {
-  border: 0;
-  height: 1px;
-  background-color: #4BBE6B;
-  margin: 15px auto; }
-  hr.mini {
-    width: 150px;
-    margin: 50px auto; }
-
-a {
-  color: #213a82; }
-  a:hover {
-    text-decoration: none; }
-
-nav a {
-  padding: 5px; }
-nav ul {
-  padding: 0;
-  margin: 0; }
-  nav ul li {
-    display: inline-block;
-    margin: 0;
-    list-style-type: none; }
-    nav ul li:first-child:before {
-      content: none; }
-    nav ul li:before {
-      content: '';
-      border-left: 1px solid #3c3c3c;
-      margin: 0 5px;
-      font-size: 70%;
-      vertical-align: middle; }
-
-@font-face {
-  font-family: "lato-regular";
-  font-style: normal;
-  font-weight: normal;
-  src: url("../../fonts/lato/lato-regular.woff") format("woff"); }
-@font-face {
-  font-family: "lato-semibold";
-  font-style: normal;
-  font-weight: normal;
-  src: url("../../fonts/lato/lato-semibold.woff") format("woff"); }
-@font-face {
-  font-family: "lato-bold";
-  font-style: normal;
-  font-weight: normal;
-  src: url("../../fonts/lato/lato-bold.woff") format("woff"); }
-@font-face {
-  font-family: "lato-italic";
-  font-style: normal;
-  font-weight: normal;
-  src: url("../../fonts/lato/lato-italic.woff") format("woff"); }
-@font-face {
-  font-family: "lato-thin";
-  font-style: normal;
-  font-weight: normal;
-  src: url("../../fonts/lato/lato-thin.woff") format("woff"); }
-@font-face {
-  font-family: "lato-light";
-  font-style: normal;
-  font-weight: normal;
-  src: url("../../fonts/lato/lato-light.woff") format("woff"); }
 p {
   margin: 15px 0; }
   p:last-child {
@@ -540,6 +540,9 @@ dl {
   dl dt {
     margin-bottom: 7px; }
 
+li > hr, dt > hr {
+  background-color: #4BBE6B; }
+
 .inline-left {
   text-align: left; }
 
@@ -576,13 +579,13 @@ dl {
 * GRID SYSTEM
 * ============================================================*/
 .row.row--dbl-margin-top {
-  margin-top: 60px; }
+  margin-top: 30px; }
 
 .row.row--dbl-margin {
-  margin: 0 -15px 60px -15px; }
+  margin: 0 -15px 30px -15px; }
   @media (max-width: 719px) {
     .row.row--dbl-margin {
-      margin-bottom: 30px; } }
+      margin-bottom: 15px; } }
 
 .row.row--no-gutter {
   margin: 0 -15px 0 -15px; }
@@ -709,26 +712,26 @@ dl {
   margin-left: 100%; }
 
 .row {
-  margin: 0 -15px 30px -15px; }
+  margin: 0 -15px 15px -15px; }
   .row .row {
     clear: both; }
     .row .row.row--dbl-margin-top {
       margin-top: 0; }
       .row .row.row--dbl-margin-top > .col {
-        margin-top: 60px; }
+        margin-top: 30px; }
         @media (max-width: 719px) {
           .row .row.row--dbl-margin-top > .col {
-            margin-top: 30px; } }
+            margin-top: 15px; } }
     .row .row.row--dbl-margin {
       margin-top: 0;
       margin-bottom: 0; }
       .row .row.row--dbl-margin > .col {
-        margin-top: 60px;
-        margin-bottom: 60px; }
+        margin-top: 30px;
+        margin-bottom: 30px; }
         @media (max-width: 719px) {
           .row .row.row--dbl-margin > .col {
-            margin-top: 30px;
-            margin-bottom: 30px; } }
+            margin-top: 15px;
+            margin-bottom: 15px; } }
   .row:before, .row:after {
     content: "";
     display: table; }
@@ -910,9 +913,12 @@ dl {
 .icon--arrow-right:before {
   content: "\e604"; }
 
+.icon--mark-github:before {
+  content: "\e605"; }
+
 form .row,
 .form .row {
-  margin: 0 0 30px 0; }
+  margin: 0 0 15px 0; }
 
 .labelInside {
   position: relative; }

@@ -64,7 +64,7 @@ $text__line--base: 20;
 // ============================================================
 
 //+ colors
-$block__color--first: #F4F5F7;
+$block__color--first: #DDDDDD;
 $block__color--second: #353535;
 
 
@@ -86,9 +86,9 @@ $margin--section: 50px;
 // GRID
 // ============================================================
 $grid__columns: 12;
-$grid__colGutter: 15px;
-$grid__rowGutter: 30px;
-$grid__documentGutter: 15px;
+$grid__col--gutter: 15px;
+$grid__row--gutter: 15px;
+$grid__document--gutter: 15px;
 
 
 // TRANSITIONS

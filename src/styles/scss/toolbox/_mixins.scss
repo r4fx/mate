@@ -153,22 +153,3 @@
   -ms-flex: 1 auto;
   flex: 1 auto;
 }
-
-// TEXT SIZES
-// examples:
-// <p class="text-size--24">Lorem ipsum</p>
-// ============================================================
-@for $i from $text__size--xxl through $text__size--s {
-  .text-size--#{strip-units($i)} {
-    @include font-size($i);
-
-    // Half size text for phone
-    @include breakpoint(phone) {
-      font-size: ($i /1px /10 /2)+em;
-    }
-
-    @if $i > $text__size--l {
-      font-family: $font__base--light;
-    }
-  }
-}

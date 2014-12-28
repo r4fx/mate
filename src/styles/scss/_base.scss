@@ -18,7 +18,7 @@ body {
 
 .box{
   margin: 0 auto;
-  padding: 0 $grid__documentGutter;
+  padding: 0 $grid__document--gutter;
   max-width: $page__width--maxsize;
 
   @include breakpoint(mobile) {
