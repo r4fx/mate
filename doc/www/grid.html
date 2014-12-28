@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Grid - Mate front-end framework</title>
+    <title>Grid system - Mate front-end framework</title>
     <meta name="desscription" content="Mate front-end framework">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, minimal-ui">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -10,11 +10,11 @@
     <meta name="apple-mobile-web-app-title" content="mate fef">
 
     <link rel="stylesheet" href="../www/styles/css/mate-doc.css">
-    <link rel="stylesheet" href="../www/javascript/vendors/prism/prism.css">
+    <link rel="stylesheet" href="../www/js/vendors/prism/prism.css">
 
-    <script src="../www/javascript/vendors/jquery-2.1.1.min.js"></script>
-    <script src="../www/javascript/vendors/prism/prism.js"></script>
-    <script src="../www/javascript/app.js"></script>
+    <script src="../www/js/vendors/jquery-2.1.3.min.js"></script>
+    <script src="../www/js/vendors/prism/prism.js"></script>
+    <script src="../www/js/app.js"></script>
 </head>
 <body>
 <main>
@@ -25,7 +25,7 @@
 
         <ul class="list-unstyled inline-right">
             <li><a href="index.html">Home</a></li>
-            <li><a href="grid.html">Grid</a></li>
+            <li><a href="grid.html">Grid system</a></li>
             <li><a href="typography.html">Typography</a></li>
             <li><a href="forms.html">Forms</a></li>
             <li><a href="buttons.html">Buttons</a></li>
@@ -45,11 +45,11 @@
     </aside>
 
     <section class="col__9 col--offset-3">
-        <h1>Grid</h1>
+        <h1>Grid system</h1>
 
         <h2>Basic grid</h2>
 
-<div class="grid--example">
+<div class="code-example">
     <div class="row">
         <div class="col__1">.col__1</div>
         <div class="col__11">.col__11</div>
@@ -109,9 +109,26 @@
     </div>
 </div>
 
+<p>Przykład:</p>
+<pre lang="html">
+&lt;div class="row">
+    &lt;div class="col__4">.col__4&lt;/div>
+    &lt;div class="col__4">.col__4&lt;/div>
+    &lt;div class="col__4">.col__4&lt;/div>
+&lt;/div>
+&lt;div class="row">
+    &lt;div class="col__6">.col__6&lt;/div>
+    &lt;div class="col__6">.col__6&lt;/div>
+    &lt;/div>
+&lt;div class="row">
+    &lt;div class="col__8">.col__8&lt;/div>
+    &lt;div class="col__4">.col__4&lt;/div>
+&lt;/div>
+</pre>
+
 <h2>Offseting columns</h2>
 
-<div class="grid--example">
+<div class="code-example">
     <div class="row">
         <div class="col__4 col--offset-4">.col__4 .col--offset-4</div>
     </div>
@@ -124,20 +141,26 @@
     </div>
 </div>
 
+<p>Przykład:</p>
+<pre lang="html">
+&lt;div class="row">
+    &lt;div class="col__4 col--offset-4">.col__4 .col--offset-4&lt;/div>
+&lt;/div>
+&lt;div class="row">
+    &lt;div class="col__4">.col__4&lt;/div>
+    &lt;div class="col__4 col--offset-4">.col__4 .col--offset-4&lt;/div>
+    &lt;/div>
+&lt;div class="row">
+    &lt;div class="col__6 col--offset-6">.col__6 .col--offset-6&lt;/div>
+&lt;/div>
+</pre>
+
 <h2>Grid helpers</h2>
 
 <h3>Mobile</h3>
 
 <h4>Phone</h4>
 <h4>Tablet</h4>
-
-
-<pre class="line-numbers" lang="markup">
-    <div class="row">
-        <div class="col__1">column</div>
-        <div class="col__11">column</div>
-    </div>
-</pre>
 
     </section>
 </main>

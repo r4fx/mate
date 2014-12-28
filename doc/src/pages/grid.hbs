@@ -1,10 +1,10 @@
 ---
-title: Grid
+title: Grid system
 ---
 
 <h2>Basic grid</h2>
 
-<div class="grid--example">
+<div class="code-example">
     <div class="row">
         <div class="col__1">.col__1</div>
         <div class="col__11">.col__11</div>
@@ -64,9 +64,26 @@ title: Grid
     </div>
 </div>
 
+<p>Przykład:</p>
+<pre lang="html">
+&lt;div class="row">
+    &lt;div class="col__4">.col__4&lt;/div>
+    &lt;div class="col__4">.col__4&lt;/div>
+    &lt;div class="col__4">.col__4&lt;/div>
+&lt;/div>
+&lt;div class="row">
+    &lt;div class="col__6">.col__6&lt;/div>
+    &lt;div class="col__6">.col__6&lt;/div>
+    &lt;/div>
+&lt;div class="row">
+    &lt;div class="col__8">.col__8&lt;/div>
+    &lt;div class="col__4">.col__4&lt;/div>
+&lt;/div>
+</pre>
+
 <h2>Offseting columns</h2>
 
-<div class="grid--example">
+<div class="code-example">
     <div class="row">
         <div class="col__4 col--offset-4">.col__4 .col--offset-4</div>
     </div>
@@ -79,17 +96,23 @@ title: Grid
     </div>
 </div>
 
+<p>Przykład:</p>
+<pre lang="html">
+&lt;div class="row">
+    &lt;div class="col__4 col--offset-4">.col__4 .col--offset-4&lt;/div>
+&lt;/div>
+&lt;div class="row">
+    &lt;div class="col__4">.col__4&lt;/div>
+    &lt;div class="col__4 col--offset-4">.col__4 .col--offset-4&lt;/div>
+    &lt;/div>
+&lt;div class="row">
+    &lt;div class="col__6 col--offset-6">.col__6 .col--offset-6&lt;/div>
+&lt;/div>
+</pre>
+
 <h2>Grid helpers</h2>
 
 <h3>Mobile</h3>
 
 <h4>Phone</h4>
 <h4>Tablet</h4>
-
-
-<pre class="line-numbers" lang="markup">
-    <div class="row">
-        <div class="col__1">column</div>
-        <div class="col__11">column</div>
-    </div>
-</pre>

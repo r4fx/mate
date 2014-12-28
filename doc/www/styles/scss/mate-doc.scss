@@ -127,18 +127,16 @@ main {
 
 // MATE GRID EXAMPLES
 // ============================================================
-.grid{
-  &--example{
-    margin: $grid__col--gutter;
+.code-example{
+  margin: $grid__col--gutter*2 $grid__col--gutter;
 
-    [class*="col"] {
-      background-color: $block__color--first;
-      padding: 15px;
-      border: 1px solid #fff;
-    }
+  [class*="col"] {
+    background-color: $block__color--first;
+    padding: 15px;
+    border: 1px solid #fff;
+  }
 
-    .row{
-      margin-bottom: $grid__row--gutter;
-    }
+  .row{
+    margin-bottom: $grid__row--gutter;
   }
 }
