@@ -125,12 +125,18 @@ main {
 }
 
 
-// MATE GRID EXAMPLES
+// MATE EXAMPLES
 // ============================================================
+p code{
+  background-color: $block__color--first;
+  padding: 2px;
+  @include font-size(14px);
+}
+
 .code-example{
   margin: $grid__col--gutter*2 $grid__col--gutter;
 
-  [class*="col"] {
+  [class^="col__"] {
     background-color: $block__color--first;
     padding: 15px;
     border: 1px solid #fff;

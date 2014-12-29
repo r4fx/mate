@@ -192,7 +192,7 @@ hr {
     margin: 50px auto; }
 
 a {
-  color: #213a82; }
+  color: #249cff; }
   a:hover {
     text-decoration: none; }
 
@@ -603,10 +603,10 @@ li > hr, dt > hr {
   .grid:after {
     clear: both; }
 
-[class*="col"] {
+[class^="col__"] {
   float: left;
   padding: 0 15px; }
-  [class*="col"] .row {
+  [class^="col__"] .row {
     margin: 0 -15px; }
 
 .col--no-gutter {
