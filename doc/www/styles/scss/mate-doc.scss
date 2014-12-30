@@ -127,7 +127,8 @@ main {
 
 // MATE EXAMPLES
 // ============================================================
-p code{
+p code,
+ul code{
   background-color: $block__color--first;
   padding: 2px;
   @include font-size(14px);

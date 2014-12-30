@@ -55,16 +55,16 @@
 
 // GRID HELPERS
 // ============================================================
-%dbl-margin-top {
-  margin-top: $grid__row--gutter*2;
-}
-
-%dbl-margin {
+%dbl-gutter {
   margin: 0 (-$grid__document--gutter) $grid__row--gutter*2 (-$grid__document--gutter);
 
   @include breakpoint(phone) {
     margin-bottom: $grid__row--gutter;
   }
+}
+
+%dbl-gutter-top {
+  margin-top: $grid__row--gutter*2;
 }
 
 %row--no-gutter {
@@ -114,12 +114,12 @@
   margin: 0 (-$grid__document--gutter) $grid__row--gutter (-$grid__document--gutter);
   //@include row-helpers;
 
-  &.row--dbl-margin {
-    @extend %dbl-margin;
+  &.row--dbl-gutter {
+    @extend %dbl-gutter;
   }
 
-  &.row--dbl-margin-top {
-    @extend %dbl-margin-top;
+  &.row--dbl-gutter-top {
+    @extend %dbl-gutter-top;
   }
 
   &.row--no-gutter {
