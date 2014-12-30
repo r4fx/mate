@@ -10,7 +10,7 @@
 // ============================================================
 @mixin grid-cols {
   @for $i from 1 through $grid__columns {
-    &__#{$i} {
+    &-#{$i} {
       width: grid-calc($i, $grid__columns);
     }
   }
@@ -20,7 +20,7 @@
 @mixin grid-cols-tablet {
   @include breakpoint(tablet) {
     @for $i from 1 through $grid__columns {
-      &__#{$i}--tablet {
+      &-#{$i}--tablet {
         width: grid-calc($i, $grid__columns);
       }
     }
@@ -31,7 +31,7 @@
 @mixin grid-cols-phone {
   @include breakpoint(phone) {
     @for $i from 1 through $grid__columns {
-      &__#{$i}--phone {
+      &-#{$i}--phone {
         width: grid-calc($i, $grid__columns);
 
         // IF col is 100% width then add bottom gutter
@@ -88,7 +88,7 @@
 
 // COLUMNS
 // ------------------------------------------------------------
-[class^="col__"]{
+[class^="col-"]{
   float: left;
   padding: 0 $grid__col--gutter;
 

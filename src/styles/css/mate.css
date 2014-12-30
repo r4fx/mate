@@ -603,87 +603,87 @@ li > hr, dt > hr {
   .grid:after {
     clear: both; }
 
-[class^="col__"] {
+[class^="col-"] {
   float: left;
   padding: 0 15px; }
-  [class^="col__"] .row {
+  [class^="col-"] .row {
     margin: 0 -15px; }
 
 .col--no-gutter {
   padding: 0; }
-.col__1 {
+.col-1 {
   width: 8.33333%; }
-.col__2 {
+.col-2 {
   width: 16.66667%; }
-.col__3 {
+.col-3 {
   width: 25%; }
-.col__4 {
+.col-4 {
   width: 33.33333%; }
-.col__5 {
+.col-5 {
   width: 41.66667%; }
-.col__6 {
+.col-6 {
   width: 50%; }
-.col__7 {
+.col-7 {
   width: 58.33333%; }
-.col__8 {
+.col-8 {
   width: 66.66667%; }
-.col__9 {
+.col-9 {
   width: 75%; }
-.col__10 {
+.col-10 {
   width: 83.33333%; }
-.col__11 {
+.col-11 {
   width: 91.66667%; }
-.col__12 {
+.col-12 {
   width: 100%; }
 @media (min-width: 720px) and (max-width: 1023px) {
-  .col__1--tablet {
+  .col-1--tablet {
     width: 8.33333%; }
-  .col__2--tablet {
+  .col-2--tablet {
     width: 16.66667%; }
-  .col__3--tablet {
+  .col-3--tablet {
     width: 25%; }
-  .col__4--tablet {
+  .col-4--tablet {
     width: 33.33333%; }
-  .col__5--tablet {
+  .col-5--tablet {
     width: 41.66667%; }
-  .col__6--tablet {
+  .col-6--tablet {
     width: 50%; }
-  .col__7--tablet {
+  .col-7--tablet {
     width: 58.33333%; }
-  .col__8--tablet {
+  .col-8--tablet {
     width: 66.66667%; }
-  .col__9--tablet {
+  .col-9--tablet {
     width: 75%; }
-  .col__10--tablet {
+  .col-10--tablet {
     width: 83.33333%; }
-  .col__11--tablet {
+  .col-11--tablet {
     width: 91.66667%; }
-  .col__12--tablet {
+  .col-12--tablet {
     width: 100%; } }
 @media (max-width: 719px) {
-  .col__1--phone {
+  .col-1--phone {
     width: 8.33333%; }
-  .col__2--phone {
+  .col-2--phone {
     width: 16.66667%; }
-  .col__3--phone {
+  .col-3--phone {
     width: 25%; }
-  .col__4--phone {
+  .col-4--phone {
     width: 33.33333%; }
-  .col__5--phone {
+  .col-5--phone {
     width: 41.66667%; }
-  .col__6--phone {
+  .col-6--phone {
     width: 50%; }
-  .col__7--phone {
+  .col-7--phone {
     width: 58.33333%; }
-  .col__8--phone {
+  .col-8--phone {
     width: 66.66667%; }
-  .col__9--phone {
+  .col-9--phone {
     width: 75%; }
-  .col__10--phone {
+  .col-10--phone {
     width: 83.33333%; }
-  .col__11--phone {
+  .col-11--phone {
     width: 91.66667%; }
-  .col__12--phone {
+  .col-12--phone {
     width: 100%;
     margin-bottom: 15px; } }
 .col--offset-1 {

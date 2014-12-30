@@ -18,7 +18,7 @@
 </head>
 <body>
 <main>
-    <aside class="col__3">
+    <aside class="col-3">
         <figure>
             <img src=../www/images/mate.png>
         </figure>
@@ -39,93 +39,92 @@
         <ul class="list-unstyled inline-right">
         </ul>
 
-        <div class="aside__footer col__3">
+        <div class="aside__footer col-3">
             <a href="https://github.com/r4fx/mate" target="_blank">GitHub Page</a>
         </div>
     </aside>
 
-    <section class="col__9 col--offset-3">
+    <section class="col-9 col--offset-3">
         <h1>Grid system</h1>
 
         <h2>Basic grid</h2>
-<p>W gridzie każda kolumna sama w sobie może być Blokiem (B - Block) i Elementem (E - Element), dlatego aby uprościć i przyśpieszyć pisanie kodu
-    kolumny od razu oznaczane są jako Elementy <code>.col__x</code> (klasa z podwójnym podkreśleniem).
+<p>W Mate domyślny grid składa się z 12 kolumn,
 </p>
 
 <div class="code-example">
     <div class="row">
-        <div class="col__1">.col__1</div>
-        <div class="col__11">.col__11</div>
+        <div class="col-1">.col-1</div>
+        <div class="col-11">.col-11</div>
     </div>
     <div class="row">
-        <div class="col__2">.col__2</div>
-        <div class="col__10">.col__10</div>
+        <div class="col-2">.col-2</div>
+        <div class="col-10">.col-10</div>
     </div>
     <div class="row">
-        <div class="col__3">.col__3</div>
-        <div class="col__9">.col__9</div>
+        <div class="col-3">.col-3</div>
+        <div class="col-9">.col-9</div>
     </div>
     <div class="row">
-        <div class="col__4">.col__4</div>
-        <div class="col__8">.col__8</div>
+        <div class="col-4">.col-4</div>
+        <div class="col-8">.col-8</div>
     </div>
     <div class="row">
-        <div class="col__5">.col__5</div>
-        <div class="col__7">.col__7</div>
+        <div class="col-5">.col-5</div>
+        <div class="col-7">.col-7</div>
     </div>
     <div class="row">
-        <div class="col__6">.col__6</div>
-        <div class="col__6">.col__6</div>
+        <div class="col-6">.col-6</div>
+        <div class="col-6">.col-6</div>
     </div>
     <div class="row">
-        <div class="col__7">.col__7</div>
-        <div class="col__5">.col__5</div>
+        <div class="col-7">.col-7</div>
+        <div class="col-5">.col-5</div>
     </div>
     <div class="row">
-        <div class="col__8">.col__8</div>
-        <div class="col__4">.col__4</div>
+        <div class="col-8">.col-8</div>
+        <div class="col-4">.col-4</div>
     </div>
     <div class="row">
-        <div class="col__9">.col__9</div>
-        <div class="col__3">.col__3</div>
+        <div class="col-9">.col-9</div>
+        <div class="col-3">.col-3</div>
     </div>
     <div class="row">
-        <div class="col__10">.col__10</div>
-        <div class="col__2">.col__2</div>
+        <div class="col-10">.col-10</div>
+        <div class="col-2">.col-2</div>
     </div>
     <div class="row">
-        <div class="col__11">.col__11</div>
-        <div class="col__1">.col__1</div>
+        <div class="col-11">.col-11</div>
+        <div class="col-1">.col-1</div>
     </div>
     <div class="row">
-        <div class="col__12">.col__12</div>
+        <div class="col-12">.col-12</div>
     </div>
 
     <div class="row">
-        <div class="col__4">.col__4</div>
-        <div class="col__4">.col__4</div>
-        <div class="col__4">.col__4</div>
+        <div class="col-4">.col-4</div>
+        <div class="col-4">.col-4</div>
+        <div class="col-4">.col-4</div>
     </div>
     <div class="row">
-        <div class="col__6">.col__6</div>
-        <div class="col__6">.col__6</div>
+        <div class="col-6">.col-6</div>
+        <div class="col-6">.col-6</div>
     </div>
 </div>
 
 <p>Example:</p>
 <pre lang="html">
 &lt;div class="row">
-    &lt;div class="col__4">.col__4&lt;/div>
-    &lt;div class="col__4">.col__4&lt;/div>
-    &lt;div class="col__4">.col__4&lt;/div>
+    &lt;div class="col-4">.col-4&lt;/div>
+    &lt;div class="col-4">.col-4&lt;/div>
+    &lt;div class="col-4">.col-4&lt;/div>
 &lt;/div>
 &lt;div class="row">
-    &lt;div class="col__6">.col__6&lt;/div>
-    &lt;div class="col__6">.col__6&lt;/div>
+    &lt;div class="col-6">.col-6&lt;/div>
+    &lt;div class="col-6">.col-6&lt;/div>
     &lt;/div>
 &lt;div class="row">
-    &lt;div class="col__8">.col__8&lt;/div>
-    &lt;div class="col__4">.col__4&lt;/div>
+    &lt;div class="col-8">.col-8&lt;/div>
+    &lt;div class="col-4">.col-4&lt;/div>
 &lt;/div>
 </pre>
 
@@ -133,37 +132,66 @@
 
 <div class="code-example">
     <div class="row">
-        <div class="col__4 col--offset-4">.col__4 .col--offset-4</div>
+        <div class="col-4 col--offset-4">.col-4 .col--offset-4</div>
     </div>
     <div class="row">
-        <div class="col__4">.col__4</div>
-        <div class="col__4 col--offset-4">.col__4 .col--offset-4</div>
+        <div class="col-4">.col-4</div>
+        <div class="col-4 col--offset-4">.col-4 .col--offset-4</div>
     </div>
     <div class="row">
-        <div class="col__6 col--offset-6">.col__6 .col--offset-6</div>
+        <div class="col-6 col--offset-6">.col-6 .col--offset-6</div>
     </div>
 </div>
 
 <p>Example:</p>
 <pre lang="html">
 &lt;div class="row">
-    &lt;div class="col__4 col--offset-4">.col__4 .col--offset-4&lt;/div>
+    &lt;div class="col-4 col--offset-4">.col-4 .col--offset-4&lt;/div>
 &lt;/div>
 &lt;div class="row">
-    &lt;div class="col__4">.col__4&lt;/div>
-    &lt;div class="col__4 col--offset-4">.col__4 .col--offset-4&lt;/div>
+    &lt;div class="col-4">.col-4&lt;/div>
+    &lt;div class="col-4 col--offset-4">.col-4 .col--offset-4&lt;/div>
 &lt;/div>
 &lt;div class="row">
-    &lt;div class="col__6 col--offset-6">.col__6 .col--offset-6&lt;/div>
+    &lt;div class="col-6 col--offset-6">.col-6 .col--offset-6&lt;/div>
 &lt;/div>
 </pre>
 
+
+<h2>RWD</h2>
+
+<h4>Desktop + Phone</h4>
+
+<div class="code-example">
+    <div class="row">
+        <div class="col-4 col-12--phone">.col-4 .col-12--phone</div>
+        <div class="col-4 col-6--phone">.col-4 .col-6--phone</div>
+        <div class="col-4 col-6--phone">.col-4 .col-6--phone</div>
+    </div>
+</div>
+
+
+<h4>Desktop + Tablet</h4>
+
+<div class="code-example">
+    <div class="row">
+        <div class="col-12 col-6--tablet">.col-12 .col-6--tablet</div>
+        <div class="col-6 col-6--tablet">.col-6 .col-6--tablet</div>
+        <div class="col-6 col-12--tablet">.col-6 .col-12--tablet</div>
+    </div>
+</div>
+
+<h4>Desktop + Tablet + Phone</h4>
+
+<div class="code-example">
+    <div class="row">
+        <div class="col-12 col-6--tablet col-12--phone">.col-12 .col-6--tablet .col-12--phone</div>
+        <div class="col-6 col-6--tablet col-12--phone">.col-6 .col-6--tablet .col-12--phone</div>
+        <div class="col-6 col-12--tablet col-12--phone">.col-6 .col-12--tablet .col-12--phone</div>
+    </div>
+</div>
+
 <h2>Grid helpers</h2>
-
-<h3>Mobile</h3>
-
-<h4>Phone</h4>
-<h4>Tablet</h4>
 
     </section>
 </main>

@@ -136,7 +136,7 @@ p code{
 .code-example{
   margin: $grid__col--gutter*2 $grid__col--gutter;
 
-  [class^="col__"] {
+  [class^="col-"] {
     background-color: $block__color--first;
     padding: 15px;
     border: 1px solid #fff;

@@ -4,8 +4,8 @@
 var gulp = require('gulp');
 var assemble = require('gulp-assemble');
 var todo = require('gulp-todo');
-var sass = require('gulp-sass');
-//var sass = require('gulp-ruby-sass');
+//var sass = require('gulp-sass');
+var sass = require('gulp-ruby-sass');
 //var concat = require('gulp-concat');
 //var uglify = require('gulp-uglify');
 
