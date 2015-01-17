@@ -217,7 +217,7 @@ body {
 hr {
   border: 0;
   height: 1px;
-  background-color: #4BBE6B;
+  background-color: #4DB069;
   margin: 15px auto; }
   hr.mini {
     width: 150px;
@@ -739,7 +739,7 @@ dl {
     margin-bottom: 7px; }
 
 li > hr, dt > hr {
-  background-color: #4BBE6B; }
+  background-color: #4DB069; }
 
 form .row,
 .form .row {

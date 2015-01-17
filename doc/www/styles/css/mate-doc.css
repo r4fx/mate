@@ -217,7 +217,7 @@ body {
 hr {
   border: 0;
   height: 1px;
-  background-color: #4BBE6B;
+  background-color: #4DB069;
   margin: 15px auto; }
   hr.mini {
     width: 150px;
@@ -739,7 +739,7 @@ dl {
     margin-bottom: 7px; }
 
 li > hr, dt > hr {
-  background-color: #4BBE6B; }
+  background-color: #4DB069; }
 
 form .row,
 .form .row {
@@ -1041,7 +1041,7 @@ main > section[class*="col"] {
   main > section[class*="col"] h1 {
     margin-top: 0;
     text-transform: uppercase;
-    color: #4BBE6B;
+    color: #4DB069;
     font-size: 35px;
     font-size: 3.5rem; }
 main > aside[class*="col"] {
@@ -1049,7 +1049,7 @@ main > aside[class*="col"] {
   left: 0;
   top: 0;
   bottom: 0;
-  background-color: #4BBE6B;
+  background-color: #4DB069;
   padding: 30px;
   color: #fff; }
   main > aside[class*="col"] figure {
@@ -1070,13 +1070,13 @@ main > aside[class*="col"] {
       -webkit-transition: background-color 0.4s ease 0s, color 0.4s ease 0s;
       transition: background-color 0.4s ease 0s, color 0.4s ease 0s; }
       main > aside[class*="col"] ul a.act, main > aside[class*="col"] ul a:hover {
-        background-color: #369651; }
+        background-color: #3a8550; }
   main > aside[class*="col"] .aside__footer {
     position: absolute;
     width: 100%;
     bottom: 0;
     left: 0;
-    background-color: #4BBE6B;
+    background-color: #4DB069;
     line-height: 30px;
     color: #fff;
     padding-top: 20px;
@@ -1092,7 +1092,7 @@ main > aside[class*="col"] {
     color: #DBC37D; }
 
 .tags {
-  border-top: 1px solid #4BBE6B;
+  border-top: 1px solid #4DB069;
   margin-top: 50px;
   padding-top: 15px;
   padding-left: 0; }
@@ -1101,7 +1101,7 @@ main > aside[class*="col"] {
     list-style-type: none;
     margin: 0 5px 0 0;
     padding: 2px 10px;
-    background-color: #4BBE6B;
+    background-color: #4DB069;
     color: #fff;
     font-size: 14px;
     font-size: 1.4rem; }
