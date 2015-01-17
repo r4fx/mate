@@ -8,3 +8,5 @@ Mate is a simple front end framework based on BEM methodology
 * CSS class namespace based on [BEM methodology](http://www.smashingmagazine.com/2012/04/16/a-new-front-end-methodology-bem/)
 * SASS
 * RWD
+* Web font icons
+* CSS & SCSS helpers library
