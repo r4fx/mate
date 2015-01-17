@@ -21,7 +21,7 @@ body {
   padding: 0 $grid__document--gutter;
   max-width: $page__width--maxsize;
 
-  @include breakpoint(mobile) {
+  @include respond-to(mobile) {
     width: 100%;
   }
 }

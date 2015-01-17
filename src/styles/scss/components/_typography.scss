@@ -32,7 +32,7 @@
     @include font-size($i);
 
     // Half size text for phone
-    @include breakpoint(phone) {
+    @include respond-to(phone) {
       font-size: ($i /1px /10 /2)+em;
     }
 
@@ -62,7 +62,7 @@ h1 {
   font-weight: normal;
 
   // Half size for phone
-  @include breakpoint(phone) {
+  @include respond-to(phone) {
     @include font-size($text__size--xxl /2 /10);
   }
 }

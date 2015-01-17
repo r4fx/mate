@@ -3,7 +3,7 @@
 // http://blog.uxpin.com/4596/responsive-web-design-cheat-sheet/
 // and Chrome Dev Tools devices
 // ============================================================
-@mixin breakpoint($point) {
+@mixin respond-to($point) {
 
   // DESKTOPS, LAPTOPS
   @if $point == desktop {
