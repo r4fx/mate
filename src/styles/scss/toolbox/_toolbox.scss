@@ -41,14 +41,12 @@
 @mixin centerer($axis: auto) {
   @if $axis == x {
     left: 50%;
-    top: auto;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
   }
 
   @else if $axis == y {
     top: 50%;
-    left: auto;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
   }
