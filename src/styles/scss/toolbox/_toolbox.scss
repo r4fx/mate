@@ -34,12 +34,27 @@
   $opacity-ie: $opacity * 100;
 }
 
-@mixin centerer {
+// Examples:
+// @include centerer();
+// @include centerer(x);
+// @include centerer(y);
+@mixin centerer($axis: auto) {
+  @if $axis == x {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  } @else if $axis == y {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  } @else {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50% -50%);
+  }
+
   position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
 }
 
 @mixin coverer {

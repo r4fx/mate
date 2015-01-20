@@ -900,11 +900,11 @@ textarea {
     border-width: 5px;
     border-style: solid; }
     .btn--circle span {
-      position: absolute;
       top: 50%;
       left: 50%;
       -webkit-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%); }
+      transform: translate(-50% -50%);
+      position: absolute; }
   .btn--arrow-r, .btn--arrow-l {
     position: relative; }
     .btn--arrow-r:after, .btn--arrow-r:before, .btn--arrow-l:after, .btn--arrow-l:before {
