@@ -23,7 +23,8 @@
 }
 
 %word-wrap {
-  word-break: break-word;
+  word-wrap: break-word; // Old method, http://caniuse.com/#feat=wordwrap
+  overflow-wrap: break-word;
 }
 
 // ============================================================
