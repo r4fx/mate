@@ -1,0 +1,11 @@
+hr {
+  border: 0;
+  height: 1px;
+  background-color: $color__base--second;
+  margin: 15px auto;
+
+  &.mini {
+    width: 150px;
+    margin: 50px auto;
+  }
+}

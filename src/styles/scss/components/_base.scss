@@ -1,0 +1,47 @@
+// ============================================================
+// BASE
+// ============================================================
+
+*, :before, :after {
+  @extend %box-sizing;
+}
+
+html {
+  font-size: 62.5%; /* Sets up the root font size to 10px */
+}
+
+body {
+  color: $text__color--first;
+  font-family: $font__base--light;
+  @include font-size($text__size--m);
+}
+
+a {
+  color: $text__color--link;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus {
+
+  }
+
+  &:active {
+
+  }
+
+  &:visited {
+
+  }
+}
+
+.box{
+  margin: 0 auto;
+  padding: 0 $grid__document--gutter;
+  max-width: $page__width--maxsize;
+
+  @include respond-to(mobile) {
+    width: 100%;
+  }
+}

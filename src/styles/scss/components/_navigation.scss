@@ -2,26 +2,6 @@
 // NAVIGATIONS
 // ============================================================
 
-a {
-  color: $text__color--link;
-
-  &:hover {
-    text-decoration: none;
-  }
-
-  &:focus {
-
-  }
-
-  &:active {
-
-  }
-
-  &:visited {
-
-  }
-}
-
 nav {
   &.nav--divided {
     a {

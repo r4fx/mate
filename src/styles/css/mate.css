@@ -10,38 +10,6 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-.inline-left {
-  text-align: left; }
-
-.inline-center {
-  text-align: center; }
-
-.inline-right {
-  text-align: right; }
-
-.inline-justify {
-  text-align: justify; }
-
-.block-center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto; }
-
-.float-right {
-  float: right; }
-
-.float-left {
-  float: left; }
-
-.margin-top-50 {
-  margin-top: 50px; }
-
-.no-margin {
-  margin: 0; }
-
-.img-circle {
-  border-radius: 50%; }
-
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%; }
@@ -206,6 +174,11 @@ body {
   font-size: 16px;
   font-size: 1.6rem; }
 
+a {
+  color: #249cff; }
+  a:hover {
+    text-decoration: none; }
+
 .box {
   margin: 0 auto;
   padding: 0 15px;
@@ -213,38 +186,6 @@ body {
   @media (max-width: 1023px) {
     .box {
       width: 100%; } }
-
-hr {
-  border: 0;
-  height: 1px;
-  background-color: #4DB069;
-  margin: 15px auto; }
-  hr.mini {
-    width: 150px;
-    margin: 50px auto; }
-
-a {
-  color: #249cff; }
-  a:hover {
-    text-decoration: none; }
-
-nav a {
-  padding: 5px; }
-nav ul {
-  padding: 0;
-  margin: 0; }
-  nav ul li {
-    display: inline-block;
-    margin: 0;
-    list-style-type: none; }
-    nav ul li:first-child:before {
-      content: none; }
-    nav ul li:before {
-      content: '';
-      border-left: 1px solid #3c3c3c;
-      margin: 0 5px;
-      font-size: 70%;
-      vertical-align: middle; }
 
 /* ============================================================
 * BUTTONS
@@ -672,10 +613,14 @@ textarea {
 .icon--mark-github:before {
   content: "\e605"; }
 
-a {
-  color: #249cff; }
-  a:hover {
-    text-decoration: none; }
+hr {
+  border: 0;
+  height: 1px;
+  background-color: #4DB069;
+  margin: 15px auto; }
+  hr.mini {
+    width: 150px;
+    margin: 50px auto; }
 
 nav.nav--divided a {
   padding: 5px; }
