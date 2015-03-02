@@ -2,24 +2,7 @@
 // NAVIGATIONS
 // ============================================================
 
-nav {
-  &.-inline {
-    a {
-      padding: 5px;
-    }
-
-    ul {
-      padding: 0;
-      margin: 0;
-
-      li {
-        display: inline-block;
-        margin: 0;
-        list-style-type: none;
-      }
-    }
-  }
-
+ul {
   &.-divided {
     a {
       padding: 5px;

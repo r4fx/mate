@@ -622,31 +622,22 @@ hr {
     width: 150px;
     margin: 50px auto; }
 
-nav.-inline a {
+ul.-divided a {
   padding: 5px; }
-nav.-inline ul {
+ul.-divided ul {
   padding: 0;
   margin: 0; }
-  nav.-inline ul li {
+  ul.-divided ul li {
     display: inline-block;
     margin: 0;
     list-style-type: none; }
-nav.-divided a {
-  padding: 5px; }
-nav.-divided ul {
-  padding: 0;
-  margin: 0; }
-  nav.-divided ul li {
-    display: inline-block;
-    margin: 0;
-    list-style-type: none; }
-    nav.-divided ul li:before {
+    ul.-divided ul li:before {
       content: '';
       border-left: 1px solid #3c3c3c;
       margin: 0 5px;
       font-size: 70%;
       vertical-align: middle; }
-    nav.-divided ul li:first-child:before {
+    ul.-divided ul li:first-child:before {
       content: none; }
 
 /*============================================================
@@ -981,8 +972,10 @@ ul, ol {
     list-style-type: none;
     margin-left: 0;
     padding-left: 0; }
-  ul.-inline li, ol.-inline li {
-    display: inline; }
+  ul.-inline, ol.-inline {
+    padding: 0; }
+    ul.-inline li, ol.-inline li {
+      display: inline; }
   ul li, ol li {
     margin-bottom: 7px; }
 
