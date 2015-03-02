@@ -11,10 +11,8 @@
       font-family: quote($faceFile);
       font-style: normal;
       font-weight: normal;
-      src:
-        //url($dir + $faceFile + ".woff2") format('woff2'), // FUTURE USE
-      url($dir + $faceFile + ".woff") format('woff'),
-        url($dir + $faceFile + ".svg#" + $faceFile + "") format('svg');
+      src: //url($dir + $faceFile + ".woff2") format('woff2'), // FUTURE USE url($dir + $faceFile + ".woff") format('woff'),
+      url($dir + $faceFile + ".svg#" + $faceFile + "") format('svg');
     }
   }
 }
@@ -106,23 +104,21 @@ h6 {
 
 // TYPOGRAPHY: LISTS
 // ============================================================
-.list {
 
-  &-unstyled {
+ul, ol, {
+  margin: 15px 0;
+
+  &.-unstyled {
     list-style-type: none;
     margin-left: 0;
     padding-left: 0;
   }
 
-  &-inline{
-    li{
+  &.-inline {
+    li {
       display: inline;
     }
   }
-}
-
-ul, ol, {
-  margin: 15px 0;
 
   li {
     margin-bottom: 7px;
@@ -137,8 +133,8 @@ dl {
   }
 }
 
-li, dt{
-  >hr{
+li, dt {
+  > hr {
     background-color: $color__base--second;
   }
 }
