@@ -5,6 +5,12 @@
 * Free to use under the MIT license.
 * http://www.opensource.org/licenses/mit-license.php
 */
+.grid:before, .row:before, header .col:before, .grid:after, .row:after, header .col:after {
+  content: "";
+  display: table; }
+.grid:after, .row:after, header .col:after {
+  clear: both; }
+
 *, :before, :after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -412,11 +418,6 @@ textarea {
   margin: 0 auto; }
   .grid--add-margin {
     margin-bottom: 15px; }
-  .grid:before, .grid:after {
-    content: "";
-    display: table; }
-  .grid:after {
-    clear: both; }
 
 [class^="col-"] {
   float: left;
@@ -547,11 +548,6 @@ textarea {
           .row .row.row--dbl-margin > .col {
             margin-top: 15px;
             margin-bottom: 15px; } }
-  .row:before, .row:after {
-    content: "";
-    display: table; }
-  .row:after {
-    clear: both; }
 
 @font-face {
   font-family: 'icomoon';
@@ -1006,11 +1002,6 @@ header {
   header .col {
     padding-top: 15px;
     padding-bottom: 15px; }
-    header .col:before, header .col:after {
-      content: "";
-      display: table; }
-    header .col:after {
-      clear: both; }
 
 main > section[class*="col"] {
   padding: 30px; }

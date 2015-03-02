@@ -22,7 +22,7 @@ header{
   .col{
     padding-top: 15px;
     padding-bottom: 15px;
-    @include clearfix;
+    @extend %clearfix;
   }
 }
 

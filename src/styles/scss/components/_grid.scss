@@ -83,7 +83,7 @@
     margin-bottom: $grid__col--gutter;
   }
 
-  @include clearfix;
+  @extend %clearfix;
 }
 
 // COLUMNS
@@ -157,5 +157,5 @@
     }
   }
 
-  @include clearfix;
+  @extend %clearfix;
 }
