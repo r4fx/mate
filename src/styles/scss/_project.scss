@@ -3,9 +3,18 @@
 // USE THIS FILE FREE FOR YOUR NEEDS
 // ============================================================
 
+// COMMON
+// ============================================================
+header > nav,
+section > div,
+footer > div {
+  margin: 0 auto;
+  width: $page__width--maxsize;
+}
+
 // HEADER
 // ============================================================
-header{
+header {
 
 }
 

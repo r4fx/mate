@@ -987,6 +987,12 @@ dl {
 li > hr, dt > hr {
   background-color: #4DB069; }
 
+header > nav,
+section > div,
+footer > div {
+  margin: 0 auto;
+  width: 1024px; }
+
 a[href^="https://github.com"]:before {
   content: "\e605";
   font-family: 'icomoon';
