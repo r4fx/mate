@@ -177,8 +177,8 @@ html {
 body {
   color: #3c3c3c;
   font-family: "lato-light", Arial, sans-serif;
-  font-size: 16px;
-  font-size: 1.6rem; }
+  font-size: 14px;
+  font-size: 1.4rem; }
 
 a {
   color: #249cff; }
@@ -942,8 +942,8 @@ h3 {
   line-height: 1; }
 
 h4 {
-  font-size: 16px;
-  font-size: 1.6rem;
+  font-size: 14px;
+  font-size: 1.4rem;
   font-family: "lato-regular", Arial, sans-serif;
   margin: 20px 0;
   font-weight: normal;

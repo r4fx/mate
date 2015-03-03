@@ -25,7 +25,7 @@
 // examples:
 // <p class="text-size--24">Lorem ipsum</p>
 // ============================================================
-@for $i from $text__size--xxl through $text__size--s {
+@for $i from $text__size--xxl through $text__size--sm {
   .text-size--#{strip-units($i)} {
     @include font-size($i);
 
@@ -34,7 +34,7 @@
       font-size: ($i /1px /10 /2)+em;
     }
 
-    @if $i > $text__size--l {
+    @if $i > $text__size--lg {
       font-family: $font__base--light;
     }
   }
@@ -74,30 +74,30 @@ h2 {
 }
 
 h3 {
-  @include font-size($text__size--l);
+  @include font-size($text__size--lg);
   font-family: $font__base--regular;
-  margin: $text__size--l 0;
+  margin: $text__size--lg 0;
   font-weight: normal;
   line-height: 1;
 }
 
 h4 {
-  @include font-size($text__size--m);
+  @include font-size($text__size--sm);
   font-family: $font__base--regular;
-  margin: $text__size--l 0;
+  margin: $text__size--lg 0;
   font-weight: normal;
   line-height: 1;
 }
 
 h5 {
-  @include font-size($text__size--s);
+  @include font-size($text__size--sm);
   font-family: $font__base--regular;
   margin: 18px 0;
   font-weight: normal;
 }
 
 h6 {
-  @include font-size($text__size--s);
+  @include font-size($text__size--sm);
   margin: 18px 0;
   font-weight: normal;
 }
