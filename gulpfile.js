@@ -1,11 +1,13 @@
-// Faqs:
+// FAQ:
 // https://github.com/gulpjs/gulp/blob/master/docs/recipes/running-tasks-in-series.md
 
 var gulp = require('gulp');
-var assemble = require('gulp-assemble');
+var assemble = require('assemble');
+var gulpAssemble = require('gulp-assemble');
+var extname = require('gulp-extname');
 var todo = require('gulp-todo');
-//var sass = require('gulp-sass');
-var sass = require('gulp-ruby-sass');
+var sass = require('gulp-sass');
+var sassRuby = require('gulp-ruby-sass');
 //var concat = require('gulp-concat');
 //var uglify = require('gulp-uglify');
 
@@ -14,13 +16,13 @@ var sass = require('gulp-ruby-sass');
  / ===========================================*/
 var paths = {
     sources: {
-        docScripts: 'doc/www/js/**/*.js',
-        docStylesDir: 'doc/www/styles/css',
-        docStylesFiles: 'doc/www/styles/css/*.css',
-        docPages: 'doc/src/pages/**/*.hbs'
+        scripts: 'doc/www/js/**/*.js',
+        stylesDir: 'doc/www/styles/css',
+        stylesFiles: 'doc/www/styles/css/*.css',
+        pages: 'doc/src/pages/**/*.hbs'
     },
     build: {
-        docStylesDir: 'doc/www/styles/css',
+        stylesDir: 'doc/www/styles/css',
         www: 'doc/www/'
     }
 };
@@ -40,14 +42,15 @@ function transform (filePath, file) {
 // Assemble Mate documentation page
 gulp.task('assemble', function () {
     var options = {
-        data: 'doc/src/data/*.{json,yml}',
-        layouts: 'doc/src/layouts/**/*.hbs',
-        layout: 'default',
-        partials: 'doc/src/partials/**/*.hbs'
+        layout: 'default.hbs',
+        layoutdir: 'doc/src/layouts',
+        partials: 'doc/src/partials/**/*.hbs',
+        data: 'doc/src/data/*.{json,yml}'
     };
 
-    gulp.src(paths.sources.docPages)
-        .pipe(assemble(options))
+    gulp.src(paths.sources.pages)
+        .pipe(gulpAssemble(assemble, options))
+        .pipe(extname())
         .pipe(gulp.dest(paths.build.www));
 });
 
@@ -55,12 +58,21 @@ gulp.task('assemble', function () {
 gulp.task('sass', function () {
     gulp.src('doc/www/styles/scss/*.scss')
         .pipe(sass())
-        .pipe(gulp.dest(paths.build.docStylesDir));
+        .pipe(gulp.dest(paths.build.stylesDir));
+});
+
+// sass-ruby
+gulp.task('sassRuby', function () {
+    return sass('doc/www/styles/scss/*.scss')
+    .on('error', function (err) {
+        console.error('Error!', err.message);
+    })
+    .pipe(gulp.dest(paths.build.stylesDir));
 });
 
 // Concat & uglify js files
 gulp.task('scripts', function () {
-    return gulp.src([paths.sources.docScripts])
+    return gulp.src([paths.sources.scripts])
         .pipe(concat('all.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest(paths.build.www));
@@ -69,8 +81,8 @@ gulp.task('scripts', function () {
 // Copy files
 //gulp.task('copy', function () {
 //    // Copy css files compiled by IDE
-//    gulp.src([paths.sources.docStylesFiles])
-//        .pipe(gulp.dest(paths.build.docStylesDir));
+//    gulp.src([paths.sources.stylesFiles])
+//        .pipe(gulp.dest(paths.build.stylesDir));
 //});
 
 // Generate todo list (mate/src/TODO.md)
@@ -100,7 +112,7 @@ gulp.task('watch', function () {
 });
 
 // Default task
-gulp.task('default', ['assemble', 'sass', 'watch'], function () {
+gulp.task('default', ['assemble', 'sassRuby', 'watch'], function () {
     // Callback
 
     // Watch .scss files

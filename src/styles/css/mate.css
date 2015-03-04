@@ -922,8 +922,8 @@ h1 {
   font-weight: normal; }
   @media (max-width: 719px) {
     h1 {
-      font-size: 2.1px;
-      font-size: 0.21rem; } }
+      font-size: 21px;
+      font-size: 2.1rem; } }
 
 h2 {
   font-size: 32px;
