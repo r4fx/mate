@@ -1,12 +1,12 @@
 # Mate
 
-Mate is a simple front end framework based on BEM methodology
+Mate is a simple and lightweight front end framework
 
 ## Some of base features
 
-* 12 columns grid system
-* CSS class namespace based on [BEM methodology](http://www.smashingmagazine.com/2012/04/16/a-new-front-end-methodology-bem/)
-* SASS
+* Grid system, you can define number of columns (default is 12)
 * RWD
+* SASS
+* Namespace for CSS classes and SASS variables have been inpired by [RSCSS](https://github.com/rstacruz/rscss) and [BEM methodology](http://www.smashingmagazine.com/2012/04/16/a-new-front-end-methodology-bem/)
+* CSS & SCSS helpers + toolbox library
 * Web font icons
-* CSS & SCSS helpers library

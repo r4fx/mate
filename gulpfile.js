@@ -41,27 +41,29 @@ function transform (filePath, file) {
 
 // Assemble Mate documentation page
 gulp.task('assemble', function () {
-    var options = {
-        layout: 'default.hbs',
-        layoutdir: 'doc/src/layouts',
-        partials: 'doc/src/partials/**/*.hbs',
-        data: 'doc/src/data/*.{json,yml}'
-    };
+
+    // Setup items on the assemble object
+    assemble.data(['doc/src/data/*.{json,yml}']);
+    assemble.layouts(['doc/src/layouts/**/*.hbs']);
+    assemble.partials(['doc/src/partials/**/*.hbs']);
+    assemble.option({
+        layout: 'default'
+    });
 
     gulp.src(paths.sources.pages)
-        .pipe(gulpAssemble(assemble, options))
+        .pipe(gulpAssemble(assemble))
         .pipe(extname())
         .pipe(gulp.dest(paths.build.www));
 });
 
 // Compile SASS files
-gulp.task('sass', function () {
-    gulp.src('doc/www/styles/scss/*.scss')
-        .pipe(sass())
-        .pipe(gulp.dest(paths.build.stylesDir));
-});
+//gulp.task('sass', function () {
+//    gulp.src('doc/www/styles/scss/*.scss')
+//        .pipe(sass())
+//        .pipe(gulp.dest(paths.build.stylesDir));
+//});
 
-// sass-ruby
+// Compile SASS files by sass-ruby
 gulp.task('sassRuby', function () {
     return sass('doc/www/styles/scss/*.scss')
     .on('error', function (err) {
@@ -85,7 +87,7 @@ gulp.task('scripts', function () {
 //        .pipe(gulp.dest(paths.build.stylesDir));
 //});
 
-// Generate todo list (mate/src/TODO.md)
+// Generate to-do list (mate/src/TODO.md)
 gulp.task('todo', function () {
     gulp.src([
         'src/js/**/*.js',
