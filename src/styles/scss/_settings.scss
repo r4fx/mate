@@ -94,6 +94,6 @@ $grid__document--gutter: 15px;
 
 // TRANSITIONS
 // ============================================================
-$trans__base--duration: 0.4s !default;
-$trans__base--timing: ease !default;
+$trans__base--duration: 300ms !default;
+$trans__base--timing: ease-in-out !default;
 $trans__base--delay: 0s !default;
