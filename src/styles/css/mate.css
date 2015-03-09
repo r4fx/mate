@@ -964,13 +964,13 @@ h6 {
 
 ul, ol {
   margin: 15px 0; }
-  ul.-unstyled, ol.-unstyled {
+  ul.list-unstyled, ol.list-unstyled {
     list-style-type: none;
     margin-left: 0;
     padding-left: 0; }
-  ul.-inline, ol.-inline {
+  ul.list-inline, ol.list-inline {
     padding: 0; }
-    ul.-inline li, ol.-inline li {
+    ul.list-inline li, ol.list-inline li {
       display: inline; }
   ul li, ol li {
     margin-bottom: 7px; }

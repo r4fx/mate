@@ -108,13 +108,13 @@ h6 {
 ul, ol, {
   margin: 15px 0;
 
-  &.-unstyled {
+  &.list-unstyled {
     list-style-type: none;
     margin-left: 0;
     padding-left: 0;
   }
 
-  &.-inline {
+  &.list-inline {
     padding: 0;
 
     li {
