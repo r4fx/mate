@@ -69,21 +69,21 @@ Examples:
     }
   }
 
-  // SMARTPHONES
+    // SMARTPHONES
   @else if $point == phone {
     @media (max-width: $breakPoint__phone - 1) {
       @content;
     }
   }
 
-  // TABLETS
+    // TABLETS
   @else if $point == tablet {
     @media (min-width: $breakPoint__phone) and (max-width: $breakPoint__desktop - 1) {
       @content;
     }
   }
 
-  // DESKTOPS & LAPTOPS
+    // DESKTOPS & LAPTOPS
   @else if $point == desktop {
 
     @if $modifier == null {
@@ -92,7 +92,7 @@ Examples:
       }
     }
 
-    // LARGE SCREENS
+      // LARGE SCREENS
     @else if $modifier == xl {
       @media (min-width: $breakPoint__desktop--xl + 1) {
         @content;
@@ -212,7 +212,8 @@ TRANSITIONS
   $properties: ();
 
   @each $property in $list {
-    $transition: unquote($property $duration $timing $delay);
+    //$transition: unquote($property $duration $timing $delay); //Old sass 3.4.9
+    $transition: $property $duration $timing $delay;
     $properties: append($properties, $transition, comma);
   }
 
