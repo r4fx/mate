@@ -234,8 +234,8 @@ html {
 body {
   color: #3c3c3c;
   font-family: "lato-light", Arial, sans-serif;
-  font-size: 14px;
-  font-size: 1.4rem; }
+  font-size: 16px;
+  font-size: 1.6rem; }
 
 a {
   color: #249cff; }
@@ -606,6 +606,38 @@ textarea {
             margin-top: 15px;
             margin-bottom: 15px; } }
 
+.inline-left {
+  text-align: left; }
+
+.inline-center {
+  text-align: center; }
+
+.inline-right {
+  text-align: right; }
+
+.inline-justify {
+  text-align: justify; }
+
+.block-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.float-right {
+  float: right; }
+
+.float-left {
+  float: left; }
+
+.margin-top-50 {
+  margin-top: 50px; }
+
+.no-margin {
+  margin: 0; }
+
+.img-circle {
+  border-radius: 50%; }
+
 @font-face {
   font-family: 'icomoon';
   src: url("../../fonts/icomoon/icomoon.woff") format("woff"), url("../../fonts/icomoon/icomoon.svg#icomoon") format("svg");
@@ -969,6 +1001,9 @@ p {
   margin: 15px 0; }
   p:last-child {
     margin-bottom: 0; }
+
+strong {
+  font-family: "lato-bold", Arial, sans-serif; }
 
 h1 {
   font-size: 42px;

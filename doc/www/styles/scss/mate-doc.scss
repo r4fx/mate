@@ -27,7 +27,7 @@ header{
 }
 
 main {
-  > section[class*="col"]{
+  > section[class*="col-"]{
     padding: $grid__row--gutter*2;
 
     h1{
@@ -38,7 +38,7 @@ main {
     }
   }
 
-  > aside[class*="col"] {
+  > aside[class*="col-"] {
     position: fixed;
     left: 0;
     top: 0;
@@ -101,7 +101,6 @@ main {
       span {
         vertical-align: middle;
         @include font-size(30px);
-        color: #DBC37D;
       }
     }
   }

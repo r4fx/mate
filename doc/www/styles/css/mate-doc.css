@@ -234,8 +234,8 @@ html {
 body {
   color: #3c3c3c;
   font-family: "lato-light", Arial, sans-serif;
-  font-size: 14px;
-  font-size: 1.4rem; }
+  font-size: 16px;
+  font-size: 1.6rem; }
 
 a {
   color: #249cff; }
@@ -606,6 +606,38 @@ textarea {
             margin-top: 15px;
             margin-bottom: 15px; } }
 
+.inline-left {
+  text-align: left; }
+
+.inline-center {
+  text-align: center; }
+
+.inline-right {
+  text-align: right; }
+
+.inline-justify {
+  text-align: justify; }
+
+.block-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.float-right {
+  float: right; }
+
+.float-left {
+  float: left; }
+
+.margin-top-50 {
+  margin-top: 50px; }
+
+.no-margin {
+  margin: 0; }
+
+.img-circle {
+  border-radius: 50%; }
+
 @font-face {
   font-family: 'icomoon';
   src: url("../../fonts/icomoon/icomoon.woff") format("woff"), url("../../fonts/icomoon/icomoon.svg#icomoon") format("svg");
@@ -970,6 +1002,9 @@ p {
   p:last-child {
     margin-bottom: 0; }
 
+strong {
+  font-family: "lato-bold", Arial, sans-serif; }
+
 h1 {
   font-size: 42px;
   font-size: 4.2rem;
@@ -1060,15 +1095,15 @@ header {
     padding-top: 15px;
     padding-bottom: 15px; }
 
-main > section[class*="col"] {
+main > section[class*="col-"] {
   padding: 30px; }
-  main > section[class*="col"] h1 {
+  main > section[class*="col-"] h1 {
     margin-top: 0;
     text-transform: uppercase;
     color: #4DB069;
     font-size: 35px;
     font-size: 3.5rem; }
-main > aside[class*="col"] {
+main > aside[class*="col-"] {
   position: fixed;
   left: 0;
   top: 0;
@@ -1076,26 +1111,26 @@ main > aside[class*="col"] {
   background-color: #4DB069;
   padding: 30px;
   color: #fff; }
-  main > aside[class*="col"] figure {
+  main > aside[class*="col-"] figure {
     text-align: right; }
-  main > aside[class*="col"] a {
+  main > aside[class*="col-"] a {
     color: #fff;
     text-decoration: none; }
-  main > aside[class*="col"] ul {
+  main > aside[class*="col-"] ul {
     font-size: 15px;
     font-size: 1.5rem; }
-    main > aside[class*="col"] ul li {
+    main > aside[class*="col-"] ul li {
       margin-bottom: 0; }
-      main > aside[class*="col"] ul li > hr {
+      main > aside[class*="col-"] ul li > hr {
         background-color: white; }
-    main > aside[class*="col"] ul a {
+    main > aside[class*="col-"] ul a {
       display: block;
       padding: 5px 10px;
       -webkit-transition: background-color 300ms ease-in-out 0s, color 300ms ease-in-out 0s;
       transition: background-color 300ms ease-in-out 0s, color 300ms ease-in-out 0s; }
-      main > aside[class*="col"] ul a.act, main > aside[class*="col"] ul a:hover {
+      main > aside[class*="col-"] ul a.act, main > aside[class*="col-"] ul a:hover {
         background-color: #3a8550; }
-  main > aside[class*="col"] .aside__footer {
+  main > aside[class*="col-"] .aside__footer {
     position: absolute;
     width: 100%;
     bottom: 0;
@@ -1106,14 +1141,13 @@ main > aside[class*="col"] {
     padding-top: 20px;
     padding-bottom: 20px;
     text-align: center; }
-  main > aside[class*="col"] figure img {
+  main > aside[class*="col-"] figure img {
     display: inline-block;
     vertical-align: middle; }
-  main > aside[class*="col"] figure span {
+  main > aside[class*="col-"] figure span {
     vertical-align: middle;
     font-size: 30px;
-    font-size: 3rem;
-    color: #DBC37D; }
+    font-size: 3rem; }
 
 .tags {
   border-top: 1px solid #4DB069;
