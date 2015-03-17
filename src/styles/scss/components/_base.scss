@@ -35,13 +35,3 @@ a {
 
   }
 }
-
-.box{
-  margin: 0 auto;
-  padding: 0 $grid__document--gutter;
-  max-width: $page__width--maxsize;
-
-  @include respond-to(mobile) {
-    width: 100%;
-  }
-}

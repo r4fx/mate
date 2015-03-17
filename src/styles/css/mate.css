@@ -242,50 +242,13 @@ a {
   a:hover {
     text-decoration: none; }
 
-.box {
-  margin: 0 auto;
-  padding: 0 15px;
-  max-width: 1024px; }
-  @media (max-width: 1023px) {
-    .box {
-      width: 100%; } }
-
 /* ============================================================
 * BUTTONS
 * ============================================================*/
-.btn, .btn--sm {
-  line-height: 30px;
-  padding: 0 15px;
-  font-size: 14px;
-  font-size: 1.4rem; }
-
-.btn--md {
-  line-height: 35px;
-  padding: 0 15px;
-  font-size: 16px;
-  font-size: 1.6rem; }
-
-.btn--lg {
-  line-height: 35px;
-  padding: 0 20px;
-  font-size: 16px;
-  font-size: 1.6rem; }
-
-.btn--xl {
-  line-height: 50px;
-  padding: 0 20px;
-  font-size: 32px;
-  font-size: 3.2rem; }
-
-.btn--xxl {
-  line-height: 50px;
-  padding: 0 25px;
-  font-size: 42px;
-  font-size: 4.2rem; }
-
 .btn {
   font-family: "lato-regular", Arial, sans-serif;
   color: #fff;
+  line-height: 1.5;
   background-color: #4DB069;
   text-decoration: none;
   border-radius: 5px;
@@ -296,11 +259,31 @@ a {
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease; }
 
-.btn--xxl.btn--circle {
-  width: 140px;
-  height: 140px;
-  line-height: 22px;
-  text-transform: uppercase; }
+.btn--sm, .btn {
+  padding: 2px 10px;
+  font-size: 14px;
+  font-size: 1.4rem; }
+.btn--md {
+  padding: 5px 20px;
+  font-size: 16px;
+  font-size: 1.6rem; }
+.btn--lg {
+  padding: 10px 25px;
+  font-size: 20px;
+  font-size: 2rem; }
+.btn--xl {
+  padding: 10px 25px;
+  font-size: 20px;
+  font-size: 2rem; }
+.btn--xxl {
+  padding: 15px 30px;
+  font-size: 32px;
+  font-size: 3.2rem; }
+  .btn--xxl.btn--circle {
+    width: 140px;
+    height: 140px;
+    line-height: 22px;
+    text-transform: uppercase; }
 
 .btn--color-first {
   color: #fff;
@@ -866,11 +849,5 @@ dl {
 
 li > hr, dt > hr {
   background-color: #4DB069; }
-
-header > nav,
-section > div,
-footer > div {
-  margin: 0 auto;
-  width: 1024px; }
 
 /*# sourceMappingURL=mate.css.map */

@@ -1,45 +1,15 @@
 /* ============================================================
 * BUTTONS
 * ============================================================*/
+
 // TODO: calc line height, http://www.mathayward.com/modular-css-with-sass-and-bem/
-
-// PLACEHOLDERS: SIZES
-// ============================================================
-%btn-size-sm {
-  line-height: 30px;
-  padding: 0 15px;
-  @include font-size($text__size--sm);
-}
-
-%btn-size-md {
-  line-height: 35px;
-  padding: 0 15px;
-  @include font-size($text__size--md);
-}
-
-%btn-size-lg {
-  line-height: 35px;
-  padding: 0 20px;
-  @include font-size($text__size--md);
-}
-
-%btn-size-xl {
-  line-height: 50px;
-  padding: 0 20px;
-  @include font-size($text__size--xl);
-}
-
-%btn-size-xxl {
-  line-height: 50px;
-  padding: 0 25px;
-  @include font-size($text__size--xxl);
-}
 
 // BUTTONS: BASE
 // ============================================================
 .btn {
   font-family: $font__base--regular;
   color: #fff;
+  line-height: 1.5;
   background-color: $color__base--second;
   text-decoration: none;
   border-radius: $border__radius;
@@ -48,30 +18,35 @@
   vertical-align: middle;
   cursor: pointer;
   @include transition-free(0.4s ease);
-  @extend %btn-size-sm;
+  @extend .btn--sm;
 }
 
 // BUTTONS: SIZES
 // ============================================================
 .btn {
   &--sm {
-    @extend %btn-size-sm;
+    padding: 2px 10px;
+    @include font-size($text__size--sm);
   }
 
   &--md {
-    @extend %btn-size-md;
+    padding: 5px 20px;
+    @include font-size($text__size--md);
   }
 
   &--lg {
-    @extend %btn-size-lg;
+    padding: 10px 25px;
+    @include font-size($text__size--lg);
   }
 
   &--xl {
-    @extend %btn-size-xl;
+    padding: 10px 25px;
+    @include font-size($text__size--lg);
   }
 
   &--xxl {
-    @extend %btn-size-xxl;
+    padding: 15px 30px;
+    @include font-size($text__size--xl);
 
     &.btn--circle {
       width: 140px;

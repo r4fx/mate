@@ -34,7 +34,7 @@ main {
       margin-top: 0;
       text-transform: uppercase;
       color: $color__base--second;
-      @include font-size(35px);
+      @include font-size($text__size--xxl);
     }
   }
 
@@ -57,7 +57,7 @@ main {
     }
 
     ul {
-      @include font-size(15px);
+      @include font-size($text__size--md);
 
       li {
         margin-bottom: 0;
