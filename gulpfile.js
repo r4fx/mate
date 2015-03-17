@@ -109,12 +109,12 @@ gulp.task('watch', function () {
     // Watch Mate source styles and recompile Documentation WWW styles
     gulp.watch('src/styles/css/*.css', function (event) {
         console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
-        gulp.start('sass');
+        gulp.start('sassRuby');
     });
 });
 
 // Default task
-gulp.task('default', ['assemble', 'sassRuby', 'watch'], function () {
+gulp.task('default', ['assemble', 'sassRuby', 'todo', 'watch'], function () {
     // Callback
 
     // Watch .scss files
