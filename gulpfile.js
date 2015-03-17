@@ -94,7 +94,7 @@ gulp.task('todo', function () {
         'src/styles/scss/**/*.scss'
         ])
         .pipe(todo())
-        .pipe(gulp.dest('src/'));
+        .pipe(gulp.dest('./'));
 });
 
 // Watch for changes
