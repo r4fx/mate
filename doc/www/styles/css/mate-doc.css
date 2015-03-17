@@ -253,46 +253,54 @@ a {
 /* ============================================================
 * BUTTONS
 * ============================================================*/
-.btn {
-  font-family: "lato-regular", Arial, sans-serif;
-  color: #fff;
-  text-decoration: none;
-  padding: 0 7px;
-  border-radius: 5px;
-  border: 0;
-  display: inline-block;
-  vertical-align: middle;
-  cursor: pointer;
-  font-size: 15px;
-  font-size: 1.5rem;
-  line-height: 4;
-  -webkit-transition: 0.4s ease;
-  transition: 0.4s ease; }
-
-.btn--sm {
+.btn, .btn--sm {
   line-height: 30px;
   padding: 0 15px;
   font-size: 14px;
   font-size: 1.4rem; }
+
 .btn--md {
+  line-height: 35px;
+  padding: 0 15px;
   font-size: 16px;
   font-size: 1.6rem; }
+
 .btn--lg {
-  font-size: 20px;
-  font-size: 2rem; }
+  line-height: 35px;
+  padding: 0 20px;
+  font-size: 16px;
+  font-size: 1.6rem; }
+
 .btn--xl {
   line-height: 50px;
   padding: 0 20px;
   font-size: 32px;
   font-size: 3.2rem; }
+
 .btn--xxl {
+  line-height: 50px;
+  padding: 0 25px;
   font-size: 42px;
   font-size: 4.2rem; }
-  .btn--xxl.btn--circle {
-    width: 140px;
-    height: 140px;
-    line-height: 22px;
-    text-transform: uppercase; }
+
+.btn {
+  font-family: "lato-regular", Arial, sans-serif;
+  color: #fff;
+  background-color: #4DB069;
+  text-decoration: none;
+  border-radius: 5px;
+  border: 0;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease; }
+
+.btn--xxl.btn--circle {
+  width: 140px;
+  height: 140px;
+  line-height: 22px;
+  text-transform: uppercase; }
 
 .btn--color-first {
   color: #fff;
@@ -781,231 +789,6 @@ ul.-divided ul {
   font-style: normal;
   font-weight: normal;
   src: url("../../fonts/lato/lato-light.svg#lato-light") format("svg"); }
-.text-size--42 {
-  font-size: 42px;
-  font-size: 4.2rem;
-  font-family: "lato-light", Arial, sans-serif; }
-  @media (max-width: 719px) {
-    .text-size--42 {
-      font-size: 2.1em; } }
-
-.text-size--41 {
-  font-size: 41px;
-  font-size: 4.1rem;
-  font-family: "lato-light", Arial, sans-serif; }
-  @media (max-width: 719px) {
-    .text-size--41 {
-      font-size: 2.05em; } }
-
-.text-size--40 {
-  font-size: 40px;
-  font-size: 4rem;
-  font-family: "lato-light", Arial, sans-serif; }
-  @media (max-width: 719px) {
-    .text-size--40 {
-      font-size: 2em; } }
-
-.text-size--39 {
-  font-size: 39px;
-  font-size: 3.9rem;
-  font-family: "lato-light", Arial, sans-serif; }
-  @media (max-width: 719px) {
-    .text-size--39 {
-      font-size: 1.95em; } }
-
-.text-size--38 {
-  font-size: 38px;
-  font-size: 3.8rem;
-  font-family: "lato-light", Arial, sans-serif; }
-  @media (max-width: 719px) {
-    .text-size--38 {
-      font-size: 1.9em; } }
-
-.text-size--37 {
-  font-size: 37px;
-  font-size: 3.7rem;
-  font-family: "lato-light", Arial, sans-serif; }
-  @media (max-width: 719px) {
-    .text-size--37 {
-      font-size: 1.85em; } }
-
-.text-size--36 {
-  font-size: 36px;
-  font-size: 3.6rem;
-  font-family: "lato-light", Arial, sans-serif; }
-  @media (max-width: 719px) {
-    .text-size--36 {
-      font-size: 1.8em; } }
-
-.text-size--35 {
-  font-size: 35px;
-  font-size: 3.5rem;
-  font-family: "lato-light", Arial, sans-serif; }
-  @media (max-width: 719px) {
-    .text-size--35 {
-      font-size: 1.75em; } }
-
-.text-size--34 {
-  font-size: 34px;
-  font-size: 3.4rem;
-  font-family: "lato-light", Arial, sans-serif; }
-  @media (max-width: 719px) {
-    .text-size--34 {
-      font-size: 1.7em; } }
-
-.text-size--33 {
-  font-size: 33px;
-  font-size: 3.3rem;
-  font-family: "lato-light", Arial, sans-serif; }
-  @media (max-width: 719px) {
-    .text-size--33 {
-      font-size: 1.65em; } }
-
-.text-size--32 {
-  font-size: 32px;
-  font-size: 3.2rem;
-  font-family: "lato-light", Arial, sans-serif; }
-  @media (max-width: 719px) {
-    .text-size--32 {
-      font-size: 1.6em; } }
-
-.text-size--31 {
-  font-size: 31px;
-  font-size: 3.1rem;
-  font-family: "lato-light", Arial, sans-serif; }
-  @media (max-width: 719px) {
-    .text-size--31 {
-      font-size: 1.55em; } }
-
-.text-size--30 {
-  font-size: 30px;
-  font-size: 3rem;
-  font-family: "lato-light", Arial, sans-serif; }
-  @media (max-width: 719px) {
-    .text-size--30 {
-      font-size: 1.5em; } }
-
-.text-size--29 {
-  font-size: 29px;
-  font-size: 2.9rem;
-  font-family: "lato-light", Arial, sans-serif; }
-  @media (max-width: 719px) {
-    .text-size--29 {
-      font-size: 1.45em; } }
-
-.text-size--28 {
-  font-size: 28px;
-  font-size: 2.8rem;
-  font-family: "lato-light", Arial, sans-serif; }
-  @media (max-width: 719px) {
-    .text-size--28 {
-      font-size: 1.4em; } }
-
-.text-size--27 {
-  font-size: 27px;
-  font-size: 2.7rem;
-  font-family: "lato-light", Arial, sans-serif; }
-  @media (max-width: 719px) {
-    .text-size--27 {
-      font-size: 1.35em; } }
-
-.text-size--26 {
-  font-size: 26px;
-  font-size: 2.6rem;
-  font-family: "lato-light", Arial, sans-serif; }
-  @media (max-width: 719px) {
-    .text-size--26 {
-      font-size: 1.3em; } }
-
-.text-size--25 {
-  font-size: 25px;
-  font-size: 2.5rem;
-  font-family: "lato-light", Arial, sans-serif; }
-  @media (max-width: 719px) {
-    .text-size--25 {
-      font-size: 1.25em; } }
-
-.text-size--24 {
-  font-size: 24px;
-  font-size: 2.4rem;
-  font-family: "lato-light", Arial, sans-serif; }
-  @media (max-width: 719px) {
-    .text-size--24 {
-      font-size: 1.2em; } }
-
-.text-size--23 {
-  font-size: 23px;
-  font-size: 2.3rem;
-  font-family: "lato-light", Arial, sans-serif; }
-  @media (max-width: 719px) {
-    .text-size--23 {
-      font-size: 1.15em; } }
-
-.text-size--22 {
-  font-size: 22px;
-  font-size: 2.2rem;
-  font-family: "lato-light", Arial, sans-serif; }
-  @media (max-width: 719px) {
-    .text-size--22 {
-      font-size: 1.1em; } }
-
-.text-size--21 {
-  font-size: 21px;
-  font-size: 2.1rem;
-  font-family: "lato-light", Arial, sans-serif; }
-  @media (max-width: 719px) {
-    .text-size--21 {
-      font-size: 1.05em; } }
-
-.text-size--20 {
-  font-size: 20px;
-  font-size: 2rem; }
-  @media (max-width: 719px) {
-    .text-size--20 {
-      font-size: 1em; } }
-
-.text-size--19 {
-  font-size: 19px;
-  font-size: 1.9rem; }
-  @media (max-width: 719px) {
-    .text-size--19 {
-      font-size: 0.95em; } }
-
-.text-size--18 {
-  font-size: 18px;
-  font-size: 1.8rem; }
-  @media (max-width: 719px) {
-    .text-size--18 {
-      font-size: 0.9em; } }
-
-.text-size--17 {
-  font-size: 17px;
-  font-size: 1.7rem; }
-  @media (max-width: 719px) {
-    .text-size--17 {
-      font-size: 0.85em; } }
-
-.text-size--16 {
-  font-size: 16px;
-  font-size: 1.6rem; }
-  @media (max-width: 719px) {
-    .text-size--16 {
-      font-size: 0.8em; } }
-
-.text-size--15 {
-  font-size: 15px;
-  font-size: 1.5rem; }
-  @media (max-width: 719px) {
-    .text-size--15 {
-      font-size: 0.75em; } }
-
-.text-size--14 {
-  font-size: 14px;
-  font-size: 1.4rem; }
-  @media (max-width: 719px) {
-    .text-size--14 {
-      font-size: 0.7em; } }
-
 p {
   margin: 15px 0; }
   p:last-child {
@@ -1023,8 +806,8 @@ h1 {
   font-weight: normal; }
   @media (max-width: 719px) {
     h1 {
-      font-size: 21px;
-      font-size: 2.1rem; } }
+      font-size: 2.1px;
+      font-size: 0.21rem; } }
 
 h2 {
   font-size: 32px;

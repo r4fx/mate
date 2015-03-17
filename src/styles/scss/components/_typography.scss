@@ -3,7 +3,7 @@
 * ============================================================*/
 
 // FONT FACE
-// [i] only woff & svg is needed today, see http://caniuse.com/#feat=fontface
+// [i] only woff & svg are needed today, see http://caniuse.com/#feat=fontface
 // ============================================================
 @mixin font-face($dir, $file) {
   @each $faceFile in $file {
@@ -20,25 +20,6 @@
 // TYPOGRAPHY: BASE FONT FACE
 // ============================================================
 @include font-face($font__base--dir, $font__base--file);
-
-// TEXT SIZES
-// examples:
-// <p class="text-size--24">Lorem ipsum</p>
-// ============================================================
-@for $i from $text__size--xxl through $text__size--sm {
-  .text-size--#{strip-units($i)} {
-    @include font-size($i);
-
-    // Half size text for phone
-    @include respond-to(phone) {
-      font-size: ($i /1px /10 /2)+em;
-    }
-
-    @if $i > $text__size--lg {
-      font-family: $font__base--light;
-    }
-  }
-}
 
 // TYPOGRAPHY: PARAGRAPHS
 // ============================================================
@@ -67,7 +48,7 @@ h1 {
 
   // Half size for phone
   @include respond-to(phone) {
-    @include font-size($text__size--xxl /2);
+    @include font-size($text__size--xxl /2 /10);
   }
 }
 
