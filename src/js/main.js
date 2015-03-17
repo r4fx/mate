@@ -1,32 +1,46 @@
-/* Main JavaScript for simple project
+/* JavaScript for simple project
 */
 
+// Page events
 var events = {
     eventType: 'click',
 
     init: function () {
-        this.events();
+        this.firstEvent();
     },
 
-    events: function () {
+    firstEvent: function () {
         $('#click-btn').unbind(events.eventType); // Don't ever keep listening for clicks !
 
         // more code...
-    }
-};
-
-var navigation = {
-
-    init: function () {
-        this.navi();
     },
 
-    navi: function () {
-        // more code...
+    secondEvent: function () {
+        // event code
     }
 };
+
+// Example object
+var Module = (function () {
+
+    var _privateMethod = function () {
+        // private stuff
+    };
+
+    var publicMethod = function () {
+        _privateMethod();
+
+        // other public stuff
+    };
+
+    return {
+        publicMethod: publicMethod
+    };
+
+})();
+
 
 $(document).ready(function () {
     events.init();
-    navigation.init();
+    Module.publicMethod();
 });
