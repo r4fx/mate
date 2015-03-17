@@ -3,68 +3,9 @@
 * ============================================================*/
 
 // TODO: calc line height, http://www.mathayward.com/modular-css-with-sass-and-bem/
-// TODO: przerobic sizez i inne na extends, aby mozna bylo includowac styl w rozne miejsca bez dublowania
 
-//+ SIZES
+// BUTTONS: BASE
 // ============================================================
-%button-sizes {
-  &.btn {
-    &--s {
-      line-height: 30px;
-      padding: 0 15px;
-      @include font-size(20px);
-    }
-
-    &--m {
-
-    }
-
-    &--xl {
-      line-height: 50px;
-      padding: 0 20px;
-      @include font-size(20px);
-    }
-
-    &--xxl {
-
-      &.btn--circle {
-        width: 140px;
-        height: 140px;
-        line-height: 22px;
-        text-transform: uppercase;
-
-        &:hover {
-          border-width: 63px;
-        }
-      }
-    }
-  }
-}
-
-//+ COLORS
-// ============================================================
-%button-colors {
-  &.btn {
-    &--color-first {
-      color: $text__color--second;
-      background-color: $color__base--first;
-
-      &:hover {
-        background-color: lighten($color__base--first, 7%);
-      }
-    }
-
-    &--color-second {
-      color: $color__base--first;
-      background-color: #fff;
-
-      &:hover {
-        background-color: darken(#fff, 45%);
-      }
-    }
-  }
-}
-
 .btn {
   font-family: $font__base--regular;
   color: #fff;
@@ -77,13 +18,68 @@
   cursor: pointer;
   @include font-size(15px, 60px);
   @include transition-free(0.4s ease);
+}
 
-  // INCLUDE PLACEHOLDERS
-  @extend %button-sizes;
-  @extend %button-colors;
+// BUTTONS: SIZES
+// ============================================================
+.btn {
+  &--sm {
+    line-height: 30px;
+    padding: 0 15px;
+    @include font-size($text__size--sm);
+  }
 
-  // TYPES
-  // ============================================================
+  &--md {
+    @include font-size($text__size--md);
+  }
+
+  &--lg {
+    @include font-size($text__size--lg);
+  }
+
+  &--xl {
+    line-height: 50px;
+    padding: 0 20px;
+    @include font-size($text__size--xl);
+  }
+
+  &--xxl {
+    @include font-size($text__size--xxl);
+
+    &.btn--circle {
+      width: 140px;
+      height: 140px;
+      line-height: 22px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+// BUTTONS: COLORS
+// ============================================================
+.btn {
+  &--color-first {
+    color: $text__color--second;
+    background-color: $text__color--link;
+
+    &:hover {
+      background-color: lighten($text__color--link, 7%);
+    }
+  }
+
+  &--color-second {
+    color: $color__base--first;
+    background-color: #fff;
+
+    &:hover {
+      background-color: darken(#fff, 45%);
+    }
+  }
+}
+
+// BUTTONS: TYPES
+// ============================================================
+.btn {
   &--block {
     display: block;
     width: 100%;
@@ -108,12 +104,13 @@
       @include centerer;
     }
   }
+}
 
-  // VARIANTS
-  // ============================================================
+// BUTTONS: VARIANTS
+// ============================================================
+.btn {
 
-  //+ ARROWS
-  // ============================================================
+  // ARROWS, LEFT & RIGHT
   &--arrow-r,
   &--arrow-l {
     position: relative;
@@ -130,6 +127,7 @@
     }
   }
 
+  // ARROW RIGHT
   &--arrow-r {
     padding-right: 50px;
 
@@ -140,6 +138,7 @@
     }
   }
 
+  // ARROW LEFT
   &--arrow-l {
     padding-left: 50px;
 
@@ -150,39 +149,17 @@
     }
   }
 
-  //ICONS POSITION FIX
+  // ICONS POSITION FIX
   .icon {
     top: -3px;
     position: relative;
   }
-
 }
 
-// STATES
-// ============================================================
-.btn, .btn-group {
-
-  &:hover {
-    //color: inherit;
-  }
-
-  &:active {
-
-  }
-
-  &:focus {
-
-  }
-}
-
-// GROUPED BUTTONS
+// BUTTONS: GROUPED BUTTONS
 // ============================================================
 .btn-group {
   display: inline-block;
-
-  // INCLUDE PLACEHOLDERS
-  @extend %button-sizes;
-  //@extend %colors;
 
   .btn {
     float: left;
@@ -197,5 +174,22 @@
       border-bottom-left-radius: 0;
       padding: 0 10px;
     }
+  }
+}
+
+// BUTTONS: STATES
+// ============================================================
+.btn, .btn-group {
+
+  &:hover {
+
+  }
+
+  &:active {
+
+  }
+
+  &:focus {
+
   }
 }

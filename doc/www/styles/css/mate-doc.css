@@ -253,35 +253,6 @@ a {
 /* ============================================================
 * BUTTONS
 * ============================================================*/
-.btn--s.btn, .btn--s.btn-group {
-  line-height: 30px;
-  padding: 0 15px;
-  font-size: 20px;
-  font-size: 2rem; }
-.btn--xl.btn, .btn--xl.btn-group {
-  line-height: 50px;
-  padding: 0 20px;
-  font-size: 20px;
-  font-size: 2rem; }
-.btn--xxl.btn--circle.btn, .btn--xxl.btn--circle.btn-group {
-  width: 140px;
-  height: 140px;
-  line-height: 22px;
-  text-transform: uppercase; }
-  .btn--xxl.btn--circle.btn:hover, .btn--xxl.btn--circle.btn-group:hover {
-    border-width: 63px; }
-
-.btn--color-first.btn {
-  color: #fff;
-  background-color: #3c3c3c; }
-  .btn--color-first.btn:hover {
-    background-color: #4e4e4e; }
-.btn--color-second.btn {
-  color: #3c3c3c;
-  background-color: #fff; }
-  .btn--color-second.btn:hover {
-    background-color: #8c8c8c; }
-
 .btn {
   font-family: "lato-regular", Arial, sans-serif;
   color: #fff;
@@ -297,51 +268,89 @@ a {
   line-height: 4;
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease; }
-  .btn--block {
-    display: block;
-    width: 100%; }
-  .btn--txt {
-    padding: 0; }
-    .btn--txt:hover {
-      background-color: rgba(255, 255, 255, 0.2);
-      color: inherit; }
-  .btn--circle {
-    position: relative;
-    border-radius: 50%;
-    border-width: 5px;
+
+.btn--sm {
+  line-height: 30px;
+  padding: 0 15px;
+  font-size: 14px;
+  font-size: 1.4rem; }
+.btn--md {
+  font-size: 16px;
+  font-size: 1.6rem; }
+.btn--lg {
+  font-size: 20px;
+  font-size: 2rem; }
+.btn--xl {
+  line-height: 50px;
+  padding: 0 20px;
+  font-size: 32px;
+  font-size: 3.2rem; }
+.btn--xxl {
+  font-size: 42px;
+  font-size: 4.2rem; }
+  .btn--xxl.btn--circle {
+    width: 140px;
+    height: 140px;
+    line-height: 22px;
+    text-transform: uppercase; }
+
+.btn--color-first {
+  color: #fff;
+  background-color: #249cff; }
+  .btn--color-first:hover {
+    background-color: #48acff; }
+.btn--color-second {
+  color: #3c3c3c;
+  background-color: #fff; }
+  .btn--color-second:hover {
+    background-color: #8c8c8c; }
+
+.btn--block {
+  display: block;
+  width: 100%; }
+.btn--txt {
+  padding: 0; }
+  .btn--txt:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: inherit; }
+.btn--circle {
+  position: relative;
+  border-radius: 50%;
+  border-width: 5px;
+  border-style: solid; }
+  .btn--circle span {
+    top: 50%;
+    left: 50%;
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    position: absolute; }
+
+.btn--arrow-r, .btn--arrow-l {
+  position: relative; }
+  .btn--arrow-r:after, .btn--arrow-r:before, .btn--arrow-l:after, .btn--arrow-l:before {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 50%;
+    margin-top: -5px;
     border-style: solid; }
-    .btn--circle span {
-      top: 50%;
-      left: 50%;
-      -moz-transform: translate(-50%, -50%);
-      -webkit-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-      position: absolute; }
-  .btn--arrow-r, .btn--arrow-l {
-    position: relative; }
-    .btn--arrow-r:after, .btn--arrow-r:before, .btn--arrow-l:after, .btn--arrow-l:before {
-      content: '';
-      width: 0;
-      height: 0;
-      position: absolute;
-      top: 50%;
-      margin-top: -5px;
-      border-style: solid; }
-  .btn--arrow-r {
-    padding-right: 50px; }
-    .btn--arrow-r:after {
-      border-width: 5px 0 5px 10px;
-      border-color: transparent transparent transparent white;
-      right: 20px; }
-  .btn--arrow-l {
-    padding-left: 50px; }
-    .btn--arrow-l:before {
-      border-width: 5px 10px 0 5px;
-      border-color: transparent white transparent transparent;
-      left: 20px; }
-  .btn .icon {
-    top: -3px;
-    position: relative; }
+.btn--arrow-r {
+  padding-right: 50px; }
+  .btn--arrow-r:after {
+    border-width: 5px 0 5px 10px;
+    border-color: transparent transparent transparent white;
+    right: 20px; }
+.btn--arrow-l {
+  padding-left: 50px; }
+  .btn--arrow-l:before {
+    border-width: 5px 10px 0 5px;
+    border-color: transparent white transparent transparent;
+    left: 20px; }
+.btn .icon {
+  top: -3px;
+  position: relative; }
 
 .btn-group {
   display: inline-block; }
