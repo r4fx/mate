@@ -1,5 +1,5 @@
 // ============================================================
-// BASE
+// BASE SKELETON
 // ============================================================
 
 *, :before, :after {
@@ -14,8 +14,21 @@ body {
   color: $text__color--first;
   font-family: $font__base--light;
   @include font-size($text__size--md);
-}
 
+  // Mobile helper
+  &.orientation-landscape:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99999;
+    background: url(../../images/mobile-lock.svg) no-repeat center center #fff;
+    background-size: 60%;
+    @include transition();
+  }
+}
 
 // LINKS
 a {
@@ -36,6 +49,12 @@ a {
   &:visited {
 
   }
+}
+
+// IMAGES
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 // MISC
