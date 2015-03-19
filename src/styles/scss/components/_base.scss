@@ -16,6 +16,8 @@ body {
   @include font-size($text__size--md);
 }
 
+
+// LINKS
 a {
   color: $text__color--link;
 
@@ -33,5 +35,18 @@ a {
 
   &:visited {
 
+  }
+}
+
+// MISC
+hr {
+  border: 0;
+  height: 1px;
+  background-color: $border__color--first;
+  margin: 15px auto;
+
+  &.mini {
+    width: 150px;
+    margin: 50px auto;
   }
 }

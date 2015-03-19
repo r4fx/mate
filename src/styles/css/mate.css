@@ -251,6 +251,15 @@ a {
   a:hover {
     text-decoration: none; }
 
+hr {
+  border: 0;
+  height: 1px;
+  background-color: #3c3c3c;
+  margin: 15px auto; }
+  hr.mini {
+    width: 150px;
+    margin: 50px auto; }
+
 /* ============================================================
 * BUTTONS
 * ============================================================*/
