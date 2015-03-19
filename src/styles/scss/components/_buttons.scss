@@ -2,86 +2,112 @@
 * BUTTONS
 * ============================================================*/
 
+// TODO: ADD states, hover, active, focus
 // TODO: calc line height, http://www.mathayward.com/modular-css-with-sass-and-bem/
 
-// BUTTONS: BASE
+// Define sizes
+$btn-sizes: sm, md, lg, xl, xxl;
+
+@mixin button-size($size){
+  @if $size == sm {
+    padding: 2px 10px;
+    @include font-size($text__size--sm);
+  }
+
+  @else if $size == md {
+    padding: 8px 20px;
+    @include font-size($text__size--md);
+  }
+
+  @else if $size == lg {
+    padding: 10px 25px;
+    @include font-size($text__size--lg);
+  }
+
+  @else if $size == xl {
+    padding: 10px 25px;
+    @include font-size($text__size--xl);
+  }
+
+  @else if $size == xxl {
+    padding: 15px 30px;
+    @include font-size($text__size--xxl);
+  }
+}
+
+// Generates sizes
+@mixin generate-btn-sizes() {
+  $i: 1;
+
+  @each $n in $btn-sizes {
+    &--#{$n} {
+      @include button-size(nth($btn-sizes, $i));
+    }
+    $i: $i + 1;
+  }
+}
+
+// BUTTON: BASE
 // ============================================================
 .btn {
-  font-family: $font__base--regular;
-  color: #fff;
   line-height: 1.5;
-  background-color: $color__base--second;
   text-decoration: none;
   border-radius: $border__radius;
   border: 0;
   display: inline-block;
   vertical-align: middle;
   cursor: pointer;
+
+  @include button-size(md);
   @include transition-free(0.4s ease);
-  @extend .btn--sm;
+  @extend %noselect;
 }
 
-// BUTTONS: SIZES
-// ============================================================
+// Button sizes
 .btn {
-  &--sm {
-    padding: 2px 10px;
-    @include font-size($text__size--sm);
-  }
-
-  &--md {
-    padding: 5px 20px;
-    @include font-size($text__size--md);
-  }
-
-  &--lg {
-    padding: 10px 25px;
-    @include font-size($text__size--lg);
-  }
-
-  &--xl {
-    padding: 10px 25px;
-    @include font-size($text__size--lg);
-  }
-
-  &--xxl {
-    padding: 15px 30px;
-    @include font-size($text__size--xl);
-
-    &.btn--circle {
-      width: 140px;
-      height: 140px;
-      line-height: 22px;
-      text-transform: uppercase;
-    }
-  }
+  @include generate-btn-sizes();
 }
 
-// BUTTONS: COLORS
+// BUTTON: COLORS
 // ============================================================
 .btn {
   &--color-first {
+    background-color: $btn__color--first;
     color: $text__color--second;
-    background-color: $text__color--link;
 
     &:hover {
-      background-color: lighten($text__color--link, 7%);
+      background-color: lighten($btn__color--first, 7%);
     }
   }
 
   &--color-second {
-    color: $color__base--first;
-    background-color: #fff;
+    background-color: $btn__color--second;
+    color: $text__color--second;
 
     &:hover {
-      background-color: darken(#fff, 45%);
+      background-color: lighten($btn__color--second, 7%);
+    }
+  }
+
+  &--color-third {
+    background-color: $btn__color--third;
+    color: $text__color--second;
+
+    &:hover {
+      background-color: lighten($color__base--second, 7%);
     }
   }
 }
 
-// BUTTONS: TYPES
+// BUTTON: TYPES & VARIANTS
 // ============================================================
 .btn {
+  // Outlined
+  &--outline {
+    border: 1px solid inherit;
+    border-radius: $border__radius;
+  }
+
   &--block {
     display: block;
     width: 100%;
@@ -96,7 +122,9 @@
     }
   }
 
+  // Circle
   &--circle {
+    line-height: 1;
     position: relative;
     border-radius: 50%;
     border-width: 5px;
@@ -105,12 +133,12 @@
     span {
       @include centerer;
     }
-  }
-}
 
-// BUTTONS: VARIANTS
-// ============================================================
-.btn {
+    &.btn--xxl {
+      width: 250px;
+      height: 250px;
+    }
+  }
 
   // ARROWS, LEFT & RIGHT
   &--arrow-r,
@@ -158,7 +186,8 @@
   }
 }
 
-// BUTTONS: GROUPED BUTTONS
+
+// BUTTON: GROUPED
 // ============================================================
 .btn-group {
   display: inline-block;
@@ -179,7 +208,7 @@
   }
 }
 
-// BUTTONS: STATES
+// BUTTON: STATES
 // ============================================================
 .btn, .btn-group {
 

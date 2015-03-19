@@ -19,6 +19,14 @@ EXTENDS, PLACEHOLDERS
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+.btn {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
 /*============================================================
 MEDIA QUERIES BREAKPOINT
 [i] breakpoints inpired by
@@ -246,25 +254,25 @@ a {
 * BUTTONS
 * ============================================================*/
 .btn {
-  font-family: "lato-regular", Arial, sans-serif;
-  color: #fff;
   line-height: 1.5;
-  background-color: #4DB069;
   text-decoration: none;
   border-radius: 5px;
   border: 0;
   display: inline-block;
   vertical-align: middle;
   cursor: pointer;
+  padding: 8px 20px;
+  font-size: 16px;
+  font-size: 1.6rem;
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease; }
 
-.btn--sm, .btn {
+.btn--sm {
   padding: 2px 10px;
   font-size: 14px;
   font-size: 1.4rem; }
 .btn--md {
-  padding: 5px 20px;
+  padding: 8px 20px;
   font-size: 16px;
   font-size: 1.6rem; }
 .btn--lg {
@@ -273,29 +281,32 @@ a {
   font-size: 2rem; }
 .btn--xl {
   padding: 10px 25px;
-  font-size: 20px;
-  font-size: 2rem; }
-.btn--xxl {
-  padding: 15px 30px;
   font-size: 32px;
   font-size: 3.2rem; }
-  .btn--xxl.btn--circle {
-    width: 140px;
-    height: 140px;
-    line-height: 22px;
-    text-transform: uppercase; }
+.btn--xxl {
+  padding: 15px 30px;
+  font-size: 42px;
+  font-size: 4.2rem; }
 
 .btn--color-first {
-  color: #fff;
-  background-color: #249cff; }
+  background-color: #4DB069;
+  color: #fff; }
   .btn--color-first:hover {
-    background-color: #48acff; }
+    background-color: #65bc7e; }
 .btn--color-second {
-  color: #3c3c3c;
-  background-color: #fff; }
+  background-color: #249cff;
+  color: #fff; }
   .btn--color-second:hover {
-    background-color: #8c8c8c; }
+    background-color: #48acff; }
+.btn--color-third {
+  background-color: #3c3c3c;
+  color: #fff; }
+  .btn--color-third:hover {
+    background-color: #4e4e4e; }
 
+.btn--outline {
+  border: 1px solid inherit;
+  border-radius: 5px; }
 .btn--block {
   display: block;
   width: 100%; }
@@ -305,6 +316,7 @@ a {
     background-color: rgba(255, 255, 255, 0.2);
     color: inherit; }
 .btn--circle {
+  line-height: 1;
   position: relative;
   border-radius: 50%;
   border-width: 5px;
@@ -316,7 +328,9 @@ a {
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     position: absolute; }
-
+  .btn--circle.btn--xxl {
+    width: 250px;
+    height: 250px; }
 .btn--arrow-r, .btn--arrow-l {
   position: relative; }
   .btn--arrow-r:after, .btn--arrow-r:before, .btn--arrow-l:after, .btn--arrow-l:before {
@@ -701,7 +715,7 @@ textarea {
 hr {
   border: 0;
   height: 1px;
-  background-color: #4DB069;
+  background-color: #3c3c3c;
   margin: 15px auto; }
   hr.mini {
     width: 150px;
@@ -718,7 +732,7 @@ ul.-divided ul {
     list-style-type: none; }
     ul.-divided ul li:before {
       content: '';
-      border-left: 1px solid #3c3c3c;
+      border-left: 1px solid #4DB069;
       margin: 0 5px;
       font-size: 70%;
       vertical-align: middle; }
@@ -848,7 +862,7 @@ dl {
     margin-bottom: 7px; }
 
 li > hr, dt > hr {
-  background-color: #4DB069; }
+  background-color: #3c3c3c; }
 
 a[href^="https://github.com"]:before {
   content: "\e605";
@@ -865,11 +879,11 @@ header {
     padding-bottom: 15px; }
 
 main > section[class*="col-"] {
-  padding: 30px; }
+  padding: 60px; }
   main > section[class*="col-"] h1 {
     margin-top: 0;
     text-transform: uppercase;
-    color: #4DB069;
+    color: #3c3c3c;
     font-size: 42px;
     font-size: 4.2rem; }
 main > aside[class*="col-"] {
@@ -877,8 +891,8 @@ main > aside[class*="col-"] {
   left: 0;
   top: 0;
   bottom: 0;
-  background-color: #4DB069;
-  padding: 30px;
+  background-color: #3c3c3c;
+  padding: 60px;
   color: #fff; }
   main > aside[class*="col-"] figure {
     text-align: right; }
@@ -898,13 +912,13 @@ main > aside[class*="col-"] {
       -webkit-transition: background-color 300ms ease-in-out 0s, color 300ms ease-in-out 0s;
       transition: background-color 300ms ease-in-out 0s, color 300ms ease-in-out 0s; }
       main > aside[class*="col-"] ul a.act, main > aside[class*="col-"] ul a:hover {
-        background-color: #3a8550; }
+        background-color: #1d1d1d; }
   main > aside[class*="col-"] .aside__footer {
     position: absolute;
     width: 100%;
     bottom: 0;
     left: 0;
-    background-color: #4DB069;
+    background-color: #3c3c3c;
     line-height: 30px;
     color: #fff;
     padding-top: 20px;
@@ -919,7 +933,7 @@ main > aside[class*="col-"] {
     font-size: 3rem; }
 
 .tags {
-  border-top: 1px solid #4DB069;
+  border-top: 1px solid #3c3c3c;
   margin-top: 50px;
   padding-top: 15px;
   padding-left: 0; }
@@ -928,7 +942,7 @@ main > aside[class*="col-"] {
     list-style-type: none;
     margin: 0 5px 0 0;
     padding: 2px 10px;
-    background-color: #4DB069;
+    background-color: #3c3c3c;
     color: #fff;
     font-size: 14px;
     font-size: 1.4rem; }
@@ -942,11 +956,11 @@ ul code {
 
 .code-example {
   margin: 30px 15px; }
-  .code-example [class^="col-"] {
+  .code-example--grid [class^="col-"] {
     background-color: #DDDDDD;
     padding: 15px;
     border: 1px solid #fff; }
-  .code-example .row {
+  .code-example--grid .row {
     margin-bottom: 15px; }
 
 /*# sourceMappingURL=mate-doc.css.map */

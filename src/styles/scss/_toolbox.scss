@@ -149,9 +149,6 @@ Examples:
   @if $line-height {
     line-height: ceil($size / $line-height) * ($line-height / $size);
   }
-
-  //margin-bottom: 0px + $line-height;
-  //margin-bottom: ($line-height / $doc-font-size)+rem;
 }
 
 /* ============================================================
@@ -212,7 +209,6 @@ TRANSITIONS
   $properties: ();
 
   @each $property in $list {
-    //$transition: unquote($property $duration $timing $delay); //Old sass 3.4.9
     $transition: $property $duration $timing $delay;
     $properties: append($properties, $transition, comma);
   }

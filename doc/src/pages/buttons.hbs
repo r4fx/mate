@@ -1,38 +1,75 @@
 ---
 title: Buttons
 ---
+<h2>Tagi</h2>
 
-<h2>Basic grid</h2>
-<p>W Mate domyślny grid składa się z 12 kolumn:</p>
+<p>Zalecamy używanie stylów przycisków dla tagów <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, <code>&lt;input&gt;</code>, <code>&lt;span&gt;
+</code></p>
+
+<p>
+    Dla domyślnego wyglądu przycisku wystarczy użyć klasy <code>.btn</code>
+</p>
 
 <div class="code-example">
     <div class="row">
-        <div class="col-1">.col-1</div>
-        <div class="col-11">.col-11</div>
-    </div>
-    <div class="row">
-        <div class="col-2">.col-2</div>
-        <div class="col-10">.col-10</div>
-    </div>
-    <div class="row">
-        <div class="col-3">.col-3</div>
-        <div class="col-9">.col-9</div>
+        <div class="col-12 col--no-gutter">
+            <a href="#" class="btn">Link</a>
+            <button class="btn" type="button">Button - type button</button>
+            <button class="btn" type="submit">Button - type submit</button>
+            <input class="btn" type="button" value="Input - type button">
+            <input class="btn" type="submit" value="Input - type submit">
+            <span class="btn">Default button</span>
+        </div>
     </div>
 </div>
 
-<p>Example:</p>
+<strong>Example code:</strong>
+
 <pre lang="html">
-&lt;div class="row">
-    &lt;div class="col-4">.col-4&lt;/div>
-    &lt;div class="col-4">.col-4&lt;/div>
-    &lt;div class="col-4">.col-4&lt;/div>
-&lt;/div>
-&lt;div class="row">
-    &lt;div class="col-6">.col-6&lt;/div>
-    &lt;div class="col-6">.col-6&lt;/div>
-    &lt;/div>
-&lt;div class="row">
-    &lt;div class="col-8">.col-8&lt;/div>
-    &lt;div class="col-4">.col-4&lt;/div>
-&lt;/div>
+&lt;a class="btn" href="#">Link&lt;/a>
+&lt;button class="btn" type="button">Button - type button&lt;/button>
+&lt;button class="btn" type="submit">Button - type submit&lt;/button>
+&lt;input class="btn" type="button" value="Input - type button">
+&lt;input class="btn" type="submit" value="Input - type submit">
+&lt;span class="btn">Default button&lt;/span>
 </pre>
+
+<h2>Rozmiary</h2>
+
+<div class="code-example">
+    <div class="row">
+        <div class="col-12 col--no-gutter">
+            <a href="#" class="btn">Default size</a>
+            <a href="#" class="btn btn--sm">Small size</a>
+            <a href="#" class="btn btn--md">Medium size</a>
+            <a href="#" class="btn btn--lg">Large size</a>
+            <a href="#" class="btn btn--xl">XL size</a>
+            <a href="#" class="btn btn--xxl">XXL size</a>
+        </div>
+    </div>
+</div>
+
+<h2>Kolory</h2>
+
+<div class="code-example">
+    <div class="row">
+        <div class="col-12 col--no-gutter">
+            <a href="#" class="btn">Color default</a>
+            <a href="#" class="btn btn--color-first">Color first</a>
+            <a href="#" class="btn btn--color-second">Color second</a>
+            <a href="#" class="btn btn--color-third">Color third</a>
+        </div>
+    </div>
+</div>
+
+<h2>Typy i warianty</h2>
+
+<div class="code-example">
+    <div class="row">
+        <div class="col-12 col--no-gutter">
+            <a href="#" class="btn">Color default</a>
+            <a href="#" class="btn btn--color-first">Color first</a>
+            <a href="#" class="btn btn--xxl btn--circle">XXL circle button</a>
+        </div>
+    </div>
+</div>
