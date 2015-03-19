@@ -722,15 +722,6 @@ textarea {
 .icon--mark-github:before {
   content: "\e605"; }
 
-hr {
-  border: 0;
-  height: 1px;
-  background-color: #3c3c3c;
-  margin: 15px auto; }
-  hr.mini {
-    width: 150px;
-    margin: 50px auto; }
-
 ul.-divided a {
   padding: 5px; }
 ul.-divided ul {
