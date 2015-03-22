@@ -48,18 +48,18 @@ EXTENDS, PLACEHOLDERS
   user-select: none;
 }
 
-/*============================================================
-MEDIA QUERIES BREAKPOINT
-[i] breakpoints inpired by
-http://blog.uxpin.com/4596/responsive-web-design-cheat-sheet/
-and Chrome Dev Tools devices
-
-Examples:
-
-@include respond-to(desktop, xl) {
-  width: 33.333%;
-}
-============================================================*/
+// ============================================================
+// MEDIA QUERIES BREAKPOINT
+// [i] breakpoints inpired by
+// http://blog.uxpin.com/4596/responsive-web-design-cheat-sheet/
+// and Chrome Dev Tools devices
+//
+// Examples:
+//
+// @include respond-to(desktop, xl) {
+//  width: 33.333%;
+// }
+// ============================================================
 @mixin respond-to($point, $modifier: null) {
 
   // GENERIC MOBILE (TABLETS & SMARTPHONES)
@@ -101,19 +101,18 @@ Examples:
   }
 }
 
-/*============================================================
-BORDERS
-============================================================*/
+// ============================================================
+// BORDERS
+// ============================================================
 @mixin border($radius: $border__radius, $style: $border__size $border__style $border__color--first) {
   border-radius: $radius;
   border: $style;
 }
 
-/*============================================================
-GRADIENTS
-
-TODO: make mixin
-============================================================*/
+// ============================================================
+// GRADIENTS
+// TODO: make mixin
+// ============================================================
 @mixin gradient-silver {
   $from: #fafafa;
   $to: #ececec;
@@ -125,22 +124,20 @@ TODO: make mixin
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#{ie-hex-str($from)}', endColorstr='#{ie-hex-str($to)}');";
 }
 
-/*============================================================
-REM SIZES
-============================================================*/
+// ============================================================
+// REM SIZES
+// ============================================================
 @function calculateRem($size) {
   $remSize: $size / 1px / 10;
   @return $remSize + rem;
 }
 
-/* ============================================================
-REM FONT SIZE
-
-Examples:
-@include font-size(14px, 60px); - general
-@include font-size(14px, 1); - for text inputs
-============================================================*/
-
+// ============================================================
+// REM FONT SIZE
+// Examples:
+// @include font-size(14px, 60px); - general
+// @include font-size(14px, 1); - for text inputs
+// ============================================================
 @mixin font-size($size, $line-height: null) {
   font-size: $size; // fallback for old browsers
   font-size: calculateRem($size);
@@ -151,23 +148,23 @@ Examples:
   }
 }
 
-/* ============================================================
-REM LINE HEIGHT
-
-Examples:
-@include lineheight-size(18px)
-============================================================*/
+// ============================================================
+// REM LINE HEIGHT
+//
+// Examples:
+// @include lineheight-size(18px)
+// ============================================================
 @mixin line-height($height) {
   line-height: $height; // fallback for old browsers
   line-height: calculateRem($height);
 }
 
-/*============================================================
-STRIP UNITS
-
-Examples:
-strip-units(24px) returns: 24 without "px"
-============================================================*/
+// ============================================================
+// STRIP UNITS
+//
+// Examples:
+// strip-units(24px) returns: 24 without "px"
+// ============================================================
 @function strip-units($number) {
   @return $number / ($number * 0 + 1);
 }

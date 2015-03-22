@@ -29,48 +29,6 @@ EXTENDS, PLACEHOLDERS
   user-select: none; }
 
 /*============================================================
-MEDIA QUERIES BREAKPOINT
-[i] breakpoints inpired by
-http://blog.uxpin.com/4596/responsive-web-design-cheat-sheet/
-and Chrome Dev Tools devices
-
-Examples:
-
-@include respond-to(desktop, xl) {
-  width: 33.333%;
-}
-============================================================*/
-/*============================================================
-BORDERS
-============================================================*/
-/*============================================================
-GRADIENTS
-
-TODO: make mixin
-============================================================*/
-/*============================================================
-REM SIZES
-============================================================*/
-/* ============================================================
-REM FONT SIZE
-
-Examples:
-@include font-size(14px, 60px); - general
-@include font-size(14px, 1); - for text inputs
-============================================================*/
-/* ============================================================
-REM LINE HEIGHT
-
-Examples:
-@include lineheight-size(18px)
-============================================================*/
-/*============================================================
-STRIP UNITS
-
-Examples:
-strip-units(24px) returns: 24 without "px"
-============================================================*/
-/*============================================================
 TRANSFORMS
 ============================================================*/
 /*============================================================
@@ -393,8 +351,7 @@ hr {
       border-bottom-left-radius: 0;
       padding: 0 10px; }
 
-form .row,
-.form .row {
+form .row, .form .row {
   margin: 0 0 15px 0; }
 
 .labelInside {
@@ -404,8 +361,7 @@ form .row,
     margin-bottom: 0;
     position: absolute; }
 
-label,
-.label {
+label, .label {
   color: #3c3c3c;
   font-family: "lato-light", Arial, sans-serif;
   display: block;
@@ -413,20 +369,29 @@ label,
   font-size: 18px;
   font-size: 1.8rem; }
 
+[placeholder]::-webkit-input-placeholder {
+  color: #959A9D; }
+[placeholder]::-moz-placeholder {
+  color: #959A9D; }
+[placeholder]:-ms-input-placeholder {
+  color: #959A9D; }
+[placeholder]::placeholder {
+  color: #959A9D; }
+
 input[type="text"],
 input[type="password"],
 input[type="tel"],
 input[type="email"],
 textarea {
-  border-radius: 5px;
   border: 1px solid #fff;
+  border-radius: 5px;
+  background-color: transparent;
   padding: 10px;
-  width: 100%;
-  height: 60px;
+  height: 34px;
   color: #3c3c3c;
-  font-size: 18px;
-  font-size: 1.8rem;
-  line-height: 1; }
+  font-family: "lato-light", Arial, sans-serif;
+  font-size: 14px;
+  font-size: 1.4rem; }
 
 textarea {
   height: auto; }
@@ -446,20 +411,16 @@ textarea {
     color: #fff;
     text-decoration: underline; }
 
-.input-radio,
-.input-checkbox {
+.input-radio, .input-checkbox {
   display: inline-block; }
-  .input-radio label,
-  .input-checkbox label {
+  .input-radio label, .input-checkbox label {
     display: inline-block;
     margin: 0 40px;
     cursor: pointer; }
-  .input-radio span,
-  .input-checkbox span {
+  .input-radio span, .input-checkbox span {
     vertical-align: middle;
     margin-left: 5px; }
-  .input-radio .icon,
-  .input-checkbox .icon {
+  .input-radio .icon, .input-checkbox .icon {
     width: 24px;
     height: 24px;
     padding: 2px;
@@ -467,11 +428,9 @@ textarea {
     color: transparent;
     font-size: 18px;
     font-size: 1.8rem; }
-  .input-radio input,
-  .input-checkbox input {
+  .input-radio input, .input-checkbox input {
     display: none; }
-    .input-radio input:checked ~ .icon,
-    .input-checkbox input:checked ~ .icon {
+    .input-radio input:checked ~ .icon, .input-checkbox input:checked ~ .icon {
       color: #000; }
 
 .input-radio .icon {

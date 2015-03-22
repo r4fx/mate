@@ -2,17 +2,52 @@
 // FORMS
 // ============================================================
 
+// INPUT PLACEHOLDER
+// Example:
+// .class-selector{
+//   @include placeholder(red, 14px);
+//}
+@mixin placeholder($color: $text__color--muted, $size: null) {
+  &::-webkit-input-placeholder {
+    color: $color;
+    @if $size {
+      @include font-size($size);
+    }
+  }
+
+  &::-moz-placeholder {
+    color: $color;
+    @if $size {
+      @include font-size($size);
+    }
+  }
+
+  &:-ms-input-placeholder {
+    color: $color;
+    @if $size {
+      @include font-size($size);
+    }
+  }
+
+  // CSS4
+  &::placeholder {
+    color: $color;
+    @if $size {
+      @include font-size($size);
+    }
+  }
+}
+
 // ROWS, FIELDS GROUP
 // ============================================================
-
-form,
-.form {
-
+form, .form {
   .row {
     margin: 0 0 $grid__row--gutter 0;
   }
 }
 
+// LABELS
+// ============================================================
 .labelInside {
   position: relative;
 
@@ -23,8 +58,7 @@ form,
   }
 }
 
-label,
-.label {
+label, .label {
   color: $text__color--first;
   font-family: $font__base--light;
   display: block;
@@ -32,21 +66,27 @@ label,
   @include font-size(18px);
 }
 
+// PLACEHOLDERS
+// ============================================================
+[placeholder] {
+  @include placeholder();
+}
+
 // TEXT INPUTS
 // ============================================================
-
 input[type="text"],
 input[type="password"],
 input[type="tel"],
 input[type="email"],
 textarea {
-  border-radius: $border__radius;
   border: 1px solid $border__color--second;
+  border-radius: $border__radius;
+  background-color: transparent;
   padding: 10px;
-  width: 100%;
-  height: 60px;
+  height: 34px;
   color: $text__color--first;
-  @include font-size(18px, 1);
+  font-family: $font__base--light;
+  @include font-size($text__size--sm);
 }
 
 textarea {
@@ -55,9 +95,7 @@ textarea {
 
 // CHECKBOXES, RADIOS
 // ============================================================
-
 .fields {
-
   input[type="checkbox"],
   input[type="radio"] {
     float: left;
@@ -79,8 +117,7 @@ textarea {
 }
 
 // Pretty radios & checkboxes
-.input-radio,
-.input-checkbox {
+.input-radio, .input-checkbox {
   display: inline-block;
 
   label {
