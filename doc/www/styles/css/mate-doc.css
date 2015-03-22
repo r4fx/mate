@@ -237,8 +237,7 @@ th {
   padding: 0; }
 
 html {
-  font-size: 62.5%;
-  /* Sets up the root font size to 10px */ }
+  font-size: 62.5%; }
 
 body {
   color: #3c3c3c;
@@ -287,17 +286,16 @@ hr {
   display: inline-block;
   vertical-align: middle;
   cursor: pointer;
-  padding: 8px 20px;
-  font-size: 16px;
-  font-size: 1.6rem;
   -webkit-transition: 0.4s ease;
-  transition: 0.4s ease; }
+  transition: 0.4s ease;
+  -webkit-transition: all 300ms ease-in-out 0s;
+  transition: all 300ms ease-in-out 0s; }
 
 .btn--sm {
   padding: 2px 10px;
   font-size: 14px;
   font-size: 1.4rem; }
-.btn--md {
+.btn--md, .btn {
   padding: 8px 20px;
   font-size: 16px;
   font-size: 1.6rem; }
@@ -314,24 +312,24 @@ hr {
   font-size: 42px;
   font-size: 4.2rem; }
 
-.btn--color-first {
-  background-color: #4DB069;
+.btn--color-first, .btn {
+  background-color: #1ab394;
   color: #fff; }
-  .btn--color-first:hover {
-    background-color: #65bc7e; }
+  .btn--color-first:hover, .btn:hover {
+    background-color: #1dc9a6; }
 .btn--color-second {
   background-color: #249cff;
   color: #fff; }
   .btn--color-second:hover {
-    background-color: #48acff; }
+    background-color: #3ea8ff; }
 .btn--color-third {
   background-color: #3c3c3c;
   color: #fff; }
   .btn--color-third:hover {
-    background-color: #4e4e4e; }
+    background-color: #494949; }
 
 .btn--outline {
-  border: 1px solid inherit;
+  border: 2px solid #249cff;
   border-radius: 5px; }
 .btn--block {
   display: block;
@@ -516,10 +514,10 @@ textarea {
   .grid--add-margin {
     margin-bottom: 15px; }
 
-[class^="col-"] {
+[class*="col-"] {
   float: left;
   padding: 0 15px; }
-  [class^="col-"] .row {
+  [class*="col-"] .row {
     margin: 0 -15px; }
 
 .col--no-gutter {
@@ -749,7 +747,7 @@ ul.-divided ul {
     list-style-type: none; }
     ul.-divided ul li:before {
       content: '';
-      border-left: 1px solid #4DB069;
+      border-left: 1px solid #1ab394;
       margin: 0 5px;
       font-size: 70%;
       vertical-align: middle; }

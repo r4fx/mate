@@ -73,6 +73,7 @@
 
 // MOUNTING GRID
 // ============================================================
+// todo: add to docs
 .grid {
   width: 100%;
   max-width: $page__width--maxsize;
@@ -88,7 +89,7 @@
 
 // COLUMNS
 // ------------------------------------------------------------
-[class^="col-"]{
+[class*="col-"]{
   float: left;
   padding: 0 $grid__col--gutter;
 
@@ -112,7 +113,6 @@
 // ------------------------------------------------------------
 .row {
   margin: 0 (-$grid__document--gutter) $grid__row--gutter (-$grid__document--gutter);
-  //@include row-helpers;
 
   &.row--dbl-gutter {
     @extend %dbl-gutter;

@@ -31,7 +31,7 @@ $font__base--light:       quote(nth($font__base--file, 6)), $font__base--safeFam
 // COLORS BASE PALETTE
 // get your palette for quick start: https://color.adobe.com/pl/create/color-wheel/
 // ============================================================
-$color__base--first:      #4DB069;
+$color__base--first:      #1ab394;
 $color__base--second:     #3c3c3c;
 
 $color__message--alert:   #ff3724;
@@ -53,6 +53,7 @@ $text__size--xxl:         42px;
 $text__color--first:      #3c3c3c;
 $text__color--second:     #fff;
 $text__color--third:      $color__base--first;
+
 $text__color--muted:      #959A9D;
 $text__color--link:       #249cff;
 
@@ -66,6 +67,7 @@ $text__line--base:        20;
 // --colors
 $block__color--first:     #DDDDDD;
 $block__color--second:    #353535;
+
 
 // BUTTONS
 // ============================================================

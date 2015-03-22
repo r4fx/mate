@@ -36,16 +36,16 @@ $btn-sizes: sm, md, lg, xl, xxl;
 }
 
 // Generates sizes
-@mixin generate-btn-sizes() {
-  $i: 1;
-
-  @each $n in $btn-sizes {
-    &--#{$n} {
-      @include button-size(nth($btn-sizes, $i));
-    }
-    $i: $i + 1;
-  }
-}
+//@mixin generate-btn-sizes() {
+//  $i: 1;
+//
+//  @each $n in $btn-sizes {
+//    &--#{$n} {
+//      @include button-size(nth($btn-sizes, $i));
+//    }
+//    $i: $i + 1;
+//  }
+//}
 
 // BUTTON: BASE
 // ============================================================
@@ -58,25 +58,50 @@ $btn-sizes: sm, md, lg, xl, xxl;
   vertical-align: middle;
   cursor: pointer;
 
-  @include button-size(md);
+  //@include button-size(md);
   @include transition-free(0.4s ease);
+  @include transition();
   @extend %noselect;
 }
 
-// Button sizes
+// BUTTON: SIZES
 .btn {
-  @include generate-btn-sizes();
+  //@include generate-btn-sizes();
+
+  @extend .btn--md;
+
+  &--sm {
+    @include button-size(sm);
+  }
+
+  &--md {
+    @include button-size(md);
+  }
+
+  &--lg {
+    @include button-size(lg);
+  }
+
+  &--xl {
+    @include button-size(xl);
+  }
+
+  &--xxl {
+    @include button-size(xxl);
+  }
 }
 
 // BUTTON: COLORS
 // ============================================================
 .btn {
+  @extend .btn--color-first;
+
   &--color-first {
     background-color: $btn__color--first;
     color: $text__color--second;
 
     &:hover {
-      background-color: lighten($btn__color--first, 7%);
+      background-color: lighten($btn__color--first, 5%);
     }
   }
 
@@ -85,7 +110,7 @@ $btn-sizes: sm, md, lg, xl, xxl;
     color: $text__color--second;
 
     &:hover {
-      background-color: lighten($btn__color--second, 7%);
+      background-color: lighten($btn__color--second, 5%);
     }
   }
 
@@ -94,7 +119,7 @@ $btn-sizes: sm, md, lg, xl, xxl;
     color: $text__color--second;
 
     &:hover {
-      background-color: lighten($color__base--second, 7%);
+      background-color: lighten($btn__color--third, 5%);
     }
   }
 }
@@ -102,9 +127,10 @@ $btn-sizes: sm, md, lg, xl, xxl;
 // BUTTON: TYPES & VARIANTS
 // ============================================================
 .btn {
+
   // Outlined
   &--outline {
-    border: 1px solid inherit;
+    border: 2px solid $btn__color--second;
     border-radius: $border__radius;
   }
 
