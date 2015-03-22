@@ -22,3 +22,13 @@
     float: none;
   }
 }
+
+// TABLE MADE BY CSS
+.css-table {
+  display: table;
+  width: 100%;
+
+  .col {
+    display: table-cell;
+  }
+}

@@ -768,6 +768,12 @@ ul.-divided ul {
     display: table-cell;
     float: none; }
 
+.css-table {
+  display: table;
+  width: 100%; }
+  .css-table .col {
+    display: table-cell; }
+
 /*============================================================
 * TYPOGRAPHY
 * ============================================================*/
