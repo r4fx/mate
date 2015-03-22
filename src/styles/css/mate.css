@@ -354,9 +354,9 @@ hr {
 form .row, .form .row {
   margin: 0 0 15px 0; }
 
-.labelInside {
+.label-inside {
   position: relative; }
-  .labelInside label {
+  .label-inside label {
     color: #fff;
     margin-bottom: 0;
     position: absolute; }
@@ -382,6 +382,7 @@ input[type="text"],
 input[type="password"],
 input[type="tel"],
 input[type="email"],
+select,
 textarea {
   border: 1px solid #fff;
   border-radius: 5px;
