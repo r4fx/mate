@@ -62,8 +62,7 @@ label, .label {
   color: $text__color--first;
   font-family: $font__base--light;
   display: block;
-  margin-bottom: 10px;
-  @include font-size(18px);
+  @include font-size($text__size--md);
 }
 
 // PLACEHOLDERS
@@ -83,10 +82,14 @@ textarea {
   border: 1px solid $border__color--second;
   border-radius: $border__radius;
   background-color: transparent;
-  padding: 10px;
+  padding: 4px 10px;
   height: 34px;
   color: $text__color--first;
   font-family: $font__base--light;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  line-height: 1.42857143;
   @include font-size($text__size--sm);
 }
 
@@ -108,7 +111,7 @@ textarea {
     position: static;
     overflow: hidden;
     cursor: pointer;
-    font-size: 11px;
+    @include font-size($text__size--md);
 
     a {
       color: #fff;
@@ -123,22 +126,24 @@ textarea {
 
   label {
     display: inline-block;
-    margin: 0 40px;
     cursor: pointer;
   }
 
   span {
     vertical-align: middle;
-    margin-left: 5px;
   }
 
-  .icon {
+  [class*="icon-"] {
     width: 24px;
     height: 24px;
     padding: 2px;
     border: 1px solid $border__color--second;
-    color: transparent;
-    @include font-size(18px);
+    text-align: center;
+    @include font-size($text__size--md);
+
+    &:before {
+      color: transparent;
+    }
   }
 
   input {
@@ -146,8 +151,11 @@ textarea {
 
     // Toggled state
     &:checked {
-      ~ .icon {
-        color: #000;
+      ~ [class*="icon-"] {
+
+        &:before {
+          color: white;
+        }
       }
     }
   }
@@ -159,7 +167,6 @@ textarea {
 
 // VALIDATION
 // ============================================================
-
 .form-error {
   position: relative;
 

@@ -19,7 +19,7 @@ $iconSizeMax: 75px;
 
 $icon-sizes: ("s": 18px, "m": 25px, "l": 35px, "xl": 50px, "xxl": 75px);
 @each $name, $size in $icon-sizes {
-  .icon--#{$name} {
+  .icon-#{$name} {
     &:before {
       @include font-size($size);
     }
@@ -46,26 +46,26 @@ $icon-sizes: ("s": 18px, "m": 25px, "l": 35px, "xl": 50px, "xxl": 75px);
   //@include transition-free(0.4s ease);
 }
 
-.icon--checkmark:before {
+.icon-checkmark:before {
   content: "\e600";
 }
 
-.icon--file-pdf:before {
+.icon-file-pdf:before {
   content: "\e601";
 }
 
-.icon--facebook:before {
+.icon-facebook:before {
   content: "\e602";
 }
 
-.icon--arrow-left:before {
+.icon-arrow-left:before {
   content: "\e603";
 }
 
-.icon--arrow-right:before {
+.icon-arrow-right:before {
   content: "\e604";
 }
 
-.icon--mark-github:before {
+.icon-mark-github:before {
   content: "\e605";
 }
