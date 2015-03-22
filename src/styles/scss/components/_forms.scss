@@ -62,7 +62,7 @@ label, .label {
   color: $text__color--first;
   font-family: $font__base--light;
   display: block;
-  @include font-size($text__size--md);
+  @include font-size($text__size--sm);
 }
 
 // PLACEHOLDERS
@@ -111,7 +111,7 @@ textarea {
     position: static;
     overflow: hidden;
     cursor: pointer;
-    @include font-size($text__size--md);
+    @include font-size($text__size--sm);
 
     a {
       color: #fff;
@@ -124,26 +124,40 @@ textarea {
 .input-radio, .input-checkbox {
   display: inline-block;
 
-  label {
-    display: inline-block;
-    cursor: pointer;
-  }
+  &.label-multiline {
 
-  span {
-    vertical-align: middle;
+    [class*="icon-"] {
+      float: left;
+
+      ~ span {
+        vertical-align: top;
+      }
+    }
   }
 
   [class*="icon-"] {
     width: 24px;
     height: 24px;
     padding: 2px;
+    margin-right: 5px;
     border: 1px solid $border__color--second;
     text-align: center;
+
     @include font-size($text__size--md);
 
     &:before {
       color: transparent;
     }
+
+    ~ span {
+      vertical-align: middle;
+      line-height: 1;
+    }
+  }
+
+  label {
+    display: inline-block;
+    cursor: pointer;
   }
 
   input {
@@ -167,6 +181,7 @@ textarea {
 
 // VALIDATION
 // ============================================================
+
 .form-error {
   position: relative;
 

@@ -365,8 +365,8 @@ label, .label {
   color: #3c3c3c;
   font-family: "lato-light", Arial, sans-serif;
   display: block;
-  font-size: 16px;
-  font-size: 1.6rem; }
+  font-size: 14px;
+  font-size: 1.4rem; }
 
 [placeholder]::-webkit-input-placeholder {
   color: #959A9D; }
@@ -409,8 +409,8 @@ textarea {
   position: static;
   overflow: hidden;
   cursor: pointer;
-  font-size: 16px;
-  font-size: 1.6rem; }
+  font-size: 14px;
+  font-size: 1.4rem; }
   .fields label a,
   .fields .label a {
     color: #fff;
@@ -418,21 +418,27 @@ textarea {
 
 .input-radio, .input-checkbox {
   display: inline-block; }
-  .input-radio label, .input-checkbox label {
-    display: inline-block;
-    cursor: pointer; }
-  .input-radio span, .input-checkbox span {
-    vertical-align: middle; }
+  .input-radio.label-multiline [class*="icon-"], .input-checkbox.label-multiline [class*="icon-"] {
+    float: left; }
+    .input-radio.label-multiline [class*="icon-"] ~ span, .input-checkbox.label-multiline [class*="icon-"] ~ span {
+      vertical-align: top; }
   .input-radio [class*="icon-"], .input-checkbox [class*="icon-"] {
     width: 24px;
     height: 24px;
     padding: 2px;
+    margin-right: 5px;
     border: 1px solid #fff;
     text-align: center;
     font-size: 16px;
     font-size: 1.6rem; }
     .input-radio [class*="icon-"]:before, .input-checkbox [class*="icon-"]:before {
       color: transparent; }
+    .input-radio [class*="icon-"] ~ span, .input-checkbox [class*="icon-"] ~ span {
+      vertical-align: middle;
+      line-height: 1; }
+  .input-radio label, .input-checkbox label {
+    display: inline-block;
+    cursor: pointer; }
   .input-radio input, .input-checkbox input {
     display: none; }
     .input-radio input:checked ~ [class*="icon-"]:before, .input-checkbox input:checked ~ [class*="icon-"]:before {
