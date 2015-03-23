@@ -1,42 +1,118 @@
-$(document).ready(function(){
+/* JavaScript for simple project
+ */
 
-    // Prism.js
-    // Build Pre Tags
-    $('pre').each(function (i, item) {
-        var item = $(item);
-        if (item.find('code').length == 0) {
+// Page events
+var events = {
+    eventType: 'click',
 
-            // get text
-            var currentCode = item.html();
-            item.empty();
+    init: function () {
+        this.firstEvent();
+        this.secondEvent();
+    },
 
-            // get lang from data-lang attr
-            var oldlang = item.prop('lang');
-            var lang = '';
+    firstEvent: function () {
+        $('#click-btn').unbind(events.eventType); // Don't ever keep listening for clicks !
 
-            switch (oldlang) {
-                case 'html':
-                    lang = 'markup';
-                    break;
-                case 'scss':
-                    lang = 'scss';
-                    break;
-                case 'css':
-                    lang = 'css';
-                    break;
-                case 'js':
-                    lang = 'javascript';
-                    break;
-                default:
-                    lang = 'markup';
-            }
+        // more code...
+    },
 
-            $('<code>').addClass('language-' + lang).appendTo(item).html(currentCode);
-        }
-    });
-
-    if ($.fn.Prism) {
-        Prism.highlightAll();
+    secondEvent: function () {
+        // event code
     }
-    //END: Prism.js
+};
+
+var codeMarkup = {
+
+    init: function () {
+        var $codeWrapper = $('.code-example');
+
+        $codeWrapper.each(function (i, item) {
+            var that = $(item);
+            var $codeToClone = that.find('[data-clone="from"]');
+            var $containerForClone = that.find('[lang]');
+
+            if ($codeToClone.length > 0) {
+                //console.log(i, $codeToClone);
+
+                var $cloned = $codeToClone.clone();
+
+                // Get the code from the clone and split it by new lines.
+                // Then filter the array to remove blank lines.
+                var code = $cloned.html().split("\n").filter(function (n) {
+                    return (n.replace(/\s+$/, '') != '');
+                });
+
+                // Determine the number of spaces on the left of the first line
+                var spacesOnLeft = code[0].match(/^ */)[0].length;
+
+                // loop through each line, removing unnecessary indentation spaces.
+                // Append the line to the output area
+                for (var el = 0, len = code.length; el < len; el++) {
+
+                    var $output = $containerForClone;
+                    var existingText = $output.text();
+                    var newText = code[el].substring(spacesOnLeft);
+
+                    $output.text(existingText + newText + '\n');
+                }
+            }
+        });
+    }
+
+};
+
+
+// Prism.js
+var Prism = (function () {
+
+    var buildPrism = function () {
+        // Build Pre Tags
+        $('pre').each(function (i, item) {
+            var that = $(item);
+            if (that.find('code').length == 0) {
+
+                // get text
+                var currentCode = that.html();
+                that.empty();
+
+                // get lang from data-lang attr
+                var oldlang = that.prop('lang');
+                var lang = '';
+
+                switch (oldlang) {
+                    case 'html':
+                        lang = 'markup';
+                        break;
+                    case 'scss':
+                        lang = 'scss';
+                        break;
+                    case 'css':
+                        lang = 'css';
+                        break;
+                    case 'js':
+                        lang = 'javascript';
+                        break;
+                    default:
+                        lang = 'markup';
+                }
+
+                $('<code>').addClass('language-' + lang).appendTo(that).html(currentCode);
+            }
+        });
+
+        // Execute prism
+        if ($.fn.Prism) {
+            Prism.highlightAll();
+        }
+    };
+
+    return {
+        init: buildPrism
+    };
+
+})();
+
+$(document).ready(function () {
+    codeMarkup.init();
+    Prism.init();
 });

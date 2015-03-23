@@ -36,16 +36,16 @@ $btn-sizes: sm, md, lg, xl, xxl;
 }
 
 // Generates sizes
-//@mixin generate-btn-sizes() {
-//  $i: 1;
-//
-//  @each $n in $btn-sizes {
-//    &--#{$n} {
-//      @include button-size(nth($btn-sizes, $i));
-//    }
-//    $i: $i + 1;
-//  }
-//}
+@mixin generate-btn-sizes() {
+  $i: 1;
+
+  @each $n in $btn-sizes {
+    &--#{$n} {
+      @include button-size(nth($btn-sizes, $i));
+    }
+    $i: $i + 1;
+  }
+}
 
 // BUTTON: BASE
 // ============================================================
@@ -58,37 +58,34 @@ $btn-sizes: sm, md, lg, xl, xxl;
   vertical-align: middle;
   cursor: pointer;
 
-  //@include button-size(md);
-  @include transition-free(0.4s ease);
+  @include button-size(md);
   @include transition();
   @extend %noselect;
 }
 
 // BUTTON: SIZES
 .btn {
-  //@include generate-btn-sizes();
+  @include generate-btn-sizes();
 
-  @extend .btn--md;
-
-  &--sm {
-    @include button-size(sm);
-  }
-
-  &--md {
-    @include button-size(md);
-  }
-
-  &--lg {
-    @include button-size(lg);
-  }
-
-  &--xl {
-    @include button-size(xl);
-  }
-
-  &--xxl {
-    @include button-size(xxl);
-  }
+//  &--sm {
+//    @include button-size(sm);
+//  }
+//
+//  &--md {
+//    @include button-size(md);
+//  }
+//
+//  &--lg {
+//    @include button-size(lg);
+//  }
+//
+//  &--xl {
+//    @include button-size(xl);
+//  }
+//
+//  &--xxl {
+//    @include button-size(xxl);
+//  }
 }
 
 // BUTTON: COLORS

@@ -136,17 +136,15 @@ ul code{
 .code-example{
   margin: $grid__col--gutter*2 $grid__col--gutter;
 
-
+  .row {
+    margin-bottom: $grid__row--gutter;
+  }
 
   &--grid {
     [class^="col-"] {
       background-color: $block__color--first;
       padding: 15px;
       border: 1px solid #fff;
-    }
-
-    .row {
-      margin-bottom: $grid__row--gutter;
     }
   }
 }

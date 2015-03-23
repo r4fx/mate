@@ -7,6 +7,7 @@ var events = {
 
     init: function () {
         this.firstEvent();
+        this.secondEvent();
     },
 
     firstEvent: function () {

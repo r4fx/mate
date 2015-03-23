@@ -14,9 +14,6 @@
 
 // ICON SIZES
 // ============================================================
-$iconSizeMin: 25px;
-$iconSizeMax: 75px;
-
 $icon-sizes: ("s": 18px, "m": 25px, "l": 35px, "xl": 50px, "xxl": 75px);
 @each $name, $size in $icon-sizes {
   .icon-#{$name} {
