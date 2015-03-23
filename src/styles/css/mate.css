@@ -397,6 +397,12 @@ textarea {
   font-size: 14px;
   font-size: 1.4rem; }
 
+select {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20version=%221.1%22%20xmlns=%22http://www.w3.org/2000/svg%22%20xmlns:xlink=%22http://www.w3.org/1999/xlink%22%20width=%2224%22%20height=%2224%22%20viewBox=%220%200%2024%2024%22%3E%0A%3Cpath%20d=%22M16.585%208.585l-4.585%204.585-4.585-4.585-1.415%201.415%206%206%206-6z%22%20fill=%22white%22%3E%3C/path%3E%0A%3C/svg%3E");
+  padding-right: 20px;
+  background-repeat: no-repeat;
+  background-position: 98% center; }
+
 textarea {
   height: auto; }
 
