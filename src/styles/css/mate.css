@@ -227,7 +227,7 @@ img {
 hr {
   border: 0;
   height: 1px;
-  background-color: #3c3c3c;
+  background-color: #ccc;
   margin: 15px auto; }
   hr.mini {
     width: 150px;
@@ -282,10 +282,10 @@ hr {
   .btn--color-second:hover {
     background-color: #3ea8ff; }
 .btn--color-third {
-  background-color: #3c3c3c;
+  background-color: #272822;
   color: #fff; }
   .btn--color-third:hover {
-    background-color: #494949; }
+    background-color: #34362e; }
 
 .btn--outline {
   border: 2px solid #249cff;
@@ -351,9 +351,6 @@ hr {
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
       padding: 0 10px; }
-
-form .row, .form .row {
-  margin: 0 0 15px 0; }
 
 .label-inside {
   position: relative; }
@@ -489,13 +486,13 @@ textarea {
   min-width: 320px;
   margin: 0 auto; }
   .grid--add-margin {
-    margin-bottom: 15px; }
+    margin-bottom: 25px; }
 
 [class*="col-"] {
   float: left;
-  padding: 0 15px; }
+  padding: 0 25px; }
   [class*="col-"] .row {
-    margin: 0 -15px; }
+    margin: 0 -25px; }
 
 .col--no-gutter {
   padding: 0; }
@@ -573,7 +570,7 @@ textarea {
     width: 91.66667%; }
   .col-12--phone {
     width: 100%;
-    margin-bottom: 15px; } }
+    margin-bottom: 25px; } }
 .col--offset-1 {
   margin-left: 8.33333%; }
 .col--offset-2 {
@@ -860,6 +857,6 @@ dl {
     margin-bottom: 7px; }
 
 li > hr, dt > hr {
-  background-color: #3c3c3c; }
+  background-color: #272822; }
 
 /*# sourceMappingURL=mate.css.map */

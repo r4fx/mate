@@ -66,26 +66,6 @@ $btn-sizes: sm, md, lg, xl, xxl;
 // BUTTON: SIZES
 .btn {
   @include generate-btn-sizes();
-
-//  &--sm {
-//    @include button-size(sm);
-//  }
-//
-//  &--md {
-//    @include button-size(md);
-//  }
-//
-//  &--lg {
-//    @include button-size(lg);
-//  }
-//
-//  &--xl {
-//    @include button-size(xl);
-//  }
-//
-//  &--xxl {
-//    @include button-size(xxl);
-//  }
 }
 
 // BUTTON: COLORS

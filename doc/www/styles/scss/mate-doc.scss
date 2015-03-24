@@ -134,13 +134,31 @@ ul code{
 }
 
 .code-example{
-  margin: $grid__col--gutter*2 $grid__col--gutter;
+  border: 1px solid $border__color--first;
+  border-radius: $border__radius;
+  padding: $grid__col--gutter 0 0;
 
-  .row {
-    margin-bottom: $grid__row--gutter;
+  [data-clone] {
+    text-align: center;
+  }
+
+  > div, > pre {
+    @extend %clearfix;
+  }
+
+  pre[class*="language-"] {
+    margin-top: $grid__col--gutter;
+    margin-bottom: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding: $grid__col--gutter;
   }
 
   &--grid {
+    .row{
+      margin: 0 $grid__col--gutter;
+    }
+
     [class^="col-"] {
       background-color: $block__color--first;
       padding: 15px;

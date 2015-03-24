@@ -6,112 +6,88 @@ title: Grid system
 <p>W Mate domyślny grid składa się z 12 kolumn:</p>
 
 <div class="code-example code-example--grid">
-    <div class="row">
-        <div class="col-1">.col-1</div>
-        <div class="col-11">.col-11</div>
-    </div>
-    <div class="row">
-        <div class="col-2">.col-2</div>
-        <div class="col-10">.col-10</div>
-    </div>
-    <div class="row">
-        <div class="col-3">.col-3</div>
-        <div class="col-9">.col-9</div>
-    </div>
-    <div class="row">
-        <div class="col-4">.col-4</div>
-        <div class="col-8">.col-8</div>
-    </div>
-    <div class="row">
-        <div class="col-5">.col-5</div>
-        <div class="col-7">.col-7</div>
-    </div>
-    <div class="row">
-        <div class="col-6">.col-6</div>
-        <div class="col-6">.col-6</div>
-    </div>
-    <div class="row">
-        <div class="col-7">.col-7</div>
-        <div class="col-5">.col-5</div>
-    </div>
-    <div class="row">
-        <div class="col-8">.col-8</div>
-        <div class="col-4">.col-4</div>
-    </div>
-    <div class="row">
-        <div class="col-9">.col-9</div>
-        <div class="col-3">.col-3</div>
-    </div>
-    <div class="row">
-        <div class="col-10">.col-10</div>
-        <div class="col-2">.col-2</div>
-    </div>
-    <div class="row">
-        <div class="col-11">.col-11</div>
-        <div class="col-1">.col-1</div>
-    </div>
-    <div class="row">
-        <div class="col-12">.col-12</div>
+    <div data-clone>
+        <div class="row">
+            <div class="col-1">.col-1</div>
+            <div class="col-11">.col-11</div>
+        </div>
+        <div class="row">
+            <div class="col-2">.col-2</div>
+            <div class="col-10">.col-10</div>
+        </div>
+        <div class="row">
+            <div class="col-3">.col-3</div>
+            <div class="col-9">.col-9</div>
+        </div>
+        <div class="row">
+            <div class="col-4">.col-4</div>
+            <div class="col-8">.col-8</div>
+        </div>
+        <div class="row">
+            <div class="col-5">.col-5</div>
+            <div class="col-7">.col-7</div>
+        </div>
+        <div class="row">
+            <div class="col-6">.col-6</div>
+            <div class="col-6">.col-6</div>
+        </div>
+        <div class="row">
+            <div class="col-7">.col-7</div>
+            <div class="col-5">.col-5</div>
+        </div>
+        <div class="row">
+            <div class="col-8">.col-8</div>
+            <div class="col-4">.col-4</div>
+        </div>
+        <div class="row">
+            <div class="col-9">.col-9</div>
+            <div class="col-3">.col-3</div>
+        </div>
+        <div class="row">
+            <div class="col-10">.col-10</div>
+            <div class="col-2">.col-2</div>
+        </div>
+        <div class="row">
+            <div class="col-11">.col-11</div>
+            <div class="col-1">.col-1</div>
+        </div>
+        <div class="row">
+            <div class="col-12">.col-12</div>
+        </div>
+
+        <div class="row">
+            <div class="col-4">.col-4</div>
+            <div class="col-4">.col-4</div>
+            <div class="col-4">.col-4</div>
+        </div>
+        <div class="row">
+            <div class="col-6">.col-6</div>
+            <div class="col-6">.col-6</div>
+        </div>
     </div>
 
-    <div class="row">
-        <div class="col-4">.col-4</div>
-        <div class="col-4">.col-4</div>
-        <div class="col-4">.col-4</div>
-    </div>
-    <div class="row">
-        <div class="col-6">.col-6</div>
-        <div class="col-6">.col-6</div>
-    </div>
+    <pre lang="html"></pre>
 </div>
-
-<strong>Example code:</strong>
-
-<pre lang="html">
-&lt;div class="row">
-    &lt;div class="col-4">.col-4&lt;/div>
-    &lt;div class="col-4">.col-4&lt;/div>
-    &lt;div class="col-4">.col-4&lt;/div>
-&lt;/div>
-&lt;div class="row">
-    &lt;div class="col-6">.col-6&lt;/div>
-    &lt;div class="col-6">.col-6&lt;/div>
-    &lt;/div>
-&lt;div class="row">
-    &lt;div class="col-8">.col-8&lt;/div>
-    &lt;div class="col-4">.col-4&lt;/div>
-&lt;/div>
-</pre>
 
 <h2>Offseting columns</h2>
 
 <div class="code-example code-example--grid">
-    <div class="row">
-        <div class="col-4 col--offset-4">.col-4 .col--offset-4</div>
+
+    <div data-clone>
+        <div class="row">
+            <div class="col-4 col--offset-4">.col-4 .col--offset-4</div>
+        </div>
+        <div class="row">
+            <div class="col-4">.col-4</div>
+            <div class="col-4 col--offset-4">.col-4 .col--offset-4</div>
+        </div>
+        <div class="row">
+            <div class="col-6 col--offset-6">.col-6 .col--offset-6</div>
+        </div>
     </div>
-    <div class="row">
-        <div class="col-4">.col-4</div>
-        <div class="col-4 col--offset-4">.col-4 .col--offset-4</div>
-    </div>
-    <div class="row">
-        <div class="col-6 col--offset-6">.col-6 .col--offset-6</div>
-    </div>
+
+    <pre lang="html"></pre>
 </div>
-
-<strong>Example code:</strong>
-
-<pre lang="html">
-&lt;div class="row">
-    &lt;div class="col-4 col--offset-4">.col-4 .col--offset-4&lt;/div>
-&lt;/div>
-&lt;div class="row">
-    &lt;div class="col-4">.col-4&lt;/div>
-    &lt;div class="col-4 col--offset-4">.col-4 .col--offset-4&lt;/div>
-&lt;/div>
-&lt;div class="row">
-    &lt;div class="col-6 col--offset-6">.col-6 .col--offset-6&lt;/div>
-&lt;/div>
-</pre>
 
 
 <h2>RWD</h2>
@@ -119,32 +95,47 @@ title: Grid system
 <h3>Desktop + Phone</h3>
 
 <div class="code-example code-example--grid">
-    <div class="row">
-        <div class="col-4 col-12--phone">.col-4 .col-12--phone</div>
-        <div class="col-4 col-6--phone">.col-4 .col-6--phone</div>
-        <div class="col-4 col-6--phone">.col-4 .col-6--phone</div>
+
+    <div data-clone>
+        <div class="row">
+            <div class="col-4 col-12--phone">.col-4 .col-12--phone</div>
+            <div class="col-4 col-6--phone">.col-4 .col-6--phone</div>
+            <div class="col-4 col-6--phone">.col-4 .col-6--phone</div>
+        </div>
     </div>
+
+    <pre lang="html"></pre>
 </div>
 
 
 <h3>Desktop + Tablet</h3>
 
 <div class="code-example code-example--grid">
-    <div class="row">
-        <div class="col-12 col-6--tablet">.col-12 .col-6--tablet</div>
-        <div class="col-6 col-6--tablet">.col-6 .col-6--tablet</div>
-        <div class="col-6 col-12--tablet">.col-6 .col-12--tablet</div>
+
+    <div data-clone>
+        <div class="row">
+            <div class="col-12 col-6--tablet">.col-12 .col-6--tablet</div>
+            <div class="col-6 col-6--tablet">.col-6 .col-6--tablet</div>
+            <div class="col-6 col-12--tablet">.col-6 .col-12--tablet</div>
+        </div>
     </div>
+
+    <pre lang="html"></pre>
 </div>
 
 <h3>Desktop + Tablet + Phone</h3>
 
 <div class="code-example code-example--grid">
-    <div class="row">
-        <div class="col-12 col-6--tablet col-12--phone">.col-12 .col-6--tablet .col-12--phone</div>
-        <div class="col-6 col-6--tablet col-12--phone">.col-6 .col-6--tablet .col-12--phone</div>
-        <div class="col-6 col-12--tablet col-12--phone">.col-6 .col-12--tablet .col-12--phone</div>
+
+    <div data-clone>
+        <div class="row">
+            <div class="col-12 col-6--tablet col-12--phone">.col-12 .col-6--tablet .col-12--phone</div>
+            <div class="col-6 col-6--tablet col-12--phone">.col-6 .col-6--tablet .col-12--phone</div>
+            <div class="col-6 col-12--tablet col-12--phone">.col-6 .col-12--tablet .col-12--phone</div>
+        </div>
     </div>
+
+    <pre lang="html"></pre>
 </div>
 
 <h2>Grid helpers</h2>

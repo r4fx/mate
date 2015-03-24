@@ -32,7 +32,7 @@ $font__base--light:       quote(nth($font__base--file, 6)), $font__base--safeFam
 // get your palette for quick start: https://color.adobe.com/pl/create/color-wheel/
 // ============================================================
 $color__base--first:      #1ab394;
-$color__base--second:     #3c3c3c;
+$color__base--second:     #272822;
 
 $color__message--alert:   #ff3724;
 $color__message--warning: #ffb82d;
@@ -82,7 +82,7 @@ $btn__color--third:       $color__base--second;
 // ============================================================
 $border__size:            1px;
 $border__style:           solid;
-$border__color--first:    $color__base--second;
+$border__color--first:    #ccc;
 $border__color--second:   #fff;
 $border__radius:          5px;
 
@@ -96,7 +96,7 @@ $margin--section:         50px;
 // GRID
 // ============================================================
 $grid__columns:           12;
-$grid__col--gutter:       15px;
+$grid__col--gutter:       25px;
 $grid__row--gutter:       15px;
 $grid__document--gutter:  15px;
 
