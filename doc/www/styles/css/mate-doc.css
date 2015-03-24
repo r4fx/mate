@@ -201,7 +201,8 @@ body {
   color: #3c3c3c;
   font-family: "lato-light", Arial, sans-serif;
   font-size: 16px;
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  line-height: 1.5; }
   body.orientation-landscape:before {
     content: '';
     position: absolute;
@@ -288,16 +289,18 @@ hr {
     background-color: #34362e; }
 
 .btn--outline {
-  border: 2px solid #249cff;
-  border-radius: 5px; }
+  border: 2px solid #1ab394;
+  color: #1ab394;
+  border-radius: 5px;
+  background-color: transparent; }
 .btn--block {
   display: block;
   width: 100%; }
 .btn--txt {
-  padding: 0; }
+  background-color: transparent;
+  color: #3c3c3c; }
   .btn--txt:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    color: inherit; }
+    background-color: inherit; }
 .btn--circle {
   line-height: 1;
   position: relative;
@@ -311,11 +314,24 @@ hr {
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     position: absolute; }
+  .btn--circle.btn--sm {
+    width: 50px;
+    height: 50px; }
+  .btn--circle.btn--md {
+    width: 100px;
+    height: 100px; }
+  .btn--circle.btn--lg {
+    width: 150px;
+    height: 150px; }
+  .btn--circle.btn--xl {
+    width: 200px;
+    height: 200px; }
   .btn--circle.btn--xxl {
     width: 250px;
     height: 250px; }
 .btn--arrow-r, .btn--arrow-l {
-  position: relative; }
+  position: relative;
+  border-radius: 0; }
   .btn--arrow-r:after, .btn--arrow-r:before, .btn--arrow-l:after, .btn--arrow-l:before {
     content: '';
     width: 0;
@@ -867,8 +883,7 @@ a[href^="https://github.com"]:before {
 header {
   font-size: 15px;
   font-size: 1.5rem;
-  line-height: 20px;
-  line-height: 2rem; }
+  line-height: 1.33333; }
   header .col {
     padding-top: 15px;
     padding-bottom: 15px; }

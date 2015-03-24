@@ -1,108 +1,116 @@
-// todo: zmienic nazewnictwo dla rozmiarow, tak jak w specyfikacji css (sprawdzic dev tools i w3c)
-
 // SIZES
 // ============================================================
-$page__width--maxsize:    1024px;
-$page__width--minsize:    320px;
+$page__width--maxsize:      1024px;
+$page__width--minsize:      320px;
 
-$breakPoint__phone:       720px;
-$breakPoint__tablet:      768px;
-$breakPoint__desktop:     1024px;
-$breakPoint__desktop--xl: 1280px;
+$breakPoint__phone:         720px;
+$breakPoint__tablet:        768px;
+$breakPoint__desktop:       1024px;
+$breakPoint__desktop--xl:   1280px;
 
 
 // FONTS
 // ============================================================
 // [i] --file should contain the names of the files in the specified --dir
-$font__base--dir:         "../../fonts/lato/";
-$font__base--file:        lato-regular, lato-semibold, lato-bold, lato-italic, lato-thin, lato-light; // (1,2,3,4,x)
-$font__base--safeFamily:  Arial;
-$font__base--generic:     sans-serif;
+$font__base--dir:           "../../fonts/lato/";
+$font__base--file:          lato-regular, lato-semibold, lato-bold, lato-italic, lato-thin, lato-light; // (1,2,3,4,x)
+$font__base--safeFamily:    Arial;
+$font__base--generic:       sans-serif;
 
-$font__base--simple:      Arial, $font__base--generic;
-$font__base--regular:     quote(nth($font__base--file, 1)), $font__base--safeFamily, $font__base--generic;
-$font__base--medium:      quote(nth($font__base--file, 2)), $font__base--safeFamily, $font__base--generic;
-$font__base--bold:        quote(nth($font__base--file, 3)), $font__base--safeFamily, $font__base--generic;
-$font__base--italic:      quote(nth($font__base--file, 4)), $font__base--safeFamily, $font__base--generic;
-$font__base--thin:        quote(nth($font__base--file, 5)), $font__base--safeFamily, $font__base--generic;
-$font__base--light:       quote(nth($font__base--file, 6)), $font__base--safeFamily, $font__base--generic;
+$font__base--simple:        Arial, $font__base--generic;
+$font__base--regular:       quote(nth($font__base--file, 1)), $font__base--safeFamily, $font__base--generic;
+$font__base--medium:        quote(nth($font__base--file, 2)), $font__base--safeFamily, $font__base--generic;
+$font__base--bold:          quote(nth($font__base--file, 3)), $font__base--safeFamily, $font__base--generic;
+$font__base--italic:        quote(nth($font__base--file, 4)), $font__base--safeFamily, $font__base--generic;
+$font__base--thin:          quote(nth($font__base--file, 5)), $font__base--safeFamily, $font__base--generic;
+$font__base--light:         quote(nth($font__base--file, 6)), $font__base--safeFamily, $font__base--generic;
 
 
 // COLORS BASE PALETTE
-// get your palette for quick start: https://color.adobe.com/pl/create/color-wheel/
+// [i] get your palette for quick start: https://color.adobe.com/pl/create/color-wheel/
 // ============================================================
-$color__base--first:      #1ab394;
-$color__base--second:     #272822;
+$color__base--first:        #1ab394;
+$color__base--second:       #272822;
 
-$color__message--alert:   #ff3724;
-$color__message--warning: #ffb82d;
-$color__message--info:    #249cff;
-$color__message--success: #0fce47;
+$color__message--alert:     #ff3724;
+$color__message--warning:   #ffb82d;
+$color__message--info:      #249cff;
+$color__message--success:   #0fce47;
 
 // TEXTS
 // ============================================================
 
 // --sizes
-$text__size--sm:          14px;
-$text__size--md:          16px;
-$text__size--lg:          20px;
-$text__size--xl:          32px;
-$text__size--xxl:         42px;
+$text__size--sm:            14px;
+$text__size--md:            16px;
+$text__size--lg:            20px;
+$text__size--xl:            32px;
+$text__size--xxl:           42px;
+$text__size--base:          $text__size--md;
+
+// --line-height
+// [i] find your own optimal line-height: http://www.pearsonified.com/typography/
+$text__line-height-ratio:   1.5;
+
+$text__line-height--sm:     $text__size--sm * $text__line-height-ratio;
+$text__line-height--md:     $text__size--md * $text__line-height-ratio;
+$text__line-height--lg:     $text__size--lg * $text__line-height-ratio;
+$text__line-height--xl:     $text__size--xl * $text__line-height-ratio;
+$text__line-height--xxl:    $text__size--xxl * $text__line-height-ratio;
+$text__line-height--base:   $text__size--base * $text__line-height-ratio;
 
 // --colors
-$text__color--first:      #3c3c3c;
-$text__color--second:     #fff;
-$text__color--third:      $color__base--first;
+$text__color--first:        #3c3c3c;
+$text__color--second:       #fff;
 
-$text__color--muted:      #959A9D;
-$text__color--link:       #249cff;
-
-// --lines
-$text__line--base:        20;
+$text__color--muted:        #959A9D;
+$text__color--link:         #249cff;
 
 
 // BLOCKS
 // ============================================================
 
 // --colors
-$block__color--first:     #DDDDDD;
-$block__color--second:    #353535;
+$block__color--first:       #DDDDDD;
+$block__color--second:      #353535;
 
 
 // BUTTONS
 // ============================================================
 
 // --colors
-$btn__color--first:       $color__base--first;
-$btn__color--second:      #249cff;
-$btn__color--third:       $color__base--second;
+$btn__color--first:         #1ab394;
+$btn__color--second:        #249cff;
+$btn__color--third:         #272822;
 
 
 // BORDERS
 // ============================================================
-$border__size:            1px;
-$border__style:           solid;
-$border__color--first:    #ccc;
-$border__color--second:   #fff;
-$border__radius:          5px;
+$border__width--base:       1px;
+$border__style--base:       solid;
+
+$border__radius:            5px;
+
+$border__color--first:      #ccc;
+$border__color--second:     #fff;
 
 
 // MARGINS
 // ============================================================
-$margin--image:           15px;
-$margin--section:         50px;
+$margin--image:             15px;
+$margin--section:           50px;
 
 
 // GRID
 // ============================================================
-$grid__columns:           12;
-$grid__col--gutter:       25px;
-$grid__row--gutter:       15px;
-$grid__document--gutter:  15px;
+$grid__columns:             12;
+$grid__col--gutter:         25px;
+$grid__row--gutter:         15px;
+$grid__document--gutter:    15px;
 
 
 // TRANSITIONS
 // ============================================================
-$trans__base--duration:   300ms !default;
-$trans__base--timing:     ease-in-out !default;
-$trans__base--delay:      0s !default;
+$trans__base--duration:     300ms !default;
+$trans__base--timing:       ease-in-out !default;
+$trans__base--delay:        0s !default;

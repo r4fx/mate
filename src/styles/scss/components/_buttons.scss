@@ -107,21 +107,25 @@ $btn-sizes: sm, md, lg, xl, xxl;
 
   // Outlined
   &--outline {
-    border: 2px solid $btn__color--second;
+    border: 2px solid $btn__color--first;
+    color: $btn__color--first;
     border-radius: $border__radius;
+    background-color: transparent;
   }
 
+  // Block
   &--block {
     display: block;
     width: 100%;
   }
 
+  // Txt
   &--txt {
-    padding: 0;
+    background-color: transparent;
+    color: $text__color--first;
 
     &:hover {
-      background-color: rgba(255, 255, 255, 0.2);
-      color: inherit;
+      background-color: inherit;
     }
   }
 
@@ -137,16 +141,38 @@ $btn-sizes: sm, md, lg, xl, xxl;
       @include centerer;
     }
 
+    // todo: make mixin
+    &.btn--sm {
+      width: 50px;
+      height: 50px;
+    }
+
+    &.btn--md {
+      width: 100px;
+      height: 100px;
+    }
+
+    &.btn--lg {
+      width: 150px;
+      height: 150px;
+    }
+
+    &.btn--xl {
+      width: 200px;
+      height: 200px;
+    }
+
     &.btn--xxl {
       width: 250px;
       height: 250px;
     }
   }
 
-  // ARROWS, LEFT & RIGHT
+  // ARROWS
   &--arrow-r,
   &--arrow-l {
     position: relative;
+    border-radius: 0;
 
     &:after,
     &:before {

@@ -16,8 +16,7 @@ a[href^="https://github.com"]:before {
 }
 
 header{
-  @include font-size(15px);
-  @include line-height(20px);
+  @include font-size(15px, 20px);
 
   .col{
     padding-top: 15px;

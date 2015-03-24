@@ -13,7 +13,7 @@ html {
 body {
   color: $text__color--first;
   font-family: $font__base--light;
-  @include font-size($text__size--md);
+  @include font-size($text__size--md, $text__line-height--md);
 
   // Mobile helper
   &.orientation-landscape:before {

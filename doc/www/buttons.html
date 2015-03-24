@@ -49,8 +49,11 @@
 
         <h2>Tagi</h2>
 
-<p>Zalecamy używanie stylów przycisków dla tagów <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, <code>&lt;input&gt;</code>, <code>&lt;span&gt;
-</code></p>
+<p>Zalecamy używanie stylów przycisków dla tagów <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, <code>&lt;input&gt;</code>,
+    <code>&lt;span&gt;</code>. <br>
+    Gdy używasz tagu <code>&lt;a&gt;</code> weź pod uwagę dodanie atrybutu <code>role="button"</code> aby zadbać o
+    dostępność.
+</p>
 
 <p>
     Dla domyślnego wyglądu przycisku wystarczy użyć klasy <code>.btn</code>
@@ -59,7 +62,7 @@
 <div class="code-example">
     <div>
         <div class="col-12" data-clone>
-            <a href="#" class="btn">Link</a>
+            <a href="#" class="btn" role="button">Link</a>
             <button class="btn" type="button">Button - type button</button>
             <button class="btn" type="submit">Button - type submit</button>
             <input class="btn" type="button" value="Input - type button">
@@ -93,10 +96,10 @@
 <div class="code-example">
     <div>
         <div class="col-12" data-clone>
-            <a href="#" class="btn">Color default</a>
             <a href="#" class="btn btn--color-first">Color first</a>
             <a href="#" class="btn btn--color-second">Color second</a>
             <a href="#" class="btn btn--color-third">Color third</a>
+            <a href="#" class="btn">Color default</a>
         </div>
     </div>
 
@@ -108,9 +111,17 @@
 <div class="code-example">
     <div>
         <div class="col-12" data-clone>
-            <a href="#" class="btn">Color default</a>
-            <a href="#" class="btn btn--color-first">Color first</a>
-            <a href="#" class="btn btn--xxl btn--circle">XXL circle button</a>
+            <a href="#" class="btn">Default type</a>
+            <a href="#" class="btn btn--outline btn--color-second">Outline</a>
+            <a href="#" class="btn btn--color-second">Button with icon <span class="icon-checkmark"></span></a>
+            <a href="#" class="btn btn--color-second"><span class="icon-file-pdf"></span> Button with icon</a>
+            <a href="#" class="btn btn--txt">Text button</a>
+
+            <a href="#" class="btn btn--block btn--color-third">Block button</a>
+            <a href="#" class="btn btn--arrow-l btn--color-second">Arrow left</a>
+            <a href="#" class="btn btn--arrow-r btn--color-second">Arrow right</a>
+
+            <a href="#" class="btn btn--circle btn--xl btn--color-second"><span>Circle button</span></a>
         </div>
     </div>
 

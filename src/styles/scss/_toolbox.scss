@@ -136,6 +136,7 @@ EXTENDS, PLACEHOLDERS
 // REM FONT SIZE
 // Examples:
 // @include font-size(14px, 60px); - general
+// @include font-size($text__size--md, $text__line-height--md); - general
 // @include font-size(14px, 1); - for text inputs
 // ============================================================
 @mixin font-size($size, $line-height: null) {
@@ -154,7 +155,7 @@ EXTENDS, PLACEHOLDERS
 // Examples:
 // @include lineheight-size(18px)
 // ============================================================
-@mixin line-height($height) {
+@mixin line-height-rem($height) {
   line-height: $height; // fallback for old browsers
   line-height: calculateRem($height);
 }
