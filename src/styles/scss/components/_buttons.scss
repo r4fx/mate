@@ -10,27 +10,27 @@ $btn-sizes: sm, md, lg, xl, xxl;
 
 @mixin button-size($size){
   @if $size == sm {
-    padding: 2px 10px;
+    padding: 2px 8px;
     @include font-size($text__size--sm);
   }
 
   @else if $size == md {
-    padding: 8px 20px;
+    padding: 6px 18px;
     @include font-size($text__size--md);
   }
 
   @else if $size == lg {
-    padding: 10px 25px;
+    padding: 8px 22px;
     @include font-size($text__size--lg);
   }
 
   @else if $size == xl {
-    padding: 10px 25px;
+    padding: 8px 22px;
     @include font-size($text__size--xl);
   }
 
   @else if $size == xxl {
-    padding: 15px 30px;
+    padding: 14px 28px;
     @include font-size($text__size--xxl);
   }
 }
@@ -49,11 +49,12 @@ $btn-sizes: sm, md, lg, xl, xxl;
 
 // BUTTON: BASE
 // ============================================================
+
 .btn {
   line-height: 1.5;
   text-decoration: none;
   border-radius: $border__radius;
-  border: 0;
+  border: $btn__outline--width solid transparent;
   display: inline-block;
   vertical-align: middle;
   cursor: pointer;
@@ -69,34 +70,164 @@ $btn-sizes: sm, md, lg, xl, xxl;
 }
 
 // BUTTON: COLORS
+// todo: make mixin
 // ============================================================
 .btn {
   @extend .btn--color-first;
 
   &--color-first {
+
+    // Base
     background-color: $btn__color--first;
     color: $text__color--second;
 
     &:hover {
-      background-color: lighten($btn__color--first, 5%);
+      background-color: lighten($btn__color--first, 7%);
+
+      // Arrows
+      &.btn--arrow-l:before {
+        border-right-color: lighten($btn__color--first, 7%);
+      }
+
+      &.btn--arrow-r:after {
+        border-left-color: lighten($btn__color--first, 7%);
+      }
+    }
+
+    // Outlined
+    &.btn--outline {
+      border-color: $btn__color--first;
+      color: $btn__color--first;
+
+      &:hover {
+        background-color: transparent;
+        border-color: lighten($btn__color--first, 7%);
+        color: lighten($btn__color--first, 7%);
+      }
+    }
+
+    // Text
+    &.btn--txt {
+      color: $btn__color--first;
+
+      &:hover {
+        background-color: inherit;
+        color: lighten($btn__color--first, 7%);
+      }
+    }
+
+    // Arrow left
+    &.btn--arrow-l:before {
+      border-right-color: $btn__color--first;
+    }
+
+    // Arrow right
+    &.btn--arrow-r:after {
+      border-left-color: $btn__color--first;
     }
   }
 
   &--color-second {
+
+    // Base
     background-color: $btn__color--second;
     color: $text__color--second;
 
     &:hover {
-      background-color: lighten($btn__color--second, 5%);
+      background-color: lighten($btn__color--second, 7%);
+
+      // Arrows
+      &.btn--arrow-l:before {
+        border-right-color: lighten($btn__color--second, 7%);
+      }
+
+      &.btn--arrow-r:after {
+        border-left-color: lighten($btn__color--second, 7%);
+      }
+    }
+
+    // Outlined
+    &.btn--outline {
+      border-color: $btn__color--second;
+      color: $btn__color--second;
+
+      &:hover{
+        background-color: transparent;
+        border-color: lighten($btn__color--second, 7%);
+        color: lighten($btn__color--second, 7%);
+      }
+    }
+
+    // Text
+    &.btn--txt {
+      color: $btn__color--second;
+
+      &:hover {
+        background-color: inherit;
+        color: lighten($btn__color--second, 7%);
+      }
+    }
+
+    // Arrow left
+    &.btn--arrow-l:before {
+      border-right-color: $btn__color--second;
+    }
+
+    // Arrow right
+    &.btn--arrow-r:after {
+      border-left-color: $btn__color--second;
     }
   }
 
   &--color-third {
+
+    // Base
     background-color: $btn__color--third;
     color: $text__color--second;
 
     &:hover {
-      background-color: lighten($btn__color--third, 5%);
+      background-color: lighten($btn__color--third, 7%);
+
+      // Arrows
+      &.btn--arrow-l:before {
+        border-right-color: lighten($btn__color--third, 7%);
+      }
+
+      &.btn--arrow-r:after {
+        border-left-color: lighten($btn__color--third, 7%);
+      }
+    }
+
+    // Outlined
+    &.btn--outline {
+      border-color: $btn__color--third;
+      color: $btn__color--third;
+
+      &:hover {
+        background-color: transparent;
+        border-color: lighten($btn__color--third, 7%);
+        color: lighten($btn__color--third, 7%);
+      }
+    }
+
+    // Text
+    &.btn--txt {
+      color: $btn__color--third;
+
+      &:hover {
+        background-color: inherit;
+        color: lighten($btn__color--third, 7%);
+      }
+    }
+
+    // Arrow left
+    &.btn--arrow-l:before {
+      border-right-color: $btn__color--third;
+    }
+
+    // Arrow right
+    &.btn--arrow-r:after {
+      border-left-color: $btn__color--third;
     }
   }
 }
@@ -107,8 +238,6 @@ $btn-sizes: sm, md, lg, xl, xxl;
 
   // Outlined
   &--outline {
-    border: 2px solid $btn__color--first;
-    color: $btn__color--first;
     border-radius: $border__radius;
     background-color: transparent;
   }
@@ -122,11 +251,6 @@ $btn-sizes: sm, md, lg, xl, xxl;
   // Txt
   &--txt {
     background-color: transparent;
-    color: $text__color--first;
-
-    &:hover {
-      background-color: inherit;
-    }
   }
 
   // Circle
@@ -168,50 +292,35 @@ $btn-sizes: sm, md, lg, xl, xxl;
     }
   }
 
-  // ARROWS
+  // ARROWS COMMON STYLES
   &--arrow-r,
   &--arrow-l {
     position: relative;
     border-radius: 0;
-
-    &:after,
-    &:before {
-      content: '';
-      width: 0;
-      height: 0;
-      position: absolute;
-      top: 50%;
-      margin-top: -5px;
-      border-style: solid;
-    }
   }
 
-  // ARROW RIGHT
-  &--arrow-r {
-    padding-right: 50px;
-
-    &:after {
-      border-width: 5px 0 5px 10px;
-      border-color: transparent transparent transparent white;
-      right: 20px;
-    }
+  &--arrow-r:after,
+  &--arrow-l:before{
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -2px;
+    border-style: solid;
+    border-color: transparent;
+    @include transition();
   }
 
   // ARROW LEFT
-  &--arrow-l {
-    padding-left: 50px;
-
-    &:before {
-      border-width: 5px 10px 0 5px;
-      border-color: transparent white transparent transparent;
-      left: 20px;
-    }
+  &--arrow-l:before {
+    border-width: 20px 20px 20px 0;
+    left: -(20px + $btn__outline--width);
   }
 
-  // ICONS POSITION FIX
-  .icon {
-    top: -3px;
-    position: relative;
+  // ARROW RIGHT
+  &--arrow-r:after {
+    border-width: 20px 0 20px 20px;
+    right: -(20px + $btn__outline--width);
   }
 }
 
