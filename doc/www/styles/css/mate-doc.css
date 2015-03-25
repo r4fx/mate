@@ -522,7 +522,7 @@ textarea {
       color: #fff;
       opacity: 1; }
 
-.input-radio .icon {
+.input-radio [class*="icon-"] {
   border-radius: 50%; }
 
 .form-error {
