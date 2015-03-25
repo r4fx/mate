@@ -14,10 +14,16 @@ EXTENDS, PLACEHOLDERS
 }
 
 // todo: add border-collapse
-%box-sizing {
+%box-sizing--border {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+%box-sizing--content {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
 }
 
 %ellipsis {

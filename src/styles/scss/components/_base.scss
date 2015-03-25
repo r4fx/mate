@@ -3,7 +3,7 @@
 // ============================================================
 
 *, :before, :after {
-  @extend %box-sizing;
+  @extend %box-sizing--border;
 }
 
 html {

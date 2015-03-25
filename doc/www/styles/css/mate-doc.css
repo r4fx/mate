@@ -271,6 +271,12 @@ hr {
   padding: 14px 28px;
   font-size: 42px;
   font-size: 4.2rem; }
+  .btn--xxl.btn--arrow-l:before {
+    border-width: 42px 42px 42px 0;
+    left: -44px; }
+  .btn--xxl.btn--arrow-r:after {
+    border-width: 46px 0 46px 46px;
+    right: -44px; }
 
 .btn--color-first, .btn {
   background-color: #1ab394;

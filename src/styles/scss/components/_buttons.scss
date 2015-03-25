@@ -32,6 +32,18 @@ $btn-sizes: sm, md, lg, xl, xxl;
   @else if $size == xxl {
     padding: 14px 28px;
     @include font-size($text__size--xxl);
+
+    // ARROW LEFT
+    &.btn--arrow-l:before {
+      border-width: $text__size--xxl $text__size--xxl $text__size--xxl 0;
+      left: -($text__size--xxl + $btn__outline--width);
+    }
+
+    // ARROW RIGHT
+    &.btn--arrow-r:after {
+      border-width: ($text__size--xxl + $btn__outline--width*2) 0 ($text__size--xxl + $btn__outline--width*2) ($text__size--xxl + $btn__outline--width*2);
+      right: -($text__size--xxl + $btn__outline--width);
+    }
   }
 }
 
