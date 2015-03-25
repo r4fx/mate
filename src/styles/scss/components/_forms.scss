@@ -131,7 +131,6 @@ textarea {
   display: inline-block;
 
   &.label-multiline {
-
     [class*="icon-"] {
       float: left;
 
@@ -148,11 +147,12 @@ textarea {
     margin-right: 5px;
     border: 1px solid $border__color--second;
     text-align: center;
-
     @include font-size($text__size--md);
 
     &:before {
       color: transparent;
+      opacity: 0;
+      @include transition();
     }
 
     ~ span {
@@ -174,7 +174,8 @@ textarea {
       ~ [class*="icon-"] {
 
         &:before {
-          color: white;
+          color: $text__color--second;
+          opacity: 1;
         }
       }
     }

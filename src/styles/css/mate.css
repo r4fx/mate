@@ -506,7 +506,10 @@ textarea {
     font-size: 16px;
     font-size: 1.6rem; }
     .input-radio [class*="icon-"]:before, .input-checkbox [class*="icon-"]:before {
-      color: transparent; }
+      color: transparent;
+      opacity: 0;
+      -webkit-transition: all 300ms ease-in-out 0s;
+      transition: all 300ms ease-in-out 0s; }
     .input-radio [class*="icon-"] ~ span, .input-checkbox [class*="icon-"] ~ span {
       vertical-align: middle;
       line-height: 1; }
@@ -516,7 +519,8 @@ textarea {
   .input-radio input, .input-checkbox input {
     display: none; }
     .input-radio input:checked ~ [class*="icon-"]:before, .input-checkbox input:checked ~ [class*="icon-"]:before {
-      color: white; }
+      color: #fff;
+      opacity: 1; }
 
 .input-radio .icon {
   border-radius: 50%; }
