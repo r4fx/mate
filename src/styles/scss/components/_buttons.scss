@@ -8,41 +8,120 @@
 // Define sizes
 $btn-sizes: sm, md, lg, xl, xxl;
 
+// Todo: do refactoring
 @mixin button-size($size){
   @if $size == sm {
     padding: 2px 8px;
     @include font-size($text__size--sm);
+
+    // Arrows
+    &.btn--arrow-l {
+      margin-left: calculateRem($text__size--sm*1.5/2);
+
+      &:before {
+        border-width: calculateRem($text__size--sm*1.5/2) calculateRem($text__size--sm*1.5/2) calculateRem($text__size--sm*1.5/2) 0;
+        margin-left: calculateRem($text__size--sm*1.5/2);
+      }
+    }
+    &.btn--arrow-r {
+      margin-right: calculateRem($text__size--sm*1.5/2);
+
+      &:after {
+        border-width: calculateRem($text__size--sm*1.5/2) 0 calculateRem($text__size--sm*1.5/2) calculateRem($text__size--sm*1.5/2);
+        margin-right: calculateRem($text__size--sm*1.5/2);
+      }
+    }
   }
 
   @else if $size == md {
     padding: 6px 18px;
     @include font-size($text__size--md);
+
+    // Arrows
+    &.btn--arrow-l {
+      margin-left: calculateRem($text__size--md*1.5/2);
+
+      &:before {
+        border-width: calculateRem($text__size--md*1.5/2) calculateRem($text__size--md*1.5/2) calculateRem($text__size--md*1.5/2) 0;
+        margin-left: calculateRem($text__size--md*1.5/2);
+      }
+    }
+    &.btn--arrow-r {
+      margin-right: calculateRem($text__size--md*1.5/2);
+
+      &:after {
+        border-width: calculateRem($text__size--md*1.5/2) 0 calculateRem($text__size--md*1.5/2) calculateRem($text__size--md*1.5/2);
+        margin-right: calculateRem($text__size--md*1.5/2);
+      }
+    }
   }
 
   @else if $size == lg {
     padding: 8px 22px;
     @include font-size($text__size--lg);
+
+    // Arrows
+    &.btn--arrow-l {
+      margin-left: calculateRem($text__size--lg*1.5/2);
+
+      &:before {
+        border-width: calculateRem($text__size--lg*1.5/2) calculateRem($text__size--lg*1.5/2) calculateRem($text__size--lg*1.5/2) 0;
+        margin-left: calculateRem($text__size--lg*1.5/2);
+      }
+    }
+    &.btn--arrow-r {
+      margin-right: calculateRem($text__size--lg*1.5/2);
+
+      &:after {
+        border-width: calculateRem($text__size--lg*1.5/2) 0 calculateRem($text__size--lg*1.5/2) calculateRem($text__size--lg*1.5/2);
+        margin-right: calculateRem($text__size--lg*1.5/2);
+      }
+    }
   }
 
   @else if $size == xl {
     padding: 8px 22px;
     @include font-size($text__size--xl);
+
+    // Arrows
+    &.btn--arrow-l {
+      margin-left: calculateRem($text__size--xl*1.5/2);
+
+      &:before {
+        border-width: calculateRem($text__size--xl*1.5/2) calculateRem($text__size--xl*1.5/2) calculateRem($text__size--xl*1.5/2) 0;
+        margin-left: calculateRem($text__size--xl*1.5/2);
+      }
+    }
+    &.btn--arrow-r {
+      margin-right: calculateRem($text__size--xl*1.5/2);
+
+      &:after {
+        border-width: calculateRem($text__size--xl*1.5/2) 0 calculateRem($text__size--xl*1.5/2) calculateRem($text__size--xl*1.5/2);
+        margin-right: calculateRem($text__size--xl*1.5/2);
+      }
+    }
   }
 
   @else if $size == xxl {
     padding: 14px 28px;
     @include font-size($text__size--xxl);
 
-    // ARROW LEFT
-    &.btn--arrow-l:before {
-      border-width: $text__size--xxl $text__size--xxl $text__size--xxl 0;
-      left: -($text__size--xxl + $btn__outline--width);
-    }
+    // Arrows
+    &.btn--arrow-l {
+      margin-left: calculateRem($text__size--xxl*1.5/2);
 
-    // ARROW RIGHT
-    &.btn--arrow-r:after {
-      border-width: ($text__size--xxl + $btn__outline--width*2) 0 ($text__size--xxl + $btn__outline--width*2) ($text__size--xxl + $btn__outline--width*2);
-      right: -($text__size--xxl + $btn__outline--width);
+      &:before {
+        border-width: calculateRem($text__size--xxl*1.5/2) calculateRem($text__size--xxl*1.5/2) calculateRem($text__size--xxl*1.5/2) 0;
+        margin-left: calculateRem($text__size--xxl*1.5/2);
+      }
+    }
+    &.btn--arrow-r {
+      margin-right: calculateRem($text__size--xxl*1.5/2);
+
+      &:after {
+        border-width: calculateRem($text__size--xxl*1.5/2) 0 calculateRem($text__size--xxl*1.5/2) calculateRem($text__size--xxl*1.5/2);
+        margin-right: calculateRem($text__size--xxl*1.5/2);
+      }
     }
   }
 }
@@ -309,15 +388,21 @@ $btn-sizes: sm, md, lg, xl, xxl;
   &--arrow-l {
     position: relative;
     border-radius: 0;
+    border: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    line-height: 1.5;
   }
 
   &--arrow-r:after,
   &--arrow-l:before{
     content: '';
     width: 0;
-    height: 0;
+    height: 100%;
+    /*height: 50%;*/
     position: absolute;
-    top: -2px;
+    top: 0;
+    bottom: 0;
     border-style: solid;
     border-color: transparent;
     @include transition();
@@ -325,14 +410,14 @@ $btn-sizes: sm, md, lg, xl, xxl;
 
   // ARROW LEFT
   &--arrow-l:before {
-    border-width: 20px 20px 20px 0;
-    left: -(20px + $btn__outline--width);
+    //border-width: (42px * 1.5)/2 (42px * 1.5)/2 (42px * 1.5)/2 0;
+    right: 100%;
   }
 
   // ARROW RIGHT
   &--arrow-r:after {
-    border-width: 20px 0 20px 20px;
-    right: -(20px + $btn__outline--width);
+    //border-width: (42px * 1.5)/2 0 (42px * 1.5)/2 (42px * 1.5)/2;
+    left: 100%;
   }
 }
 
