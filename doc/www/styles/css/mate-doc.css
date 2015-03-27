@@ -9,10 +9,10 @@
 /*============================================================
 EXTENDS, PLACEHOLDERS
 ============================================================*/
-.grid:before, .row:before, header .col:before, .code-example > div:before, .code-example > pre:before, .grid:after, .row:after, header .col:after, .code-example > div:after, .code-example > pre:after {
+.grid:before, .row:before, header .col:before, .code-example > div:before, .grid:after, .row:after, header .col:after, .code-example > div:after {
   content: "";
   display: table; }
-.grid:after, .row:after, header .col:after, .code-example > div:after, .code-example > pre:after {
+.grid:after, .row:after, header .col:after, .code-example > div:after {
   clear: both; }
 
 *, :before, :after {
@@ -438,18 +438,16 @@ hr {
 .btn--txt {
   background-color: transparent; }
 .btn--circle {
-  line-height: 1;
   position: relative;
-  border-radius: 50%;
-  border-width: 5px;
-  border-style: solid; }
+  border-radius: 50%; }
   .btn--circle span {
     top: 50%;
     left: 50%;
     -moz-transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    position: absolute; }
+    position: absolute;
+    line-height: 1; }
   .btn--circle.btn--sm {
     width: 50px;
     height: 50px; }

@@ -142,7 +142,7 @@ ul code{
     text-align: center;
   }
 
-  > div, > pre {
+  > div{
     @extend %clearfix;
   }
 

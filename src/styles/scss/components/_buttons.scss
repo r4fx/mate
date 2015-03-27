@@ -384,14 +384,12 @@ $btn-sizes: sm, md, lg, xl, xxl;
 
   // Circle
   &--circle {
-    line-height: 1;
     position: relative;
     border-radius: 50%;
-    border-width: 5px;
-    border-style: solid;
 
     span {
       @include centerer;
+      line-height: 1;
     }
 
     // todo: make mixin
