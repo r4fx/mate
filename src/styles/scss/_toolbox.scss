@@ -134,8 +134,7 @@ EXTENDS, PLACEHOLDERS
 // REM SIZES
 // ============================================================
 @function calculateRem($size) {
-  $remSize: $size / 1px / 10;
-  @return $remSize + rem;
+  @return ($size / 1px / 10) * 1rem;
 }
 
 // ============================================================
@@ -149,21 +148,10 @@ EXTENDS, PLACEHOLDERS
   font-size: $size; // fallback for old browsers
   font-size: calculateRem($size);
 
-  // Optional unitless line heights http://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/
+  // Optional unitless line height http://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/
   @if $line-height {
     line-height: ceil($size / $line-height) * ($line-height / $size);
   }
-}
-
-// ============================================================
-// REM LINE HEIGHT
-//
-// Examples:
-// @include lineheight-size(18px)
-// ============================================================
-@mixin line-height-rem($height) {
-  line-height: $height; // fallback for old browsers
-  line-height: calculateRem($height);
 }
 
 // ============================================================
@@ -172,8 +160,8 @@ EXTENDS, PLACEHOLDERS
 // Examples:
 // strip-units(24px) returns: 24 without "px"
 // ============================================================
-@function strip-units($number) {
-  @return $number / ($number * 0 + 1);
+@function strip-units($value) {
+  @return $value / ($value * 0 + 1);
 }
 
 /*============================================================
