@@ -73,7 +73,7 @@ main {
 
         &.act,
         &:hover {
-          background-color: darken($color__base--second, 12);
+          background-color: $color__base--first;
         }
       }
     }

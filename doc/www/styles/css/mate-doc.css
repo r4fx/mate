@@ -1053,7 +1053,7 @@ main > aside[class*="col-"] {
       -webkit-transition: background-color 300ms ease-in-out 0s, color 300ms ease-in-out 0s;
       transition: background-color 300ms ease-in-out 0s, color 300ms ease-in-out 0s; }
       main > aside[class*="col-"] ul a.act, main > aside[class*="col-"] ul a:hover {
-        background-color: #070706; }
+        background-color: #1ab394; }
   main > aside[class*="col-"] .aside__footer {
     position: absolute;
     width: 100%;
