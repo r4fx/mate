@@ -8,7 +8,7 @@
 // Define sizes
 $btn-sizes: sm, md, lg, xl, xxl;
 
-// Todo: do refactoring
+// Todo: do refactoring!
 @mixin button-size($size){
   @if $size == sm {
     font-size: calculateRem($text__size--sm);

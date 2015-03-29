@@ -531,6 +531,7 @@ textarea {
   background-color: transparent;
   padding: 4px 10px;
   height: 34px;
+  vertical-align: middle;
   color: #3c3c3c;
   font-family: "lato-light", Arial, sans-serif;
   -webkit-appearance: none;
@@ -795,6 +796,9 @@ textarea {
 
 .no-margin {
   margin: 0; }
+
+.hide {
+  display: none !important; }
 
 .radius-none {
   border-radius: 0; }
