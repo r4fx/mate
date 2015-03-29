@@ -24,7 +24,6 @@ $icon-sizes: ("s": 18px, "m": 25px, "l": 35px, "xl": 50px, "xxl": 75px);
 
 [class^="icon-"],
 [class*="icon-"] {
-  font-family: 'icomoon';
   font-style: normal;
   font-weight: normal;
   text-transform: none;
@@ -33,6 +32,10 @@ $icon-sizes: ("s": 18px, "m": 25px, "l": 35px, "xl": 50px, "xxl": 75px);
   speak: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  &:before {
+    font-family: 'icomoon';
+  }
 }
 
 // ICON TYPES

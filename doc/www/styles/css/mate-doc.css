@@ -831,7 +831,6 @@ textarea {
 
 [class^="icon-"],
 [class*="icon-"] {
-  font-family: 'icomoon';
   font-style: normal;
   font-weight: normal;
   text-transform: none;
@@ -840,6 +839,9 @@ textarea {
   speak: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
+  [class^="icon-"]:before,
+  [class*="icon-"]:before {
+    font-family: 'icomoon'; }
 
 .icon-checkmark:before {
   content: "\e600"; }
