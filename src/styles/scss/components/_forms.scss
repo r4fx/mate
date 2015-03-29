@@ -64,7 +64,6 @@ label, .label {
   color: $text__color--first;
   font-family: $font__base--light;
   display: block;
-  @include font-size($text__size--sm);
 }
 
 // PLACEHOLDERS

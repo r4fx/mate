@@ -507,9 +507,7 @@ hr {
 label, .label {
   color: #3c3c3c;
   font-family: "lato-light", Arial, sans-serif;
-  display: block;
-  font-size: 14px;
-  font-size: 1.4rem; }
+  display: block; }
 
 [placeholder]::-webkit-input-placeholder {
   color: #959A9D; }
