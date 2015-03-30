@@ -8,6 +8,25 @@
 
 // COLUMNS
 // ============================================================
+
+%grid-cols-common {
+  float: left;
+  padding-left: $grid__col--gutter;
+  padding-right: $grid__col--gutter;
+}
+
+// COMMON STYLES FOR ALL DEVICES
+@mixin grid-cols-common {
+  @for $i from 1 through $grid__columns {
+    &-#{$i},
+    &-#{$i}--tablet,
+    &-#{$i}--phone{
+      @extend %grid-cols-common;
+    }
+  }
+}
+
+// DEFAULT COLUMNS FOR DESKTOP
 @mixin grid-cols {
   @for $i from 1 through $grid__columns {
     &-#{$i} {
@@ -89,20 +108,12 @@
 
 // COLUMNS
 // ------------------------------------------------------------
-[class*="col-"]{
-  float: left;
-  padding: 0 $grid__col--gutter;
-
-  .row {
-    margin: 0 (-$grid__col--gutter);
-  }
-}
-
 .col{
   &--no-gutter {
     padding: 0;
   }
 
+  @include grid-cols-common;
   @include grid-cols;
   @include grid-cols-tablet;
   @include grid-cols-phone;
@@ -128,6 +139,7 @@
 
   .row {
     clear: both;
+    //margin: 0 (-$grid__col--gutter);
 
     &.row--dbl-margin-top {
       margin-top: 0;

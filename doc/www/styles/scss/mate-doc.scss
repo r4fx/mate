@@ -45,6 +45,7 @@ main {
     background-color: $color__base--second;
     padding: $grid__row--gutter*2;
     color: $text__color--second;
+    min-width: 295px;
 
     figure{
       text-align: right;
@@ -138,10 +139,6 @@ ul code{
   padding: $grid__col--gutter 0 0;
   margin-bottom: $grid__row--gutter;
 
-  [data-clone] {
-    text-align: center;
-  }
-
   > div{
     @extend %clearfix;
   }
@@ -164,5 +161,10 @@ ul code{
       padding: 10px;
       border: 1px solid #fff;
     }
+  }
+
+  form {
+    padding-left: $grid__col--gutter;
+    padding-right: $grid__col--gutter;
   }
 }

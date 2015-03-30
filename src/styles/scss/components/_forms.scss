@@ -43,13 +43,30 @@
 // Encode tool: http://pressbin.com/tools/urlencode_urldecode/
 @mixin svg-bkg($color) {
   background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20version=%221.1%22%20xmlns=%22http://www.w3.org/2000/svg%22%20xmlns:xlink=%22http://www.w3.org/1999/xlink%22%20width=%2224%22%20height=%2224%22%20viewBox=%220%200%2024%2024%22%3E%0A%3Cpath%20d=%22M16.585%208.585l-4.585%204.585-4.585-4.585-1.415%201.415%206%206%206-6z%22%20fill=%22#{$color}%22%3E%3C/path%3E%0A%3C/svg%3E');
-  padding-right: 20px;
+  padding-right: 25px;
   background-repeat: no-repeat;
-  background-position: 98% center;
+  background-position: right center;
 }
+
+// FORM CONTAINER
+// ============================================================
+form {
+  > .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
 
 // LABELS
 // ============================================================
+label, .label {
+  color: $text__color--first;
+  font-family: $font__base--light;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
 .label-inside {
   position: relative;
 
@@ -60,19 +77,13 @@
   }
 }
 
-label, .label {
-  color: $text__color--first;
-  font-family: $font__base--light;
-  display: block;
-}
-
 // PLACEHOLDERS
 // ============================================================
 [placeholder] {
   @include placeholder();
 }
 
-// TEXT INPUTS
+// TEXT FIELDS
 // ============================================================
 input[type="text"],
 input[type="password"],
@@ -80,11 +91,12 @@ input[type="tel"],
 input[type="email"],
 select,
 textarea {
-  border: 1px solid $border__color--second;
+  width: 100%;
+  height: 34px;
+  padding: 4px 10px;
+  border: 1px solid $border__color--first;
   border-radius: $border__radius;
   background-color: transparent;
-  padding: 4px 10px;
-  height: 34px;
   vertical-align: middle;
   color: $text__color--first;
   font-family: $font__base--light;
@@ -93,10 +105,16 @@ textarea {
   appearance: none;
   line-height: 1.42857143;
   @include font-size($text__size--sm);
+
+  &:focus {
+    outline: 0;
+    border-color: $color__message--info;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px darken($color__message--info, 5%);
+  }
 }
 
 select {
-  @include svg-bkg(white);
+  @include svg-bkg(#000);
 }
 
 textarea {
@@ -127,7 +145,8 @@ textarea {
 }
 
 // Pretty radios & checkboxes
-.input-radio, .input-checkbox {
+.input-radio,
+.input-checkbox {
   display: inline-block;
 
   &.label-multiline {
@@ -188,7 +207,6 @@ textarea {
 
 // VALIDATION
 // ============================================================
-
 .form-error {
   position: relative;
 
