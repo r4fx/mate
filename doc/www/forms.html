@@ -49,28 +49,53 @@
 
         <p>Formualurze wykorzystują tę samę składnie klas co grid. Wiersze formularza są bez marginesów.</p>
 
-<h2>Standard form</h2>
-<p>Default size is connected with medium size.</p>
+<h2>Standard form fields</h2>
 
 <div class="code-example">
     <div data-clone>
         <form>
             <div class="row">
-                <label>First name</label>
-                <input type="text">
+                <label>Text field</label>
+                <input type="text" placeholder="First name">
             </div>
 
             <div class="row">
-                <label>E-mail</label>
-                <input type="email">
-            </div>
-
-            <div class="row">
+                <label>Select</label>
                 <select>
                     <option value="0">---</option>
-                    <option value="1">Option 2</option>
-                    <option value="1">Option 3</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
                 </select>
+            </div>
+
+            <div class="row">
+                <button type="submit" class="btn btn--block">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <pre lang="html"></pre>
+</div>
+
+<h2>HTML5 fields</h2>
+
+<div class="code-example">
+    <div data-clone>
+        <form>
+            <div class="row">
+                <label>Search field</label>
+                <input type="search" placeholder="Search something ...">
+            </div>
+
+            <div class="row">
+                <label>E-mail field</label>
+                <input type="email" placeholder="E-mail">
+            </div>
+
+            <div class="row">
+                <label>Number field</label>
+                <input type="number" placeholder="Number">
             </div>
 
             <div class="row">

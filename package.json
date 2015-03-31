@@ -8,9 +8,10 @@
     "gulp-assemble": "git://github.com/assemble/gulp-assemble",
     "gulp-concat": "^2.5.2",
     "gulp-extname": "^0.2.0",
-    "gulp-ruby-sass": "^1.0.0-alpha.3",
+    "gulp-ruby-sass": "^1.0.1",
     "gulp-sass": "^1.3.3",
-    "gulp-todo": "^2.5.0",
+    "gulp-sourcemaps": "^1.5.1",
+    "gulp-todo": "^2.5.1",
     "gulp-uglify": "^1.1.0"
   },
   "repository": {

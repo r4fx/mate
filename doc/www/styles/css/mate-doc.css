@@ -160,17 +160,6 @@ input[type="radio"] {
   box-sizing: border-box;
   padding: 0; }
 
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  height: auto; }
-
-input[type="search"] {
-  -webkit-appearance: textfield;
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box; }
-
-input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
 
@@ -653,7 +642,7 @@ form > .row {
 
 label, .label {
   color: #3c3c3c;
-  font-family: "lato-light", Arial, sans-serif;
+  font-family: "lato-regular", Arial, sans-serif;
   display: inline-block;
   margin-bottom: 5px; }
 
@@ -676,7 +665,10 @@ label, .label {
 input[type="text"],
 input[type="password"],
 input[type="tel"],
+input[type="url"],
 input[type="email"],
+input[type="search"],
+input[type="number"],
 select,
 textarea {
   width: 100%;
@@ -692,12 +684,15 @@ textarea {
   -moz-appearance: none;
   appearance: none;
   line-height: 1.42857143;
-  font-size: 14px;
-  font-size: 1.4rem; }
+  font-size: 16px;
+  font-size: 1.6rem; }
   input[type="text"]:focus,
   input[type="password"]:focus,
   input[type="tel"]:focus,
+  input[type="url"]:focus,
   input[type="email"]:focus,
+  input[type="search"]:focus,
+  input[type="number"]:focus,
   select:focus,
   textarea:focus {
     outline: 0;
@@ -722,8 +717,8 @@ textarea {
   position: static;
   overflow: hidden;
   cursor: pointer;
-  font-size: 14px;
-  font-size: 1.4rem; }
+  font-size: 16px;
+  font-size: 1.6rem; }
   .fields label a,
   .fields .label a {
     color: #fff;
@@ -1141,4 +1136,6 @@ ul code {
     padding-left: 25px;
     padding-right: 25px; }
 
-/*# sourceMappingURL=mate-doc.css.map */
+
+
+/*# sourceMappingURL=../maps/mate-doc.css.map */

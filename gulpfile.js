@@ -6,8 +6,9 @@ var assemble = require('assemble');
 var gulpAssemble = require('gulp-assemble');
 var extname = require('gulp-extname');
 var todo = require('gulp-todo');
-//var sass = require('gulp-sass');
+var sourcemaps = require('gulp-sourcemaps');
 var sassRuby = require('gulp-ruby-sass');
+//var sass = require('gulp-sass');
 //var concat = require('gulp-concat');
 //var uglify = require('gulp-uglify');
 
@@ -65,10 +66,16 @@ gulp.task('assemble', function () {
 
 // Compile SASS files by sass-ruby
 gulp.task('sassRuby', function () {
-    return sassRuby('doc/www/styles/scss/*.scss')
-    .on('error', function (err) {
+    //return sassRuby('doc/www/styles/scss/*.scss')
+    return sassRuby('doc/www/styles/scss/mate-doc.scss', {sourcemap: true})
+        .on('error', function (err) {
         console.error('Error!', err.message);
     })
+
+    .pipe(sourcemaps.write('../maps/', {
+        includeContent: false
+    }))
+
     .pipe(gulp.dest(paths.build.stylesDir));
 });
 
