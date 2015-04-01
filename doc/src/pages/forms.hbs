@@ -11,7 +11,7 @@ title: Forms
         <form>
             <div class="row">
                 <label>Text field</label>
-                <input type="text" placeholder="First name">
+                <input type="text" placeholder="First name" readonly>
             </div>
 
             <div class="row">
@@ -23,6 +23,94 @@ title: Forms
                     <option value="3">Option 3</option>
                 </select>
             </div>
+
+            <fieldset>
+                <legend>Please choose one option</legend>
+                <div class="row">
+                    <label>
+                        <input type="checkbox" checked>
+                        Checked by default radio 1
+                    </label>
+                </div>
+
+                <div class="row">
+                    <label>
+                        <input type="checkbox">
+                        Checkbox 2
+                    </label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <div class="row">
+                    <label>
+                        <input type="radio" name="form-radios">
+                        Radio 1
+                    </label>
+                </div>
+
+                <div class="row">
+                    <label>
+                        <input type="radio" name="form-radios">
+                        Radio 2
+                    </label>
+                </div>
+            </fieldset>
+
+            <div class="row">
+                <label>Textarea</label>
+                <textarea rows="3"></textarea>
+            </div>
+
+            <div class="row">
+                <button type="submit" class="btn btn--block">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <pre lang="html"></pre>
+</div>
+
+<h2>Disabling fields</h2>
+
+<div class="code-example">
+    <div data-clone>
+        <form>
+
+            <fieldset>
+                <legend>Disabled specific field</legend>
+                <div class="row">
+                    <label>
+                        <input type="radio"  disabled>
+                        Radio 1
+                    </label>
+                </div>
+            </fieldset>
+
+            <fieldset disabled>
+                <legend>Disabled whole fieldset</legend>
+                <div class="row">
+                    <label>
+                        <input type="checkbox" checked>
+                        Checkbox 1
+                    </label>
+                </div>
+
+                <div class="row">
+                    <label>
+                        <input type="checkbox">
+                        Checkbox 2
+                    </label>
+                </div>
+
+                <div class="row">
+                    <label>
+                        <input type="checkbox">
+                        Checkbox 3
+                    </label>
+                </div>
+            </fieldset>
+
 
             <div class="row">
                 <button type="submit" class="btn btn--block">Submit</button>

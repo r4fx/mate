@@ -49,19 +49,39 @@
   background-position: right center;
 }
 
-// FORM CONTAINER
+// FORM CONTAINERS
 // ============================================================
-form {
+form,
+fieldset{
   > .row {
     margin-left: 0;
     margin-right: 0;
   }
 }
 
+fieldset {
+  border: 0;
+  margin: 0 0 $grid__row--gutter;
+  padding: 0;
+
+  > .row {
+    margin-bottom: 0;
+  }
+
+  legend {
+    margin-bottom: 15px;
+  }
+}
+
 
 // LABELS
 // ============================================================
-label, .label {
+legend {
+  border: 0;
+  padding: 0;
+}
+
+label, legend {
   color: $text__color--first;
   font-family: $font__base--regular;
   display: inline-block;
@@ -84,7 +104,7 @@ label, .label {
   @include placeholder();
 }
 
-// TEXT FIELDS
+// FIELDS
 // ============================================================
 input[type="text"],
 input[type="password"],

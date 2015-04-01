@@ -1,4 +1,4 @@
-// Edited normalize.css v3.0.0 | MIT License | git.io/normalize
+// MODIFIED VERSION OF normalize.css v3.0.0 | MIT License | git.io/normalize
 
 // 2. Prevent iOS text size adjust after orientation change, without disabling user zoom.
 html {
@@ -242,22 +242,6 @@ input[type="number"]::-webkit-outer-spin-button {
 // Remove inner padding for search field
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
-}
-
-// Define consistent border, margin, and padding.
-
-fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
-}
-
-// 1. Correct `color` not being inherited in IE 8/9.
-// 2. Remove padding so people aren't caught out if they zero out fieldsets.
-
-legend {
-  border: 0; // 1
-  padding: 0; // 2
 }
 
 // Don't inherit the `font-weight` (applied by a rule above).

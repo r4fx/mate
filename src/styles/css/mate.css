@@ -163,15 +163,6 @@ input[type="radio"] {
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
 
-fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em; }
-
-legend {
-  border: 0;
-  padding: 0; }
-
 optgroup {
   font-weight: bold; }
 
@@ -636,11 +627,25 @@ hr {
       border-bottom-left-radius: 0;
       padding: 0 10px; }
 
-form > .row {
+form > .row,
+fieldset > .row {
   margin-left: 0;
   margin-right: 0; }
 
-label, .label {
+fieldset {
+  border: 0;
+  margin: 0 0 25px;
+  padding: 0; }
+  fieldset > .row {
+    margin-bottom: 0; }
+  fieldset legend {
+    margin-bottom: 15px; }
+
+legend {
+  border: 0;
+  padding: 0; }
+
+label, legend {
   color: #3c3c3c;
   font-family: "lato-regular", Arial, sans-serif;
   display: inline-block;
