@@ -919,7 +919,7 @@ p {
   p:last-child {
     margin-bottom: 0; }
 
-strong {
+strong, b {
   font-family: "lato-bold", Arial, sans-serif; }
 
 h1 {
