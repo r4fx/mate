@@ -47,17 +47,8 @@
     <section class="col-9 col--offset-3">
         <h1>Forms</h1>
 
-        <p>Formualurze wykorzystują tę samę składnie klas co grid. Wiersze formularza są bez marginesów.</p>
+        <p>Formualurze wykorzystują tę samę składnie klas co grid. Wiersze formularza są bez marginesów bocznych.</p>
 
-<h2>PRISM TEST</h2>
-
-<div class="code-example">
-    <div data-clone>
-       <input checked type="checkbox" >
-    </div>
-
-    <pre lang="html"></pre>
-</div>
 
 <div class="code-example">
     <div data-clone>
@@ -82,14 +73,14 @@
                 <div class="row">
                     <label>
                         <input type="checkbox" checked>
-                        Checked by default radio 1
+                        Checked by default first checkbox
                     </label>
                 </div>
 
                 <div class="row">
                     <label>
                         <input type="checkbox">
-                        Checkbox 2
+                        Second checkbox
                     </label>
                 </div>
             </fieldset>
@@ -98,14 +89,14 @@
                 <div class="row">
                     <label>
                         <input type="radio" name="form-radios">
-                        Radio 1
+                        First radio
                     </label>
                 </div>
 
                 <div class="row">
                     <label>
                         <input type="radio" name="form-radios">
-                        Radio 2
+                        Second radio
                     </label>
                 </div>
             </fieldset>
@@ -113,6 +104,10 @@
             <div class="row">
                 <label>Textarea</label>
                 <textarea rows="3"></textarea>
+            </div>
+
+            <div class="row">
+                <input type="file">
             </div>
 
             <div class="row">
@@ -134,7 +129,7 @@
                 <legend>Disabled specific field</legend>
                 <div class="row">
                     <label>
-                        <input type="radio"  disabled>
+                        <input type="radio" disabled>
                         Radio 1
                     </label>
                 </div>
@@ -203,12 +198,48 @@
     <pre lang="html"></pre>
 </div>
 
-<label class="input-checkbox label-multiline">
-    <input type="checkbox" name="pretty-checkbox">
-    <span class="icon-checkmark"></span>
-    <span>Pretty checkbox</span>
-</label>
 
+<h2>Bonus</h2>
+
+<h3>Pure CSS pretty checkbox</h3>
+<div class="code-example">
+    <div data-clone>
+        <form>
+            <div class="row">
+                <label class="input-checkbox">
+                    <input type="checkbox" name="pretty-checkbox">
+                    <span class="icon-checkmark"></span>
+                    <span>Pretty checkbox</span>
+                </label>
+            </div>
+            <div class="row">
+                <label class="input-radio label-multiline">
+                    <input type="checkbox" name="pretty-checkbox">
+                    <span class="icon-checkmark"></span>
+                    <span>Pretty radio multiline very long text with fixed container</span>
+                </label>
+            </div>
+        </form>
+    </div>
+
+    <pre lang="html"></pre>
+</div>
+
+<h3>Elegant input file with only one line of JavaScript</h3>
+<p>This is only a concept.</p>
+<p>Important: Input file must be placed inside <code>&lt;form&gt;</code> tag!</p>
+<div class="code-example">
+    <div data-clone>
+        <form>
+            <label onchange="setAttribute('data-file', test.value.split('\\').pop())">
+                <span class="btn btn--color-second btn-file">Wybierz plik</span>
+                <input type="file" name="test">
+            </label>
+        </form>
+    </div>
+
+    <pre lang="html"></pre>
+</div>
     </section>
 </main>
 </body>

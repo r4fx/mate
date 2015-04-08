@@ -145,6 +145,19 @@ textarea {
   height: auto;
 }
 
+input[type="file"] {
+  line-height: 1;
+}
+
+.btn-file + input[type="file"]{
+  display: none;
+}
+
+[data-file]:after{
+  content: attr(data-file);
+  display: inline-block;
+}
+
 // CHECKBOXES, RADIOS
 // ============================================================
 .fields {
@@ -169,6 +182,7 @@ textarea {
 }
 
 // Pretty radios & checkboxes
+// ============================================================
 .input-radio,
 .input-checkbox {
   display: inline-block;
@@ -179,6 +193,9 @@ textarea {
 
       ~ span {
         vertical-align: top;
+        line-height: normal;
+        display: block;
+        overflow: hidden;
       }
     }
   }
@@ -197,11 +214,6 @@ textarea {
       opacity: 0;
       @include transition();
     }
-
-    ~ span {
-      vertical-align: middle;
-      line-height: 1;
-    }
   }
 
   label {
@@ -217,7 +229,7 @@ textarea {
       ~ [class*="icon-"] {
 
         &:before {
-          color: $text__color--second;
+          color: $border__color--second;
           opacity: 1;
         }
       }
