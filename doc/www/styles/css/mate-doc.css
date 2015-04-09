@@ -218,7 +218,7 @@ hr {
   padding-right: 25px; }
 
 .row.row--dbl-gutter {
-  margin: 0 -15px 50px -15px; }
+  margin: 0 -25px 50px -25px; }
   @media (max-width: 719px) {
     .row.row--dbl-gutter {
       margin-bottom: 25px; } }
@@ -227,7 +227,7 @@ hr {
   margin-top: 50px; }
 
 .row.row--no-gutter {
-  margin: 0 -15px 0 -15px; }
+  margin: 0 -25px 0 -25px; }
 
 .grid {
   width: 100%;
@@ -338,7 +338,7 @@ hr {
   margin-left: 100%; }
 
 .row {
-  margin: 0 -15px 25px -15px; }
+  margin: 0 -25px 25px -25px; }
   .row .row {
     clear: both; }
     .row .row.row--dbl-margin-top {
@@ -629,25 +629,30 @@ fieldset > .row {
   margin-left: 0;
   margin-right: 0; }
 
+form.grid > .row {
+  margin-left: -25px;
+  margin-right: -25px; }
+
 fieldset {
   border: 0;
   margin: 0 0 25px;
   padding: 0; }
   fieldset > .row {
     margin-bottom: 0; }
-  fieldset legend {
-    margin-bottom: 15px; }
 
-legend {
-  border: 0;
-  padding: 0; }
-
-label, legend {
+label, legend, .legend {
   color: #3c3c3c;
   font-family: "lato-regular", Arial, sans-serif;
   display: inline-block;
   margin-bottom: 5px;
+  border: 0;
+  padding: 0;
   cursor: pointer; }
+
+.legend, legend {
+  margin-top: 0;
+  margin-bottom: 15px;
+  display: block; }
 
 [placeholder]::-webkit-input-placeholder {
   color: #959A9D; }

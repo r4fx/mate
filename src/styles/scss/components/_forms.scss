@@ -58,6 +58,13 @@ fieldset{
   }
 }
 
+form.grid {
+  > .row {
+    margin-left: -$grid__row--gutter;
+    margin-right: -$grid__row--gutter;
+  }
+}
+
 fieldset {
   border: 0;
   margin: 0 0 $grid__row--gutter;
@@ -66,25 +73,24 @@ fieldset {
   > .row {
     margin-bottom: 0;
   }
-
-  legend {
-    margin-bottom: 15px;
-  }
 }
 
 // LABELS
 // ============================================================
-legend {
-  border: 0;
-  padding: 0;
-}
-
-label, legend {
+label, legend, .legend {
   color: $text__color--first;
   font-family: $font__base--regular;
   display: inline-block;
   margin-bottom: 5px;
+  border: 0;
+  padding: 0;
   cursor: pointer;
+}
+
+.legend, legend {
+  margin-top: 0;
+  margin-bottom: 15px;
+  display: block;
 }
 
 // PLACEHOLDERS

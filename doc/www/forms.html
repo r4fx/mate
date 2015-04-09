@@ -49,7 +49,9 @@
 
         <p>Formualurze wykorzystują tę samę składnie klas co grid. Wiersze formularza są bez marginesów bocznych.</p>
 
-<h2>Basic form</h2>
+<h2>Simple form</h2>
+<p>Always use <code>fieldset</code> tag for grouping checkboxes and radios, native <code>fieldset</code> tag
+has <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset" target="_blank">additional benefits</a>.</p>
 <div class="code-example">
     <div data-clone>
         <form>
@@ -110,9 +112,76 @@
                 <input type="file">
             </div>
 
+            <button type="submit" class="btn btn--block">Submit</button>
+        </form>
+    </div>
+
+    <pre lang="html"></pre>
+</div>
+
+
+<h2>Form divided with columns</h2>
+<p>Add class <code>.grid</code> to the form</p>
+<div class="code-example">
+    <div data-clone>
+        <form class="grid">
             <div class="row">
-                <button type="submit" class="btn btn--block">Submit</button>
+                <div class="col-6">
+                    <label>First name</label>
+                    <input type="text">
+                </div>
+                <div class="col-6">
+                    <label>Options</label>
+                    <select>
+                        <option value="0">---</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                    </select>
+                </div>
             </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <label>Email</label>
+                    <input type="text">
+                </div>
+            </div>
+
+            <fieldset>
+                <legend>Please choose one option</legend>
+                <div class="row">
+                    <label>
+                        <input type="checkbox" checked>
+                        Checked by default first checkbox
+                    </label>
+                </div>
+
+                <div class="row">
+                    <label>
+                        <input type="checkbox">
+                        Second checkbox
+                    </label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <div class="row">
+                    <label>
+                        <input type="radio" name="form-radios">
+                        First radio
+                    </label>
+                </div>
+
+                <div class="row">
+                    <label>
+                        <input type="radio" name="form-radios">
+                        Second radio
+                    </label>
+                </div>
+            </fieldset>
+
+            <button type="submit" class="btn btn--block">Submit</button>
         </form>
     </div>
 
@@ -195,9 +264,9 @@
 </div>
 
 
-<h2>Bonus</h2>
+<h2>Bonuses</h2>
 
-<h3>Pure CSS pretty checkbox</h3>
+<h3> Bonus 1: Pure CSS pretty checkbox</h3>
 <div class="code-example">
     <div data-clone>
         <form>
@@ -221,9 +290,9 @@
     <pre lang="html"></pre>
 </div>
 
-<h3>Elegant input file with only one line of JavaScript</h3>
+<h3>Bonus 2: Elegant input file with only one line of JavaScript</h3>
 <p>This is only a concept.</p>
-<p>Important: Input file must be placed inside <code>&lt;form&gt;</code> tag, and must contain name attribute !</p>
+<p>Important: Input file must be placed inside <code>form</code> tag, and must contain name attribute !</p>
 <div class="code-example">
     <div data-clone>
         <form>
