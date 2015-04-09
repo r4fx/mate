@@ -49,7 +49,7 @@
 
         <p>Formualurze wykorzystują tę samę składnie klas co grid. Wiersze formularza są bez marginesów bocznych.</p>
 
-
+<h2>Basic form</h2>
 <div class="code-example">
     <div data-clone>
         <form>
@@ -125,15 +125,11 @@
     <div data-clone>
         <form>
 
-            <fieldset>
-                <legend>Disabled specific field</legend>
-                <div class="row">
-                    <label>
-                        <input type="radio" disabled>
-                        Radio 1
-                    </label>
-                </div>
-            </fieldset>
+            <div class="row">
+                <p class="legend">Disabled specific field</p>
+                <label>Text field</label>
+                <input type="text" placeholder="First name" disabled>
+            </div>
 
             <fieldset disabled>
                 <legend>Disabled whole fieldset</legend>
@@ -215,7 +211,7 @@
             <div class="row">
                 <label class="input-radio label-multiline">
                     <input type="checkbox" name="pretty-checkbox">
-                    <span class="icon-checkmark"></span>
+                    <span class="icon-dot"></span>
                     <span>Pretty radio multiline very long text with fixed container</span>
                 </label>
             </div>
@@ -227,13 +223,13 @@
 
 <h3>Elegant input file with only one line of JavaScript</h3>
 <p>This is only a concept.</p>
-<p>Important: Input file must be placed inside <code>&lt;form&gt;</code> tag!</p>
+<p>Important: Input file must be placed inside <code>&lt;form&gt;</code> tag, and must contain name attribute !</p>
 <div class="code-example">
     <div data-clone>
         <form>
-            <label onchange="setAttribute('data-file', test.value.split('\\').pop())">
-                <span class="btn btn--color-second btn-file">Wybierz plik</span>
-                <input type="file" name="test">
+            <label onchange="setAttribute('data-file', fileInput_1.value.split('\\').pop())">
+                <input type="file" name="fileInput_1">
+                <span class="btn btn--color-second btn--file">Wybierz plik</span>
             </label>
         </form>
     </div>

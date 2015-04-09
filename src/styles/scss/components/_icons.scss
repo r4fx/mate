@@ -39,18 +39,17 @@ $icon-sizes: ("s": 18px, "m": 25px, "l": 35px, "xl": 50px, "xxl": 75px);
 
 // ICON TYPES
 // ============================================================
+
+// Forms
 .icon-checkmark:before {
   content: "\e600";
 }
 
-.icon-file-pdf:before {
-  content: "\e601";
+.icon-dot:before {
+  content: "\f052";
 }
 
-.icon-facebook:before {
-  content: "\e602";
-}
-
+// User interface
 .icon-arrow-left:before {
   content: "\e603";
 }
@@ -59,6 +58,16 @@ $icon-sizes: ("s": 18px, "m": 25px, "l": 35px, "xl": 50px, "xxl": 75px);
   content: "\e604";
 }
 
-.icon-mark-github:before {
-  content: "\e605";
+// Socials
+.icon-github:before {
+  content: "\e600";
+}
+
+.icon-facebook:before {
+  content: "\e602";
+}
+
+// Docuemnts
+.icon-file-pdf:before {
+  content: "\e601";
 }

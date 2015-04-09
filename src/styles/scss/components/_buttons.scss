@@ -451,10 +451,15 @@ $btn-sizes: sm, md, lg, xl, xxl;
   &--arrow-r:after {
     left: 100%;
   }
+
+  &--file {
+    line-height: 3.4rem;
+  }
 }
 
 
 // BUTTON: GROUPED
+// todo: gropued buttons
 // ============================================================
 .btn-group {
   display: inline-block;
@@ -472,22 +477,5 @@ $btn-sizes: sm, md, lg, xl, xxl;
       border-bottom-left-radius: 0;
       padding: 0 10px;
     }
-  }
-}
-
-// BUTTON: STATES
-// ============================================================
-.btn, .btn-group {
-
-  &:hover {
-
-  }
-
-  &:active {
-
-  }
-
-  &:focus {
-
   }
 }

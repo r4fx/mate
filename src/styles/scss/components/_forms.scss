@@ -40,11 +40,9 @@
 
 // Use SVG icon for drop-down arrow
 // Inpiration: https://css-tricks.com/probably-dont-base64-svg/
-// Encode tool: http://pressbin.com/tools/urlencode_urldecode/
-// todo: change to new svg
-// todo: check firefox
+// Encode tool: http://pressbin.com/tools/urlencode_urldecode/ (use encodeURIComponent())
 @mixin svg-bkg($color) {
-  background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20version=%221.1%22%20xmlns=%22http://www.w3.org/2000/svg%22%20xmlns:xlink=%22http://www.w3.org/1999/xlink%22%20width=%2224%22%20height=%2224%22%20viewBox=%220%200%2024%2024%22%3E%0A%3Cpath%20d=%22M16.585%208.585l-4.585%204.585-4.585-4.585-1.415%201.415%206%206%206-6z%22%20fill=%22#{$color}%22%3E%3C/path%3E%0A%3C/svg%3E');
+  background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%0A%3Cpath%20fill%3D%22{$color}%22%20d%3D%22M7%2010l5%205%205-5z%22%3E%3C%2Fpath%3E%0A%3C%2Fsvg%3E');
   padding-right: 25px;
   background-repeat: no-repeat;
   background-position: right center;
@@ -74,7 +72,6 @@ fieldset {
   }
 }
 
-
 // LABELS
 // ============================================================
 legend {
@@ -87,16 +84,7 @@ label, legend {
   font-family: $font__base--regular;
   display: inline-block;
   margin-bottom: 5px;
-}
-
-.label-inside {
-  position: relative;
-
-  label {
-    color: $text__color--second;
-    margin-bottom: 0;
-    position: absolute;
-  }
+  cursor: pointer;
 }
 
 // PLACEHOLDERS
@@ -146,11 +134,13 @@ textarea {
   height: auto;
 }
 
+// FILES
+// ============================================================
 input[type="file"] {
   line-height: 1;
 }
 
-.btn-file + input[type="file"]{
+label > input[type="file"] {
   display: none;
 }
 
@@ -159,34 +149,21 @@ input[type="file"] {
   display: inline-block;
 }
 
-// CHECKBOXES, RADIOS
+// CHECKBOXES & RADIOS
 // ============================================================
-.fields {
-  input[type="checkbox"],
-  input[type="radio"] {
-    float: left;
-    margin-right: 20px;
-  }
-
-  label,
-  .label {
-    position: static;
-    overflow: hidden;
-    cursor: pointer;
-    @include font-size($text__size--md);
-
-    a {
-      color: #fff;
-      text-decoration: underline;
-    }
-  }
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: 5px;
+  position: relative;
+  top: -1px;
 }
 
-// Pretty radios & checkboxes
+// PRETTY RADIOS & CHECKBOXES
 // ============================================================
 .input-radio,
 .input-checkbox {
   display: inline-block;
+  cursor: pointer;
 
   &.label-multiline {
     [class*="icon-"] {
@@ -201,13 +178,14 @@ input[type="file"] {
     }
   }
 
-  [class*="icon-"] {
+  > [class*="icon-"] {
     width: 24px;
     height: 24px;
     padding: 2px;
     margin-right: 5px;
     border: 1px solid $border__color--second;
     text-align: center;
+    line-height: normal;
     @include font-size($text__size--md);
 
     &:before {
@@ -217,12 +195,7 @@ input[type="file"] {
     }
   }
 
-  label {
-    display: inline-block;
-    cursor: pointer;
-  }
-
-  input {
+  > input {
     display: none;
 
     // Toggled state
@@ -238,7 +211,7 @@ input[type="file"] {
   }
 }
 
-.input-radio [class*="icon-"] {
+.input-radio > [class*="icon-"] {
   border-radius: 50%;
 }
 
