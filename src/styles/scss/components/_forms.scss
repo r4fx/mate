@@ -173,7 +173,7 @@ label > input[type="file"] {
 }
 
 [data-file-multiple]:after {
-  content: attr(data-file-multi);
+  content: attr(data-file-multiple);
   background-color: $block__color--second;
   color: white;
   margin-left: 8px;

@@ -738,7 +738,7 @@ label > input[type="file"] {
   content: attr(data-file); }
 
 [data-file-multiple]:after {
-  content: attr(data-file-multi);
+  content: attr(data-file-multiple);
   background-color: #353535;
   color: white;
   margin-left: 8px; }
