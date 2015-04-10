@@ -137,7 +137,7 @@ ul code{
   border: 1px solid $border__color--first;
   border-radius: $border__radius;
   padding: $grid__col--gutter 0 0;
-  margin-bottom: $grid__row--gutter;
+  margin-bottom: $grid__row--gutter*2;
 
   > div{
     @extend %clearfix;

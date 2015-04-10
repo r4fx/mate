@@ -426,7 +426,7 @@ hr {
       border-width: 2rem 0 2rem 2rem;
       margin-right: 2rem; }
 .btn--lg {
-  font-size: 2rem;
+  font-size: 2.2rem;
   line-height: 5rem;
   padding-left: 2.5rem;
   padding-right: 2.5rem; }
@@ -443,7 +443,7 @@ hr {
       border-width: 2.5rem 0 2.5rem 2.5rem;
       margin-right: 2.5rem; }
 .btn--xl {
-  font-size: 3.2rem;
+  font-size: 3.4rem;
   line-height: 6rem;
   padding-left: 3rem;
   padding-right: 3rem; }
@@ -640,19 +640,20 @@ fieldset {
   fieldset > .row {
     margin-bottom: 0; }
 
-label, legend, .legend {
+label {
   color: #3c3c3c;
   font-family: "lato-regular", Arial, sans-serif;
   display: inline-block;
   margin-bottom: 5px;
-  border: 0;
-  padding: 0;
   cursor: pointer; }
 
 .legend, legend {
-  margin-top: 0;
-  margin-bottom: 15px;
-  display: block; }
+  color: #3c3c3c;
+  font-family: "lato-regular", Arial, sans-serif;
+  margin: 0 0 15px 0;
+  display: block;
+  padding: 0;
+  border: 0; }
 
 [placeholder]::-webkit-input-placeholder {
   color: #959A9D; }
@@ -717,7 +718,9 @@ label > input[type="file"] {
 
 [data-file]:after {
   content: attr(data-file);
-  display: inline-block; }
+  display: inline-block;
+  vertical-align: middle;
+  white-space: nowrap; }
 
 input[type="checkbox"],
 input[type="radio"] {
@@ -931,18 +934,18 @@ h1 {
       font-size: 0.21rem; } }
 
 h2 {
-  font-size: 32px;
-  font-size: 3.2rem;
+  font-size: 34px;
+  font-size: 3.4rem;
   font-family: "lato-regular", Arial, sans-serif;
-  margin: 32px 0;
+  margin: 34px 0;
   font-weight: normal;
   line-height: 1; }
 
 h3 {
-  font-size: 20px;
-  font-size: 2rem;
+  font-size: 22px;
+  font-size: 2.2rem;
   font-family: "lato-regular", Arial, sans-serif;
-  margin: 20px 0;
+  margin: 22px 0;
   font-weight: normal;
   line-height: 1; }
 
@@ -950,7 +953,7 @@ h4 {
   font-size: 14px;
   font-size: 1.4rem;
   font-family: "lato-regular", Arial, sans-serif;
-  margin: 20px 0;
+  margin: 22px 0;
   font-weight: normal;
   line-height: 1; }
 

@@ -59,12 +59,12 @@ has <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset"
             </fieldset>
 
             <div class="row">
-                <label>Textarea</label>
-                <textarea rows="3"></textarea>
+                <input type="file">
             </div>
 
             <div class="row">
-                <input type="file">
+                <label>Textarea</label>
+                <textarea rows="3"></textarea>
             </div>
 
             <button type="submit" class="btn btn--block">Submit</button>
@@ -75,7 +75,7 @@ has <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset"
 </div>
 
 
-<h2>Form divided with columns</h2>
+<h2>Form divided by columns</h2>
 <p>Add class <code>.grid</code> to the form</p>
 <div class="code-example">
     <div data-clone>
@@ -221,7 +221,7 @@ has <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset"
 
 <h2>Bonuses</h2>
 
-<h3> Bonus 1: Pure CSS pretty checkbox</h3>
+<h3>Pure CSS pretty checkbox</h3>
 <div class="code-example">
     <div data-clone>
         <form>
@@ -245,16 +245,28 @@ has <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset"
     <pre lang="html"></pre>
 </div>
 
-<h3>Bonus 2: Elegant input file with only one line of JavaScript</h3>
-<p>This is only a concept.</p>
-<p>Important: Input file must be placed inside <code>form</code> tag, and must contain name attribute !</p>
+<h3>Elegant input file with only one line (inline) of JavaScript!</h3>
+<p>Important: Input file must be placed inside <code>form</code> and then in <code>label</code> tag!</p>
 <div class="code-example">
     <div data-clone>
         <form>
-            <label onchange="setAttribute('data-file', fileInput_1.value.split('\\').pop())">
-                <input type="file" name="fileInput_1">
-                <span class="btn btn--color-second btn--file">Wybierz plik</span>
-            </label>
+
+            <p class="legend">Single file</p>
+            <div class="row">
+                <label>
+                    <input type="file" onchange="parentNode.setAttribute('data-file',this.files[0].name)">
+                    <span class="btn btn--color-second btn--file">Choose file</span>
+                </label>
+            </div>
+
+            <p class="legend">Multiple files</p>
+            <div class="row">
+                <label>
+                    <input multiple type="file" onchange="parentNode.setAttribute('data-file','Files: '+this.files.length)">
+                    <span class="btn btn--color-second btn--file">Choose file</span>
+                </label>
+            </div>
+
         </form>
     </div>
 
