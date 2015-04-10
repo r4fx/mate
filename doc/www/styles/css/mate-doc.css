@@ -716,11 +716,22 @@ input[type="file"] {
 label > input[type="file"] {
   display: none; }
 
-[data-file]:after {
-  content: attr(data-file);
+[data-file]:after,
+[data-file-multi]:after {
   display: inline-block;
   vertical-align: middle;
-  white-space: nowrap; }
+  white-space: nowrap;
+  padding: 0 8px;
+  border-radius: 50%; }
+
+[data-file]:after {
+  content: attr(data-file); }
+
+[data-file-multi]:after {
+  content: attr(data-file-multi);
+  background-color: #353535;
+  color: white;
+  margin-left: 8px; }
 
 input[type="checkbox"],
 input[type="radio"] {
@@ -1142,4 +1153,6 @@ ul code {
     .code-example form .label-multiline {
       max-width: 200px; }
 
-/*# sourceMappingURL=mate-doc.css.map */
+
+
+/*# sourceMappingURL=../maps/mate-doc.css.map */

@@ -254,16 +254,16 @@ has <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset"
             <p class="legend">Single file</p>
             <div class="row">
                 <label>
-                    <input type="file" onchange="parentNode.setAttribute('data-file',this.files[0].name)">
                     <span class="btn btn--color-second btn--file">Choose file</span>
+                    <input type="file" onchange="parentNode.setAttribute('data-file', this.files[0].name)">
                 </label>
             </div>
 
             <p class="legend">Multiple files</p>
             <div class="row">
                 <label>
-                    <input multiple type="file" onchange="parentNode.setAttribute('data-file','Files: '+this.files.length)">
-                    <span class="btn btn--color-second btn--file">Choose file</span>
+                    <span class="btn btn--color-second btn--file">Choose files</span>
+                    <input multiple type="file" onchange="parentNode.setAttribute('data-file-multi', this.files.length)">
                 </label>
             </div>
 
