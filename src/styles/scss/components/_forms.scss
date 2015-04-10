@@ -48,6 +48,10 @@
   background-position: right center;
 }
 
+%disabled {
+  cursor: no-drop;
+}
+
 // FORM CONTAINERS
 // ============================================================
 form,
@@ -82,7 +86,7 @@ label{
   font-family: $font__base--regular;
   display: inline-block;
   margin-bottom: 5px;
-  cursor: pointer;
+  //cursor: pointer;
 }
 
 .legend, legend {
@@ -92,7 +96,6 @@ label{
   display: block;
   padding: 0;
   border: 0;
-
 }
 
 // PLACEHOLDERS
@@ -131,6 +134,10 @@ textarea {
     outline: 0;
     border-color: $color__message--info;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px darken($color__message--info, 5%);
+  }
+
+  &[disabled]{
+    @extend %disabled;
   }
 }
 
@@ -188,24 +195,12 @@ input[type="radio"] {
   display: inline-block;
   cursor: pointer;
 
-  &.label-multiline {
-    [class*="icon-"] {
-      float: left;
-
-      ~ span {
-        vertical-align: top;
-        line-height: normal;
-        display: block;
-        overflow: hidden;
-      }
-    }
-  }
-
   > [class*="icon-"] {
+    float: left;
     width: 24px;
     height: 24px;
     padding: 2px;
-    margin-right: 5px;
+    margin-right: 10px;
     border: 1px solid $border__color--second;
     text-align: center;
     line-height: normal;
@@ -215,6 +210,11 @@ input[type="radio"] {
       color: transparent;
       opacity: 0;
       @include transition();
+    }
+
+    ~ span {
+      overflow: hidden;
+      display: block;
     }
   }
 
@@ -238,6 +238,14 @@ input[type="radio"] {
   border-radius: 50%;
 }
 
+// DISABLED FIELDS AND SECTIONS
+// ============================================================
+[disabled] {
+  label {
+    @extend %disabled;
+  }
+}
+
 // VALIDATION
 // ============================================================
 .form-error {
@@ -252,11 +260,7 @@ input[type="radio"] {
     border-color: $color__message--alert;
   }
 
-  label, .label {
-    color: $color__message--alert;
-  }
-
-  &__message {
+  label{
     color: $color__message--alert;
   }
 }

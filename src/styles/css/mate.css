@@ -624,6 +624,17 @@ hr {
       border-bottom-left-radius: 0;
       padding: 0 10px; }
 
+input[type="text"][disabled],
+input[type="password"][disabled],
+input[type="tel"][disabled],
+input[type="url"][disabled],
+input[type="email"][disabled],
+input[type="search"][disabled],
+input[type="number"][disabled],
+select[disabled],
+textarea[disabled], [disabled] label {
+  cursor: no-drop; }
+
 form > .row,
 fieldset > .row {
   margin-left: 0;
@@ -644,8 +655,7 @@ label {
   color: #3c3c3c;
   font-family: "lato-regular", Arial, sans-serif;
   display: inline-block;
-  margin-bottom: 5px;
-  cursor: pointer; }
+  margin-bottom: 5px; }
 
 .legend, legend {
   color: #3c3c3c;
@@ -743,21 +753,13 @@ input[type="radio"] {
 .input-checkbox {
   display: inline-block;
   cursor: pointer; }
-  .input-radio.label-multiline [class*="icon-"],
-  .input-checkbox.label-multiline [class*="icon-"] {
-    float: left; }
-    .input-radio.label-multiline [class*="icon-"] ~ span,
-    .input-checkbox.label-multiline [class*="icon-"] ~ span {
-      vertical-align: top;
-      line-height: normal;
-      display: block;
-      overflow: hidden; }
   .input-radio > [class*="icon-"],
   .input-checkbox > [class*="icon-"] {
+    float: left;
     width: 24px;
     height: 24px;
     padding: 2px;
-    margin-right: 5px;
+    margin-right: 10px;
     border: 1px solid #249cff;
     text-align: center;
     line-height: normal;
@@ -769,6 +771,10 @@ input[type="radio"] {
       opacity: 0;
       -webkit-transition: all 300ms ease-in-out 0s;
       transition: all 300ms ease-in-out 0s; }
+    .input-radio > [class*="icon-"] ~ span,
+    .input-checkbox > [class*="icon-"] ~ span {
+      overflow: hidden;
+      display: block; }
   .input-radio > input,
   .input-checkbox > input {
     display: none; }
@@ -789,9 +795,7 @@ input[type="radio"] {
   .form-error input[type="email"],
   .form-error textarea {
     border-color: #ff3724; }
-  .form-error label, .form-error .label {
-    color: #ff3724; }
-  .form-error__message {
+  .form-error label {
     color: #ff3724; }
 
 @font-face {
@@ -961,8 +965,8 @@ h3 {
   line-height: 1; }
 
 h4 {
-  font-size: 14px;
-  font-size: 1.4rem;
+  font-size: 16px;
+  font-size: 1.6rem;
   font-family: "lato-regular", Arial, sans-serif;
   margin: 22px 0;
   font-weight: normal;
@@ -973,13 +977,15 @@ h5 {
   font-size: 1.4rem;
   font-family: "lato-regular", Arial, sans-serif;
   margin: 18px 0;
-  font-weight: normal; }
+  font-weight: normal;
+  line-height: normal; }
 
 h6 {
   font-size: 14px;
   font-size: 1.4rem;
   margin: 18px 0;
-  font-weight: normal; }
+  font-weight: normal;
+  line-height: normal; }
 
 ul, ol {
   margin: 15px 0; }
