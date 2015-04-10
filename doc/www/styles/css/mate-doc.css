@@ -727,7 +727,7 @@ label > input[type="file"] {
   display: none; }
 
 [data-file]:after,
-[data-file-multi]:after {
+[data-file-multiple]:after {
   display: inline-block;
   vertical-align: middle;
   white-space: nowrap;
@@ -737,7 +737,7 @@ label > input[type="file"] {
 [data-file]:after {
   content: attr(data-file); }
 
-[data-file-multi]:after {
+[data-file-multiple]:after {
   content: attr(data-file-multi);
   background-color: #353535;
   color: white;
