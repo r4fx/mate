@@ -751,15 +751,16 @@ input[type="radio"] {
 
 .input-radio,
 .input-checkbox {
-  display: inline-block;
-  cursor: pointer; }
+  cursor: pointer;
+  padding-left: 39px;
+  line-height: 1; }
   .input-radio > [class*="icon-"],
   .input-checkbox > [class*="icon-"] {
-    float: left;
     width: 24px;
     height: 24px;
     padding: 2px;
-    margin-right: 10px;
+    margin-left: -39px;
+    margin-right: 5px;
     border: 1px solid #249cff;
     text-align: center;
     line-height: normal;
@@ -773,8 +774,8 @@ input[type="radio"] {
       transition: all 300ms ease-in-out 0s; }
     .input-radio > [class*="icon-"] ~ span,
     .input-checkbox > [class*="icon-"] ~ span {
-      overflow: hidden;
-      display: block; }
+      display: inline-block;
+      vertical-align: middle; }
   .input-radio > input,
   .input-checkbox > input {
     display: none; }
@@ -828,6 +829,7 @@ input[type="radio"] {
   font-style: normal;
   font-weight: normal;
   display: inline-block;
+  vertical-align: middle;
   line-height: 1;
   speak: none;
   -webkit-font-smoothing: antialiased;

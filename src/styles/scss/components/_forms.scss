@@ -192,15 +192,16 @@ input[type="radio"] {
 // ============================================================
 .input-radio,
 .input-checkbox {
-  display: inline-block;
   cursor: pointer;
+  padding-left: 39px;
+  line-height: 1;
 
   > [class*="icon-"] {
-    float: left;
     width: 24px;
     height: 24px;
     padding: 2px;
-    margin-right: 10px;
+    margin-left: -39px;
+    margin-right: 5px;
     border: 1px solid $border__color--second;
     text-align: center;
     line-height: normal;
@@ -213,8 +214,8 @@ input[type="radio"] {
     }
 
     ~ span {
-      overflow: hidden;
-      display: block;
+      display: inline-block;
+      vertical-align: middle;
     }
   }
 
