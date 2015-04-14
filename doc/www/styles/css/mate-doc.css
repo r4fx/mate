@@ -902,32 +902,32 @@ ul.-divided ul {
   font-family: "lato-regular";
   font-style: normal;
   font-weight: normal;
-  src: url("../../fonts/lato/lato-regular.svg#lato-regular") format("svg"); }
+  src: url("../../fonts/lato/lato-regular.woff") format("woff"), url("../../fonts/lato/lato-regular.svg#lato-regular") format("svg"); }
 @font-face {
   font-family: "lato-semibold";
   font-style: normal;
   font-weight: normal;
-  src: url("../../fonts/lato/lato-semibold.svg#lato-semibold") format("svg"); }
+  src: url("../../fonts/lato/lato-semibold.woff") format("woff"), url("../../fonts/lato/lato-semibold.svg#lato-semibold") format("svg"); }
 @font-face {
   font-family: "lato-bold";
   font-style: normal;
   font-weight: normal;
-  src: url("../../fonts/lato/lato-bold.svg#lato-bold") format("svg"); }
+  src: url("../../fonts/lato/lato-bold.woff") format("woff"), url("../../fonts/lato/lato-bold.svg#lato-bold") format("svg"); }
 @font-face {
   font-family: "lato-italic";
   font-style: normal;
   font-weight: normal;
-  src: url("../../fonts/lato/lato-italic.svg#lato-italic") format("svg"); }
+  src: url("../../fonts/lato/lato-italic.woff") format("woff"), url("../../fonts/lato/lato-italic.svg#lato-italic") format("svg"); }
 @font-face {
   font-family: "lato-thin";
   font-style: normal;
   font-weight: normal;
-  src: url("../../fonts/lato/lato-thin.svg#lato-thin") format("svg"); }
+  src: url("../../fonts/lato/lato-thin.woff") format("woff"), url("../../fonts/lato/lato-thin.svg#lato-thin") format("svg"); }
 @font-face {
   font-family: "lato-light";
   font-style: normal;
   font-weight: normal;
-  src: url("../../fonts/lato/lato-light.svg#lato-light") format("svg"); }
+  src: url("../../fonts/lato/lato-light.woff") format("woff"), url("../../fonts/lato/lato-light.svg#lato-light") format("svg"); }
 p {
   margin: 15px 0; }
   p:last-child {
