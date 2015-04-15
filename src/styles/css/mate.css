@@ -659,7 +659,7 @@ label {
 
 .legend, legend {
   color: #3c3c3c;
-  font-family: "lato-regular", Arial, sans-serif;
+  font-family: "lato-bold", Arial, sans-serif;
   margin: 0 0 15px 0;
   display: block;
   padding: 0;
@@ -748,12 +748,16 @@ input[type="radio"] {
   margin-right: 5px;
   position: relative;
   top: -1px; }
+  input[type="checkbox"] ~ span,
+  input[type="radio"] ~ span {
+    display: inline-block;
+    vertical-align: top;
+    line-height: normal; }
 
 .input-radio,
 .input-checkbox {
   cursor: pointer;
-  padding-left: 39px;
-  line-height: 1; }
+  padding-left: 39px; }
   .input-radio > [class*="icon-"],
   .input-checkbox > [class*="icon-"] {
     width: 24px;
@@ -763,6 +767,7 @@ input[type="radio"] {
     margin-right: 5px;
     border: 1px solid #249cff;
     text-align: center;
+    vertical-align: initial;
     line-height: normal;
     font-size: 16px;
     font-size: 1.6rem; }
@@ -772,10 +777,6 @@ input[type="radio"] {
       opacity: 0;
       -webkit-transition: all 300ms ease-in-out 0s;
       transition: all 300ms ease-in-out 0s; }
-    .input-radio > [class*="icon-"] ~ span,
-    .input-checkbox > [class*="icon-"] ~ span {
-      display: inline-block;
-      vertical-align: middle; }
   .input-radio > input,
   .input-checkbox > input {
     display: none; }

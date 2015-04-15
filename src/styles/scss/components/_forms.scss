@@ -91,7 +91,7 @@ label{
 
 .legend, legend {
   color: $text__color--first;
-  font-family: $font__base--regular;
+  font-family: $font__base--bold;
   margin: 0 0 15px 0;
   display: block;
   padding: 0;
@@ -186,6 +186,13 @@ input[type="radio"] {
   margin-right: 5px;
   position: relative;
   top: -1px;
+
+  // span is used for multi line label
+  ~ span {
+    display: inline-block;
+    vertical-align: top;
+    line-height: normal;
+  }
 }
 
 // PRETTY RADIOS & CHECKBOXES
@@ -194,7 +201,6 @@ input[type="radio"] {
 .input-checkbox {
   cursor: pointer;
   padding-left: 39px;
-  line-height: 1;
 
   > [class*="icon-"] {
     width: 24px;
@@ -204,6 +210,7 @@ input[type="radio"] {
     margin-right: 5px;
     border: 1px solid $border__color--second;
     text-align: center;
+    vertical-align: initial;
     line-height: normal;
     @include font-size($text__size--md);
 
@@ -214,8 +221,7 @@ input[type="radio"] {
     }
 
     ~ span {
-      display: inline-block;
-      vertical-align: middle;
+      //line-height: normal;
     }
   }
 

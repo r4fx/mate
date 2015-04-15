@@ -52,6 +52,7 @@
 </p>
 
 <h2>Basic form</h2>
+<p>If you need multiline label beside checkbox (or radio) use the additional <code>span</code> tag</p>
 
 <div class="code-example">
     <div data-clone>
@@ -100,7 +101,10 @@
                 <div class="row">
                     <label>
                         <input type="radio" name="form-radios">
-                        Second radio
+                        <span>Fusce commodo aliquam arcu. Pellentesque egestas, neque sit amet convallis pulvinar, <br>
+                        justo nulla eleifend augue, ac auctor orci leo non est. Praesent turpis. Suspendisse faucibus, <br>
+                        nunc et pellentesque egestas, lacus ante convallis tellus, vitaeiaculis lacus elit id tortor. Maecenas malesuada.
+                        </span>
                     </label>
                 </div>
             </fieldset>
@@ -256,14 +260,14 @@
             <label class="input-checkbox">
                 <input type="checkbox" name="pretty-checkbox">
                 <span class="icon-checkmark"></span>
-                <span>Pretty checkbox</span>
+                <span>Fusce commodo aliquam arcutellus</span>
             </label>
         </div>
         <div class="row">
             <label class="input-radio">
-                <input type="checkbox" name="pretty-checkbox">
+                <input type="radio" name="pretty-radio">
                 <span class="icon-dot"></span>
-                <span>Pretty radio with multiline very long text within fixed container</span>
+                <span>Fusce commodo aliquam arcu. Pellentesque egestas, neque sit amet convallis pulvinar, justo nulla eleifend augue, ac auctor orci leo non est. Praesent turpis. Suspendisse faucibus, nunc et pellentesque egestas, lacus ante convallis tellus, vitae iaculis lacus elit id tortor. Maecenas malesuada.</span>
             </label>
         </div>
     </form>
