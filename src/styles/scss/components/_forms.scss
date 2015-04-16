@@ -75,18 +75,25 @@ fieldset {
   padding: 0;
 
   > .row {
-    margin-bottom: 0;
+    margin-bottom: 5px;
   }
 }
 
 // LABELS
 // ============================================================
-label{
+label {
   color: $text__color--first;
   font-family: $font__base--regular;
   display: inline-block;
   margin-bottom: 5px;
-  //cursor: pointer;
+}
+
+form em {
+  font-family: serif;
+  font-weight: normal;
+  line-height: 0;
+  font-size: 2em;
+  vertical-align: super;
 }
 
 .legend, legend {
@@ -96,6 +103,10 @@ label{
   display: block;
   padding: 0;
   border: 0;
+}
+
+fieldset > .row label {
+  margin-bottom: 0;
 }
 
 // PLACEHOLDERS
@@ -219,10 +230,6 @@ input[type="radio"] {
       opacity: 0;
       @include transition();
     }
-
-    ~ span {
-      //line-height: normal;
-    }
   }
 
   > input {
@@ -256,18 +263,46 @@ input[type="radio"] {
 // VALIDATION
 // ============================================================
 .form-error {
-  position: relative;
 
-  .form-field,
+  &__message {
+    margin: 0;
+    color: $color__message--alert;
+    display: block;
+    text-transform: uppercase;
+    @include font-size($text__size--xs);
+  }
+
   input[type="text"],
   input[type="password"],
   input[type="tel"],
+  input[type="url"],
   input[type="email"],
+  input[type="search"],
+  input[type="number"],
+  select,
   textarea {
     border-color: $color__message--alert;
   }
 
-  label{
+  em {
     color: $color__message--alert;
+  }
+
+  > .legend {
+    margin-bottom: 0;
+
+    + .form-error__message {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+fieldset.form-error {
+  border-radius: $border__radius;
+  border: 1px solid $color__message--alert;
+  padding: 15px;
+
+  > .form-error__message {
+    margin-bottom: 15px;
   }
 }

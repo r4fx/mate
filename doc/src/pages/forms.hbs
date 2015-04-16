@@ -27,6 +27,11 @@ title: Forms
                 </select>
             </div>
 
+            <div class="row">
+                <label>Textarea</label>
+                <textarea rows="3"></textarea>
+            </div>
+
             <fieldset>
                 <legend>Checkboxes</legend>
                 <div class="row">
@@ -58,7 +63,7 @@ title: Forms
                         <input type="radio" name="form-radios">
                         <span>Fusce commodo aliquam arcu. Pellentesque egestas, neque sit amet convallis pulvinar, <br>
                         justo nulla eleifend augue, ac auctor orci leo non est. Praesent turpis. Suspendisse faucibus, <br>
-                        nunc et pellentesque egestas, lacus ante convallis tellus, vitaeiaculis lacus elit id tortor. Maecenas malesuada.
+                        nunc et pellentesque egestas, lacus ante convallis tellus, vitaeiaculis lacus elit id tortor.
                         </span>
                     </label>
                 </div>
@@ -67,11 +72,6 @@ title: Forms
             <div class="row">
                 <p class="legend">Attachments</p>
                 <input type="file">
-            </div>
-
-            <div class="row">
-                <label>Textarea</label>
-                <textarea rows="3"></textarea>
             </div>
 
             <button type="submit" class="btn btn--block">Submit</button>
@@ -169,37 +169,98 @@ title: Forms
     <pre lang="html"></pre>
 </div>
 
-<h2>HTML5 fields</h2>
-
+<h2>Form validation</h2>
 <div class="code-example">
     <form data-clone>
-        <div class="row">
-            <label>Search field</label>
-            <input type="search" placeholder="Search something ...">
-        </div>
-
-        <div class="row">
-            <label>E-mail field</label>
-            <input type="email" placeholder="E-mail">
-        </div>
-
-        <div class="row">
-            <label>Number field</label>
-            <input type="number" placeholder="Number">
+        <div class="row form-error">
+            <label>Text field <em>.</em></label>
+            <strong class="form-error__message">This field is required</strong>
+            <input type="text">
         </div>
     </form>
 
     <pre lang="html"></pre>
 </div>
 
-<h2>Form validation</h2>
-
 <div class="code-example">
     <form data-clone>
         <div class="row form-error">
-            <label>Text field</label>
-            <input type="text">
+            <label>Drop down field <em>.</em></label>
+            <strong class="form-error__message">This field is required</strong>
+            <select>
+                <option value="0">---</option>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+            </select>
         </div>
+    </form>
+
+    <pre lang="html"></pre>
+</div>
+
+<div class="code-example">
+    <form data-clone>
+        <fieldset>
+            <div class="row form-error">
+                <strong class="form-error__message">This field is required</strong>
+                <label>
+                    <input type="checkbox">
+                    First checkbox <em>.</em>
+                </label>
+            </div>
+
+            <div class="row">
+                <label>
+                    <input type="checkbox" checked>
+                    Second checkbox <em>.</em>
+                </label>
+            </div>
+
+            <div class="row">
+                <label>
+                    <input type="checkbox">
+                    Second checkbox
+                </label>
+            </div>
+        </fieldset>
+
+    </form>
+
+    <pre lang="html"></pre>
+</div>
+
+<h3>Validation for group of fields</h3>
+<div class="code-example">
+    <form data-clone>
+
+        <p class="legend">In hac habitasse platea dictumst <em>.</em></p>
+
+        <fieldset class="form-error">
+            <strong class="form-error__message">Minimum one field is required</strong>
+
+            <div class="row">
+                <label>
+                    <input type="checkbox">
+                    First checkbox
+                </label>
+            </div>
+
+            <div class="row">
+                <label>
+                    <input type="checkbox">
+                    Second checkbox
+                </label>
+            </div>
+
+            <div class="row">
+                <label>
+                    <input type="checkbox">
+                    Third checkbox
+                </label>
+            </div>
+        </fieldset>
+
     </form>
 
     <pre lang="html"></pre>

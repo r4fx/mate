@@ -649,13 +649,20 @@ fieldset {
   margin: 0 0 25px;
   padding: 0; }
   fieldset > .row {
-    margin-bottom: 0; }
+    margin-bottom: 5px; }
 
 label {
   color: #3c3c3c;
   font-family: "lato-regular", Arial, sans-serif;
   display: inline-block;
   margin-bottom: 5px; }
+
+form em {
+  font-family: serif;
+  font-weight: normal;
+  line-height: 0;
+  font-size: 2em;
+  vertical-align: super; }
 
 .legend, legend {
   color: #3c3c3c;
@@ -664,6 +671,9 @@ label {
   display: block;
   padding: 0;
   border: 0; }
+
+fieldset > .row label {
+  margin-bottom: 0; }
 
 [placeholder]::-webkit-input-placeholder {
   color: #959A9D; }
@@ -788,17 +798,36 @@ input[type="radio"] {
 .input-radio > [class*="icon-"] {
   border-radius: 50%; }
 
-.form-error {
-  position: relative; }
-  .form-error .form-field,
-  .form-error input[type="text"],
-  .form-error input[type="password"],
-  .form-error input[type="tel"],
-  .form-error input[type="email"],
-  .form-error textarea {
-    border-color: #ff3724; }
-  .form-error label {
-    color: #ff3724; }
+.form-error__message {
+  margin: 0;
+  color: #ff3724;
+  display: block;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-size: 1.2rem; }
+.form-error input[type="text"],
+.form-error input[type="password"],
+.form-error input[type="tel"],
+.form-error input[type="url"],
+.form-error input[type="email"],
+.form-error input[type="search"],
+.form-error input[type="number"],
+.form-error select,
+.form-error textarea {
+  border-color: #ff3724; }
+.form-error em {
+  color: #ff3724; }
+.form-error > .legend {
+  margin-bottom: 0; }
+  .form-error > .legend + .form-error__message {
+    margin-bottom: 15px; }
+
+fieldset.form-error {
+  border-radius: 5px;
+  border: 1px solid #ff3724;
+  padding: 15px; }
+  fieldset.form-error > .form-error__message {
+    margin-bottom: 15px; }
 
 @font-face {
   font-family: 'icomoon';
