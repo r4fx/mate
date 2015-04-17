@@ -962,6 +962,8 @@ ul.-divided ul {
   src: url("../../fonts/lato/lato-light.woff") format("woff"), url("../../fonts/lato/lato-light.svg#lato-light") format("svg"); }
 p {
   margin: 15px 0; }
+  p:first-child {
+    margin-top: 0; }
   p:last-child {
     margin-bottom: 0; }
 
