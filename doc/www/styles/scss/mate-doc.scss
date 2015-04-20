@@ -139,6 +139,39 @@ ul code{
   padding: $grid__col--gutter 0 0;
   margin-bottom: $grid__row--gutter*2;
 
+  &--grid {
+    .row {
+      margin: 0 $grid__col--gutter;
+    }
+
+    [class^="col-"] {
+      background-color: $block__color--first;
+      padding: 10px;
+      border: 1px solid #fff;
+    }
+  }
+
+  &__icons {
+    padding: $grid__col--gutter;
+
+    [class^=col-] {
+      text-align: center;
+      border: 2px solid white;
+      padding: 15px 10px;
+      background-color: $block__color--first;
+      @include transition();
+
+      &:hover{
+        background-color: $block__color--second;
+        color: white;
+      }
+    }
+
+    p{
+      line-height: 1;
+    }
+  }
+
   > div{
     @extend %clearfix;
   }
@@ -152,18 +185,6 @@ ul code{
     @extend %clearfix;
   }
 
-  &--grid {
-    .row{
-      margin: 0 $grid__col--gutter;
-    }
-
-    [class^="col-"] {
-      background-color: $block__color--first;
-      padding: 10px;
-      border: 1px solid #fff;
-    }
-  }
-
   form {
     padding-left: $grid__col--gutter;
     padding-right: $grid__col--gutter;
@@ -171,5 +192,13 @@ ul code{
     .input-radio {
       max-width: 410px;
     }
+  }
+}
+
+.flex-box {
+  @include flexWrap;
+
+  > div {
+    @include flexItem;
   }
 }
