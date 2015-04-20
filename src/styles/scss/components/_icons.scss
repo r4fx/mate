@@ -26,12 +26,10 @@ $icon-sizes: ("s": 18px, "m": 25px, "l": 35px, "xl": 50px, "xxl": 75px);
   font-style: normal;
   font-weight: normal;
   display: inline-block;
-  vertical-align: middle;
   line-height: 1;
   text-transform: none;
   font-variant: normal;
   speak: none;
-  @include font-size(24px);
 
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;

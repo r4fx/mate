@@ -58,7 +58,7 @@ h1 {
 h2 {
   @include font-size($text__size--xl);
   font-family: $font__base--regular;
-  margin: 0 0 $text__size--xl;
+  margin: $text__size--xl 0 ;
   font-weight: normal;
   line-height: 1;
 }
@@ -66,7 +66,7 @@ h2 {
 h3 {
   @include font-size($text__size--lg);
   font-family: $font__base--regular;
-  margin: 0 0 $text__size--lg;
+  margin: $text__size--lg 0;
   font-weight: normal;
   line-height: 1;
 }
@@ -74,7 +74,7 @@ h3 {
 h4 {
   @include font-size($text__size--md);
   font-family: $font__base--regular;
-  margin: 0 0 $text__size--lg;
+  margin: $text__size--lg 0;
   font-weight: normal;
   line-height: 1;
 }
@@ -82,14 +82,14 @@ h4 {
 h5 {
   @include font-size($text__size--sm);
   font-family: $font__base--regular;
-  margin: 0 0 $text__size--sm;
+  margin: $text__size--sm 0;
   font-weight: normal;
   line-height: normal;
 }
 
 h6 {
   @include font-size($text__size--xs);
-  margin: 0 0 $text__size--xs;
+  margin: $text__size--xs 0;
   font-weight: normal;
   line-height: normal;
 }

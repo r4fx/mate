@@ -7,6 +7,7 @@
 * http://www.opensource.org/licenses/mit-license.php
 */
 .grid:before, .row:before, .grid:after, .row:after {
+  content: '';
   display: block;
   clear: both; }
 
@@ -841,13 +842,10 @@ fieldset.form-error {
   font-style: normal;
   font-weight: normal;
   display: inline-block;
-  vertical-align: middle;
   line-height: 1;
   text-transform: none;
   font-variant: normal;
   speak: none;
-  font-size: 24px;
-  font-size: 2.4rem;
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
@@ -1336,7 +1334,7 @@ h2 {
   font-size: 34px;
   font-size: 3.4rem;
   font-family: "lato-regular", Arial, sans-serif;
-  margin: 0 0 34px;
+  margin: 34px 0;
   font-weight: normal;
   line-height: 1; }
 
@@ -1344,7 +1342,7 @@ h3 {
   font-size: 22px;
   font-size: 2.2rem;
   font-family: "lato-regular", Arial, sans-serif;
-  margin: 0 0 22px;
+  margin: 22px 0;
   font-weight: normal;
   line-height: 1; }
 
@@ -1352,7 +1350,7 @@ h4 {
   font-size: 16px;
   font-size: 1.6rem;
   font-family: "lato-regular", Arial, sans-serif;
-  margin: 0 0 22px;
+  margin: 22px 0;
   font-weight: normal;
   line-height: 1; }
 
@@ -1360,14 +1358,14 @@ h5 {
   font-size: 14px;
   font-size: 1.4rem;
   font-family: "lato-regular", Arial, sans-serif;
-  margin: 0 0 14px;
+  margin: 14px 0;
   font-weight: normal;
   line-height: normal; }
 
 h6 {
   font-size: 12px;
   font-size: 1.2rem;
-  margin: 0 0 12px;
+  margin: 12px 0;
   font-weight: normal;
   line-height: normal; }
 
