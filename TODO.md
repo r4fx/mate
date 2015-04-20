@@ -12,3 +12,4 @@
 | components/_grid.scss | 95 | add to docs
 | components/_helpers.scss | 35 | zrobic dynamiczna wartosc marginesow np. (top,50)
 | components/_icons.scss | 1 | add icons assets like in bootstrap
+| components/_typography.scss | 51 | do tests
