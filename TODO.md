@@ -1,8 +1,9 @@
 ### TODOs
 | Filename | line # | TODO
 |:------|:------:|:------
-| _toolbox.scss | 16 | add border-collapse
-| _toolbox.scss | 120 | make mixin
+| _toolbox.scss | 13 | add border-collapse
+| _toolbox.scss | 117 | make mixin
+| _toolbox.scss | 213 | make mixin with params
 | components/_buttons.scss | 5 | ADD states, hover, active, focus
 | components/_buttons.scss | 6 | calc line height, http://www.mathayward.com/modular-css-with-sass-and-bem/
 | components/_buttons.scss | 11 | do refactoring!

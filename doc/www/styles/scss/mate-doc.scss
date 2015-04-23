@@ -142,6 +142,17 @@ ul code{
   &--grid {
     .row {
       margin: 0 $grid__col--gutter;
+
+      &:hover{
+        [class^="col-"] {
+          background-color: $color__base--first;
+          color: white;
+
+          &:hover {
+            background-color: darken($color__base--first, 7%);
+          }
+        }
+      }
     }
 
     [class^="col-"] {

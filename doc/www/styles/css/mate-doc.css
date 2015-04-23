@@ -1555,6 +1555,11 @@ ul code {
   margin-bottom: 25px; }
   .code-example--grid .row {
     margin: 0 25px; }
+    .code-example--grid .row:hover [class^="col-"] {
+      background-color: #1ab394;
+      color: white; }
+      .code-example--grid .row:hover [class^="col-"]:hover {
+        background-color: #15947a; }
   .code-example--grid [class^="col-"] {
     background-color: #DDDDDD;
     padding: 10px;
@@ -1624,6 +1629,4 @@ ul code {
     -webkit-align-self: auto;
     align-self: auto; }
 
-
-
-/*# sourceMappingURL=../maps/mate-doc.css.map */
+/*# sourceMappingURL=mate-doc.css.map */
