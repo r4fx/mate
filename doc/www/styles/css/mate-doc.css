@@ -187,7 +187,7 @@ img {
 hr {
   border: 0;
   height: 1px;
-  background-color: #ccc;
+  background-color: #CCC;
   margin: 15px auto; }
   hr.mini {
     width: 150px;
@@ -680,7 +680,7 @@ textarea {
   width: 100%;
   height: 34px;
   padding: 4px 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #CCC;
   border-radius: 5px;
   background-color: transparent;
   vertical-align: middle;
@@ -733,7 +733,7 @@ label > input[type="file"] {
 
 [data-file-multiple]:after {
   content: attr(data-file-multiple);
-  background-color: #353535;
+  background-color: #353;
   color: white;
   margin-left: 8px; }
 
@@ -1257,19 +1257,18 @@ ul.-divided ul {
     ul.-divided ul li:first-child:before {
       content: none; }
 
-/*============================================================
-* TABELS
-* ============================================================*/
-.table {
-  display: table; }
-  .table .row {
-    display: table-row;
-    margin: inherit; }
-    .table .row--vertical-middle .col {
-      vertical-align: middle; }
-  .table .col {
-    display: table-cell;
-    float: none; }
+table {
+  empty-cells: show;
+  border: 1px solid #CCC; }
+  table thead {
+    background-color: #DDD;
+    font-family: "lato-bold", Arial, sans-serif;
+    text-align: left; }
+  table th, table td {
+    padding: 0.5em 1em;
+    border-bottom: 1px solid #CCC; }
+  table.bordered th, table.bordered td {
+    border-left: 1px solid #CCC; }
 
 .css-table {
   display: table;
@@ -1477,6 +1476,9 @@ main > section[class*="col-"] {
   main > section[class*="col-"] > h1 {
     margin-top: 0;
     text-transform: uppercase; }
+  main > section[class*="col-"] p {
+    font-size: 18px;
+    font-size: 1.8rem; }
 main > aside[class*="col-"] {
   position: fixed;
   left: 0;
@@ -1527,7 +1529,7 @@ main > aside[class*="col-"] {
     font-size: 3rem; }
 
 .tags {
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #CCC;
   margin-top: 50px;
   padding-top: 15px;
   padding-left: 0; }
@@ -1543,13 +1545,13 @@ main > aside[class*="col-"] {
 
 p code,
 ul code {
-  background-color: #DDDDDD;
+  background-color: #DDD;
   padding: 2px;
   font-size: 14px;
   font-size: 1.4rem; }
 
 .code-example {
-  border: 1px solid #ccc;
+  border: 1px solid #CCC;
   border-radius: 5px;
   padding: 25px 0 0;
   margin-bottom: 25px; }
@@ -1561,7 +1563,7 @@ ul code {
       .code-example--grid .row:hover [class^="col-"]:hover {
         background-color: #15947a; }
   .code-example--grid [class^="col-"] {
-    background-color: #DDDDDD;
+    background-color: #DDD;
     padding: 10px;
     border: 1px solid #fff; }
   .code-example__icons {
@@ -1570,11 +1572,11 @@ ul code {
       text-align: center;
       border: 2px solid white;
       padding: 15px 10px;
-      background-color: #DDDDDD;
+      background-color: #DDD;
       -webkit-transition: all 300ms ease-in-out 0s;
       transition: all 300ms ease-in-out 0s; }
       .code-example__icons [class^=col-]:hover {
-        background-color: #353535;
+        background-color: #353;
         color: white; }
     .code-example__icons p {
       line-height: 1; }
@@ -1588,10 +1590,13 @@ ul code {
     border-top-right-radius: 0;
     padding: 25px; }
   .code-example form {
-    padding-left: 25px;
-    padding-right: 25px; }
+    margin-left: 25px;
+    margin-right: 25px; }
     .code-example form .input-radio {
       max-width: 410px; }
+  .code-example table {
+    margin-left: 25px;
+    margin-right: 25px; }
 
 .flex-box {
   display: -ms-flexbox;
@@ -1629,4 +1634,6 @@ ul code {
     -webkit-align-self: auto;
     align-self: auto; }
 
-/*# sourceMappingURL=mate-doc.css.map */
+
+
+/*# sourceMappingURL=../maps/mate-doc.css.map */

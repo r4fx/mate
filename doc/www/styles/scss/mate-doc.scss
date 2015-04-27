@@ -1,7 +1,6 @@
 // ============================================================
 // MATE BASE STYLES
 // ============================================================
-// TODO: dołączać tylko toolbox z katalogu zrodlowego mate
 
 @import "../../../../src/styles/scss/mate";
 
@@ -26,12 +25,17 @@ header{
 }
 
 main {
+
   > section[class*="col-"]{
     padding: $grid__row--gutter*2;
 
     > h1{
       margin-top: 0;
       text-transform: uppercase;
+    }
+
+    p {
+      @include font-size(18px);
     }
   }
 
@@ -201,12 +205,17 @@ ul code{
   }
 
   form {
-    padding-left: $grid__col--gutter;
-    padding-right: $grid__col--gutter;
+    margin-left: $grid__col--gutter;
+    margin-right: $grid__col--gutter;
 
     .input-radio {
       max-width: 410px;
     }
+  }
+
+  table {
+    margin-left: $grid__col--gutter;
+    margin-right: $grid__col--gutter;
   }
 }
 

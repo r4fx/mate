@@ -1,25 +1,27 @@
-/*============================================================
-* TABELS
-* ============================================================*/
+// ============================================================
+// TABELS
+// ============================================================
 
-.table {
-  display: table;
+table {
+  empty-cells: show;
+  border: 1px solid $border__color--first;
 
-  .row {
-    display: table-row;
-    margin: inherit;
-
-    &--vertical-middle {
-
-      .col {
-        vertical-align: middle;
-      }
-    }
+  thead {
+    background-color: $block__color--first;
+    font-family: $font__base--bold;
+    text-align: left;
   }
 
-  .col {
-    display: table-cell;
-    float: none;
+  th, td {
+    padding: 0.5em 1em;
+    border-bottom: 1px solid $border__color--first;
+  }
+
+  // bordered
+  &.bordered {
+    th, td {
+      border-left: 1px solid $border__color--first;
+    }
   }
 }
 
