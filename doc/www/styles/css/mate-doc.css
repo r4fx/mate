@@ -145,14 +145,6 @@ input[type="search"]::-webkit-search-decoration {
 optgroup {
   font-weight: bold; }
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-td,
-th {
-  padding: 0; }
-
 html {
   font-size: 62.5%; }
 
@@ -733,7 +725,7 @@ label > input[type="file"] {
 
 [data-file-multiple]:after {
   content: attr(data-file-multiple);
-  background-color: #353;
+  background-color: #353535;
   color: white;
   margin-left: 8px; }
 
@@ -812,6 +804,9 @@ fieldset.form-error {
   padding: 15px; }
   fieldset.form-error > .form-error__message {
     margin-bottom: 15px; }
+
+label > .form-error__message {
+  display: inline-block; }
 
 @font-face {
   font-family: 'icomoon';
@@ -1259,7 +1254,9 @@ ul.-divided ul {
 
 table {
   empty-cells: show;
-  border: 1px solid #CCC; }
+  border: 1px solid #CCC;
+  border-collapse: collapse;
+  border-spacing: 0; }
   table thead {
     background-color: #DDD;
     font-family: "lato-bold", Arial, sans-serif;
@@ -1267,8 +1264,10 @@ table {
   table th, table td {
     padding: 0.5em 1em;
     border-bottom: 1px solid #CCC; }
-  table.bordered th, table.bordered td {
+  table.table-bordered th, table.table-bordered td {
     border-left: 1px solid #CCC; }
+  table.table-striped tr:nth-child(odd) td {
+    background-color: #f7f7f7; }
 
 .css-table {
   display: table;
@@ -1476,9 +1475,9 @@ main > section[class*="col-"] {
   main > section[class*="col-"] > h1 {
     margin-top: 0;
     text-transform: uppercase; }
-  main > section[class*="col-"] p {
-    font-size: 18px;
-    font-size: 1.8rem; }
+main > section p {
+  font-size: 18px;
+  font-size: 1.8rem; }
 main > aside[class*="col-"] {
   position: fixed;
   left: 0;
@@ -1553,10 +1552,11 @@ ul code {
 .code-example {
   border: 1px solid #CCC;
   border-radius: 5px;
-  padding: 25px 0 0;
   margin-bottom: 25px; }
+  .code-example > div {
+    margin: 25px; }
   .code-example--grid .row {
-    margin: 0 25px; }
+    margin: 0; }
     .code-example--grid .row:hover [class^="col-"] {
       background-color: #1ab394;
       color: white; }
@@ -1566,37 +1566,29 @@ ul code {
     background-color: #DDD;
     padding: 10px;
     border: 1px solid #fff; }
-  .code-example__icons {
-    padding: 25px; }
-    .code-example__icons [class^=col-] {
-      text-align: center;
-      border: 2px solid white;
-      padding: 15px 10px;
-      background-color: #DDD;
-      -webkit-transition: all 300ms ease-in-out 0s;
-      transition: all 300ms ease-in-out 0s; }
-      .code-example__icons [class^=col-]:hover {
-        background-color: #353;
-        color: white; }
-    .code-example__icons p {
-      line-height: 1; }
-    .code-example__icons [class^="icon-"], .code-example__icons [class*=" icon-"] {
-      font-size: 24px;
-      font-size: 2.4rem; }
+  .code-example__icons [class^=col-] {
+    text-align: center;
+    border: 2px solid white;
+    padding: 15px 10px;
+    background-color: #DDD;
+    -webkit-transition: all 300ms ease-in-out 0s;
+    transition: all 300ms ease-in-out 0s; }
+    .code-example__icons [class^=col-]:hover {
+      background-color: #1ab394;
+      color: white; }
+  .code-example__icons p {
+    line-height: 1;
+    font-size: 16px; }
+  .code-example__icons [class^="icon-"], .code-example__icons [class*=" icon-"] {
+    font-size: 24px;
+    font-size: 2.4rem; }
   .code-example pre[class*="language-"] {
-    margin-top: 25px;
     margin-bottom: 0;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     padding: 25px; }
-  .code-example form {
-    margin-left: 25px;
-    margin-right: 25px; }
-    .code-example form .input-radio {
-      max-width: 410px; }
-  .code-example table {
-    margin-left: 25px;
-    margin-right: 25px; }
+  .code-example form .input-radio {
+    max-width: 410px; }
 
 .flex-box {
   display: -ms-flexbox;
@@ -1634,6 +1626,4 @@ ul code {
     -webkit-align-self: auto;
     align-self: auto; }
 
-
-
-/*# sourceMappingURL=../maps/mate-doc.css.map */
+/*# sourceMappingURL=mate-doc.css.map */

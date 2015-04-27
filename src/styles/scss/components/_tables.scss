@@ -5,6 +5,8 @@
 table {
   empty-cells: show;
   border: 1px solid $border__color--first;
+  border-collapse: collapse;
+  border-spacing: 0;
 
   thead {
     background-color: $block__color--first;
@@ -18,9 +20,18 @@ table {
   }
 
   // bordered
-  &.bordered {
+  &.table-bordered {
     th, td {
       border-left: 1px solid $border__color--first;
+    }
+  }
+
+  // striped
+  &.table-striped {
+    tr:nth-child(odd){
+      td {
+        background-color: lighten($block__color--first, 10);
+      }
     }
   }
 }

@@ -33,10 +33,10 @@ main {
       margin-top: 0;
       text-transform: uppercase;
     }
+  }
 
-    p {
-      @include font-size(18px);
-    }
+  > section p{
+    @include font-size(18px);
   }
 
   > aside[class*="col-"] {
@@ -140,12 +140,16 @@ ul code{
 .code-example{
   border: 1px solid $border__color--first;
   border-radius: $border__radius;
-  padding: $grid__col--gutter 0 0;
   margin-bottom: $grid__row--gutter;
+
+  > div {
+    margin: $grid__col--gutter;
+    @extend %clearfix;
+  }
 
   &--grid {
     .row {
-      margin: 0 $grid__col--gutter;
+      margin: 0;
 
       &:hover{
         [class^="col-"] {
@@ -167,7 +171,6 @@ ul code{
   }
 
   &__icons {
-    padding: $grid__col--gutter;
 
     [class^=col-] {
       text-align: center;
@@ -177,13 +180,14 @@ ul code{
       @include transition();
 
       &:hover{
-        background-color: $block__color--second;
+        background-color: $color__base--first;
         color: white;
       }
     }
 
     p{
       line-height: 1;
+      font-size: $text__size--md;
     }
 
     [class^="icon-"], [class*=" icon-"] {
@@ -191,12 +195,7 @@ ul code{
     }
   }
 
-  > div{
-    @extend %clearfix;
-  }
-
   pre[class*="language-"] {
-    margin-top: $grid__col--gutter;
     margin-bottom: 0;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
@@ -205,17 +204,9 @@ ul code{
   }
 
   form {
-    margin-left: $grid__col--gutter;
-    margin-right: $grid__col--gutter;
-
     .input-radio {
       max-width: 410px;
     }
-  }
-
-  table {
-    margin-left: $grid__col--gutter;
-    margin-right: $grid__col--gutter;
   }
 }
 

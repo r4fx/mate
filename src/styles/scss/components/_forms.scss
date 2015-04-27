@@ -306,3 +306,10 @@ fieldset.form-error {
     margin-bottom: 15px;
   }
 }
+
+// inside label
+label {
+  > .form-error__message {
+    display: inline-block;
+  }
+}
