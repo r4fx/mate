@@ -142,7 +142,6 @@
 // @include font-size(14px, 1); - for text inputs
 // ============================================================
 @mixin font-size($size, $line-height: null) {
-  font-size: $size; // fallback for old browsers
   font-size: calculateRem($size);
 
   // Optional unitless line height http://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/

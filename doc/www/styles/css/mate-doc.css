@@ -151,7 +151,6 @@ html {
 body {
   color: #3c3c3c;
   font-family: "lato-light", Arial, sans-serif;
-  font-size: 16px;
   font-size: 1.6rem;
   line-height: 1.5; }
   body.orientation-landscape:before {
@@ -286,8 +285,7 @@ hr {
   .col-11--phone {
     width: 91.66667%; }
   .col-12--phone {
-    width: 100%;
-    margin-bottom: 25px; } }
+    width: 100%; } }
 .col--offset-1 {
   margin-left: 8.33333%; }
 .col--offset-2 {
@@ -682,7 +680,6 @@ textarea {
   -moz-appearance: none;
   appearance: none;
   line-height: 1.42857143;
-  font-size: 16px;
   font-size: 1.6rem; }
   input[type="text"]:focus,
   input[type="password"]:focus,
@@ -755,7 +752,6 @@ input[type="radio"] {
     text-align: center;
     vertical-align: initial;
     line-height: normal;
-    font-size: 16px;
     font-size: 1.6rem; }
     .input-radio > [class*="icon-"]:before,
     .input-checkbox > [class*="icon-"]:before {
@@ -779,7 +775,6 @@ input[type="radio"] {
   color: #ff3724;
   display: block;
   text-transform: uppercase;
-  font-size: 12px;
   font-size: 1.2rem; }
 .form-error input[type="text"],
 .form-error input[type="password"],
@@ -814,23 +809,18 @@ label > .form-error__message {
   font-weight: normal;
   font-style: normal; }
 .icon-s:before {
-  font-size: 18px;
   font-size: 1.8rem; }
 
 .icon-m:before {
-  font-size: 25px;
   font-size: 2.5rem; }
 
 .icon-l:before {
-  font-size: 35px;
   font-size: 3.5rem; }
 
 .icon-xl:before {
-  font-size: 50px;
   font-size: 5rem; }
 
 .icon-xxl:before {
-  font-size: 75px;
   font-size: 7.5rem; }
 
 [class^="icon-"], [class*=" icon-"] {
@@ -1317,7 +1307,6 @@ strong, b {
   font-family: "lato-bold", Arial, sans-serif; }
 
 h1 {
-  font-size: 42px;
   font-size: 4.2rem;
   font-family: "lato-regular", Arial, sans-serif;
   margin: 0 0 42px;
@@ -1325,45 +1314,56 @@ h1 {
   font-weight: normal; }
   @media (max-width: 719px) {
     h1 {
-      font-size: 2.1px;
-      font-size: 0.21rem; } }
+      font-size: 2.8rem;
+      margin-bottom: 28px; } }
 
 h2 {
-  font-size: 34px;
   font-size: 3.4rem;
   font-family: "lato-regular", Arial, sans-serif;
-  margin: 34px 0;
+  margin: 0 0 34px;
   font-weight: normal;
   line-height: 1; }
+  @media (max-width: 719px) {
+    h2 {
+      font-size: 2.26667rem;
+      margin-bottom: 22.66667px; } }
 
 h3 {
-  font-size: 22px;
   font-size: 2.2rem;
   font-family: "lato-regular", Arial, sans-serif;
-  margin: 22px 0;
+  margin: 0 0 22px;
   font-weight: normal;
   line-height: 1; }
+  @media (max-width: 719px) {
+    h3 {
+      font-size: 1.46667rem;
+      margin-bottom: 14.66667px; } }
 
 h4 {
-  font-size: 16px;
   font-size: 1.6rem;
   font-family: "lato-regular", Arial, sans-serif;
-  margin: 22px 0;
+  margin: 0 0 22px;
   font-weight: normal;
   line-height: 1; }
+  @media (max-width: 719px) {
+    h4 {
+      font-size: 1.06667rem;
+      margin-bottom: 10.66667px; } }
 
 h5 {
-  font-size: 14px;
   font-size: 1.4rem;
   font-family: "lato-regular", Arial, sans-serif;
-  margin: 14px 0;
+  margin: 0 0 14px;
   font-weight: normal;
   line-height: normal; }
+  @media (max-width: 719px) {
+    h5 {
+      font-size: 0.93333rem;
+      margin-bottom: 9.33333px; } }
 
 h6 {
-  font-size: 12px;
   font-size: 1.2rem;
-  margin: 12px 0;
+  margin: 0 0 12px;
   font-weight: normal;
   line-height: normal; }
 
@@ -1462,70 +1462,144 @@ a[href^="https://github.com"]:before {
   font-family: 'icomoon';
   margin-right: 5px; }
 
+.sidebar-on {
+  overflow: hidden; }
+  .sidebar-on aside {
+    -webkit-transform: translateX(0);
+    transform: translateX(0); }
+  .sidebar-on .aside-toggle {
+    right: 15px; }
+    .sidebar-on .aside-toggle:before {
+      content: "\e60c"; }
+
+.aside-toggle {
+  position: fixed;
+  z-index: 1001;
+  bottom: 15px;
+  right: 15px;
+  display: none;
+  background-color: #1ab394;
+  width: 36px;
+  height: 36px;
+  text-align: center;
+  font-size: 2.4rem;
+  border-radius: 50%;
+  -webkit-transition: all 300ms ease-in-out 300ms;
+  transition: all 300ms ease-in-out 300ms; }
+  .aside-toggle:before {
+    vertical-align: middle;
+    color: white;
+    line-height: 36px; }
+  @media (max-width: 719px) {
+    .aside-toggle {
+      display: block; } }
+
+body, html {
+  height: 100%; }
+
+body {
+  font-size: 1.8rem; }
+  @media (max-width: 719px) {
+    body {
+      font-size: 1.6rem; } }
+
 header {
-  font-size: 15px;
   font-size: 1.5rem;
   line-height: 1.33333; }
   header .col {
     padding-top: 15px;
     padding-bottom: 15px; }
 
-main > section[class*="col-"] {
-  padding: 50px; }
-  main > section[class*="col-"] > h1 {
-    margin-top: 0;
-    text-transform: uppercase; }
-main > section p {
-  font-size: 18px;
-  font-size: 1.8rem; }
-main > aside[class*="col-"] {
-  position: fixed;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  background-color: #272822;
-  padding: 50px;
-  color: #fff;
-  min-width: 295px; }
-  main > aside[class*="col-"] figure {
-    text-align: right; }
-  main > aside[class*="col-"] a {
+main > aside {
+  position: relative;
+  z-index: 10;
+  height: 100%;
+  padding: 0 !important; }
+  @media (max-width: 719px) {
+    main > aside {
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+      -webkit-transition: all 300ms ease-in-out 0s;
+      transition: all 300ms ease-in-out 0s;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      padding: 15px; } }
+  main > aside:after {
+    content: '';
+    display: block;
+    height: 1px; }
+  main > aside > div[class*="col-"] {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #272822;
+    padding: 50px;
+    height: 100%;
+    color: #fff; }
+    @media (max-width: 1023px) {
+      main > aside > div[class*="col-"] {
+        padding: 25px;
+        position: static; } }
+  main > aside figure {
+    text-align: right;
+    margin-bottom: 25px; }
+    @media (max-width: 719px) {
+      main > aside figure {
+        text-align: center; } }
+    main > aside figure img {
+      display: inline-block;
+      vertical-align: middle; }
+    main > aside figure span {
+      vertical-align: middle;
+      line-height: normal;
+      font-size: 3rem; }
+  main > aside a {
     color: #fff;
     text-decoration: none; }
-  main > aside[class*="col-"] ul {
-    font-size: 16px;
-    font-size: 1.6rem;
+  main > aside ul {
     height: calc(100% - 71px);
-    overflow: auto; }
-    main > aside[class*="col-"] ul li {
+    overflow: auto;
+    line-height: normal;
+    text-align: right; }
+    @media (max-width: 719px) {
+      main > aside ul {
+        text-align: center; } }
+    main > aside ul li {
       margin-bottom: 0; }
-      main > aside[class*="col-"] ul li > hr {
+      main > aside ul li > hr {
         background-color: white; }
-    main > aside[class*="col-"] ul a {
+    main > aside ul a {
       display: block;
       padding: 5px 10px;
       -webkit-transition: background-color 300ms ease-in-out 0s, color 300ms ease-in-out 0s;
       transition: background-color 300ms ease-in-out 0s, color 300ms ease-in-out 0s; }
-      main > aside[class*="col-"] ul a.act, main > aside[class*="col-"] ul a:hover {
+      main > aside ul a.act, main > aside ul a:hover {
         background-color: #1ab394; }
-  main > aside[class*="col-"] .aside__footer {
+  main > aside .aside__footer {
     position: absolute;
     width: 100%;
     bottom: 0;
     left: 0;
     background-color: #272822;
-    line-height: 30px;
     color: #fff;
     padding-top: 20px;
     padding-bottom: 20px;
     text-align: center; }
-  main > aside[class*="col-"] figure img {
-    display: inline-block;
-    vertical-align: middle; }
-  main > aside[class*="col-"] figure span {
-    vertical-align: middle;
-    font-size: 30px;
-    font-size: 3rem; }
+main > section[class*="col-"] {
+  padding: 50px; }
+  @media (min-width: 720px) and (max-width: 1023px) {
+    main > section[class*="col-"] {
+      padding: 25px; } }
+  @media (max-width: 719px) {
+    main > section[class*="col-"] {
+      padding: 15px 15px 61px; } }
+  main > section[class*="col-"] > h1 {
+    font-family: "lato-light", Arial, sans-serif; }
+    @media (max-width: 719px) {
+      main > section[class*="col-"] > h1 {
+        text-align: center; } }
 
 .tags {
   border-top: 1px solid #CCC;
@@ -1539,14 +1613,12 @@ main > aside[class*="col-"] {
     padding: 2px 10px;
     background-color: #272822;
     color: #fff;
-    font-size: 14px;
     font-size: 1.4rem; }
 
 p code,
 ul code {
   background-color: #DDD;
   padding: 2px;
-  font-size: 14px;
   font-size: 1.4rem; }
 
 .code-example {
@@ -1555,6 +1627,9 @@ ul code {
   margin-bottom: 25px; }
   .code-example > div {
     margin: 25px; }
+    @media (max-width: 719px) {
+      .code-example > div {
+        margin: 15px; } }
   .code-example--grid .row {
     margin: 0; }
     .code-example--grid .row:hover [class^="col-"] {
@@ -1580,13 +1655,16 @@ ul code {
     line-height: 1;
     font-size: 16px; }
   .code-example__icons [class^="icon-"], .code-example__icons [class*=" icon-"] {
-    font-size: 24px;
     font-size: 2.4rem; }
   .code-example pre[class*="language-"] {
     margin-bottom: 0;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-    padding: 25px; }
+    padding: 25px;
+    font-size: 1.6rem; }
+    @media (max-width: 1023px) {
+      .code-example pre[class*="language-"] {
+        padding: 15px; } }
   .code-example form .input-radio {
     max-width: 410px; }
 

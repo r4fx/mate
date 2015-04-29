@@ -55,7 +55,7 @@
 
         // IF col is 100% width then add bottom gutter
         @if $i == 12 {
-          margin-bottom: $grid__col--gutter;
+          //margin-bottom: $grid__col--gutter;
         }
       }
     }

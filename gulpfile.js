@@ -36,7 +36,6 @@ function transform (filePath, file) {
     return file.contents.toString('utf8')
 }
 
-
 /* Tasks
 / ===========================================*/
 
@@ -72,7 +71,7 @@ gulp.task('sassRuby', function () {
         console.error('Error!', err.message);
     })
 
-    .pipe(sourcemaps.write('../maps/', {
+    .pipe(sourcemaps.write('../css/', {
         includeContent: false
     }))
 

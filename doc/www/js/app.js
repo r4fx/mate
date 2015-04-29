@@ -13,7 +13,9 @@ var events = {
     firstEvent: function () {
         $('#click-btn').unbind(events.eventType); // Don't ever keep listening for clicks !
 
-        // more code...
+        $('.aside-toggle').on(events.eventType, function(){
+            $('body').toggleClass('sidebar-on');
+        })
     },
 
     secondEvent: function () {
@@ -116,4 +118,5 @@ var codeMarkup = (function(){
 
 $(document).ready(function () {
     codeMarkup.init();
+    events.init();
 });

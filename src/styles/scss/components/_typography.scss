@@ -51,45 +51,66 @@ h1 {
   // todo: do tests
   // Half size for phone
   @include respond-to(phone) {
-    @include font-size($text__size--xxl /2 /10);
+    @include font-size($text__size--xxl /1.5);
+    margin-bottom: $text__size--xxl /1.5;
   }
 }
 
 h2 {
   @include font-size($text__size--xl);
   font-family: $font__base--regular;
-  margin: $text__size--xl 0 ;
+  margin: 0 0 $text__size--xl;
   font-weight: normal;
   line-height: 1;
+
+  @include respond-to(phone) {
+    @include font-size($text__size--xl /1.5);
+    margin-bottom: $text__size--xl /1.5;
+  }
 }
 
 h3 {
   @include font-size($text__size--lg);
   font-family: $font__base--regular;
-  margin: $text__size--lg 0;
+  margin: 0 0 $text__size--lg;
   font-weight: normal;
   line-height: 1;
+
+  @include respond-to(phone) {
+    @include font-size($text__size--lg /1.5);
+    margin-bottom: $text__size--lg /1.5;
+  }
 }
 
 h4 {
   @include font-size($text__size--md);
   font-family: $font__base--regular;
-  margin: $text__size--lg 0;
+  margin: 0 0 $text__size--lg;
   font-weight: normal;
   line-height: 1;
+
+  @include respond-to(phone) {
+    @include font-size($text__size--md /1.5);
+    margin-bottom: $text__size--md /1.5;
+  }
 }
 
 h5 {
   @include font-size($text__size--sm);
   font-family: $font__base--regular;
-  margin: $text__size--sm 0;
+  margin: 0 0 $text__size--sm;
   font-weight: normal;
   line-height: normal;
+
+  @include respond-to(phone) {
+    @include font-size($text__size--sm /1.5);
+    margin-bottom: $text__size--sm /1.5;
+  }
 }
 
 h6 {
   @include font-size($text__size--xs);
-  margin: $text__size--xs 0;
+  margin: 0 0 $text__size--xs;
   font-weight: normal;
   line-height: normal;
 }
