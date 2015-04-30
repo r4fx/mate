@@ -34,6 +34,11 @@ table {
       }
     }
   }
+
+  // striped
+  &.table-wide {
+    width: 100%;
+  }
 }
 
 // TABLE MADE BY CSS

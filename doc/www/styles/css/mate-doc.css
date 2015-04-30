@@ -1258,6 +1258,8 @@ table {
     border-left: 1px solid #CCC; }
   table.table-striped tr:nth-child(odd) td {
     background-color: #f7f7f7; }
+  table.table-wide {
+    width: 100%; }
 
 .css-table {
   display: table;
