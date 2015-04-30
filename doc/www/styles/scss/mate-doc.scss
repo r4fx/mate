@@ -236,10 +236,21 @@ ul code{
   @include font-size(14px);
 }
 
+pre.code-example[class*="language-"]{
+  margin: 0 0 $grid__row--gutter;
+  border: 0;
+  @extend %clearfix;
+
+  @include respond-to(mobile) {
+    padding: 15px;
+  }
+}
+
 .code-example{
   border: 1px solid $border__color--first;
   border-radius: $border__radius;
   margin-bottom: $grid__row--gutter;
+  font-size: 1.6rem;
 
   > div {
     margin: $grid__col--gutter;
@@ -299,16 +310,9 @@ ul code{
   }
 
   pre[class*="language-"] {
-    margin-bottom: 0;
+    margin: 0;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-    padding: $grid__col--gutter;
-    @include font-size($text__size--md);
-    @extend %clearfix;
-
-    @include respond-to(mobile) {
-      padding: 15px;
-    }
   }
 
   form {

@@ -6,7 +6,7 @@
 * Free to use under the MIT license.
 * http://www.opensource.org/licenses/mit-license.php
 */
-.grid:before, .row:before, header .col:before, .code-example > div:before, .code-example pre[class*="language-"]:before, .grid:after, .row:after, header .col:after, .code-example > div:after, .code-example pre[class*="language-"]:after {
+.grid:before, .row:before, header .col:before, pre.code-example[class*="language-"]:before, .code-example > div:before, .grid:after, .row:after, header .col:after, pre.code-example[class*="language-"]:after, .code-example > div:after {
   content: '';
   display: block;
   clear: both; }
@@ -1620,10 +1620,18 @@ ul code {
   padding: 2px;
   font-size: 1.4rem; }
 
+pre.code-example[class*="language-"] {
+  margin: 0 0 25px;
+  border: 0; }
+  @media (max-width: 1023px) {
+    pre.code-example[class*="language-"] {
+      padding: 15px; } }
+
 .code-example {
   border: 1px solid #CCC;
   border-radius: 5px;
-  margin-bottom: 25px; }
+  margin-bottom: 25px;
+  font-size: 1.6rem; }
   .code-example > div {
     margin: 25px; }
     @media (max-width: 719px) {
@@ -1656,14 +1664,9 @@ ul code {
   .code-example__icons [class^="icon-"], .code-example__icons [class*=" icon-"] {
     font-size: 2.4rem; }
   .code-example pre[class*="language-"] {
-    margin-bottom: 0;
+    margin: 0;
     border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    padding: 25px;
-    font-size: 1.6rem; }
-    @media (max-width: 1023px) {
-      .code-example pre[class*="language-"] {
-        padding: 15px; } }
+    border-top-right-radius: 0; }
   .code-example form .input-radio {
     max-width: 410px; }
 
