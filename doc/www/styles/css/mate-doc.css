@@ -1375,10 +1375,6 @@ ul, ol {
     padding: 0; }
     ul.list-inline li, ol.list-inline li {
       display: inline; }
-  ul li, ol li {
-    margin-bottom: 7px; }
-    ul li:last-child, ol li:last-child {
-      margin-bottom: 0; }
   ul li:last-child ul, ol li:last-child ul {
     margin-bottom: 0; }
   ul ul, ul ol, ol ul, ol ol {
@@ -1509,6 +1505,9 @@ header {
   header .col {
     padding-top: 15px;
     padding-bottom: 15px; }
+
+ul, ol {
+  margin-bottom: 20px; }
 
 main > aside {
   position: relative;

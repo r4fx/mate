@@ -132,14 +132,6 @@ ul, ol, {
     }
   }
 
-  li {
-    margin-bottom: 7px;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-
   // second level
   li:last-child ul {
     margin-bottom: 0;
