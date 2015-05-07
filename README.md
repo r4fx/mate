@@ -11,3 +11,5 @@ Mate is a simple and lightweight front end framework
 * CSS & SCSS helpers + toolbox library
 * Web font icons from IcoMoon
 * REM & EM based sizes
+
+Beta of documentation can be find here http://r4fx.github.io/mate/doc/www/
