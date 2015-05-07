@@ -6,7 +6,7 @@
 * Free to use under the MIT license.
 * http://www.opensource.org/licenses/mit-license.php
 */
-.box:before, .row:before, header .col:before, pre.code-example[class*="language-"]:before, .code-example > div:before, .box:after, .row:after, header .col:after, pre.code-example[class*="language-"]:after, .code-example > div:after {
+.grid:before, .row:before, header .col:before, pre.code-example[class*="language-"]:before, .code-example > div:before, .grid:after, .row:after, header .col:after, pre.code-example[class*="language-"]:after, .code-example > div:after {
   content: '';
   display: block;
   clear: both; }
@@ -204,10 +204,10 @@ hr {
 .row.row--no-gutter {
   margin: 0 -25px 0 -25px; }
 
-.box {
+.grid {
   width: 100%;
   margin: 0 auto; }
-  .box--add-margin {
+  .grid--add-margin {
     margin-bottom: 25px; }
 
 .col--no-gutter {
