@@ -1,6 +1,10 @@
 // ============================================================
 // POSITIONING
 // ============================================================
+.hide {
+  display: none !important;
+}
+
 .inline-left {
   text-align: left;
 }
@@ -32,17 +36,13 @@
   float: left;
 }
 
-// TODO: zrobic dynamiczna wartosc marginesow np. (top,50)
+// TODO: make it dynamic, example: (top,50)
 .margin-top-50 {
   margin-top: 50px;
 }
 
 .no-margin{
   margin: 0;
-}
-
-.hide {
-  display: none !important;
 }
 
 // ============================================================

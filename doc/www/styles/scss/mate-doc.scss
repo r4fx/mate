@@ -230,7 +230,8 @@ main {
 // MATE EXAMPLES
 // ============================================================
 p code,
-ul code{
+ul code,
+h4 code{
   background-color: $block__color--first;
   padding: 2px;
   @include font-size(14px);
@@ -323,9 +324,9 @@ pre.code-example[class*="language-"]{
 }
 
 .flex-box {
-  @include flexWrap;
+  @include flex-wrap;
 
   > div {
-    @include flexItem;
+    @include flex-item;
   }
 }

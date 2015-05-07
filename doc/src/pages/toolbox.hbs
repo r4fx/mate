@@ -2,10 +2,91 @@
 title: Toolbox
 ---
 
-<p></p>
-
-<ul>
-    <li>respond-to</li>
-    <li>font-size</li>
-    <li>strip-units</li>
+<h2>Placeholders (from _tollbox.scss)</h2>
+<ul class="list-unstyled">
+    <li><code>%clearfix</code></li>
+    <li><code>%box-sizing--border</code></li>
+    <li><code>%box-sizing--content</code></li>
+    <li><code>%ellipsis</code></li>
+    <li><code>%hide-text</code></li>
+    <li><code>%word-wrap</code></li>
+    <li><code>%noselect</code></li>
 </ul>
+
+<h2>Helper classes (from _helpers.scss)</h2>
+<ul class="list-unstyled">
+    <li><code>.hide</code></li>
+    <li><code>.inline-left</code></li>
+    <li><code>.inline-right</code></li>
+    <li><code>.inline-center</code></li>
+    <li><code>.inline-justify</code></li>
+    <li><code>.block-center</code></li>
+    <li><code>.float-right</code></li>
+    <li><code>.float-left</code></li>
+    <li><code>.img-circle</code></li>
+    <li><code>.radius-none</code></li>
+    <li><code>.no-margin</code></li>
+</ul>
+
+<h2>Mixins (from _tollbox.scss)</h2>
+<ul class="list-unstyled">
+    <li><code>respond-to($point, $modifier: null)</code></li>
+    <li><code>gradient($gradient-color-from, $gradient-color-to)</code></li>
+    <li><code>font-size($size, $line-height: null)</code></li>
+    <li><code>transform-free($args...)</code></li>
+    <li><code>rotate($val)</code></li>
+    <li><code>transition($list: all, $duration: $trans__base--duration, $timing: $trans__base--timing, $delay: $trans__base--delay)</code></li>
+    <li><code>transition-free($args...)</code></li>
+    <li><code>centerer($axis: auto)</code></li>
+    <li><code>coverer</code></li>
+    <li><code>flex-wrap</code></li>
+    <li><code>flex-item</code></li>
+</ul>
+
+<h3>respond-to</h3>
+<p>Jeden z najważniejszych mixinów odpowiadający za media queries i breakpointy na potrzeby RWD. <br/>
+    Obsługowane breakpointy: <code>mobile</code>, <code>phone</code>, <code>tablet</code>, <code>desktop</code>
+</p>
+
+<h4>Mobile odpowiada za zakresy phone + tablet</h4>
+<div class="code-example">
+    <div data-clone class="hide">
+        div[class*="col-"] {
+            position: fixed;
+            left: 0;
+            top: 0;
+            padding: $grid__row--gutter*2;
+
+            @include respond-to(mobile) {
+                position: static;
+
+                padding: $grid__row--gutter;
+            }
+        }
+    </div>
+    <pre lang="scss"></pre>
+</div>
+
+<h4>Phone</h4>
+<div class="code-example">
+    <div data-clone class="hide">
+        ul {
+            text-align: right;
+
+            @include respond-to(phone) {
+                text-align: center;
+            }
+        }
+    </div>
+    <pre lang="scss"></pre>
+</div>
+
+<h4>Desktop może przyjąć dodatkowy argument <code>xl</code></h4>
+<div class="code-example">
+    <div data-clone class="hide">
+        @include respond-to(desktop, xl) {
+            width: 100%;
+        }
+    </div>
+    <pre lang="scss"></pre>
+</div>

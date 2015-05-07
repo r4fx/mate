@@ -6,7 +6,7 @@
 * Free to use under the MIT license.
 * http://www.opensource.org/licenses/mit-license.php
 */
-.grid:before, .row:before, header .col:before, pre.code-example[class*="language-"]:before, .code-example > div:before, .grid:after, .row:after, header .col:after, pre.code-example[class*="language-"]:after, .code-example > div:after {
+.box:before, .row:before, header .col:before, pre.code-example[class*="language-"]:before, .code-example > div:before, .box:after, .row:after, header .col:after, pre.code-example[class*="language-"]:after, .code-example > div:after {
   content: '';
   display: block;
   clear: both; }
@@ -204,10 +204,10 @@ hr {
 .row.row--no-gutter {
   margin: 0 -25px 0 -25px; }
 
-.grid {
+.box {
   width: 100%;
   margin: 0 auto; }
-  .grid--add-margin {
+  .box--add-margin {
     margin-bottom: 25px; }
 
 .col--no-gutter {
@@ -1311,61 +1311,71 @@ strong, b {
 h1 {
   font-size: 4.2rem;
   font-family: "lato-regular", Arial, sans-serif;
-  margin: 0 0 42px;
+  margin: 42px 0;
   line-height: 1;
   font-weight: normal; }
   @media (max-width: 719px) {
     h1 {
       font-size: 2.8rem;
-      margin-bottom: 28px; } }
+      margin: 28px 0; } }
+  h1:first-child {
+    margin-top: 0; }
 
 h2 {
   font-size: 3.4rem;
   font-family: "lato-regular", Arial, sans-serif;
-  margin: 0 0 34px;
+  margin: 34px 0;
   font-weight: normal;
   line-height: 1; }
   @media (max-width: 719px) {
     h2 {
       font-size: 2.26667rem;
-      margin-bottom: 22.66667px; } }
+      margin: 22.66667px 0; } }
+  h2:first-child {
+    margin-top: 0; }
 
 h3 {
   font-size: 2.2rem;
   font-family: "lato-regular", Arial, sans-serif;
-  margin: 0 0 22px;
+  margin: 22px 0;
   font-weight: normal;
   line-height: 1; }
   @media (max-width: 719px) {
     h3 {
       font-size: 1.46667rem;
-      margin-bottom: 14.66667px; } }
+      margin: 14.66667px 0; } }
+  h3:first-child {
+    margin-top: 0; }
 
 h4 {
   font-size: 1.6rem;
   font-family: "lato-regular", Arial, sans-serif;
-  margin: 0 0 22px;
+  margin: 22px 0;
   font-weight: normal;
   line-height: 1; }
   @media (max-width: 719px) {
     h4 {
       font-size: 1.06667rem;
-      margin-bottom: 10.66667px; } }
+      margin: 10.66667px 0; } }
+  h4:first-child {
+    margin-top: 0; }
 
 h5 {
   font-size: 1.4rem;
   font-family: "lato-regular", Arial, sans-serif;
-  margin: 0 0 14px;
+  margin: 14px 0;
   font-weight: normal;
   line-height: normal; }
   @media (max-width: 719px) {
     h5 {
       font-size: 0.93333rem;
-      margin-bottom: 9.33333px; } }
+      margin: 9.33333px 0; } }
+  h5:first-child {
+    margin-top: 0; }
 
 h6 {
   font-size: 1.2rem;
-  margin: 0 0 12px;
+  margin: 12px 0;
   font-weight: normal;
   line-height: normal; }
 
@@ -1417,6 +1427,9 @@ ul .separator, ol .separator, dl .separator {
   margin: 0;
   list-style-type: none; }
 
+.hide {
+  display: none !important; }
+
 .inline-left {
   text-align: left; }
 
@@ -1445,9 +1458,6 @@ ul .separator, ol .separator, dl .separator {
 
 .no-margin {
   margin: 0; }
-
-.hide {
-  display: none !important; }
 
 .radius-none {
   border-radius: 0; }
@@ -1617,7 +1627,8 @@ main > section[class*="col-"] {
     font-size: 1.4rem; }
 
 p code,
-ul code {
+ul code,
+h4 code {
   background-color: #DDD;
   padding: 2px;
   font-size: 1.4rem; }
@@ -1708,6 +1719,4 @@ pre.code-example[class*="language-"] {
     -webkit-align-self: auto;
     align-self: auto; }
 
-
-
-/*# sourceMappingURL=../css/mate-doc.css.map */
+/*# sourceMappingURL=mate-doc.css.map */
