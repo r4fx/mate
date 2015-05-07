@@ -44,11 +44,10 @@ title: Toolbox
 </ul>
 
 <h3>respond-to</h3>
-<p>Jeden z najważniejszych mixinów odpowiadający za media queries i breakpointy na potrzeby RWD. <br/>
-    Obsługowane breakpointy: <code>mobile</code>, <code>phone</code>, <code>tablet</code>, <code>desktop</code>
+<p>Jeden z najważniejszych mixinów odpowiadający za media queries i breakpointy na potrzeby RWD. <br>
+    Obsługowane breakpointy: <code>mobile</code>, <code>phone</code>, <code>tablet</code>, <code>desktop</code> <br>
 </p>
-
-<h4>Mobile odpowiada za zakresy phone + tablet</h4>
+<p>Mobile odpowiada za zakresy phone + tablet. Desktop może przyjąć dodatkowy argument <code>xl</code></p>
 <div class="code-example">
     <div data-clone class="hide">
         div[class*="col-"] {
@@ -63,13 +62,7 @@ title: Toolbox
                 padding: $grid__row--gutter;
             }
         }
-    </div>
-    <pre lang="scss"></pre>
-</div>
 
-<h4>Phone</h4>
-<div class="code-example">
-    <div data-clone class="hide">
         ul {
             text-align: right;
 
@@ -77,13 +70,7 @@ title: Toolbox
                 text-align: center;
             }
         }
-    </div>
-    <pre lang="scss"></pre>
-</div>
 
-<h4>Desktop może przyjąć dodatkowy argument <code>xl</code></h4>
-<div class="code-example">
-    <div data-clone class="hide">
         @include respond-to(desktop, xl) {
             width: 100%;
         }
