@@ -1,6 +1,6 @@
 # Mate
 
-Mate is a simple and lightweight front end framework
+Mate is a simple and lightweight front-end framework, currently in beta state.
 
 ## Some of base features
 
