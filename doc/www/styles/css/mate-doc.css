@@ -1137,6 +1137,9 @@ label > .form-error__message {
 .icon-email:before {
   content: "\e66d"; }
 
+.icon-email-outline:before {
+  content: "\e637"; }
+
 .icon-search:before {
   content: "\e66e"; }
 
@@ -1223,6 +1226,9 @@ label > .form-error__message {
 
 .icon-github:before {
   content: "\e600"; }
+
+.icon-linkedin:before {
+  content: "\e681"; }
 
 ul.-divided a {
   padding: 5px; }

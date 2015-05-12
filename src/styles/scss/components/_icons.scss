@@ -443,6 +443,10 @@ $icon-sizes: ("s": 18px, "m": 25px, "l": 35px, "xl": 50px, "xxl": 75px);
   content: "\e66d";
 }
 
+.icon-email-outline:before {
+  content: "\e637";
+}
+
 .icon-search:before {
   content: "\e66e";
 }
@@ -557,4 +561,8 @@ $icon-sizes: ("s": 18px, "m": 25px, "l": 35px, "xl": 50px, "xxl": 75px);
 
 .icon-github:before {
   content: "\e600";
+}
+
+.icon-linkedin:before {
+  content: "\e681";
 }
