@@ -1949,7 +1949,7 @@
 		{
 			"icon": {
 				"paths": [
-					"M171.297 269.055l340.703 340.703 340.703-340.703z"
+					"M185.493 340.51l326.507 326.507 326.507-326.507z"
 				],
 				"attrs": [],
 				"isMulticolor": false,
@@ -1973,14 +1973,15 @@
 		{
 			"icon": {
 				"paths": [
-					"M725.333 597.333l-213.333-213.333-213.333 213.333z"
+					"M852.703 668.724l-340.703-340.703-340.703 340.703z"
 				],
 				"attrs": [],
 				"isMulticolor": false,
 				"tags": [
 					"arrow-drop-up"
 				],
-				"grid": 24
+				"grid": 24,
+				"width": 1023.9999999999999
 			},
 			"attrs": [],
 			"properties": {
@@ -3274,7 +3275,8 @@
 			"showMetadata": false,
 			"showVersion": false,
 			"resetPoint": 58880,
-			"classSelector": ".icon"
+			"classSelector": ".icon",
+			"cssVars": false
 		},
 		"imagePref": {
 			"prefix": "icon-",
