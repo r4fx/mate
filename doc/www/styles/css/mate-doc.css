@@ -1396,7 +1396,7 @@ ul, ol {
   ul.list-inline, ol.list-inline {
     padding: 0; }
     ul.list-inline li, ol.list-inline li {
-      display: inline; }
+      display: inline-block; }
   ul li:last-child ul, ol li:last-child ul {
     margin-bottom: 0; }
   ul ul, ul ol, ol ul, ol ol {
