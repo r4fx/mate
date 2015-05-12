@@ -290,6 +290,7 @@
 
 // ============================================================
 // FILTERS
+// [i] Filters preview: http://html5-demos.appspot.com/static/css/filters/index.html
 // ============================================================
 @mixin filter($args...) {
   -webkit-filter: $args;
