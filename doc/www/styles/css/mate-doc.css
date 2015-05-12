@@ -538,7 +538,8 @@ hr {
   background-color: transparent; }
 .btn--circle {
   position: relative;
-  border-radius: 50%; }
+  border-radius: 50%;
+  padding: 0; }
   .btn--circle span {
     top: 50%;
     left: 50%;
@@ -547,6 +548,9 @@ hr {
     transform: translate(-50%, -50%);
     position: absolute;
     line-height: 1; }
+  .btn--circle.btn--xs {
+    width: 32px;
+    height: 32px; }
   .btn--circle.btn--sm {
     width: 50px;
     height: 50px; }
@@ -1725,6 +1729,4 @@ pre.code-example[class*="language-"] {
     -webkit-align-self: auto;
     align-self: auto; }
 
-
-
-/*# sourceMappingURL=../css/mate-doc.css.map */
+/*# sourceMappingURL=mate-doc.css.map */

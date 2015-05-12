@@ -4,9 +4,10 @@
 
 // TODO: ADD states, hover, active, focus
 // TODO: calc line height, http://www.mathayward.com/modular-css-with-sass-and-bem/
+// TODO: extend xs size, for now only rounded btn have that
 
 // Define sizes
-$btn-sizes: sm, md, lg, xl, xxl;
+$btn-sizes: xs, sm, md, lg, xl, xxl;
 
 // Todo: do refactoring!
 @mixin button-size($size){
@@ -386,6 +387,7 @@ $btn-sizes: sm, md, lg, xl, xxl;
   &--circle {
     position: relative;
     border-radius: 50%;
+    padding: 0;
 
     span {
       @include centerer;
@@ -393,6 +395,11 @@ $btn-sizes: sm, md, lg, xl, xxl;
     }
 
     // todo: make mixin
+    &.btn--xs {
+      width: 32px;
+      height: 32px;
+    }
+
     &.btn--sm {
       width: 50px;
       height: 50px;
