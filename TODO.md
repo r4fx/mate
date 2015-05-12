@@ -10,8 +10,8 @@
 | components/_buttons.scss | 202 | make mixin
 | components/_buttons.scss | 397 | make mixin
 | components/_buttons.scss | 469 | gropued buttons
-| components/_grid.scss | 95 | add to docs
+| components/_grid.scss | 94 | add to docs
 | components/_helpers.scss | 39 | make it dynamic, example: (top,50)
-| components/_icons.scss | 1 | add icons assets like in bootstrap
+| components/_icons.scss | 13 | add to doc
 | components/_tables.scss | 45 | describe in doc
 | components/_typography.scss | 51 | do tests

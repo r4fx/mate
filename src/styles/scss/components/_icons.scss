@@ -1,5 +1,3 @@
-// todo: add icons assets like in bootstrap
-
 // ============================================================
 // ICON FONT
 // ============================================================
@@ -11,9 +9,10 @@
   font-style: normal;
 }
 
-// ICON SIZES
+// ICON SIZES HELPER
+// todo: add to doc
 // ============================================================
-$icon-sizes: ("s": 18px, "m": 25px, "l": 35px, "xl": 50px, "xxl": 75px);
+$icon-sizes: ("sm": $text__size--sm, "md": $text__size--md, "lg": $text__size--lg, "xl": $text__size--xl, "xxl": $text__size--xxl);
 @each $name, $size in $icon-sizes {
   .icon-#{$name} {
     &:before {
@@ -31,7 +30,7 @@ $icon-sizes: ("s": 18px, "m": 25px, "l": 35px, "xl": 50px, "xxl": 75px);
   font-variant: normal;
   speak: none;
 
-  /* Better Font Rendering =========== */
+  // Better Font Rendering
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
@@ -42,7 +41,6 @@ $icon-sizes: ("s": 18px, "m": 25px, "l": 35px, "xl": 50px, "xxl": 75px);
 
 // ICONS
 // ============================================================
-
 .icon-disabled:before {
   content: "\e608";
 }

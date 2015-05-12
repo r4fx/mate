@@ -39,7 +39,6 @@ figcaption,
 figure,
 footer,
 header,
-hgroup,
 main,
 nav,
 section,
@@ -184,9 +183,6 @@ hr {
     width: 150px;
     margin: 50px auto; }
 
-/*============================================================
-* GRID SYSTEM
-* ============================================================*/
 .col-1, .col-1--tablet, .col-1--phone, .col-2, .col-2--tablet, .col-2--phone, .col-3, .col-3--tablet, .col-3--phone, .col-4, .col-4--tablet, .col-4--phone, .col-5, .col-5--tablet, .col-5--phone, .col-6, .col-6--tablet, .col-6--phone, .col-7, .col-7--tablet, .col-7--phone, .col-8, .col-8--tablet, .col-8--phone, .col-9, .col-9--tablet, .col-9--phone, .col-10, .col-10--tablet, .col-10--phone, .col-11, .col-11--tablet, .col-11--phone, .col-12, .col-12--tablet, .col-12--phone {
   float: left;
   padding-left: 25px;
@@ -812,20 +808,20 @@ label > .form-error__message {
   src: url("../../fonts/icomoon/icomoon.woff") format("woff"), url("../../fonts/icomoon/icomoon.svg#icomoon") format("svg");
   font-weight: normal;
   font-style: normal; }
-.icon-s:before {
-  font-size: 1.8rem; }
+.icon-sm:before {
+  font-size: 1.4rem; }
 
-.icon-m:before {
-  font-size: 2.5rem; }
+.icon-md:before {
+  font-size: 1.6rem; }
 
-.icon-l:before {
-  font-size: 3.5rem; }
+.icon-lg:before {
+  font-size: 2.2rem; }
 
 .icon-xl:before {
-  font-size: 5rem; }
+  font-size: 3.4rem; }
 
 .icon-xxl:before {
-  font-size: 7.5rem; }
+  font-size: 4.2rem; }
 
 [class^="icon-"], [class*=" icon-"] {
   font-style: normal;
@@ -835,7 +831,6 @@ label > .form-error__message {
   text-transform: none;
   font-variant: normal;
   speak: none;
-  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
   [class^="icon-"]:before, [class*=" icon-"]:before {
@@ -1277,9 +1272,6 @@ table {
   .css-table .col {
     display: table-cell; }
 
-/*============================================================
-* TYPOGRAPHY
-* ============================================================*/
 @font-face {
   font-family: "lato-regular";
   font-style: normal;
@@ -1729,6 +1721,4 @@ pre.code-example[class*="language-"] {
     -webkit-align-self: auto;
     align-self: auto; }
 
-
-
-/*# sourceMappingURL=../css/mate-doc.css.map */
+/*# sourceMappingURL=mate-doc.css.map */
