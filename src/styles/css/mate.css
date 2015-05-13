@@ -169,6 +169,9 @@ a {
   color: #249cff; }
   a:hover {
     text-decoration: none; }
+  a[href^=tel]:hover {
+    text-decoration: none !important;
+    cursor: default; }
 
 img {
   max-width: 100%;
@@ -1269,8 +1272,9 @@ table {
 .css-table {
   display: table;
   width: 100%; }
-  .css-table .col {
-    display: table-cell; }
+  .css-table > [class*="col"] {
+    display: table-cell;
+    float: none; }
 
 @font-face {
   font-family: "lato-regular";

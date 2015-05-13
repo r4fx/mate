@@ -47,7 +47,8 @@ table {
   display: table;
   width: 100%;
 
-  .col {
+  > [class*="col"] {
     display: table-cell;
+    float: none;
   }
 }

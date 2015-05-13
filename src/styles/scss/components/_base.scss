@@ -50,6 +50,11 @@ a {
   &:visited {
 
   }
+
+  &[href^=tel]:hover {
+    text-decoration: none !important;
+    cursor: default;
+  }
 }
 
 // IMAGES
