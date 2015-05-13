@@ -2,27 +2,57 @@
 // TABELS
 // ============================================================
 
-table {
+
+%table-frame {
   empty-cells: show;
-  border: 1px solid $border__color--first;
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+%table-thead {
+  background-color: $block__color--first;
+  font-family: $font__base--bold;
+  text-align: left;
+}
+
+%table-col {
+  padding: 0.5em 1em;
+  border-bottom: 1px solid $border__color--first;
+}
+
+%table-bordered-frame {
+  border: 1px solid $border__color--first;
+}
+
+%table-bordered-col {
+  border-left: 1px solid $border__color--first;
+}
+
+%table-striped {
+  background-color: lighten($block__color--first, 10);
+}
+
+%table-wide {
+  width: 100%;
+}
+
+table {
+  @extend %table-frame;
 
   thead {
-    background-color: $block__color--first;
-    font-family: $font__base--bold;
-    text-align: left;
+    @extend %table-thead;
   }
 
   th, td {
-    padding: 0.5em 1em;
-    border-bottom: 1px solid $border__color--first;
+    @extend %table-col;
   }
 
   // bordered
   &.table-bordered {
+    @extend %table-bordered-frame;
+
     th, td {
-      border-left: 1px solid $border__color--first;
+      @extend %table-bordered-col;
     }
   }
 
@@ -30,25 +60,79 @@ table {
   &.table-striped {
     tr:nth-child(odd){
       td {
-        background-color: lighten($block__color--first, 10);
+        @extend %table-striped;
       }
     }
   }
 
-  // striped
+  // Super wide
   &.table-wide {
-    width: 100%;
+    @extend %table-wide;
   }
 }
 
 // TABLE MADE BY CSS
-// todo: describe in doc
-.css-table {
+.table-css {
   display: table;
-  width: 100%;
+  empty-cells: show;
+  border-collapse: collapse;
+  border-spacing: 0;
 
-  > [class*="col"] {
+  // Row
+  .row {
+    margin: 0;
+    display: table-row;
+
+    &:before,
+    &:after{
+      display: none;
+    }
+  }
+
+  // Columns
+  .table-thead [class*="col"]{
+    @extend %table-thead;
+  }
+
+  [class*="col"] {
+    @extend %table-col;
     display: table-cell;
     float: none;
+    width: auto;
+  }
+
+  // Bordered
+  &.table-bordered {
+    @extend %table-bordered-frame;
+
+    [class*="col"] {
+      @extend %table-bordered-col;
+
+      &:first-child{
+        border-left: 0;
+      }
+    }
+  }
+
+  // Striped
+  &.table-striped {
+    .row:not(.table-thead):nth-child(odd) {
+      [class*="col"] {
+        @extend %table-striped;
+      }
+    }
+  }
+
+  // Clean table
+  &.table-clean {
+    [class*="col"] {
+      padding: 0;
+      border: 0;
+    }
+  }
+
+  // Super wide
+  &.table-wide {
+    @extend %table-wide;
   }
 }

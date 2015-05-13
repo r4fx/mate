@@ -1244,29 +1244,49 @@ ul.-divided ul {
 
 table {
   empty-cells: show;
-  border: 1px solid #CCC;
   border-collapse: collapse;
   border-spacing: 0; }
-  table thead {
-    background-color: #DDD;
-    font-family: "lato-bold", Arial, sans-serif;
-    text-align: left; }
-  table th, table td {
-    padding: 0.5em 1em;
-    border-bottom: 1px solid #CCC; }
-  table.table-bordered th, table.table-bordered td {
-    border-left: 1px solid #CCC; }
-  table.table-striped tr:nth-child(odd) td {
-    background-color: #f7f7f7; }
-  table.table-wide {
-    width: 100%; }
 
-.css-table {
-  display: table;
+table thead, .table-css .table-thead [class*="col"] {
+  background-color: #DDD;
+  font-family: "lato-bold", Arial, sans-serif;
+  text-align: left; }
+
+table th, table td, .table-css [class*="col"] {
+  padding: 0.5em 1em;
+  border-bottom: 1px solid #CCC; }
+
+table.table-bordered, .table-css.table-bordered {
+  border: 1px solid #CCC; }
+
+table.table-bordered th, table.table-bordered td, .table-css.table-bordered [class*="col"] {
+  border-left: 1px solid #CCC; }
+
+table.table-striped tr:nth-child(odd) td, .table-css.table-striped .row:not(.table-thead):nth-child(odd) [class*="col"] {
+  background-color: #f7f7f7; }
+
+table.table-wide, .table-css.table-wide {
   width: 100%; }
-  .css-table > [class*="col"] {
+
+.table-css {
+  display: table;
+  empty-cells: show;
+  border-collapse: collapse;
+  border-spacing: 0; }
+  .table-css .row {
+    margin: 0;
+    display: table-row; }
+    .table-css .row:before, .table-css .row:after {
+      display: none; }
+  .table-css [class*="col"] {
     display: table-cell;
-    float: none; }
+    float: none;
+    width: auto; }
+  .table-css.table-bordered [class*="col"]:first-child {
+    border-left: 0; }
+  .table-css.table-clean [class*="col"] {
+    padding: 0;
+    border: 0; }
 
 @font-face {
   font-family: "lato-regular";
