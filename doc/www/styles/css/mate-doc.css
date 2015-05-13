@@ -178,6 +178,9 @@ hr {
     width: 150px;
     margin: 50px auto; }
 
+/*============================================================
+* GRID SYSTEM
+* ============================================================*/
 .col-1, .col-1--tablet, .col-1--phone, .col-2, .col-2--tablet, .col-2--phone, .col-3, .col-3--tablet, .col-3--phone, .col-4, .col-4--tablet, .col-4--phone, .col-5, .col-5--tablet, .col-5--phone, .col-6, .col-6--tablet, .col-6--phone, .col-7, .col-7--tablet, .col-7--phone, .col-8, .col-8--tablet, .col-8--phone, .col-9, .col-9--tablet, .col-9--phone, .col-10, .col-10--tablet, .col-10--phone, .col-11, .col-11--tablet, .col-11--phone, .col-12, .col-12--tablet, .col-12--phone {
   float: left;
   padding-left: 25px;
@@ -303,7 +306,8 @@ hr {
   margin-left: 100%; }
 
 .row {
-  margin: 0 -25px 25px -25px; }
+  margin-left: -25px;
+  margin-right: -25px; }
   .row .row {
     clear: both; }
     .row .row.row--dbl-margin-top {
@@ -329,18 +333,18 @@ hr {
 * ============================================================*/
 .btn {
   border: 0;
-  padding-bottom: 0;
-  padding-top: 0;
   border-radius: 5px;
   display: inline-block;
   vertical-align: middle;
   text-decoration: none;
   text-align: center;
   cursor: pointer;
-  font-size: 1.6rem;
-  line-height: 4rem;
+  padding-bottom: 0;
+  padding-top: 0;
   padding-left: 2rem;
   padding-right: 2rem;
+  font-size: 1.6rem;
+  line-height: 4rem;
   -webkit-transition: all 300ms ease-in-out 0s;
   transition: all 300ms ease-in-out 0s; }
   .btn.btn--outline {
@@ -357,10 +361,10 @@ hr {
       margin-right: 2rem; }
 
 .btn--sm {
-  font-size: 1.4rem;
-  line-height: 2rem;
   padding-left: 1rem;
-  padding-right: 1rem; }
+  padding-right: 1rem;
+  font-size: 1.4rem;
+  line-height: 2rem; }
   .btn--sm.btn--outline {
     line-height: 1.6rem; }
   .btn--sm.btn--arrow-l {
@@ -374,10 +378,10 @@ hr {
       border-width: 1rem 0 1rem 1rem;
       margin-right: 1rem; }
 .btn--md {
-  font-size: 1.6rem;
-  line-height: 4rem;
   padding-left: 2rem;
-  padding-right: 2rem; }
+  padding-right: 2rem;
+  font-size: 1.6rem;
+  line-height: 4rem; }
   .btn--md.btn--outline {
     line-height: 3.6rem; }
   .btn--md.btn--arrow-l {
@@ -391,10 +395,10 @@ hr {
       border-width: 2rem 0 2rem 2rem;
       margin-right: 2rem; }
 .btn--lg {
-  font-size: 2.2rem;
-  line-height: 5rem;
   padding-left: 2.5rem;
-  padding-right: 2.5rem; }
+  padding-right: 2.5rem;
+  font-size: 2.2rem;
+  line-height: 5rem; }
   .btn--lg.btn--outline {
     line-height: 4.6rem; }
   .btn--lg.btn--arrow-l {
@@ -408,10 +412,10 @@ hr {
       border-width: 2.5rem 0 2.5rem 2.5rem;
       margin-right: 2.5rem; }
 .btn--xl {
-  font-size: 3.4rem;
-  line-height: 6rem;
   padding-left: 3rem;
-  padding-right: 3rem; }
+  padding-right: 3rem;
+  font-size: 3.4rem;
+  line-height: 6rem; }
   .btn--xl.btn--outline {
     line-height: 5.6rem; }
   .btn--xl.btn--arrow-l {
@@ -425,10 +429,10 @@ hr {
       border-width: 3rem 0 3rem 3rem;
       margin-right: 3rem; }
 .btn--xxl {
-  font-size: 4.2rem;
-  line-height: 7rem;
   padding-left: 3.5rem;
-  padding-right: 3.5rem; }
+  padding-right: 3.5rem;
+  font-size: 4.2rem;
+  line-height: 7rem; }
   .btn--xxl.btn--outline {
     line-height: 6.6rem; }
   .btn--xxl.btn--arrow-l {
