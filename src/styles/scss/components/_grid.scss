@@ -1,6 +1,6 @@
-// ============================================================
-// GRID SYSTEM
-// ============================================================
+/*============================================================
+* GRID SYSTEM
+* ============================================================*/
 
 @function grid-calc($colNumber, $grid__columns) {
   @return percentage(($colNumber / $grid__columns));
@@ -8,6 +8,7 @@
 
 // COLUMNS
 // ============================================================
+
 %grid-cols-common {
   float: left;
   padding-left: $grid__col--gutter;
@@ -19,7 +20,7 @@
   @for $i from 1 through $grid__columns {
     &-#{$i},
     &-#{$i}--tablet,
-    &-#{$i}--phone{
+    &-#{$i}--phone {
       @extend %grid-cols-common;
     }
   }
@@ -107,7 +108,7 @@
 
 // COLUMNS
 // ------------------------------------------------------------
-.col{
+.col {
   &--no-gutter {
     padding: 0;
   }
@@ -122,7 +123,8 @@
 // ROWS
 // ------------------------------------------------------------
 .row {
-  margin: 0 (-$grid__document--gutter) $grid__row--gutter (-$grid__document--gutter);
+  margin-left: (-$grid__col--gutter);
+  margin-right: (-$grid__col--gutter);
 
   &.row--dbl-gutter {
     @extend %dbl-gutter;
