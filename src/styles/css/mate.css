@@ -347,8 +347,8 @@ hr {
   text-decoration: none;
   text-align: center;
   cursor: pointer;
-  padding-bottom: 0;
   padding-top: 0;
+  padding-bottom: 0;
   padding-left: 2rem;
   padding-right: 2rem;
   font-size: 1.6rem;
@@ -698,7 +698,7 @@ textarea {
   select:focus,
   textarea:focus {
     outline: 0;
-    border-color: #249cff;
+    border-color: #249cff !important;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #0a90ff; }
 
 select {
