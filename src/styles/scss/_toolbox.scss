@@ -123,7 +123,6 @@
 // GRADIENTS
 // ============================================================
 @mixin gradient($gradient-color-from, $gradient-color-to) {
-  background-color: $gradient-color-from;
   background-image: -moz-linear-gradient($gradient-color-from, $gradient-color-to);
   background-image: -webkit-linear-gradient($gradient-color-from, $gradient-color-to);
   background-image: -o-linear-gradient($gradient-color-from, $gradient-color-to);
