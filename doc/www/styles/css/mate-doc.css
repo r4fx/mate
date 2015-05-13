@@ -1278,6 +1278,8 @@ table.table-wide, .table-css.table-wide {
     display: table-row; }
     .table-css .row:before, .table-css .row:after {
       display: none; }
+  .table-css.row [class*="col"] {
+    border-bottom: 0; }
   .table-css [class*="col"] {
     display: table-cell;
     float: none;

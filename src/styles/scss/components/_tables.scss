@@ -2,7 +2,6 @@
 // TABELS
 // ============================================================
 
-
 %table-frame {
   empty-cells: show;
   border-collapse: collapse;
@@ -58,7 +57,7 @@ table {
 
   // striped
   &.table-striped {
-    tr:nth-child(odd){
+    tr:nth-child(odd) {
       td {
         @extend %table-striped;
       }
@@ -84,14 +83,23 @@ table {
     display: table-row;
 
     &:before,
-    &:after{
+    &:after {
       display: none;
     }
   }
 
+  // One row table
+  &.row {
+    [class*="col"] {
+      border-bottom: 0;
+    }
+  }
+
   // Columns
-  .table-thead [class*="col"]{
-    @extend %table-thead;
+  .table-thead {
+    [class*="col"] {
+      @extend %table-thead;
+    }
   }
 
   [class*="col"] {
@@ -108,7 +116,7 @@ table {
     [class*="col"] {
       @extend %table-bordered-col;
 
-      &:first-child{
+      &:first-child {
         border-left: 0;
       }
     }
