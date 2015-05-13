@@ -176,8 +176,8 @@ $btn-sizes: xs, sm, md, lg, xl, xxl;
   text-decoration: none;
   text-align: center;
   cursor: pointer;
-  padding-bottom: 0;
   padding-top: 0;
+  padding-bottom: 0;
 
   @include button-size(md);
   @include transition();
