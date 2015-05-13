@@ -1,29 +1,3 @@
-/*============================================================
-* mate front-end framework
-* https://github.com/r4fx/mate
-* ============================================================
-*
-* Free to use under the MIT license.
-* http://www.opensource.org/licenses/mit-license.php
-*/
-.grid:before, .row:before, header .col:before, pre.code-example[class*="language-"]:before, .code-example > div:before, .grid:after, .row:after, header .col:after, pre.code-example[class*="language-"]:after, .code-example > div:after {
-  content: '';
-  display: block;
-  clear: both; }
-
-*, :before, :after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-
-.btn {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none; }
-
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%; }
@@ -143,6 +117,24 @@ input[type="search"]::-webkit-search-decoration {
 
 optgroup {
   font-weight: bold; }
+
+.grid:before, .row:before, header .col:before, pre.code-example[class*="language-"]:before, .code-example > div:before, .grid:after, .row:after, header .col:after, pre.code-example[class*="language-"]:after, .code-example > div:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+*, :before, :after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.btn {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
 
 html {
   font-size: 62.5%; }
@@ -1721,4 +1713,6 @@ pre.code-example[class*="language-"] {
     -webkit-align-self: auto;
     align-self: auto; }
 
-/*# sourceMappingURL=mate-doc.css.map */
+
+
+/*# sourceMappingURL=../css/mate-doc.css.map */

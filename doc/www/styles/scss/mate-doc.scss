@@ -1,13 +1,13 @@
+// INCLUDE MATE FRAMEWORK
 // ============================================================
-// MATE BASE STYLES
-// ============================================================
+@import "../../../../src/styles/scss/settings";
+@import "../../../../src/styles/scss/normalize";
+@import "../../../../src/styles/scss/toolbox";
+@import "../../../../src/styles/scss/components/all";
 
-@import "../../../../src/styles/scss/mate";
 
-// ============================================================
 // MATE DOCUMENTATION
 // ============================================================
-
 a[href^="https://github.com"]:before {
   content: "\e600";
   font-family: 'icomoon';
