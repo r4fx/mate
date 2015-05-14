@@ -123,8 +123,9 @@
 // ROWS
 // ------------------------------------------------------------
 .row {
-  margin-left: (-$grid__col--gutter);
-  margin-right: (-$grid__col--gutter);
+  margin-left: -$grid__col--gutter;
+  margin-right: -$grid__col--gutter;
+  margin-bottom: $grid__row--gutter;
 
   &.row--dbl-gutter {
     @extend %dbl-gutter;
