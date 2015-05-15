@@ -106,7 +106,7 @@
             <div class="col-12">.col-12</div>
         </div>
 
-        <div class="row">
+        <div class="row row--dbl-gutter">
             <div class="col-4">.col-4</div>
             <div class="col-4">.col-4</div>
             <div class="col-4">.col-4</div>
@@ -114,6 +114,25 @@
         <div class="row">
             <div class="col-6">.col-6</div>
             <div class="col-6">.col-6</div>
+        </div>
+    </div>
+
+    <pre lang="html"></pre>
+</div>
+
+<h2>Nesting columns</h2>
+
+<div class="code-example code-example--grid">
+
+    <div data-clone>
+        <div class="row">
+            <div class="col-12">
+                Level 1: .col-12
+                <div class="row">
+                    <div class="col-6">Level 2: .col-6</div>
+                    <div class="col-6">Level 2: .col-6</div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -195,20 +214,20 @@
 
 <ul class="list-unstyled">
     <li>
-        <code>.row--dbl-gutter</code> - Double margins
+        <code>.row--add-gutter</code> - Add bottom gutter
     </li>
     <li>
-        <code>.row--dbl-gutter-top</code> - Double margin top
+        <code>.row--dbl-gutter</code> - Add double bottom gutter
     </li>
     <li>
-        <code>.row--no-gutter</code> - Zero margins
+        <code>.row--no-gutter</code> - Reset gutters (zero margins)
     </li>
 </ul>
 
 <h3>Columns</h3>
 
 <ul class="list-unstyled">
-    <li><code>.col--no-gutter</code> - Zero margins</li>
+    <li><code>.col--no-gutter</code> - Reset gutters</li>
 </ul>
     </section>
 </main>

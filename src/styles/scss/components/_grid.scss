@@ -74,33 +74,33 @@
 
 // GRID HELPERS
 // ============================================================
-%dbl-gutter {
-  margin: 0 (-$grid__document--gutter) $grid__row--gutter*2 (-$grid__document--gutter);
+%row-add-gutter {
+  margin-bottom: $grid__row--gutter;
+}
+
+%row-dbl-gutter {
+  margin-bottom: $grid__row--gutter*2;
 
   @include respond-to(phone) {
     margin-bottom: $grid__row--gutter;
   }
 }
 
-%dbl-gutter-top {
-  margin-top: $grid__row--gutter*2;
-}
-
 %row--no-gutter {
-  margin: 0 (-$grid__document--gutter) 0 (-$grid__document--gutter);
+  margin: 0;
 }
 
 // MOUNTING GRID
 // ============================================================
 // todo: add to docs
-.grid {
+.box {
   width: 100%;
   //max-width: $page__width--maxsize;
   //min-width: $page__width--minsize;
   margin: 0 auto;
 
-  &--add-margin {
-    margin-bottom: $grid__col--gutter;
+  &--add-gutter {
+    margin-bottom: $grid__row--gutter;
   }
 
   @extend %clearfix;
@@ -125,50 +125,21 @@
 .row {
   margin-left: -$grid__col--gutter;
   margin-right: -$grid__col--gutter;
-  margin-bottom: $grid__row--gutter;
 
-  &.row--dbl-gutter {
-    @extend %dbl-gutter;
+  &--add-gutter{
+    @extend %row-add-gutter;
   }
 
-  &.row--dbl-gutter-top {
-    @extend %dbl-gutter-top;
+  &--dbl-gutter {
+    @extend %row-dbl-gutter;
   }
 
-  &.row--no-gutter {
+  &--no-gutter {
     @extend %row--no-gutter;
   }
 
   .row {
     clear: both;
-    //margin: 0 (-$grid__col--gutter);
-
-    &.row--dbl-margin-top {
-      margin-top: 0;
-
-      > .col {
-        margin-top: $grid__row--gutter*2;
-
-        @include respond-to(phone) {
-          margin-top: $grid__row--gutter;
-        }
-      }
-    }
-
-    &.row--dbl-margin {
-      margin-top: 0;
-      margin-bottom: 0;
-
-      > .col {
-        margin-top: $grid__row--gutter*2;
-        margin-bottom: $grid__row--gutter*2;
-
-        @include respond-to(phone) {
-          margin-top: $grid__row--gutter;
-          margin-bottom: $grid__row--gutter;
-        }
-      }
-    }
   }
 
   @extend %clearfix;

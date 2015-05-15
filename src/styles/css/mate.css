@@ -6,7 +6,7 @@
 * Free to use under the MIT license.
 * http://www.opensource.org/licenses/mit-license.php
 */
-.grid:before, .row:before, .grid:after, .row:after {
+.box:before, .row:before, .box:after, .row:after {
   content: '';
   display: block;
   clear: both; }
@@ -194,22 +194,22 @@ hr {
   padding-left: 25px;
   padding-right: 25px; }
 
-.row.row--dbl-gutter {
-  margin: 0 -25px 50px -25px; }
+.row--add-gutter {
+  margin-bottom: 25px; }
+
+.row--dbl-gutter {
+  margin-bottom: 50px; }
   @media (max-width: 719px) {
-    .row.row--dbl-gutter {
+    .row--dbl-gutter {
       margin-bottom: 25px; } }
 
-.row.row--dbl-gutter-top {
-  margin-top: 50px; }
+.row--no-gutter {
+  margin: 0; }
 
-.row.row--no-gutter {
-  margin: 0 -25px 0 -25px; }
-
-.grid {
+.box {
   width: 100%;
   margin: 0 auto; }
-  .grid--add-margin {
+  .box--add-gutter {
     margin-bottom: 25px; }
 
 .col--no-gutter {
@@ -315,27 +315,9 @@ hr {
 
 .row {
   margin-left: -25px;
-  margin-right: -25px;
-  margin-bottom: 25px; }
+  margin-right: -25px; }
   .row .row {
     clear: both; }
-    .row .row.row--dbl-margin-top {
-      margin-top: 0; }
-      .row .row.row--dbl-margin-top > .col {
-        margin-top: 50px; }
-        @media (max-width: 719px) {
-          .row .row.row--dbl-margin-top > .col {
-            margin-top: 25px; } }
-    .row .row.row--dbl-margin {
-      margin-top: 0;
-      margin-bottom: 0; }
-      .row .row.row--dbl-margin > .col {
-        margin-top: 50px;
-        margin-bottom: 50px; }
-        @media (max-width: 719px) {
-          .row .row.row--dbl-margin > .col {
-            margin-top: 25px;
-            margin-bottom: 25px; } }
 
 /* ============================================================
 * BUTTONS

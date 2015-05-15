@@ -256,16 +256,14 @@ pre.code-example[class*="language-"]{
   > div {
     margin: $grid__col--gutter;
     @extend %clearfix;
-
-    @include respond-to(phone) {
-      margin: 15px;
-    }
   }
 
   &--grid {
-    .row {
+    > div > .row {
       margin: 0;
+    }
 
+    .row {
       &:hover{
         [class^="col-"] {
           background-color: $color__base--first;
@@ -280,8 +278,9 @@ pre.code-example[class*="language-"]{
 
     [class^="col-"] {
       background-color: $block__color--first;
-      padding: 10px;
-      border: 1px solid #fff;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border: 1px solid $border__color--first;
     }
   }
 

@@ -118,7 +118,7 @@ input[type="search"]::-webkit-search-decoration {
 optgroup {
   font-weight: bold; }
 
-.grid:before, .row:before, header .col:before, pre.code-example[class*="language-"]:before, .code-example > div:before, .grid:after, .row:after, header .col:after, pre.code-example[class*="language-"]:after, .code-example > div:after {
+.box:before, .row:before, header .col:before, pre.code-example[class*="language-"]:before, .code-example > div:before, .box:after, .row:after, header .col:after, pre.code-example[class*="language-"]:after, .code-example > div:after {
   content: '';
   display: block;
   clear: both; }
@@ -186,22 +186,22 @@ hr {
   padding-left: 25px;
   padding-right: 25px; }
 
-.row.row--dbl-gutter {
-  margin: 0 -25px 50px -25px; }
+.row--add-gutter {
+  margin-bottom: 25px; }
+
+.row--dbl-gutter {
+  margin-bottom: 50px; }
   @media (max-width: 719px) {
-    .row.row--dbl-gutter {
+    .row--dbl-gutter {
       margin-bottom: 25px; } }
 
-.row.row--dbl-gutter-top {
-  margin-top: 50px; }
+.row--no-gutter {
+  margin: 0; }
 
-.row.row--no-gutter {
-  margin: 0 -25px 0 -25px; }
-
-.grid {
+.box {
   width: 100%;
   margin: 0 auto; }
-  .grid--add-margin {
+  .box--add-gutter {
     margin-bottom: 25px; }
 
 .col--no-gutter {
@@ -307,27 +307,9 @@ hr {
 
 .row {
   margin-left: -25px;
-  margin-right: -25px;
-  margin-bottom: 25px; }
+  margin-right: -25px; }
   .row .row {
     clear: both; }
-    .row .row.row--dbl-margin-top {
-      margin-top: 0; }
-      .row .row.row--dbl-margin-top > .col {
-        margin-top: 50px; }
-        @media (max-width: 719px) {
-          .row .row.row--dbl-margin-top > .col {
-            margin-top: 25px; } }
-    .row .row.row--dbl-margin {
-      margin-top: 0;
-      margin-bottom: 0; }
-      .row .row.row--dbl-margin > .col {
-        margin-top: 50px;
-        margin-bottom: 50px; }
-        @media (max-width: 719px) {
-          .row .row.row--dbl-margin > .col {
-            margin-top: 25px;
-            margin-bottom: 25px; } }
 
 /* ============================================================
 * BUTTONS
@@ -1684,20 +1666,18 @@ pre.code-example[class*="language-"] {
   font-size: 1.6rem; }
   .code-example > div {
     margin: 25px; }
-    @media (max-width: 719px) {
-      .code-example > div {
-        margin: 15px; } }
-  .code-example--grid .row {
+  .code-example--grid > div > .row {
     margin: 0; }
-    .code-example--grid .row:hover [class^="col-"] {
-      background-color: #1ab394;
-      color: white; }
-      .code-example--grid .row:hover [class^="col-"]:hover {
-        background-color: #15947a; }
+  .code-example--grid .row:hover [class^="col-"] {
+    background-color: #1ab394;
+    color: white; }
+    .code-example--grid .row:hover [class^="col-"]:hover {
+      background-color: #15947a; }
   .code-example--grid [class^="col-"] {
     background-color: #DDD;
-    padding: 10px;
-    border: 1px solid #fff; }
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid #CCC; }
   .code-example__icons [class^=col-] {
     text-align: center;
     border: 2px solid white;
@@ -1756,6 +1736,4 @@ pre.code-example[class*="language-"] {
     -webkit-align-self: auto;
     align-self: auto; }
 
-
-
-/*# sourceMappingURL=../css/mate-doc.css.map */
+/*# sourceMappingURL=mate-doc.css.map */
