@@ -260,7 +260,8 @@ pre.code-example[class*="language-"]{
 
   &--grid {
     > div > .row {
-      margin: 0;
+      margin-left: 0;
+      margin-right: 0;
     }
 
     .row {

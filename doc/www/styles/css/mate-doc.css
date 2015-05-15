@@ -1667,7 +1667,8 @@ pre.code-example[class*="language-"] {
   .code-example > div {
     margin: 25px; }
   .code-example--grid > div > .row {
-    margin: 0; }
+    margin-left: 0;
+    margin-right: 0; }
   .code-example--grid .row:hover [class^="col-"] {
     background-color: #1ab394;
     color: white; }
