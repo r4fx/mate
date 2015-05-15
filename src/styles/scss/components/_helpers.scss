@@ -1,10 +1,6 @@
 // ============================================================
 // POSITIONING
 // ============================================================
-.hide {
-  display: none !important;
-}
-
 .inline-left {
   text-align: left;
 }
@@ -54,4 +50,29 @@
 
 .img-circle{
   border-radius: 50%;
+}
+
+// ============================================================
+// HIDE ELEMENTS
+// ============================================================
+.hidden {
+  display: none !important;
+}
+
+.hidden--mobile {
+  @include respond-to(mobile) {
+    display: none !important;
+  }
+}
+
+.hidden--tablet {
+  @include respond-to(tablet) {
+    display: none !important;
+  }
+}
+
+.hidden--phone {
+  @include respond-to(phone) {
+    display: none !important;
+  }
 }

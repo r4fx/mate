@@ -1452,9 +1452,6 @@ ul .separator, ol .separator, dl .separator {
   margin: 0;
   list-style-type: none; }
 
-.hide {
-  display: none !important; }
-
 .inline-left {
   text-align: left; }
 
@@ -1489,6 +1486,21 @@ ul .separator, ol .separator, dl .separator {
 
 .img-circle {
   border-radius: 50%; }
+
+.hidden {
+  display: none !important; }
+
+@media (max-width: 1023px) {
+  .hidden--mobile {
+    display: none !important; } }
+
+@media (min-width: 720px) and (max-width: 1023px) {
+  .hidden--tablet {
+    display: none !important; } }
+
+@media (max-width: 719px) {
+  .hidden--phone {
+    display: none !important; } }
 
 a[href^="https://github.com"]:before {
   content: "\e600";
