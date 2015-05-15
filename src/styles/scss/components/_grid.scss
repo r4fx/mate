@@ -134,7 +134,7 @@
     @extend %row-dbl-gutter;
   }
 
-  &--no-gutter {
+  &.row--no-gutter {
     @extend %row--no-gutter;
   }
 
