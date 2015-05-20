@@ -203,7 +203,7 @@ hr {
     .row--dbl-gutter {
       margin-bottom: 25px; } }
 
-.row--no-gutter {
+.row.row--no-gutter {
   margin: 0; }
 
 .box {
@@ -1321,7 +1321,8 @@ p {
     margin-bottom: 0; }
 
 strong, b {
-  font-family: "lato-bold", Arial, sans-serif; }
+  font-family: "lato-bold", Arial, sans-serif;
+  font-weight: normal; }
 
 h1 {
   font-size: 4.2rem;

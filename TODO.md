@@ -10,6 +10,6 @@
 | components/_buttons.scss | 388 | make mixin
 | components/_buttons.scss | 459 | gropued buttons
 | components/_grid.scss | 95 | add to docs
-| components/_helpers.scss | 39 | make it dynamic, example: (top,50)
+| components/_helpers.scss | 35 | make it dynamic, example: (top,50)
 | components/_icons.scss | 13 | add to doc
 | components/_typography.scss | 51 | do tests
