@@ -8,8 +8,33 @@
 
 html {
   font-size: 62.5%; // Sets up the root font size to 10px
-}
 
+  // Breakpoint helper
+  // todo: describe how to use with JS
+  &:after {
+    visibility: hidden;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 5px 10px;
+    font-size: 1rem;
+    font-family: monospace;
+    background-color: royalblue;
+    color: #fff;
+
+    @include respond-to(phone) {
+      content: 'small';
+    }
+
+    @include respond-to(tablet) {
+      content: 'medium';
+    }
+
+    @include respond-to(desktop) {
+      content: 'large';
+    }
+  }
+}
 body {
   color: $text__color--first;
   font-family: $font__base--light;

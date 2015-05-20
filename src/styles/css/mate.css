@@ -146,6 +146,25 @@ optgroup {
 
 html {
   font-size: 62.5%; }
+  html:after {
+    visibility: hidden;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 5px 10px;
+    font-size: 1rem;
+    font-family: monospace;
+    background-color: royalblue;
+    color: #fff; }
+    @media (max-width: 719px) {
+      html:after {
+        content: 'small'; } }
+    @media (min-width: 720px) and (max-width: 1023px) {
+      html:after {
+        content: 'medium'; } }
+    @media (min-width: 1024px) {
+      html:after {
+        content: 'large'; } }
 
 body {
   color: #3c3c3c;
