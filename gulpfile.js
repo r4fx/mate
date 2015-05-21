@@ -108,15 +108,22 @@ gulp.task('watch', function () {
 
     // Watch Documentation WWW files (pages & config)
     gulp.watch('doc/src/**/*', function (event) {
-        console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
+        console.log('Watcher: file ' + event.path + ' was ' + event.type + ', running task...');
         gulp.start('assemble');
     });
 
     // Watch Mate source styles and recompile Documentation WWW styles
     gulp.watch('src/styles/css/*.css', function (event) {
-        console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
+        console.log('Watcher: file ' + event.path + ' was ' + event.type + ', running task...');
         gulp.start('sassRuby');
     });
+
+    // Watch TODO tasks
+    gulp.watch('src/styles/scss/**/*.scss', function (event) {
+        console.log('Watcher: file ' + event.path + ' was ' + event.type + ', running task...');
+        gulp.start('todo');
+    });
+
 });
 
 // Default task
