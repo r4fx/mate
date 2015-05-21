@@ -149,6 +149,7 @@ html {
   html:after {
     visibility: hidden;
     position: fixed;
+    z-index: 99999;
     left: 0;
     bottom: 0;
     padding: 5px 10px;
