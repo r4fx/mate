@@ -147,20 +147,24 @@ html {
     padding: 5px 10px;
     font-size: 1rem;
     font-family: monospace;
-    background-color: royalblue;
-    color: #fff; }
+    color: #fff;
+    border-top-right-radius: 5px; }
     @media (max-width: 719px) {
       html:after {
-        content: 'small'; } }
+        content: 'small';
+        background-color: mediumseagreen; } }
     @media (max-width: 1023px) and (min-width: 720px) {
       html:after {
-        content: 'medium'; } }
+        content: 'medium';
+        background-color: deepskyblue; } }
     @media (max-width: 1279px) and (min-width: 1024px) {
       html:after {
-        content: 'large'; } }
+        content: 'large';
+        background-color: mediumpurple; } }
     @media (min-width: 1281px) {
       html:after {
-        content: 'x-large'; } }
+        content: 'x-large';
+        background-color: tomato; } }
 
 body {
   color: #3c3c3c;
