@@ -33,6 +33,10 @@ html {
     @include respond-to(desktop) {
       content: 'large';
     }
+
+    @include respond-to(desktop, xl) {
+      content: 'x-large';
+    }
   }
 }
 body {

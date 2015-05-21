@@ -157,6 +157,9 @@ html {
     @media (max-width: 1279px) and (min-width: 1024px) {
       html:after {
         content: 'large'; } }
+    @media (min-width: 1281px) {
+      html:after {
+        content: 'x-large'; } }
 
 body {
   color: #3c3c3c;
