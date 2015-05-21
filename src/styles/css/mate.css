@@ -159,10 +159,10 @@ html {
     @media (max-width: 719px) {
       html:after {
         content: 'small'; } }
-    @media (min-width: 720px) and (max-width: 1023px) {
+    @media (max-width: 1023px) and (min-width: 720px) {
       html:after {
         content: 'medium'; } }
-    @media (min-width: 1024px) {
+    @media (max-width: 1279px) and (min-width: 1024px) {
       html:after {
         content: 'large'; } }
 
@@ -257,7 +257,7 @@ hr {
   width: 91.66667%; }
 .col-12 {
   width: 100%; }
-@media (min-width: 720px) and (max-width: 1023px) {
+@media (max-width: 1023px) and (min-width: 720px) {
   .col-1--tablet {
     width: 8.33333%; }
   .col-2--tablet {
@@ -1504,7 +1504,7 @@ ul .separator, ol .separator, dl .separator {
   .hidden--mobile {
     display: none !important; } }
 
-@media (min-width: 720px) and (max-width: 1023px) {
+@media (max-width: 1023px) and (min-width: 720px) {
   .hidden--tablet {
     display: none !important; } }
 
