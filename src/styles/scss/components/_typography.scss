@@ -11,10 +11,9 @@
       font-family: quote($faceFile);
       font-style: normal;
       font-weight: normal;
-      src:
-      //url($dir + $faceFile + ".woff2") format('woff2'), // FUTURE USE
-      url($dir + $faceFile + ".woff") format('woff'),
-      url($dir + $faceFile + ".svg#" + $faceFile + "") format('svg');
+      src: url($dir + $faceFile + ".woff2") format('woff2'),
+           url($dir + $faceFile + ".woff") format('woff'),
+           url($dir + $faceFile + ".svg#" + $faceFile + "") format('svg');
     }
   }
 }
