@@ -11,6 +11,7 @@ html {
 
   // Breakpoint helper
   // todo: describe in manual, + how to use with JS
+  // todo: add var in settings to disable?
   &:after {
     visibility: hidden;
     position: fixed;
