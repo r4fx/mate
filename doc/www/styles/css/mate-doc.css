@@ -363,9 +363,6 @@ ul .separator, ol .separator, dl .separator {
   margin: 0;
   list-style-type: none; }
 
-/*============================================================
-* GRID SYSTEM
-* ============================================================*/
 .col-1, .col-1--tablet, .col-1--phone, .col-2, .col-2--tablet, .col-2--phone, .col-3, .col-3--tablet, .col-3--phone, .col-4, .col-4--tablet, .col-4--phone, .col-5, .col-5--tablet, .col-5--phone, .col-6, .col-6--tablet, .col-6--phone, .col-7, .col-7--tablet, .col-7--phone, .col-8, .col-8--tablet, .col-8--phone, .col-9, .col-9--tablet, .col-9--phone, .col-10, .col-10--tablet, .col-10--phone, .col-11, .col-11--tablet, .col-11--phone, .col-12, .col-12--tablet, .col-12--phone {
   float: left;
   padding-left: 25px;
@@ -988,7 +985,7 @@ label > .form-error__message {
 .icon-xxl:before {
   font-size: 4.2rem; }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^="icon-"] {
   font-style: normal;
   font-weight: normal;
   display: inline-block;
@@ -998,7 +995,7 @@ label > .form-error__message {
   speak: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
-  [class^="icon-"]:before, [class*=" icon-"]:before {
+  [class^="icon-"]:before {
     font-family: 'icomoon'; }
 
 .icon-disabled:before {
