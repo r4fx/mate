@@ -629,7 +629,8 @@ textarea[disabled], [disabled] label {
 form > .row,
 fieldset > .row {
   margin-left: 0;
-  margin-right: 0; }
+  margin-right: 0;
+  margin-bottom: 25px; }
 
 form.grid > .row {
   margin-left: -25px;
