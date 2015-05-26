@@ -116,6 +116,9 @@ main {
 
       @include respond-to(mobile) {
         padding: $grid__row--gutter;
+      }
+
+      @include respond-to(phone) {
         position: static;
       }
     }

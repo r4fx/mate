@@ -985,7 +985,7 @@ label > .form-error__message {
 .icon-xxl:before {
   font-size: 4.2rem; }
 
-[class^="icon-"] {
+[class*="icon-"] {
   font-style: normal;
   font-weight: normal;
   display: inline-block;
@@ -995,7 +995,7 @@ label > .form-error__message {
   speak: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
-  [class^="icon-"]:before {
+  [class*="icon-"]:before {
     font-family: 'icomoon'; }
 
 .icon-disabled:before {
@@ -1593,7 +1593,9 @@ main > aside {
     color: #fff; }
     @media (max-width: 1023px) {
       main > aside > div[class*="col-"] {
-        padding: 25px;
+        padding: 25px; } }
+    @media (max-width: 719px) {
+      main > aside > div[class*="col-"] {
         position: static; } }
   main > aside figure {
     text-align: right;
@@ -1760,6 +1762,4 @@ pre.code-example[class*="language-"] {
     -webkit-align-self: auto;
     align-self: auto; }
 
-
-
-/*# sourceMappingURL=../css/mate-doc.css.map */
+/*# sourceMappingURL=mate-doc.css.map */

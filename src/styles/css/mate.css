@@ -993,7 +993,7 @@ label > .form-error__message {
 .icon-xxl:before {
   font-size: 4.2rem; }
 
-[class^="icon-"] {
+[class*="icon-"] {
   font-style: normal;
   font-weight: normal;
   display: inline-block;
@@ -1003,7 +1003,7 @@ label > .form-error__message {
   speak: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
-  [class^="icon-"]:before {
+  [class*="icon-"]:before {
     font-family: 'icomoon'; }
 
 .icon-disabled:before {
