@@ -5,15 +5,6 @@
 // ============================================================
 // EXTENDS, PLACEHOLDERS
 // ============================================================
-%clearfix {
-  &:before,
-  &:after {
-    content: '';
-    display: block;
-    clear: both;
-  }
-}
-
 // todo: add border-collapse
 %box-sizing--border {
   -webkit-box-sizing: border-box;
@@ -25,6 +16,15 @@
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
+}
+
+%clearfix {
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
 }
 
 %ellipsis {

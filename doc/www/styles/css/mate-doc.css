@@ -118,15 +118,15 @@ input[type="search"]::-webkit-search-decoration {
 optgroup {
   font-weight: bold; }
 
-.box:before, .row:before, header .col:before, pre.code-example[class*="language-"]:before, .code-example > div:before, .box:after, .row:after, header .col:after, pre.code-example[class*="language-"]:after, .code-example > div:after {
-  content: '';
-  display: block;
-  clear: both; }
-
 *, :before, :after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
+
+.box:before, .row:before, header .col:before, pre.code-example[class*="language-"]:before, .code-example > div:before, .box:after, .row:after, header .col:after, pre.code-example[class*="language-"]:after, .code-example > div:after {
+  content: '';
+  display: block;
+  clear: both; }
 
 .btn {
   -webkit-touch-callout: none;

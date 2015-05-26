@@ -6,15 +6,15 @@
 * Free to use under the MIT license.
 * http://www.opensource.org/licenses/mit-license.php
 */
-.box:before, .row:before, .box:after, .row:after {
-  content: '';
-  display: block;
-  clear: both; }
-
 *, :before, :after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
+
+.box:before, .row:before, .box:after, .row:after {
+  content: '';
+  display: block;
+  clear: both; }
 
 .btn {
   -webkit-touch-callout: none;
