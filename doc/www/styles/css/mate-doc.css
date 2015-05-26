@@ -1622,7 +1622,7 @@ main > aside {
       main > aside ul {
         text-align: center; } }
     main > aside ul li {
-      margin-bottom: 0; }
+      margin: 5px 0; }
       main > aside ul li > hr {
         background-color: white; }
     main > aside ul a {
