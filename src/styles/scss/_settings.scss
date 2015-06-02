@@ -40,7 +40,7 @@ $color__message--success:   #0fce47;
 // TEXTS
 // ============================================================
 
-// --sizes
+// text--sizes
 $text__size--xs:            12px;
 $text__size--sm:            14px;
 $text__size--md:            16px;
@@ -49,7 +49,7 @@ $text__size--xl:            34px;
 $text__size--xxl:           42px;
 $text__size--base:          $text__size--md;
 
-// --line-height
+// text--line-height
 // [i] find your own optimal line-height: http://www.pearsonified.com/typography/
 $text__line-height-ratio:   1.5;
 
@@ -60,7 +60,7 @@ $text__line-height--xl:     $text__size--xl * $text__line-height-ratio;
 $text__line-height--xxl:    $text__size--xxl * $text__line-height-ratio;
 $text__line-height--base:   $text__size--base * $text__line-height-ratio;
 
-// --colors
+// text--colors
 $text__color--first:        #3c3c3c;
 $text__color--second:       #fff;
 
@@ -71,7 +71,7 @@ $text__color--link:         #249cff;
 // BLOCKS
 // ============================================================
 
-// --colors
+// block--colors
 $block__color--first:       #DDD;
 $block__color--second:      #353535;
 
@@ -79,12 +79,12 @@ $block__color--second:      #353535;
 // BUTTONS
 // ============================================================
 
-// --colors
+// button--colors
 $btn__color--first:         #1ab394;
 $btn__color--second:        #249cff;
 $btn__color--third:         #272822;
 
-// --styles
+// button--styles
 $btn__outline--width:       2px;
 
 
