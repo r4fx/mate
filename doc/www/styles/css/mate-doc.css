@@ -119,7 +119,6 @@ optgroup {
   font-weight: bold; }
 
 *, :before, :after {
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
@@ -131,7 +130,6 @@ optgroup {
 .btn {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
-  -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none; }
@@ -181,7 +179,6 @@ body {
     z-index: 99999;
     background: url(../../images/mobile-lock.svg) no-repeat center center #fff;
     background-size: 60%;
-    -webkit-transition: all 300ms ease-in-out 0s;
     transition: all 300ms ease-in-out 0s; }
 
 a {
@@ -507,7 +504,6 @@ ul .separator, ol .separator, dl .separator {
   padding-right: 2rem;
   font-size: 1.6rem;
   line-height: 4rem;
-  -webkit-transition: all 300ms ease-in-out 0s;
   transition: all 300ms ease-in-out 0s; }
   .btn.btn--outline {
     line-height: 3.6rem; }
@@ -700,7 +696,6 @@ ul .separator, ol .separator, dl .separator {
   .btn--circle span {
     top: 50%;
     left: 50%;
-    -moz-transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     position: absolute;
@@ -738,7 +733,6 @@ ul .separator, ol .separator, dl .separator {
   bottom: 0;
   border-style: solid;
   border-color: transparent;
-  -webkit-transition: all 300ms ease-in-out 0s;
   transition: all 300ms ease-in-out 0s; }
 .btn--arrow-l:before {
   right: 100%; }
@@ -918,7 +912,6 @@ input[type="radio"] {
     .input-checkbox > [class*="icon-"]:before {
       color: transparent;
       opacity: 0;
-      -webkit-transition: all 300ms ease-in-out 0s;
       transition: all 300ms ease-in-out 0s; }
   .input-radio > input,
   .input-checkbox > input {
@@ -1533,7 +1526,6 @@ a[href^="https://github.com"]:before {
   text-align: center;
   font-size: 2.4rem;
   border-radius: 50%;
-  -webkit-transition: all 300ms ease-in-out 300ms;
   transition: all 300ms ease-in-out 300ms; }
   .aside-toggle:before {
     vertical-align: middle;
@@ -1571,7 +1563,6 @@ main > aside {
     main > aside {
       -webkit-transform: translateX(-100%);
       transform: translateX(-100%);
-      -webkit-transition: all 300ms ease-in-out 0s;
       transition: all 300ms ease-in-out 0s;
       position: fixed;
       z-index: 1000;
@@ -1627,7 +1618,6 @@ main > aside {
     main > aside ul a {
       display: block;
       padding: 5px 10px;
-      -webkit-transition: background-color 300ms ease-in-out 0s, color 300ms ease-in-out 0s;
       transition: background-color 300ms ease-in-out 0s, color 300ms ease-in-out 0s; }
       main > aside ul a.act, main > aside ul a:hover {
         background-color: #1ab394; }
@@ -1708,7 +1698,6 @@ pre.code-example[class*="language-"] {
     border: 2px solid white;
     padding: 15px 10px;
     background-color: #DDD;
-    -webkit-transition: all 300ms ease-in-out 0s;
     transition: all 300ms ease-in-out 0s; }
     .code-example__icons [class^=col-]:hover {
       background-color: #1ab394;

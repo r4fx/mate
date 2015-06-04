@@ -5,15 +5,12 @@
 // ============================================================
 // EXTENDS, PLACEHOLDERS
 // ============================================================
-// todo: add border-collapse
 %box-sizing--border {
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 %box-sizing--content {
-  -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
@@ -49,7 +46,6 @@
 %noselect {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
-  -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
@@ -127,10 +123,7 @@
 // GRADIENTS
 // ============================================================
 @mixin gradient($gradient-color-from, $gradient-color-to) {
-  background-image: -moz-linear-gradient($gradient-color-from, $gradient-color-to);
-  background-image: -webkit-linear-gradient($gradient-color-from, $gradient-color-to);
-  background-image: -o-linear-gradient($gradient-color-from, $gradient-color-to);
-  background-image: -ms-linear-gradient($gradient-color-from, $gradient-color-to);
+  background-image: linear-gradient($gradient-color-from, $gradient-color-to);
 }
 
 // ============================================================
@@ -174,7 +167,6 @@
 // @include transition-free(background-color .4s ease, width 1s ease-out);
 // @include transition-free(0.5s ease);
 @mixin transition-free($args...) {
-  -webkit-transition: $args;
   transition: $args;
 }
 
@@ -264,18 +256,15 @@
 @mixin centerer($axis: auto) {
   @if $axis == x {
     left: 50%;
-    -moz-transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
   } @else if $axis == y {
     top: 50%;
-    -moz-transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
   } @else {
     top: 50%;
     left: 50%;
-    -moz-transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
   }
@@ -297,8 +286,6 @@
 // ============================================================
 @mixin filter($args...) {
   -webkit-filter: $args;
-  -moz-filter: $args;
-  -ms-filter: $args;
   filter: $args;
 }
 
@@ -307,7 +294,5 @@
 // ============================================================
 @mixin perspective($size) {
   -webkit-perspective: $size;
-  -moz-perspective: $size;
-  -ms-perspective: $size;
   perspective: $size;
 }
