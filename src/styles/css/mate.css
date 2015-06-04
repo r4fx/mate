@@ -177,17 +177,18 @@ body {
   font-family: "lato-light", Arial, sans-serif;
   font-size: 1.6rem;
   line-height: 1.5; }
-  body.orientation-landscape:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 99999;
-    background: url(../../images/mobile-lock.svg) no-repeat center center #fff;
-    background-size: 60%;
-    transition: all 300ms ease-in-out 0s; }
+
+.color--alert {
+  color: #ff3724; }
+
+.color--warning {
+  color: #ffb82d; }
+
+.color--info {
+  color: #249cff; }
+
+.color--success {
+  color: #0fce47; }
 
 a {
   color: #249cff; }

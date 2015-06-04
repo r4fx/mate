@@ -45,24 +45,31 @@ html {
     }
   }
 }
+
 body {
   color: $text__color--first;
   font-family: $font__base--light;
+  //-webkit-font-smoothing: antialiased;
+  //-moz-osx-font-smoothing: grayscale;
   @include font-size($text__size--md, $text__line-height--md);
+}
 
-  // Mobile helper
-  &.orientation-landscape:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 99999;
-    background: url(../../images/mobile-lock.svg) no-repeat center center #fff;
-    background-size: 60%;
-    @include transition();
-  }
+// BASIC COMMON COLORS
+// ------------------------------------------------------------
+.color--alert {
+  color: $color__message--alert;
+}
+
+.color--warning {
+  color: $color__message--warning;
+}
+
+.color--info {
+  color: $color__message--info;
+}
+
+.color--success {
+  color: $color__message--success;
 }
 
 // LINKS
