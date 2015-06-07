@@ -222,12 +222,14 @@ input[type="radio"] {
     border: 1px solid $border__color--second;
     text-align: center;
     vertical-align: initial;
-    line-height: normal;
+    line-height: 1;
     @include font-size($text__size--md);
 
     &:before {
       color: transparent;
       opacity: 0;
+      margin-top: 1px;
+      display: block;
       @include transition();
     }
   }
