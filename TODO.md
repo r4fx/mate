@@ -4,6 +4,7 @@
 | _toolbox.scss | 193 | make mixin with params
 | components/_base.scss | 13 | describe in manual, + how to use with JS
 | components/_base.scss | 14 | add var in settings to disable?
+| components/_base.scss | 58 | describe in manual
 | components/_buttons.scss | 5 | ADD states, hover, active, focus
 | components/_buttons.scss | 6 | calc line height, http://www.mathayward.com/modular-css-with-sass-and-bem/
 | components/_buttons.scss | 11 | do refactoring!
