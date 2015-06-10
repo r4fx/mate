@@ -141,6 +141,11 @@ textarea {
   line-height: 1.42857143;
   @include font-size($text__size--md);
 
+  // min. 16px on mobile devices prevent zooming to element
+  @include respond-to(phone) {
+    font-size: 1.6rem;
+  }
+
   &:focus {
     outline: 0;
     border-color: $color__message--info !important;
