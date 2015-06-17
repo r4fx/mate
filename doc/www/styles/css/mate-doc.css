@@ -155,7 +155,7 @@ html {
       html:after {
         content: 'medium';
         background-color: deepskyblue; } }
-    @media (max-width: 1279px) and (min-width: 1024px) {
+    @media (min-width: 1024px) {
       html:after {
         content: 'large';
         background-color: mediumpurple; } }
@@ -1500,6 +1500,10 @@ table.table-wide, .table-css.table-wide {
 
 .hidden {
   display: none !important; }
+
+@media (min-width: 1024px) {
+  .hidden--desktop {
+    display: none !important; } }
 
 @media (max-width: 1023px) {
   .hidden--mobile {
