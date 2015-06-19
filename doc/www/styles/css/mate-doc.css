@@ -337,8 +337,10 @@ ul, ol {
     display: inline-block;
     margin: 0; }
     .list-path li:after {
-      content: '\25B8';
-      color: #959A9D; }
+      content: "\e65c";
+      font-family: 'icomoon';
+      color: #959A9D;
+      vertical-align: bottom; }
     .list-path li:last-child:after {
       display: none; }
 

@@ -180,8 +180,10 @@ ul, ol, {
     margin: 0;
 
     &:after {
-      content: '\25B8';
+      content: "\e65c";
+      font-family: 'icomoon';
       color: $text__color--muted;
+      vertical-align: bottom;
     }
 
     &:last-child:after {
