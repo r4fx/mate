@@ -90,19 +90,22 @@ table {
 
   // One row table
   &.row {
-    [class*="col-"] {
+    [class*="col-"],
+    > div{
       border-bottom: 0;
     }
   }
 
   // Columns
   .table-thead {
-    [class*="col-"] {
+    [class*="col-"],
+    > div{
       @extend %table-thead;
     }
   }
 
-  [class*="col-"] {
+  [class*="col-"],
+  .row > div{
     @extend %table-col;
     display: table-cell;
     float: none;
@@ -113,7 +116,8 @@ table {
   &.table-bordered {
     @extend %table-bordered-frame;
 
-    [class*="col-"] {
+    [class*="col-"],
+    .row > div{
       @extend %table-bordered-col;
 
       &:first-child {
@@ -125,7 +129,8 @@ table {
   // Striped
   &.table-striped {
     .row:not(.table-thead):nth-child(odd) {
-      [class*="col-"] {
+      [class*="col-"],
+      > div{
         @extend %table-striped;
       }
     }
@@ -133,7 +138,8 @@ table {
 
   // Clean table
   &.table-clean {
-    [class*="col-"] {
+    [class*="col-"],
+    .row > div{
       padding: 0;
       border: 0;
     }

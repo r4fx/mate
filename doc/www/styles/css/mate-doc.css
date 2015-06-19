@@ -1420,22 +1420,26 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-table thead, .table-css .table-thead [class*="col-"] {
+table thead, .table-css .table-thead [class*="col-"],
+.table-css .table-thead > div {
   background-color: #DDD;
   font-family: "lato-bold", Arial, sans-serif;
   text-align: left; }
 
-table th, table td, .table-css [class*="col-"] {
+table th, table td, .table-css [class*="col-"],
+.table-css .row > div {
   padding: 0.5em 1em;
   border-bottom: 1px solid #CCC; }
 
 table.table-bordered, .table-css.table-bordered {
   border: 1px solid #CCC; }
 
-table.table-bordered th, table.table-bordered td, .table-css.table-bordered [class*="col-"] {
+table.table-bordered th, table.table-bordered td, .table-css.table-bordered [class*="col-"],
+.table-css.table-bordered .row > div {
   border-left: 1px solid #CCC; }
 
-table.table-striped tr:nth-child(odd) td, .table-css.table-striped .row:not(.table-thead):nth-child(odd) [class*="col-"] {
+table.table-striped tr:nth-child(odd) td, .table-css.table-striped .row:not(.table-thead):nth-child(odd) [class*="col-"],
+.table-css.table-striped .row:not(.table-thead):nth-child(odd) > div {
   background-color: #f7f7f7; }
 
 table.table-wide, .table-css.table-wide {
@@ -1451,15 +1455,19 @@ table.table-wide, .table-css.table-wide {
     display: table-row; }
     .table-css .row:before, .table-css .row:after {
       display: none; }
-  .table-css.row [class*="col-"] {
+  .table-css.row [class*="col-"],
+  .table-css.row > div {
     border-bottom: 0; }
-  .table-css [class*="col-"] {
+  .table-css [class*="col-"],
+  .table-css .row > div {
     display: table-cell;
     float: none;
     width: auto; }
-  .table-css.table-bordered [class*="col-"]:first-child {
+  .table-css.table-bordered [class*="col-"]:first-child,
+  .table-css.table-bordered .row > div:first-child {
     border-left: 0; }
-  .table-css.table-clean [class*="col-"] {
+  .table-css.table-clean [class*="col-"],
+  .table-css.table-clean .row > div {
     padding: 0;
     border: 0; }
 
