@@ -340,7 +340,9 @@ ul, ol {
       content: "\e65c";
       font-family: 'icomoon';
       color: #959A9D;
-      vertical-align: bottom; }
+      vertical-align: bottom;
+      font-size: 2rem;
+      line-height: 1; }
     .list-path li:last-child:after {
       display: none; }
 
