@@ -15,4 +15,4 @@ Mate is a simple and lightweight front-end framework for modern web.
 Mate currently is in beta state, it's mean that some basic things may be change during development.
 Beta of documentation can be find here: http://r4fx.github.io/mate/doc/www/
 
-Browser support: Chrome 36+, Firefox 31+, Opera 25+, Safari 7.1+, IE 10+, EDGE
+Browser support: Chrome 36+, Firefox 31+, Opera 25+, Safari 7.1+, IE 10+, IE EDGE
