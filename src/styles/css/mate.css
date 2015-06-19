@@ -194,9 +194,6 @@ a {
   color: #249cff; }
   a:hover {
     text-decoration: none; }
-  a[href^=tel]:hover {
-    text-decoration: none !important;
-    cursor: default; }
 
 img {
   max-width: 100%;
@@ -369,6 +366,9 @@ ul .separator, ol .separator, dl .separator {
   margin: 0;
   list-style-type: none; }
 
+/*============================================================
+* GRID SYSTEM
+* ============================================================*/
 .col-1, .col-1--tablet, .col-1--phone, .col-2, .col-2--tablet, .col-2--phone, .col-3, .col-3--tablet, .col-3--phone, .col-4, .col-4--tablet, .col-4--phone, .col-5, .col-5--tablet, .col-5--phone, .col-6, .col-6--tablet, .col-6--phone, .col-7, .col-7--tablet, .col-7--phone, .col-8, .col-8--tablet, .col-8--phone, .col-9, .col-9--tablet, .col-9--phone, .col-10, .col-10--tablet, .col-10--phone, .col-11, .col-11--tablet, .col-11--phone, .col-12, .col-12--tablet, .col-12--phone {
   float: left;
   padding-left: 25px;
@@ -387,8 +387,29 @@ ul .separator, ol .separator, dl .separator {
   margin: 0; }
 
 .box {
-  width: 100%;
+  max-width: 1024px;
   margin: 0 auto; }
+  .box--fluid {
+    width: 100%; }
+  .box--flex {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-justify-content: flex-start;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    -ms-align-items: stretch;
+    -webkit-align-items: stretch;
+    align-items: stretch;
+    -ms-align-content: flex-start;
+    -webkit-align-content: flex-start;
+    align-content: flex-start; }
   .box--add-gutter {
     margin-bottom: 25px; }
 

@@ -1,6 +1,6 @@
-// ============================================================
-// GRID SYSTEM
-// ============================================================
+/*============================================================
+* GRID SYSTEM
+* ============================================================*/
 
 @function grid-calc($colNumber, $grid__columns) {
   @return percentage(($colNumber / $grid__columns));
@@ -94,10 +94,16 @@
 // ============================================================
 // todo: add to docs
 .box {
-  width: 100%;
-  //max-width: $page__width--maxsize;
-  //min-width: $page__width--minsize;
+  max-width: $page__width--maxsize;
   margin: 0 auto;
+
+  &--fluid {
+    width: 100%;
+  }
+
+  &--flex {
+    @include flex-wrap;
+  }
 
   &--add-gutter {
     margin-bottom: $grid__row--gutter;
@@ -126,7 +132,7 @@
   margin-left: -$grid__col--gutter;
   margin-right: -$grid__col--gutter;
 
-  &--add-gutter{
+  &--add-gutter {
     @extend %row-add-gutter;
   }
 
