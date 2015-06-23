@@ -260,8 +260,8 @@ h2 {
   line-height: 1; }
   @media (max-width: 719px) {
     h2 {
-      font-size: 2.26667rem;
-      margin: 22.66667px 0; } }
+      font-size: 2.2rem;
+      margin: 22px 0; } }
   h2:first-child {
     margin-top: 0; }
 
@@ -273,8 +273,8 @@ h3 {
   line-height: 1; }
   @media (max-width: 719px) {
     h3 {
-      font-size: 1.46667rem;
-      margin: 14.66667px 0; } }
+      font-size: 1.4rem;
+      margin: 14px 0; } }
   h3:first-child {
     margin-top: 0; }
 
@@ -286,8 +286,8 @@ h4 {
   line-height: 1; }
   @media (max-width: 719px) {
     h4 {
-      font-size: 1.06667rem;
-      margin: 10.66667px 0; } }
+      font-size: 1rem;
+      margin: 10px 0; } }
   h4:first-child {
     margin-top: 0; }
 
@@ -299,8 +299,8 @@ h5 {
   line-height: normal; }
   @media (max-width: 719px) {
     h5 {
-      font-size: 0.93333rem;
-      margin: 9.33333px 0; } }
+      font-size: 0.9rem;
+      margin: 9px 0; } }
   h5:first-child {
     margin-top: 0; }
 
@@ -338,7 +338,7 @@ ul, ol {
     margin: 0; }
     .list-path li:after {
       content: "\e65c";
-      font-family: 'icomoon';
+      font-family: 'icomoon', sans-serif;
       color: #959A9D;
       vertical-align: bottom;
       font-size: 2rem;
@@ -888,9 +888,9 @@ textarea {
 
 select {
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%0A%3Cpath%20fill%3D%22#000%22%20d%3D%22M7%2010l5%205%205-5z%22%3E%3C%2Fpath%3E%0A%3C%2Fsvg%3E");
-  padding-right: 25px;
   background-repeat: no-repeat;
-  background-position: right center; }
+  background-position: right center;
+  padding-right: 25px; }
 
 textarea {
   height: auto; }
@@ -1023,11 +1023,10 @@ label > .form-error__message {
   line-height: 1;
   text-transform: none;
   font-variant: normal;
-  speak: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
   [class*="icon-"]:before {
-    font-family: 'icomoon'; }
+    font-family: 'icomoon', sans-serif; }
 
 .icon-disabled:before {
   content: "\e608"; }

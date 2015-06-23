@@ -28,14 +28,13 @@ $icon-sizes: ("sm": $text__size--sm, "md": $text__size--md, "lg": $text__size--l
   line-height: 1;
   text-transform: none;
   font-variant: normal;
-  speak: none;
 
   // Better Font Rendering
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
   &:before {
-    font-family: 'icomoon';
+    font-family: 'icomoon', sans-serif;
   }
 }
 

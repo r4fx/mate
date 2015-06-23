@@ -50,8 +50,8 @@ h1 {
 
   // todo: do tests
   @include respond-to(phone) {
-    @include font-size($text__size--xxl /1.5);
-    margin: $text__size--xxl /1.5 0;
+    @include font-size(floor($text__size--xxl /1.5));
+    margin: floor($text__size--xxl/1.5) 0;
   }
 
   &:first-child {
@@ -67,8 +67,8 @@ h2 {
   line-height: 1;
 
   @include respond-to(phone) {
-    @include font-size($text__size--xl /1.5);
-    margin: $text__size--xl /1.5 0;
+    @include font-size(floor($text__size--xl /1.5));
+    margin: floor($text__size--xl/1.5) 0;
   }
 
   &:first-child{
@@ -84,8 +84,8 @@ h3 {
   line-height: 1;
 
   @include respond-to(phone) {
-    @include font-size($text__size--lg /1.5);
-    margin: $text__size--lg /1.5 0;
+    @include font-size(floor($text__size--lg /1.5));
+    margin: floor($text__size--lg/1.5) 0;
   }
 
   &:first-child {
@@ -101,8 +101,8 @@ h4 {
   line-height: 1;
 
   @include respond-to(phone) {
-    @include font-size($text__size--md /1.5);
-    margin: $text__size--md /1.5 0;
+    @include font-size(floor($text__size--md /1.5));
+    margin: floor($text__size--md/1.5) 0;
   }
 
   &:first-child {
@@ -118,8 +118,8 @@ h5 {
   line-height: normal;
 
   @include respond-to(phone) {
-    @include font-size($text__size--sm /1.5);
-    margin: $text__size--sm /1.5 0;
+    @include font-size(floor($text__size--sm /1.5));
+    margin: floor($text__size--sm/1.5) 0;
   }
 
   &:first-child {
@@ -181,7 +181,7 @@ ul, ol, {
 
     &:after {
       content: "\e65c";
-      font-family: 'icomoon';
+      font-family: 'icomoon', sans-serif;
       color: $text__color--muted;
       vertical-align: bottom;
       font-size: 2rem;

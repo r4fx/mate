@@ -156,9 +156,9 @@ textarea {
 
 select {
   @include svg-bkg(#000);
-  padding-right: 25px;
   background-repeat: no-repeat;
   background-position: right center;
+  padding-right: 25px;
 }
 
 textarea {
