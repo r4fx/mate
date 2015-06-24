@@ -186,6 +186,17 @@
 }
 
 // ============================================================
+// ANIMATIONS
+// ============================================================
+
+// Examples:
+// @include animation(animName 1s ease);
+@mixin animation($args...) {
+  animation: $args;
+  -webkit-animation: $args;
+}
+
+// ============================================================
 // FLEX BOX
 // resources:
 // https://scotch.io/demos/visual-guide-to-css3-flexbox-flexbox-playground
