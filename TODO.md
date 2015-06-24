@@ -1,7 +1,7 @@
 ### TODOs
 | Filename | line # | TODO
 |:------|:------:|:------
-| _toolbox.scss | 193 | make mixin with params
+| _toolbox.scss | 204 | make mixin with params
 | components/_base.scss | 13 | describe in manual, + how to use with JS
 | components/_base.scss | 14 | add var in settings to disable?
 | components/_base.scss | 58 | describe in manual
