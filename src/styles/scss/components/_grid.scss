@@ -16,6 +16,7 @@
 }
 
 // COMMON STYLES FOR ALL DEVICES
+// todo: to remove because of [class*="col-"]
 @mixin grid-cols-common {
   @for $i from 1 through $grid__columns {
     &-#{$i},
@@ -114,12 +115,16 @@
 
 // COLUMNS
 // ------------------------------------------------------------
+[class*="col-"] {
+  @extend %grid-cols-common;
+}
+
 .col {
   &--no-gutter {
     padding: 0;
   }
 
-  @include grid-cols-common;
+  //@include grid-cols-common; // todo: to remove because of [class*="col-"]
   @include grid-cols;
   @include grid-cols-tablet;
   @include grid-cols-phone;

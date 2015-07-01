@@ -257,6 +257,51 @@
 }
 
 // ============================================================
+// NATIVE CSS MULTI COLUMNS
+// resources: http://caniuse.com/#search=column
+// todo: add to manual
+// ============================================================
+
+// Examples:
+// <div class="columns-2">...</div>
+
+%columns-common {
+  -webkit-column-gap: $grid__col--gutter*2;
+  -moz-column-gap: $grid__col--gutter*2;
+  column-gap: $grid__col--gutter*2;
+
+  -webkit-column-rule-style: solid;
+  -moz-column-rule-style: solid;
+  column-rule-style: solid;
+
+  -webkit-column-rule-width: 1px;
+  -moz-column-rule-width: 1px;
+  column-rule-width: 1px;
+
+  -webkit-column-rule-color: lightblue;
+  -moz-column-rule-color: lightblue;
+  column-rule-color: lightblue;
+}
+
+@mixin columns-count {
+  @for $i from 1 through $grid__columns {
+    &-#{$i} {
+      -webkit-column-count: $i;
+      -moz-column-count: $i;
+      column-count: $i;
+    }
+  }
+}
+
+[class*="columns-"] {
+  @extend %columns-common;
+}
+
+.columns {
+  @include columns-count;
+}
+
+// ============================================================
 // POSITIONING
 // ============================================================
 

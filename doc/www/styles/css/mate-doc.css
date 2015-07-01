@@ -134,6 +134,69 @@ optgroup {
   -ms-user-select: none;
   user-select: none; }
 
+[class*="columns-"] {
+  -webkit-column-gap: 50px;
+  -moz-column-gap: 50px;
+  column-gap: 50px;
+  -webkit-column-rule-style: solid;
+  -moz-column-rule-style: solid;
+  column-rule-style: solid;
+  -webkit-column-rule-width: 1px;
+  -moz-column-rule-width: 1px;
+  column-rule-width: 1px;
+  -webkit-column-rule-color: lightblue;
+  -moz-column-rule-color: lightblue;
+  column-rule-color: lightblue; }
+
+.columns-1 {
+  -webkit-column-count: 1;
+  -moz-column-count: 1;
+  column-count: 1; }
+.columns-2 {
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2; }
+.columns-3 {
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3; }
+.columns-4 {
+  -webkit-column-count: 4;
+  -moz-column-count: 4;
+  column-count: 4; }
+.columns-5 {
+  -webkit-column-count: 5;
+  -moz-column-count: 5;
+  column-count: 5; }
+.columns-6 {
+  -webkit-column-count: 6;
+  -moz-column-count: 6;
+  column-count: 6; }
+.columns-7 {
+  -webkit-column-count: 7;
+  -moz-column-count: 7;
+  column-count: 7; }
+.columns-8 {
+  -webkit-column-count: 8;
+  -moz-column-count: 8;
+  column-count: 8; }
+.columns-9 {
+  -webkit-column-count: 9;
+  -moz-column-count: 9;
+  column-count: 9; }
+.columns-10 {
+  -webkit-column-count: 10;
+  -moz-column-count: 10;
+  column-count: 10; }
+.columns-11 {
+  -webkit-column-count: 11;
+  -moz-column-count: 11;
+  column-count: 11; }
+.columns-12 {
+  -webkit-column-count: 12;
+  -moz-column-count: 12;
+  column-count: 12; }
+
 html {
   font-size: 62.5%; }
   html:after {
@@ -365,7 +428,7 @@ ul .separator, ol .separator, dl .separator {
 /*============================================================
 * GRID SYSTEM
 * ============================================================*/
-.col-1, .col-1--tablet, .col-1--phone, .col-2, .col-2--tablet, .col-2--phone, .col-3, .col-3--tablet, .col-3--phone, .col-4, .col-4--tablet, .col-4--phone, .col-5, .col-5--tablet, .col-5--phone, .col-6, .col-6--tablet, .col-6--phone, .col-7, .col-7--tablet, .col-7--phone, .col-8, .col-8--tablet, .col-8--phone, .col-9, .col-9--tablet, .col-9--phone, .col-10, .col-10--tablet, .col-10--phone, .col-11, .col-11--tablet, .col-11--phone, .col-12, .col-12--tablet, .col-12--phone {
+[class*="col-"] {
   float: left;
   padding-left: 25px;
   padding-right: 25px; }
@@ -720,10 +783,10 @@ ul .separator, ol .separator, dl .separator {
   border-radius: 50%;
   padding: 0; }
   .btn--circle span {
-    top: 50%;
-    left: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
     position: absolute;
     line-height: 1; }
   .btn--circle.btn--xs {
