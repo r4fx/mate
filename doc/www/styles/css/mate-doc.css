@@ -137,16 +137,7 @@ optgroup {
 [class*="columns-"] {
   -webkit-column-gap: 50px;
   -moz-column-gap: 50px;
-  column-gap: 50px;
-  -webkit-column-rule-style: solid;
-  -moz-column-rule-style: solid;
-  column-rule-style: solid;
-  -webkit-column-rule-width: 1px;
-  -moz-column-rule-width: 1px;
-  column-rule-width: 1px;
-  -webkit-column-rule-color: lightblue;
-  -moz-column-rule-color: lightblue;
-  column-rule-color: lightblue; }
+  column-gap: 50px; }
 
 .columns-1 {
   -webkit-column-count: 1;
@@ -196,6 +187,10 @@ optgroup {
   -webkit-column-count: 12;
   -moz-column-count: 12;
   column-count: 12; }
+.columns--bordered {
+  -webkit-column-rule: 1px solid #CCC;
+  -moz-column-rule: 1px solid #CCC;
+  column-rule: 1px solid #CCC; }
 
 html {
   font-size: 62.5%; }

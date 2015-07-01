@@ -269,18 +269,6 @@
   -webkit-column-gap: $grid__col--gutter*2;
   -moz-column-gap: $grid__col--gutter*2;
   column-gap: $grid__col--gutter*2;
-
-  -webkit-column-rule-style: solid;
-  -moz-column-rule-style: solid;
-  column-rule-style: solid;
-
-  -webkit-column-rule-width: 1px;
-  -moz-column-rule-width: 1px;
-  column-rule-width: 1px;
-
-  -webkit-column-rule-color: lightblue;
-  -moz-column-rule-color: lightblue;
-  column-rule-color: lightblue;
 }
 
 @mixin columns-count {
@@ -299,6 +287,12 @@
 
 .columns {
   @include columns-count;
+
+  &--bordered {
+    -webkit-column-rule: 1px solid $border__color--first;
+    -moz-column-rule: 1px solid $border__color--first;
+    column-rule: 1px solid $border__color--first;
+  }
 }
 
 // ============================================================
