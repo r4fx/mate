@@ -263,7 +263,7 @@
 // ============================================================
 
 // Examples:
-// <div class="columns-2">...</div>
+// <div class="columns-2 columns--bordered">...</div>
 
 %columns-common {
   -webkit-column-gap: $grid__col--gutter*2;
