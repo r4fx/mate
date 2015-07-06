@@ -35,6 +35,11 @@
   width: 100%;
 }
 
+%table-clean {
+  padding: 0;
+  border: 0;
+}
+
 table {
   @extend %table-frame;
 
@@ -75,6 +80,13 @@ table {
   // Super wide
   &.table-wide {
     @extend %table-wide;
+  }
+
+  // Clean table
+  &.table-clean {
+    th, td {
+      @extend %table-clean;
+    }
   }
 }
 
@@ -148,8 +160,7 @@ table {
   &.table-clean {
     [class*="col-"],
     .row > div {
-      padding: 0;
-      border: 0;
+      @extend %table-clean;
     }
   }
 
