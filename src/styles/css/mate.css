@@ -1530,10 +1530,13 @@ table.table-bordered th, table.table-bordered td, .table-css.table-bordered [cla
 
 table.table-striped tr:nth-child(odd) td, .table-css.table-striped .row:not(.table-thead):nth-child(odd) [class*="col-"],
 .table-css.table-striped .row:not(.table-thead):nth-child(odd) > div {
-  background-color: #f7f7f7; }
+  background-color: #f1f1f1; }
 
 table.table-wide, .table-css.table-wide {
   width: 100%; }
+
+table tbody tr:last-child td {
+  border-bottom: 0; }
 
 .table-css {
   display: table;

@@ -28,7 +28,7 @@
 }
 
 %table-striped {
-  background-color: lighten($block__color--first, 10);
+  background-color: lighten($block__color--first, 8);
 }
 
 %table-wide {
@@ -40,6 +40,14 @@ table {
 
   thead {
     @extend %table-thead;
+  }
+
+  tbody {
+    tr:last-child {
+      td {
+        border-bottom: 0;
+      }
+    }
   }
 
   th, td {
@@ -91,7 +99,7 @@ table {
   // One row table
   &.row {
     [class*="col-"],
-    > div{
+    > div {
       border-bottom: 0;
     }
   }
@@ -99,13 +107,13 @@ table {
   // Columns
   .table-thead {
     [class*="col-"],
-    > div{
+    > div {
       @extend %table-thead;
     }
   }
 
   [class*="col-"],
-  .row > div{
+  .row > div {
     @extend %table-col;
     display: table-cell;
     float: none;
@@ -117,7 +125,7 @@ table {
     @extend %table-bordered-frame;
 
     [class*="col-"],
-    .row > div{
+    .row > div {
       @extend %table-bordered-col;
 
       &:first-child {
@@ -130,7 +138,7 @@ table {
   &.table-striped {
     .row:not(.table-thead):nth-child(odd) {
       [class*="col-"],
-      > div{
+      > div {
         @extend %table-striped;
       }
     }
@@ -139,7 +147,7 @@ table {
   // Clean table
   &.table-clean {
     [class*="col-"],
-    .row > div{
+    .row > div {
       padding: 0;
       border: 0;
     }
