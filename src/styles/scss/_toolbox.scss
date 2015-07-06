@@ -263,15 +263,15 @@
 // ============================================================
 
 // Examples:
-// <div class="columns-2 columns--bordered">...</div>
+// <div class="column-2 column--bordered">...</div>
 
-%columns-common {
+%column-common {
   -webkit-column-gap: $grid__col--gutter*2;
   -moz-column-gap: $grid__col--gutter*2;
   column-gap: $grid__col--gutter*2;
 }
 
-@mixin columns-count {
+@mixin column-count {
   @for $i from 1 through $grid__columns {
     &-#{$i} {
       -webkit-column-count: $i;
@@ -281,12 +281,40 @@
   }
 }
 
+// RWD COLUMNS FOR PHONE
+@mixin column-phone {
+  @include respond-to(phone) {
+    @for $i from 1 through $grid__columns {
+      &-#{$i}--phone {
+        -webkit-column-count: $i;
+        -moz-column-count: $i;
+        column-count: $i;
+      }
+    }
+  }
+}
+
+// RWD COLUMNS FOR TABLET
+@mixin column-tablet {
+  @include respond-to(tablet) {
+    @for $i from 1 through $grid__columns {
+      &-#{$i}--tablet {
+        -webkit-column-count: $i;
+        -moz-column-count: $i;
+        column-count: $i;
+      }
+    }
+  }
+}
+
 [class*="columns-"] {
-  @extend %columns-common;
+  @extend %column-common;
 }
 
 .columns {
-  @include columns-count;
+  @include column-count;
+  @include column-phone;
+  @include column-tablet;
 
   &--bordered {
     -webkit-column-rule: 1px solid $border__color--first;
