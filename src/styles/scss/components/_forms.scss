@@ -52,7 +52,7 @@
 // FORM CONTAINERS
 // ============================================================
 form,
-fieldset{
+fieldset {
   > .row {
     margin-left: 0;
     margin-right: 0;
@@ -144,7 +144,7 @@ textarea {
 
   // min. 16px on mobile devices prevent zooming to element
   @include respond-to(phone) {
-    font-size: 1.6rem;
+    @include font-size(16px);
   }
 
   &:focus {
@@ -153,16 +153,16 @@ textarea {
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px darken($color__message--info, 5%);
   }
 
-  &[disabled]{
+  &[disabled] {
     @extend %disabled;
   }
 }
 
 select {
   @include svg-bkg(#000);
+  padding-right: 25px;
   background-repeat: no-repeat;
   background-position: right center;
-  padding-right: 25px;
 }
 
 textarea {
@@ -180,7 +180,7 @@ label > input[type="file"] {
 }
 
 [data-file]:after,
-[data-file-multiple]:after{
+[data-file-multiple]:after {
   display: inline-block;
   vertical-align: middle;
   white-space: nowrap;
@@ -217,50 +217,53 @@ input[type="radio"] {
 
 // PRETTY RADIOS & CHECKBOXES
 // ============================================================
-.input-radio,
-.input-checkbox {
-  cursor: pointer;
-  padding-left: 39px;
+input[type="checkbox"].mate-input,
+input[type="radio"].mate-input {
+  display: none;
+  position: absolute;
+  left: -9999px;
 
-  > [class*="icon-"] {
-    width: 24px;
-    height: 24px;
-    padding: 2px;
-    margin-left: -39px;
-    margin-right: 5px;
-    border: 1px solid $border__color--second;
-    text-align: center;
-    vertical-align: initial;
-    line-height: 1;
-    @include font-size($text__size--md);
+  + span,
+  + label {
+    position: relative;
+    padding-left: 40px;
+    cursor: pointer;
 
-    &:before {
-      color: transparent;
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 25px;
+      height: 25px;
+      border: 2px solid $border__color--first;
+    }
+
+    &:after {
+      border: 0;
       opacity: 0;
-      margin-top: 1px;
-      display: block;
+      background-color: $color__message--success;
+      @include transform-free(scale(0));
       @include transition();
     }
   }
 
-  > input {
-    display: none;
-
-    // Toggled state
-    &:checked {
-      ~ [class*="icon-"] {
-
-        &:before {
-          color: $border__color--second;
-          opacity: 1;
-        }
-      }
+  // Toggled state
+  &:checked {
+    + span:after,
+    + label:after {
+      opacity: 1;
+      @include transform-free(scale(0.6));
     }
   }
 }
 
-.input-radio > [class*="icon-"] {
-  border-radius: 50%;
+input[type="radio"].mate-input {
+  + span:before,
+  + span:after {
+    border-radius: 50%;
+  }
 }
 
 // DISABLED FIELDS AND SECTIONS

@@ -336,16 +336,21 @@
     <div>
         <form data-clone>
             <div class="row">
-                <label class="input-checkbox">
-                    <input type="checkbox" name="pretty-checkbox">
-                    <span class="icon-checkmark"></span>
+                <input class="mate-input" type="checkbox" name="term" id="form-terms">
+                <label for="form-terms">I accept <a href="#">the terms of use</a></label>
+            </div>
+
+            <!-- Inputs inside labels -->
+
+            <div class="row">
+                <label>
+                    <input class="mate-input" type="checkbox" name="pretty-checkbox">
                     <span>Fusce commodo aliquam arcutellus</span>
                 </label>
             </div>
             <div class="row">
-                <label class="input-radio">
-                    <input type="radio" name="pretty-radio">
-                    <span class="icon-dot"></span>
+                <label>
+                    <input class="mate-input" type="radio" name="pretty-radio">
                     <span>Fusce commodo aliquam arcu. Pellentesque egestas, neque sit amet convallis pulvinar, justo nulla eleifend augue, ac auctor orci leo non est. Praesent turpis. Suspendisse faucibus, nunc et pellentesque egestas, lacus ante convallis tellus, vitae iaculis lacus elit id tortor. Maecenas malesuada.</span>
                 </label>
             </div>
