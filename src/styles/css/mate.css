@@ -959,6 +959,9 @@ fieldset > .row {
   margin-left: 0;
   margin-right: 0;
   margin-bottom: 25px; }
+  form > .row:last-child,
+  fieldset > .row:last-child {
+    margin-bottom: 0; }
 
 form.grid > .row {
   margin-left: -25px;

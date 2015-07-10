@@ -57,6 +57,10 @@ fieldset{
     margin-left: 0;
     margin-right: 0;
     margin-bottom: $grid__row--gutter;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
