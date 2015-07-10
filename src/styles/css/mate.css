@@ -1117,7 +1117,7 @@ input[type="radio"].mate-input {
     input[type="radio"].mate-input + label:after {
       content: '';
       position: absolute;
-      top: 0;
+      top: -1px;
       left: 0;
       width: 25px;
       height: 25px;
