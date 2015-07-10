@@ -1113,7 +1113,7 @@ input[type="radio"].mate-input {
       left: 0;
       width: 25px;
       height: 25px;
-      border: 2px solid #CCC; }
+      border: 1px solid #CCC; }
     input[type="checkbox"].mate-input + span:after,
     input[type="checkbox"].mate-input + label:after,
     input[type="radio"].mate-input + span:after,

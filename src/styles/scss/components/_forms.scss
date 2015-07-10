@@ -130,7 +130,7 @@ textarea {
   width: 100%;
   height: 34px;
   padding: 4px 10px;
-  border: 1px solid $border__color--first;
+  border: $border__width--base solid $border__color--first;
   border-radius: $border__radius;
   background-color: transparent;
   vertical-align: middle;
@@ -237,7 +237,7 @@ input[type="radio"].mate-input {
       left: 0;
       width: 25px;
       height: 25px;
-      border: 2px solid $border__color--first;
+      border: $border__width--base solid $border__color--first;
     }
 
     &:after {
