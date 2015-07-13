@@ -66,8 +66,8 @@ fieldset {
 
 form.grid {
   > .row {
-    margin-left: -$grid__row--gutter;
-    margin-right: -$grid__row--gutter;
+    margin-left: -$grid__col--gutter;
+    margin-right: -$grid__col--gutter;
   }
 }
 
