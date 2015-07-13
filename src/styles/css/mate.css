@@ -178,6 +178,15 @@
   -moz-column-rule: 1px solid #CCC;
   column-rule: 1px solid #CCC; }
 
+.mate-blink {
+  animation: mate-blink 2s ease;
+  -webkit-animation: mate-blink 2s ease; }
+
+@keyframes mate-blink {
+  0% {
+    background-color: #ffb82d; }
+  100% {
+    background-color: transparent; } }
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%; }

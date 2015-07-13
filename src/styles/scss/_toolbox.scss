@@ -374,3 +374,27 @@
   -webkit-perspective: $size;
   perspective: $size;
 }
+
+// ============================================================
+// Animations
+// [i] Useful for focusing user eyes on changed element
+// todo: add to manual, relocate to animation.scss?
+// ============================================================
+
+// Example:
+// add class .mate-blink to an element by JS
+// document.getElementById(yourElement).classList.add('mate-blink');
+
+.mate-blink {
+  @include animation(mate-blink 2s ease);
+}
+
+@keyframes mate-blink {
+  0% {
+    background-color: $color__message--warning;
+  }
+
+  100% {
+    background-color: transparent;
+  }
+}
