@@ -307,11 +307,11 @@
   }
 }
 
-[class*="columns-"] {
+[class*="column-"] {
   @extend %column-common;
 }
 
-.columns {
+.column {
   @include column-count;
   @include column-phone;
   @include column-tablet;
