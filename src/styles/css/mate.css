@@ -1673,6 +1673,18 @@ table.table--clean [class*="col-"], table.table--clean .row > div, .table-css.ta
   padding: 0;
   border: 0; }
 
+table th, table td,
+table [class*="col-"], table .row > div, .table-css th, .table-css td,
+.table-css [class*="col-"], .table-css .row > div {
+  vertical-align: top; }
+  table th.vertical-middle, table td.vertical-middle,
+  table [class*="col-"].vertical-middle, table .row > div.vertical-middle, .table-css th.vertical-middle, .table-css td.vertical-middle,
+  .table-css [class*="col-"].vertical-middle, .table-css .row > div.vertical-middle {
+    vertical-align: middle; }
+  table th.vertical-bottom, table td.vertical-bottom,
+  table [class*="col-"].vertical-bottom, table .row > div.vertical-bottom, .table-css th.vertical-bottom, .table-css td.vertical-bottom,
+  .table-css [class*="col-"].vertical-bottom, .table-css .row > div.vertical-bottom {
+    vertical-align: bottom; }
 table.table--bordered th:first-child, table.table--bordered td:first-child,
 table.table--bordered [class*="col-"]:first-child, table.table--bordered .row > div:first-child, .table-css.table--bordered th:first-child, .table-css.table--bordered td:first-child,
 .table-css.table--bordered [class*="col-"]:first-child, .table-css.table--bordered .row > div:first-child {

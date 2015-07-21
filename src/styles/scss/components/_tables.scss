@@ -48,6 +48,21 @@
 // ============================================================
 table, .table-css {
 
+  // Vertical aligment
+  // todo: add to manual
+  th, td,
+  [class*="col-"], .row > div {
+    vertical-align: top;
+
+    &.vertical-middle {
+      vertical-align: middle;
+    }
+
+    &.vertical-bottom {
+      vertical-align: bottom;
+    }
+  }
+
   // Super wide
   &.table--wide {
     @extend %table-wide;
@@ -78,7 +93,7 @@ table, .table-css {
   // Striped
   &.table--striped {
     tr:nth-child(odd),
-    .row:not(.table-thead):nth-child(odd){
+    .row:not(.table-thead):nth-child(odd) {
       td,
       [class*="col-"], > div {
         @extend %table-striped;

@@ -16,4 +16,5 @@
 | components/_grid.scss | 96 | add to docs
 | components/_helpers.scss | 39 | make it dynamic, example: (top,50)
 | components/_icons.scss | 13 | add to doc
+| components/_tables.scss | 52 | add to manual
 | components/_typography.scss | 51 | do tests
