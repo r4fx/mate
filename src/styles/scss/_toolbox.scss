@@ -82,21 +82,21 @@
 
   // GENERIC MOBILE (TABLETS & SMARTPHONES)
   @if $point == mobile {
-    @media (max-width: $breakPoint__desktop - 1) {
+    @media screen and (max-width: $breakPoint__desktop - 1) {
       @content;
     }
   }
 
     // SMARTPHONES
   @else if $point == phone {
-    @media (max-width: $breakPoint__phone - 1) {
+    @media screen and (max-width: $breakPoint__phone - 1) {
       @content;
     }
   }
 
     // TABLETS
   @else if $point == tablet {
-    @media (max-width: $breakPoint__desktop - 1) and (min-width: $breakPoint__phone) {
+    @media screen and (max-width: $breakPoint__desktop - 1) and (min-width: $breakPoint__phone) {
       @content;
     }
   }
@@ -378,7 +378,6 @@
 // ============================================================
 // Animations
 // [i] Useful for focusing user eyes on changed element
-// todo: add to manual, relocate to animation.scss?
 // ============================================================
 
 // Example:
