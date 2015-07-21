@@ -14,7 +14,7 @@
   text-align: left;
 }
 
-%table-col {
+%table-cell {
   padding: 0.5em 1em;
   border-bottom: 1px solid $border__color--first;
 }
@@ -23,7 +23,7 @@
   border: 1px solid $border__color--first;
 }
 
-%table-bordered-col {
+%table-bordered-cell {
   border-left: 1px solid $border__color--first;
 }
 
@@ -48,21 +48,6 @@
 // ============================================================
 table, .table-css {
 
-  // Vertical aligment
-  // todo: add to manual
-  th, td,
-  [class*="col-"], .row > div {
-    vertical-align: top;
-
-    &.vertical-middle {
-      vertical-align: middle;
-    }
-
-    &.vertical-bottom {
-      vertical-align: bottom;
-    }
-  }
-
   // Super wide
   &.table--wide {
     @extend %table-wide;
@@ -82,7 +67,7 @@ table, .table-css {
 
     th, td,
     [class*="col-"], .row > div {
-      @extend %table-bordered-col;
+      @extend %table-bordered-cell;
 
       &:first-child {
         border-left: 0;
@@ -121,7 +106,7 @@ table {
   }
 
   th, td {
-    @extend %table-col;
+    @extend %table-cell;
   }
 
 }
@@ -153,7 +138,7 @@ table {
     }
   }
 
-  // Columns
+  // Cells
   .table-thead {
     [class*="col-"],
     > div {
@@ -163,9 +148,18 @@ table {
 
   [class*="col-"],
   .row > div {
-    @extend %table-col;
+    @extend %table-cell;
     display: table-cell;
     float: none;
+    vertical-align: middle;
+
+    &.vertical-top {
+      vertical-align: top;
+    }
+
+    &.vertical-bottom {
+      vertical-align: bottom;
+    }
   }
 
   // Auto columns size

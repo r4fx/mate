@@ -1,9 +1,6 @@
 // ============================================================
-// MATE HELPERS
-// ============================================================
-
-// ============================================================
 // POSITIONING
+// todo: add to manual
 // ============================================================
 .inline-left {
   text-align: left;
@@ -27,6 +24,18 @@
   margin-right: auto;
 }
 
+.vertical-top {
+  vertical-align: top;
+}
+
+.vertical-middle {
+  vertical-align: middle;
+}
+
+.vertical-bottom {
+  vertical-align: bottom;
+}
+
 // [i] Use floats for positioning image with text
 .float-right {
   float: right;
@@ -41,7 +50,7 @@
   margin-top: 50px;
 }
 
-.no-margin{
+.no-margin {
   margin: 0;
 }
 
@@ -52,7 +61,7 @@
   border-radius: 0;
 }
 
-.img-circle{
+.img-circle {
   border-radius: 50%;
 }
 
