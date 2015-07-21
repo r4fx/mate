@@ -75,7 +75,7 @@
   -webkit-column-count: 12;
   -moz-column-count: 12;
   column-count: 12; }
-@media (max-width: 719px) {
+@media screen and (max-width: 719px) {
   .column-1--phone {
     -webkit-column-count: 1;
     -moz-column-count: 1;
@@ -124,7 +124,7 @@
     -webkit-column-count: 12;
     -moz-column-count: 12;
     column-count: 12; } }
-@media (max-width: 1023px) and (min-width: 720px) {
+@media screen and (max-width: 1023px) and (min-width: 720px) {
   .column-1--tablet {
     -webkit-column-count: 1;
     -moz-column-count: 1;
@@ -320,11 +320,11 @@ html {
     font-family: monospace;
     color: #fff;
     border-top-right-radius: 5px; }
-    @media (max-width: 719px) {
+    @media screen and (max-width: 719px) {
       html:after {
         content: 'small';
         background-color: mediumseagreen; } }
-    @media (max-width: 1023px) and (min-width: 720px) {
+    @media screen and (max-width: 1023px) and (min-width: 720px) {
       html:after {
         content: 'medium';
         background-color: deepskyblue; } }
@@ -418,7 +418,7 @@ h1 {
   margin: 42px 0;
   line-height: 1;
   font-weight: normal; }
-  @media (max-width: 719px) {
+  @media screen and (max-width: 719px) {
     h1 {
       font-size: 2.8rem;
       margin: 28px 0; } }
@@ -431,7 +431,7 @@ h2 {
   margin: 34px 0;
   font-weight: normal;
   line-height: 1; }
-  @media (max-width: 719px) {
+  @media screen and (max-width: 719px) {
     h2 {
       font-size: 2.2rem;
       margin: 22px 0; } }
@@ -444,7 +444,7 @@ h3 {
   margin: 22px 0;
   font-weight: normal;
   line-height: 1; }
-  @media (max-width: 719px) {
+  @media screen and (max-width: 719px) {
     h3 {
       font-size: 1.4rem;
       margin: 14px 0; } }
@@ -457,7 +457,7 @@ h4 {
   margin: 22px 0;
   font-weight: normal;
   line-height: 1; }
-  @media (max-width: 719px) {
+  @media screen and (max-width: 719px) {
     h4 {
       font-size: 1rem;
       margin: 10px 0; } }
@@ -470,7 +470,7 @@ h5 {
   margin: 14px 0;
   font-weight: normal;
   line-height: normal; }
-  @media (max-width: 719px) {
+  @media screen and (max-width: 719px) {
     h5 {
       font-size: 0.9rem;
       margin: 9px 0; } }
@@ -548,7 +548,7 @@ ul .separator, ol .separator, dl .separator {
 
 .row--dbl-gutter {
   margin-bottom: 50px; }
-  @media (max-width: 719px) {
+  @media screen and (max-width: 719px) {
     .row--dbl-gutter {
       margin-bottom: 25px; } }
 
@@ -608,7 +608,7 @@ ul .separator, ol .separator, dl .separator {
   width: 91.66667%; }
 .col-12 {
   width: 100%; }
-@media (max-width: 1023px) and (min-width: 720px) {
+@media screen and (max-width: 1023px) and (min-width: 720px) {
   .col-1--tablet {
     width: 8.33333%; }
   .col-2--tablet {
@@ -633,7 +633,7 @@ ul .separator, ol .separator, dl .separator {
     width: 91.66667%; }
   .col-12--tablet {
     width: 100%; } }
-@media (max-width: 719px) {
+@media screen and (max-width: 719px) {
   .col-1--phone {
     width: 8.33333%; }
   .col-2--phone {
@@ -1038,7 +1038,7 @@ textarea {
   appearance: none;
   line-height: 1.42857143;
   font-size: 1.6rem; }
-  @media (max-width: 719px) {
+  @media screen and (max-width: 719px) {
     input[type="text"],
     input[type="password"],
     input[type="tel"],
@@ -1645,24 +1645,38 @@ table th, table td, .table-css [class*="col-"],
   padding: 0.5em 1em;
   border-bottom: 1px solid #CCC; }
 
-table.table-bordered, .table-css.table-bordered {
+table.table--bordered, .table-css.table--bordered {
   border: 1px solid #CCC; }
 
-table.table-bordered th, table.table-bordered td, .table-css.table-bordered [class*="col-"],
-.table-css.table-bordered .row > div {
+table.table--bordered th, table.table--bordered td,
+table.table--bordered [class*="col-"], table.table--bordered .row > div, .table-css.table--bordered th, .table-css.table--bordered td,
+.table-css.table--bordered [class*="col-"], .table-css.table--bordered .row > div {
   border-left: 1px solid #CCC; }
 
-table.table-striped tr:nth-child(odd) td, .table-css.table-striped .row:not(.table-thead):nth-child(odd) [class*="col-"],
-.table-css.table-striped .row:not(.table-thead):nth-child(odd) > div {
+table.table--striped tr:nth-child(odd) td,
+table.table--striped tr:nth-child(odd) [class*="col-"], table.table--striped tr:nth-child(odd) > div,
+table.table--striped .row:not(.table-thead):nth-child(odd) td,
+table.table--striped .row:not(.table-thead):nth-child(odd) [class*="col-"],
+table.table--striped .row:not(.table-thead):nth-child(odd) > div, .table-css.table--striped tr:nth-child(odd) td,
+.table-css.table--striped tr:nth-child(odd) [class*="col-"], .table-css.table--striped tr:nth-child(odd) > div,
+.table-css.table--striped .row:not(.table-thead):nth-child(odd) td,
+.table-css.table--striped .row:not(.table-thead):nth-child(odd) [class*="col-"],
+.table-css.table--striped .row:not(.table-thead):nth-child(odd) > div {
   background-color: #f1f1f1; }
 
-table.table-wide, .table-css.table-wide {
+table.table--wide, .table-css.table--wide {
   width: 100%; }
 
-table.table-clean th, table.table-clean td, .table-css.table-clean [class*="col-"],
-.table-css.table-clean .row > div {
+table.table--clean th, table.table--clean td,
+table.table--clean [class*="col-"], table.table--clean .row > div, .table-css.table--clean th, .table-css.table--clean td,
+.table-css.table--clean [class*="col-"], .table-css.table--clean .row > div {
   padding: 0;
   border: 0; }
+
+table.table--bordered th:first-child, table.table--bordered td:first-child,
+table.table--bordered [class*="col-"]:first-child, table.table--bordered .row > div:first-child, .table-css.table--bordered th:first-child, .table-css.table--bordered td:first-child,
+.table-css.table--bordered [class*="col-"]:first-child, .table-css.table--bordered .row > div:first-child {
+  border-left: 0; }
 
 table tbody tr:last-child td {
   border-bottom: 0; }
@@ -1683,11 +1697,10 @@ table tbody tr:last-child td {
   .table-css [class*="col-"],
   .table-css .row > div {
     display: table-cell;
-    float: none;
+    float: none; }
+  .table-css.table--auto-size [class*="col-"],
+  .table-css.table--auto-size .row > div {
     width: auto; }
-  .table-css.table-bordered [class*="col-"]:first-child,
-  .table-css.table-bordered .row > div:first-child {
-    border-left: 0; }
 
 .inline-left {
   text-align: left; }
@@ -1731,15 +1744,15 @@ table tbody tr:last-child td {
   .hidden--desktop {
     display: none !important; } }
 
-@media (max-width: 1023px) {
+@media screen and (max-width: 1023px) {
   .hidden--mobile {
     display: none !important; } }
 
-@media (max-width: 1023px) and (min-width: 720px) {
+@media screen and (max-width: 1023px) and (min-width: 720px) {
   .hidden--tablet {
     display: none !important; } }
 
-@media (max-width: 719px) {
+@media screen and (max-width: 719px) {
   .hidden--phone {
     display: none !important; } }
 

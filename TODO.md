@@ -3,7 +3,6 @@
 |:------|:------:|:------
 | _toolbox.scss | 204 | make mixin with params
 | _toolbox.scss | 262 | add to manual
-| _toolbox.scss | 381 | add to manual, relocate to animation.scss?
 | components/_base.scss | 13 | describe in manual, + how to use with JS
 | components/_base.scss | 14 | add var in settings to disable?
 | components/_base.scss | 58 | describe in manual

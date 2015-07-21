@@ -97,7 +97,7 @@
 <h3>Bordered table</h3>
 <div class="code-example">
     <div data-clone>
-        <table class="table-bordered">
+        <table class="table--bordered">
             <thead>
                 <tr>
                     <th>#</th>
@@ -137,7 +137,7 @@
 <h3>Super wide bordered table</h3>
 <div class="code-example">
     <div data-clone>
-        <table class="table-bordered table-wide">
+        <table class="table--bordered table--wide">
             <thead>
                 <tr>
                     <th>#</th>
@@ -178,7 +178,7 @@
 <h3>Striped table</h3>
 <div class="code-example">
     <div data-clone>
-        <table class="table-striped">
+        <table class="table--striped">
             <thead>
                 <tr>
                     <th>#</th>
@@ -216,9 +216,11 @@
 </div>
 
 <h3>CSS driven table</h3>
+<p>By default CSS table inherit width of cells from grid columns, use <code>.table--auto-size</code> class to set automatic width of cell based on cell content.</p>
+
 <div class="code-example">
     <div data-clone>
-        <div class="table-css">
+        <div class="table-css table--auto-size">
             <div class="row table-thead">
                 <div class="col-3">#</div>
                 <div class="col-3">City</div>
@@ -252,7 +254,7 @@
 <p>If you need simple css driven table without grid, you can omit grid columns classes and use simple <code>div</code> as col.</p>
 <div class="code-example">
     <div data-clone>
-        <div class="table-css table-clean">
+        <div class="table-css table--clean">
             <div class="row table-thead">
                 <div>#</div>
                 <div>City</div>
