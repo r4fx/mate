@@ -1753,6 +1753,26 @@ a[href^="https://github.com"]:before {
   font-family: 'icomoon';
   margin-right: 5px; }
 
+.anchor-link {
+  opacity: 0.2;
+  color: #3c3c3c;
+  display: inline-block;
+  background-color: rgba(221, 221, 221, 0.9);
+  border-radius: 50%;
+  font-size: 2.1rem;
+  padding: 5px;
+  margin-left: 10px;
+  transition: all 300ms ease-in-out 0s; }
+  .anchor-link:before {
+    display: inline-block;
+    content: "\e63a";
+    font-family: 'icomoon';
+    vertical-align: top; }
+  .anchor-link:hover {
+    color: #fff;
+    opacity: 1;
+    background-color: #1ab394; }
+
 .sidebar-on {
   overflow: hidden; }
   .sidebar-on aside {
@@ -1999,6 +2019,4 @@ pre.code-example[class*="language-"] {
     -webkit-align-self: auto;
     align-self: auto; }
 
-
-
-/*# sourceMappingURL=../css/mate-doc.css.map */
+/*# sourceMappingURL=mate-doc.css.map */
