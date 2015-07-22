@@ -716,6 +716,8 @@ ul .separator, ol .separator, dl .separator {
     .btn.btn--arrow-r:after {
       border-width: 2rem 0 2rem 2rem;
       margin-right: 2rem; }
+  .btn > [class*="icon-"]:before {
+    /*vertical-align: inherit;*/ }
 
 .btn--sm {
   padding-left: 1rem;
@@ -1213,10 +1215,13 @@ label > .form-error__message {
   line-height: 1;
   text-transform: none;
   font-variant: normal;
+  text-decoration: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
   [class*="icon-"]:before {
     font-family: 'icomoon', sans-serif; }
+  [class*="icon-"].btn {
+    line-height: inherit; }
 
 .icon-disabled:before {
   content: "\e608"; }
