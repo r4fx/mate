@@ -1767,10 +1767,10 @@ table tbody tr:last-child td {
   .hidden--phone {
     display: none !important; } }
 
-[data-note] {
+[data-todo] {
   position: relative; }
-  [data-note]:hover:after {
-    content: "Todo: " attr(data-note);
+  [data-todo]:hover:after {
+    content: "TODO: " attr(data-todo);
     white-space: pre-wrap;
     background-color: gold;
     font-weight: normal;
@@ -2054,6 +2054,4 @@ pre.code-example[class*="language-"] {
     -webkit-align-self: auto;
     align-self: auto; }
 
-
-
-/*# sourceMappingURL=../css/mate-doc.css.map */
+/*# sourceMappingURL=mate-doc.css.map */

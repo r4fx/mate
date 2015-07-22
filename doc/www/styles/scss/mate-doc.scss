@@ -8,12 +8,12 @@
 
 // MATE DOCUMENTATION
 // ============================================================
-[data-note] {
+[data-todo] {
   position: relative;
 
   &:hover:after {
     //content: "Todo:\A" attr(data-note);
-    content: "Todo: " attr(data-note);
+    content: "TODO: " attr(data-todo);
     white-space: pre-wrap;
     background-color: gold;
     font-weight: normal;
