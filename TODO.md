@@ -16,5 +16,6 @@
 | components/_grid.scss | 96 | add to docs
 | components/_helpers.scss | 3 | add to manual
 | components/_helpers.scss | 48 | make it dynamic, example: (top,50)
-| components/_icons.scss | 13 | get sizes from global settings
+| components/_icons.scss | 3 | fix height and vertical align when use with buttons and text
+| components/_icons.scss | 14 | get sizes from global settings
 | components/_typography.scss | 51 | do tests
