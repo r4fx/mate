@@ -708,8 +708,6 @@ ul .separator, ol .separator, dl .separator {
     .btn.btn--arrow-r:after {
       border-width: 2rem 0 2rem 2rem;
       margin-right: 2rem; }
-  .btn > [class*="icon-"]:before {
-    /*vertical-align: inherit;*/ }
 
 .btn--sm {
   padding-left: 1rem;

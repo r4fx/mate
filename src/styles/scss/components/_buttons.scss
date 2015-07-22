@@ -182,13 +182,6 @@ $btn-sizes: xs, sm, md, lg, xl, xxl;
   @include button-size(md);
   @include transition();
   @extend %noselect;
-
-  > [class*="icon-"] {
-
-    &:before{
-      /*vertical-align: inherit;*/
-    }
-  }
 }
 
 // BUTTON: SIZES
