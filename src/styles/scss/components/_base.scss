@@ -49,9 +49,10 @@ html {
 body {
   color: $text__color--first;
   font-family: $font__base--light;
+  font-size: $text__size--md;
+  line-height: $text__line-height-ratio;
   //-webkit-font-smoothing: antialiased;
   //-moz-osx-font-smoothing: grayscale;
-  @include font-size($text__size--md, $text__line-height--md);
 }
 
 // BASIC COMMON COLORS

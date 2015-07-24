@@ -32,10 +32,10 @@ $font__base--light:         quote(nth($font__base--file, 6)), $font__base--safeF
 $color__base--first:        #1ab394;
 $color__base--second:       #272822;
 
-$color__message--alert: #B03C1D;
-$color__message--warning: #ffb82d;
-$color__message--info: #249cff;
-$color__message--success: #00A631;
+$color__message--alert:     #B03C1D;
+$color__message--warning:   #ffb82d;
+$color__message--info:      #249cff;
+$color__message--success:   #00A631;
 
 // TEXTS
 // ============================================================
@@ -52,13 +52,6 @@ $text__size--base:          $text__size--md;
 // text--line-height
 // [i] find your own optimal line-height: http://www.pearsonified.com/typography/
 $text__line-height-ratio:   1.5;
-
-$text__line-height--sm:     $text__size--sm * $text__line-height-ratio;
-$text__line-height--md:     $text__size--md * $text__line-height-ratio;
-$text__line-height--lg:     $text__size--lg * $text__line-height-ratio;
-$text__line-height--xl:     $text__size--xl * $text__line-height-ratio;
-$text__line-height--xxl:    $text__size--xxl * $text__line-height-ratio;
-$text__line-height--base:   $text__size--base * $text__line-height-ratio;
 
 // text--colors
 $text__color--first:        #3c3c3c;

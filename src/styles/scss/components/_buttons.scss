@@ -2,195 +2,107 @@
 // BUTTONS
 // ============================================================
 
-// TODO: ADD states, hover, active, focus
-// TODO: calc line height, http://www.mathayward.com/modular-css-with-sass-and-bem/
-
 // Define sizes
-$btn-sizes: xs, sm, md, lg, xl, xxl;
+// ------------------------------------------------------------
+$list__btn-sizes: (xs 0.25rem), (sm 0.5rem), (md 1rem), (lg 1.25rem), (xl 1.5rem), (xxl 1.75rem);
 
-// Todo: do refactoring!
-@mixin button-size($size) {
-  @if $size == sm {
-    padding-left: (2rem/2);
-    padding-right: (2rem/2);
-    font-size: calculateRem($text__size--sm);
-    line-height: 2rem;
+// Return button text size
+// ------------------------------------------------------------
+@function getTextSize($value) {
+  @if $value == "xs" {
+    @return $text__size--xs;
+  }
 
-    // Outlined
-    &.btn--outline {
-      line-height: 2rem - calculateRem($btn__outline--width*2);
+  @if $value == "sm" {
+    @return $text__size--sm;
+  }
+
+  @if $value == "md" {
+    @return $text__size--md;
+  }
+
+  @if $value == "lg" {
+    @return $text__size--lg;
+  }
+
+  @if $value == "xl" {
+    @return $text__size--xl;
+  }
+
+  @if $value == "xxl" {
+    @return $text__size--xxl;
+  }
+}
+
+// Buttons common sets
+// ------------------------------------------------------------
+@mixin btn-common-sets($arrow-border-size, $btn-padding-vertical, $btn-padding-horizontal) {
+  padding: $btn-padding-vertical $btn-padding-horizontal;
+
+  &.btn--arrow-l {
+    margin-left: $arrow-border-size;
+
+    &:before {
+      border-width: $arrow-border-size $arrow-border-size $arrow-border-size 0;
+      margin-left: $arrow-border-size;
     }
+  }
 
-    // Arrows
-    &.btn--arrow-l {
-      margin-left: (2rem/2);
+  &.btn--arrow-r {
+    margin-right: $arrow-border-size;
 
-      &:before {
-        border-width: (2rem/2) (2rem/2) (2rem/2) 0;
-        margin-left: (2rem/2);
-      }
-    }
-    &.btn--arrow-r {
-      margin-right: (2rem/2);
-
-      &:after {
-        border-width: (2rem/2) 0 (2rem/2) (2rem/2);
-        margin-right: (2rem/2);
-      }
-    }
-  } @else if $size == md {
-    padding-left: (4rem/2);
-    padding-right: (4rem/2);
-    font-size: calculateRem($text__size--md);
-    line-height: 4rem;
-
-    // Outlined
-    &.btn--outline {
-      line-height: 4rem - calculateRem($btn__outline--width*2);
-    }
-
-    // Arrows
-    &.btn--arrow-l {
-      margin-left: (4rem/2);
-
-      &:before {
-        border-width: (4rem/2) (4rem/2) (4rem/2) 0;
-        margin-left: (4rem/2);
-      }
-    }
-    &.btn--arrow-r {
-      margin-right: (4rem/2);
-
-      &:after {
-        border-width: (4rem/2) 0 (4rem/2) (4rem/2);
-        margin-right: (4rem/2);
-      }
-    }
-  } @else if $size == lg {
-    padding-left: (5rem/2);
-    padding-right: (5rem/2);
-    font-size: calculateRem($text__size--lg);
-    line-height: 5rem;
-
-    // Outlined
-    &.btn--outline {
-      line-height: 5rem - calculateRem($btn__outline--width*2);
-    }
-
-    // Arrows
-    &.btn--arrow-l {
-      margin-left: (5rem/2);
-
-      &:before {
-        border-width: (5rem/2) (5rem/2) (5rem/2) 0;
-        margin-left: (5rem/2);
-      }
-    }
-    &.btn--arrow-r {
-      margin-right: (5rem/2);
-
-      &:after {
-        border-width: (5rem/2) 0 (5rem/2) (5rem/2);
-        margin-right: (5rem/2);
-      }
-    }
-  } @else if $size == xl {
-    padding-left: (6rem/2);
-    padding-right: (6rem/2);
-    font-size: calculateRem($text__size--xl);
-    line-height: 6rem;
-
-    // Outlined
-    &.btn--outline {
-      line-height: 6rem - calculateRem($btn__outline--width*2);
-    }
-
-    // Arrows
-    &.btn--arrow-l {
-      margin-left: (6rem/2);
-
-      &:before {
-        border-width: (6rem/2) (6rem/2) (6rem/2) 0;
-        margin-left: (6rem/2);
-      }
-    }
-    &.btn--arrow-r {
-      margin-right: (6rem/2);
-
-      &:after {
-        border-width: (6rem/2) 0 (6rem/2) (6rem/2);
-        margin-right: (6rem/2);
-      }
-    }
-  } @else if $size == xxl {
-    padding-left: (7rem/2);
-    padding-right: (7rem/2);
-    font-size: calculateRem($text__size--xxl);
-    line-height: 7rem;
-
-    // Outlined
-    &.btn--outline {
-      line-height: 7rem - calculateRem($btn__outline--width*2);
-    }
-
-    // Arrows
-    &.btn--arrow-l {
-      margin-left: (7rem/2);
-
-      &:before {
-        border-width: (7rem/2) (7rem/2) (7rem/2) 0;
-        margin-left: (7rem/2);
-      }
-    }
-    &.btn--arrow-r {
-      margin-right: (7rem/2);
-
-      &:after {
-        border-width: (7rem/2) 0 (7rem/2) (7rem/2);
-        margin-right: (7rem/2);
-      }
+    &:after {
+      border-width: $arrow-border-size 0 $arrow-border-size $arrow-border-size;
+      margin-right: $arrow-border-size;
     }
   }
 }
 
-// Generates sizes
-@mixin generate-btn-sizes() {
-  $i: 1;
+// Generate sizes
+// ------------------------------------------------------------
+@mixin generate-btn-sizes($default: null) {
 
-  @each $n in $btn-sizes {
-    &--#{$n} {
-      @include button-size(nth($btn-sizes, $i));
+  @each $n in $list__btn-sizes {
+    $type: nth($n, 1);
+    $padding: nth($n, 2);
+    $btn-padding-vertical: $padding;
+    $btn-padding-horizontal: $btn-padding-vertical*2;
+    $arrow-border-size: (calculateRem(getTextSize($type)) * $text__line-height-ratio + ($btn-padding-vertical*2)) /2;
+
+    // Generate default size
+    @if $default == $type {
+      font-size: calculateRem(getTextSize($default));
+      @include btn-common-sets($arrow-border-size, $btn-padding-vertical, $btn-padding-horizontal);
     }
-    $i: $i + 1;
+
+    // Generates all button sizes
+    &--#{$type} {
+      font-size: calculateRem(getTextSize($type));
+      @include btn-common-sets($arrow-border-size, $btn-padding-vertical, $btn-padding-horizontal);
+    }
   }
 }
 
 // BUTTON: BASE
 // ============================================================
-
 .btn {
-  border: 0;
+  line-height: $text__line-height-ratio;
   border-radius: $border__radius;
   display: inline-block;
+  text-align: center;
   vertical-align: middle;
   text-decoration: none;
-  text-align: center;
+  border: 0;
   cursor: pointer;
-  padding-top: 0;
-  padding-bottom: 0;
-
-  @include button-size(md);
   @include transition();
   @extend %noselect;
-}
 
-// BUTTON: SIZES
-.btn {
-  @include generate-btn-sizes();
+  // Sizes
+  @include generate-btn-sizes(md); // parameters means default size
 }
 
 // BUTTON: COLORS
-// todo: make mixin
+// todo: make as mixin
 // ============================================================
 .btn {
   @extend .btn--color-first;
@@ -216,12 +128,10 @@ $btn-sizes: xs, sm, md, lg, xl, xxl;
 
     // Outlined
     &.btn--outline {
-      border-color: $btn__color--first;
       color: $btn__color--first;
 
       &:hover {
         background-color: transparent;
-        border-color: lighten($btn__color--first, 7%);
         color: lighten($btn__color--first, 7%);
       }
     }
@@ -359,8 +269,10 @@ $btn-sizes: xs, sm, md, lg, xl, xxl;
   // Outlined
   &--outline {
     border-radius: $border__radius;
-    border: $btn__outline--width solid transparent;
     background-color: transparent;
+
+    // Magic border, border color is set by "color" property inherited from text
+    box-shadow: 0 0 0 $btn__outline--width inset;
   }
 
   // Block
@@ -423,15 +335,13 @@ $btn-sizes: xs, sm, md, lg, xl, xxl;
     position: relative;
     border-radius: 0;
     border: 0;
-    padding-top: 0;
-    padding-bottom: 0;
   }
 
   &--arrow-r:after,
   &--arrow-l:before {
     content: '';
     width: 0;
-    height: 50%;
+    //height: 50%; // use only when height is calculated by "line-height"
     position: absolute;
     top: 0;
     bottom: 0;

@@ -4,18 +4,42 @@
 // ============================================================
 .inline-left {
   text-align: left;
+
+  &--phone {
+    @include respond-to(phone) {
+      text-align: left;
+    }
+  }
 }
 
 .inline-center {
   text-align: center;
+
+  &--phone {
+    @include respond-to(phone) {
+      text-align: center;
+    }
+  }
 }
 
 .inline-right {
   text-align: right;
+
+  &--phone {
+    @include respond-to(phone) {
+      text-align: right;
+    }
+  }
 }
 
 .inline-justify {
   text-align: justify;
+
+  &--phone {
+    @include respond-to(phone) {
+      text-align: justify;
+    }
+  }
 }
 
 .block-center {
@@ -93,5 +117,14 @@
 .hidden--phone {
   @include respond-to(phone) {
     display: none !important;
+  }
+}
+
+.link-neutral {
+  text-decoration: none;
+  color: $text__color--first;
+
+  &:hover {
+    color: $text__color--link;
   }
 }
