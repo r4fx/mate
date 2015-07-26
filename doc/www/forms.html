@@ -384,9 +384,9 @@
 
 <h2 id="nav-elegant-file-input">
     Elegant input file with only one line (inline) of JavaScript!
-    <a href="#nav-elegant-file" class="anchor-link"></a>
+    <a href="#nav-elegant-file-input" class="anchor-link"></a>
 </h2>
-<p>Important: Input file must be placed inside <code>form</code> and then in <code>label</code> tag!</p>
+<p><strong>Important:</strong> Input file must be placed inside <code>form</code> and then in <code>label</code> tag!</p>
 
 <h4>Single file</h4>
 <div class="code-example">
@@ -403,11 +403,13 @@
 </div>
 
 <h4>Multiple files</h4>
+<p>Select several files to see effect</p>
+
 <div class="code-example">
     <div>
         <form data-clone>
             <label>
-                <span class="btn btn--color-second btn--file">Choose files</span>
+                <span class="btn btn--color-second btn--file">Choose several files</span>
                 <input multiple type="file" onchange="parentNode.setAttribute('data-file-multiple', this.files.length)">
             </label>
         </form>

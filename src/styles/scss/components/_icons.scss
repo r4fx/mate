@@ -1,6 +1,5 @@
 // ============================================================
 // ICON FONT
-// todo: fix height and vertical align when use with buttons and text
 // ============================================================
 @font-face {
   font-family: 'icomoon';
@@ -10,28 +9,33 @@
   font-style: normal;
 }
 
-// ICON SIZES HELPER
-// todo: get sizes from global settings
+// ICON SIZE HELPER
 // ============================================================
-$icon-sizes: ("sm": 2rem, "md": 3rem, "lg": 4rem, "xl": 6rem, "xxl": 8rem);
-@each $name, $size in $icon-sizes {
-  .icon--#{$name} {
+$list__icon-sizes: (sm 2rem), (md 3rem), (lg 4rem), (xl 6rem), (xxl 8rem);
+@each $n in $list__icon-sizes {
+  $type: nth($n, 1);
+  $size: nth($n, 2);
+
+  .icon--#{$type} {
     &:before {
       font-size: $size;
     }
   }
 }
 
+// ICON: BASE
+// ============================================================
 [class*="icon-"] {
   font-style: normal;
   font-weight: normal;
   display: inline-block;
+  vertical-align: middle;
   line-height: 1;
   text-transform: none;
   font-variant: normal;
   text-decoration: none;
 
-  // Better Font Rendering
+  // Better font rendering
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
@@ -41,6 +45,7 @@ $icon-sizes: ("sm": 2rem, "md": 3rem, "lg": 4rem, "xl": 6rem, "xxl": 8rem);
 }
 
 // ICONS
+// Import your owns from http://icomoon.io
 // ============================================================
 .icon-disabled:before {
   content: "\e608";

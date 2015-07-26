@@ -815,7 +815,6 @@ ul .separator, ol .separator, dl .separator {
     .btn--color-second:hover.btn--arrow-r:after {
       border-left-color: #48acff; }
   .btn--color-second.btn--outline {
-    border-color: #249cff;
     color: #249cff; }
     .btn--color-second.btn--outline:hover {
       background-color: transparent;
@@ -840,7 +839,6 @@ ul .separator, ol .separator, dl .separator {
     .btn--color-third:hover.btn--arrow-r:after {
       border-left-color: #3a3b32; }
   .btn--color-third.btn--outline {
-    border-color: #272822;
     color: #272822; }
     .btn--color-third.btn--outline:hover {
       background-color: transparent;
@@ -911,8 +909,8 @@ ul .separator, ol .separator, dl .separator {
   right: 100%; }
 .btn--arrow-r:after {
   left: 100%; }
-.btn--file {
-  line-height: 3.4rem; }
+.btn > span:not([class*='icon-']) {
+  vertical-align: middle; }
 
 .btn-group {
   display: inline-block; }
@@ -1184,6 +1182,7 @@ label > .form-error__message {
   font-style: normal;
   font-weight: normal;
   display: inline-block;
+  vertical-align: middle;
   line-height: 1;
   text-transform: none;
   font-variant: normal;

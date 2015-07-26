@@ -599,11 +599,14 @@
     How to use
     <a href="#nav-how-to" class="anchor-link"></a>
 </h2>
-<h3>With buttons</h3>
 
+<p><strong>Pro tip:</strong> Wrap text in the <code>span</code> to perfectly center the text beside the icon.</p>
+
+
+<h3>With buttons</h3>
 <div class="code-example">
     <div class="inline-center" data-clone>
-        <a href="#" class="btn btn--color-second btn--md">Edit <span class="icon-edit"></span></a>
+        <a href="#" class="btn btn--color-second btn--md"><span>Edit</span> <span class="icon-edit"></span></a>
     </div>
     <pre lang="html"></pre>
 </div>
@@ -613,34 +616,38 @@
 
 <div class="code-example">
     <div class="inline-center" data-clone>
-        <!-- icons and button in same tag -->
+        <!-- icon and button in the same tag -->
         <a href="#" class="btn btn--color-second * icon-edit icon--md"></a>
         <a href="#" class="btn btn--color-second * icon-add-circle icon--md"></a>
 
-        <!-- icons inside buttons -->
+        <!-- icon tag inside button -->
         <a href="#" class="btn btn--color-second">
-            <span class="icon-apps icon--md"></span> Menu
+            <span class="icon-apps icon--md"></span>
+            <span>Menu</span>
         </a>
         <a href="#" class="btn btn--color-second">
-            <span class="icon-email-alt icon--md"></span> Email
+            <span class="icon-email icon--md"></span>
+            <span>Email</span>
         </a>
         <a href="#" class="btn btn--color-second">
             <span class="icon-bookmark icon--md"></span>
         </a>
 
-        <!-- icons inside outlined buttons -->
-        <a href="#" class="btn btn--color-second btn--outline * icon-apps icon--md"></a>
+        <!-- icon inside outlined buttons -->
+        <a href="#" class="btn btn--color-second btn--outline">
+            <span class="icon-apps icon--md"></span>
+        </a>
 
         <a href="#" class="btn btn--color-second btn--outline">
-            <span class="icon-file icon--md"></span> Menu
+            <span class="icon-file icon--md"></span> <span>Menu</span>
         </a>
 
-        <!-- icons inside buttons, size dfined in button -->
-        <a href="#" class="btn btn--color-second btn--md">
-            Voice <span class="icon-voice"></span>
+        <!-- icon inside button, size defined in button -->
+        <a href="#" class="btn btn--color-second btn--xl">
+            <span>Voice</span><span class="icon-voice"></span>
         </a>
-        <a href="#" class="btn btn--color-second btn--md">
-            Video <span class="icon-videocam"></span>
+        <a href="#" class="btn btn--color-second btn--xl">
+            <span>Video</span> <span class="icon-videocam"></span>
         </a>
 
     </div>

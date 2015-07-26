@@ -2,7 +2,8 @@
 // BUTTONS
 // ============================================================
 
-// Define sizes
+// Define sizes,
+// second parameter is a vertical padding
 // ------------------------------------------------------------
 $list__btn-sizes: (xs 0.25rem), (sm 0.5rem), (md 1rem), (lg 1.25rem), (xl 1.5rem), (xxl 1.75rem);
 
@@ -98,7 +99,7 @@ $list__btn-sizes: (xs 0.25rem), (sm 0.5rem), (md 1rem), (lg 1.25rem), (xl 1.5rem
   @extend %noselect;
 
   // Sizes
-  @include generate-btn-sizes(md); // parameters means default size
+  @include generate-btn-sizes(md); // parameter means default size
 }
 
 // BUTTON: COLORS
@@ -178,7 +179,6 @@ $list__btn-sizes: (xs 0.25rem), (sm 0.5rem), (md 1rem), (lg 1.25rem), (xl 1.5rem
 
     // Outlined
     &.btn--outline {
-      border-color: $btn__color--second;
       color: $btn__color--second;
 
       &:hover {
@@ -230,7 +230,6 @@ $list__btn-sizes: (xs 0.25rem), (sm 0.5rem), (md 1rem), (lg 1.25rem), (xl 1.5rem
 
     // Outlined
     &.btn--outline {
-      border-color: $btn__color--third;
       color: $btn__color--third;
 
       &:hover {
@@ -297,7 +296,7 @@ $list__btn-sizes: (xs 0.25rem), (sm 0.5rem), (md 1rem), (lg 1.25rem), (xl 1.5rem
       line-height: 1;
     }
 
-    // todo: make mixin
+    // todo: make as mixin
     &.btn--xs {
       width: 32px;
       height: 32px;
@@ -341,7 +340,7 @@ $list__btn-sizes: (xs 0.25rem), (sm 0.5rem), (md 1rem), (lg 1.25rem), (xl 1.5rem
   &--arrow-l:before {
     content: '';
     width: 0;
-    //height: 50%; // use only when height is calculated by "line-height"
+    //height: 50%; // tip: use only when height is calculated by "line-height"
     position: absolute;
     top: 0;
     bottom: 0;
@@ -360,8 +359,9 @@ $list__btn-sizes: (xs 0.25rem), (sm 0.5rem), (md 1rem), (lg 1.25rem), (xl 1.5rem
     left: 100%;
   }
 
-  &--file {
-    line-height: 3.4rem;
+  // ICON INSIDE BUTTON, PERFECTLY VERTICAL CENTERED
+  > span:not([class*='icon-']) {
+    vertical-align: middle;
   }
 }
 
