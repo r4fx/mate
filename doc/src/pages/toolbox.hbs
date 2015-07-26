@@ -2,7 +2,12 @@
 title: Toolbox
 ---
 
-<h2>Placeholders (from _tollbox.scss)</h2>
+<h2 id="nav-placeholders">
+    Placeholders (from tollbox.scss)
+    <a href="#nav-placeholders" class="anchor-link"></a>
+</h2>
+<p><a class="link-neutral" href="https://github.com/r4fx/mate/blob/master/src/styles/scss/_toolbox.scss" target="_blank">see tollbox.scss on github</a></p>
+
 <ul class="list-unstyled">
     <li><code>%clearfix</code></li>
     <li><code>%box-sizing--border</code></li>
@@ -13,46 +18,55 @@ title: Toolbox
     <li><code>%noselect</code></li>
 </ul>
 
-<h2>Helper classes (from _helpers.scss)</h2>
+<h2 id="nav-helpes">
+    Helper classes (from helpers.scss)
+    <a href="#nav-helpes" class="anchor-link"></a>
+</h2>
+<p><a class="link-neutral" href="https://github.com/r4fx/mate/blob/master/src/styles/scss/components/_helpers.scss" target="_blank">see helpers.scss on github</a></p>
+
 <ul class="list-unstyled">
     <li><code>.hidden</code></li>
     <li><code>.hidden--mobile</code></li>
     <li><code>.hidden--phone</code></li>
-    <li><code>.hidden--toblet</code></li>
+    <li><code>.hidden--tablet</code></li>
+    <li><code>.hidden--desktop</code></li>
     <li><code>.inline-left</code></li>
+    <li><code>.inline-left--phone</code></li>
     <li><code>.inline-right</code></li>
+    <li><code>.inline-right--phone</code></li>
     <li><code>.inline-center</code></li>
+    <li><code>.inline-center--phone</code></li>
     <li><code>.inline-justify</code></li>
+    <li><code>.inline-justify--phone</code></li>
     <li><code>.block-center</code></li>
+    <li><code>.vertical-top</code></li>
+    <li><code>.vertical-middle</code></li>
+    <li><code>.vertical-bottom</code></li>
     <li><code>.float-right</code></li>
     <li><code>.float-left</code></li>
-    <li><code>.img-circle</code></li>
-    <li><code>.radius-none</code></li>
     <li><code>.no-margin</code></li>
+    <li><code>.radius-none</code></li>
+    <li><code>.img-circle</code></li>
+    <li><code>.link-neutral</code></li>
 </ul>
 
-<h2>Mixins (from _tollbox.scss)</h2>
+<h2 id="nav-mixins">
+    Mixins (from tollbox.scss)
+    <a href="#nav-mixins" class="anchor-link"></a>
+</h2>
+<p><a class="link-neutral" href="https://github.com/r4fx/mate/blob/master/src/styles/scss/_toolbox.scss" target="_blank">see tollbox.scss on github</a></p>
+
+<h3>Media queries breakpoint</h3>
 <ul class="list-unstyled">
     <li><code>respond-to($point, $modifier: null)</code></li>
-    <li><code>gradient($gradient-color-from, $gradient-color-to)</code></li>
-    <li><code>font-size($size, $line-height: null)</code></li>
-    <li><code>transform-free($args...)</code></li>
-    <li><code>rotate($val)</code></li>
-    <li><code>transition($list: all, $duration: $trans__base--duration, $timing: $trans__base--timing, $delay: $trans__base--delay)</code></li>
-    <li><code>transition-free($args...)</code></li>
-    <li><code>centerer($axis: auto)</code></li>
-    <li><code>coverer</code></li>
-    <li><code>flex-wrap</code></li>
-    <li><code>flex-item</code></li>
 </ul>
-
-<h3>respond-to</h3>
 <p>Jeden z najważniejszych mixinów odpowiadający za media queries i breakpointy na potrzeby RWD. <br>
     Obsługowane breakpointy: <code>mobile</code>, <code>phone</code>, <code>tablet</code>, <code>desktop</code> <br>
 </p>
-<p>Mobile odpowiada za zakresy phone + tablet. Desktop może przyjąć dodatkowy argument <code>xl</code></p>
+<p>Mobile odpowiada za zakresy phone + tablet. Desktop może przyjąć dodatkowy argument <code>xl</code>, <br>
+    przykład:</p>
 <div class="code-example">
-    <div data-clone class="hide">
+    <div data-clone class="hidden">
         div[class*="col-"] {
             position: fixed;
             left: 0;
@@ -61,14 +75,12 @@ title: Toolbox
 
             @include respond-to(mobile) {
                 position: static;
-
                 padding: $grid__row--gutter;
             }
         }
 
         ul {
             text-align: right;
-
             @include respond-to(phone) {
                 text-align: center;
             }
@@ -80,3 +92,34 @@ title: Toolbox
     </div>
     <pre lang="scss"></pre>
 </div>
+
+<h3>Transforms</h3>
+<ul class="list-unstyled">
+    <li><code>transform-free($args...)</code></li>
+    <li><code>rotate($val)</code></li>
+</ul>
+
+<h3>Transitions</h3>
+<ul class="list-unstyled">
+    <li><code>transition($list: all, $duration: $trans__base--duration, $timing: $trans__base--timing, $delay: $trans__base--delay)</code></li>
+    <li><code>transition-free($args...)</code></li>
+</ul>
+
+<h3>Flex Box</h3>
+<ul class="list-unstyled">
+    <li><code>flex-wrap</code></li>
+    <li><code>flex-item</code></li>
+</ul>
+
+<h3>Positioning</h3>
+<ul class="list-unstyled">
+    <li><code>centerer($axis: auto)</code></li>
+    <li><code>coverer</code></li>
+</ul>
+
+<h3>Others</h3>
+<ul class="list-unstyled">
+    <li><code>gradient($gradient-color-from, $gradient-color-to)</code></li>
+    <li><code>font-size($size, $line-height: null)</code></li>
+    <li><code>animation($args...)</code></li>
+</ul>
