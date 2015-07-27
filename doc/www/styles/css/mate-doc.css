@@ -857,7 +857,6 @@ ul .separator, ol .separator, dl .separator {
 .btn--outline {
   border-radius: 5px;
   background-color: transparent;
-  border: 1px solid transparent;
   box-shadow: 0 0 0 2px inset; }
 .btn--block {
   display: block;
@@ -998,7 +997,7 @@ input[type="number"],
 select,
 textarea {
   width: 100%;
-  height: 34px;
+  height: 44px;
   padding: 4px 10px;
   border: 1px solid #CCC;
   border-radius: 5px;
