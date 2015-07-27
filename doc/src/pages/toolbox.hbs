@@ -3,7 +3,7 @@ title: Toolbox
 ---
 
 <h2 id="nav-placeholders">
-    Placeholders (from tollbox.scss)
+    Placeholders
     <a href="#nav-placeholders" class="anchor-link"></a>
 </h2>
 <p><a class="link-neutral" href="https://github.com/r4fx/mate/blob/master/src/styles/scss/_toolbox.scss" target="_blank">see tollbox.scss on github</a></p>
@@ -19,7 +19,7 @@ title: Toolbox
 </ul>
 
 <h2 id="nav-helpes">
-    Helper classes (from helpers.scss)
+    Helper classes
     <a href="#nav-helpes" class="anchor-link"></a>
 </h2>
 <p><a class="link-neutral" href="https://github.com/r4fx/mate/blob/master/src/styles/scss/components/_helpers.scss" target="_blank">see helpers.scss on github</a></p>
@@ -47,11 +47,11 @@ title: Toolbox
     <li><code>.no-margin</code></li>
     <li><code>.radius-none</code></li>
     <li><code>.img-circle</code></li>
-    <li><code>.link-neutral</code></li>
+    <li><code>.link-neutral</code> - href  color as default color of text</li>
 </ul>
 
 <h2 id="nav-mixins">
-    Mixins (from tollbox.scss)
+    Mixins
     <a href="#nav-mixins" class="anchor-link"></a>
 </h2>
 <p><a class="link-neutral" href="https://github.com/r4fx/mate/blob/master/src/styles/scss/_toolbox.scss" target="_blank">see tollbox.scss on github</a></p>
@@ -129,10 +129,37 @@ title: Toolbox
 </ul>
 
 <h2 id="nav-animations">
-    Animations (from tollbox.scss)
+    Animations
     <a href="#nav-animations" class="anchor-link"></a>
 </h2>
 
 <ul class="list-unstyled">
     <li>Blink: add class <code>.mate-blink</code></li>
 </ul>
+
+<h2 id="nav-multicolumns">
+    Native CSS multi columns
+    <a href="#nav-multicolumns" class="anchor-link"></a>
+</h2>
+
+<p>You can use this technique to achieve well-known masonry effect or simple columns for different use case.</p>
+<p>There is 12 columns by default like in grid system, so you can use classes from <code>.column-1</code> to <code>.column-12</code>. <br>
+    For RWD needs just add modifier class like in grid system <code>--phone, --tablet, --mobile</code> to achieve the class like <code>.column-1--phone</code> and so on.</p>
+
+<p>
+    Additional classes: <code>.column--bordered</code>
+</p>
+
+<div class="code-example">
+    <div data-clone>
+        <div class="column-2 column-1--phone">
+            <article class="col-12"><img src="http://placehold.it/550x400/" alt=""></article>
+            <article class="col-12"><img src="http://placehold.it/550x500/" alt=""></article>
+            <article class="col-12"><img src="http://placehold.it/550x300/" alt=""></article>
+            <article class="col-12"><img src="http://placehold.it/555x300/" alt=""></article>
+            <article class="col-12"><img src="http://placehold.it/555x300/" alt=""></article>
+            <article class="col-12"><img src="http://placehold.it/550x500/" alt=""></article>
+        </div>
+    </div>
+    <pre lang="html"></pre>
+</div>

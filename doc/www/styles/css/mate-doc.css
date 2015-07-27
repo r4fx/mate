@@ -139,6 +139,10 @@ optgroup {
   -moz-column-gap: 50px;
   column-gap: 50px; }
 
+[class*="column-"] > [class*="col-"] {
+  display: inline-block;
+  float: none; }
+
 .column-1 {
   -webkit-column-count: 1;
   -moz-column-count: 1;
