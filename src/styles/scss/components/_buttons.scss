@@ -269,6 +269,7 @@ $list__btn-sizes: (xs 0.25rem), (sm 0.5rem), (md 1rem), (lg 1.25rem), (xl 1.5rem
   &--outline {
     border-radius: $border__radius;
     background-color: transparent;
+    border: 1px solid transparent;
 
     // Magic border, border color is set by "color" property inherited from text
     box-shadow: 0 0 0 $btn__outline--width inset;
