@@ -8,26 +8,6 @@
 
 // MATE DOCUMENTATION
 // ============================================================
-[data-todo] {
-  position: relative;
-
-  &:hover:after {
-    //content: "Todo:\A" attr(data-note);
-    content: "TODO: " attr(data-todo);
-    white-space: pre-wrap;
-    background-color: gold;
-    font-weight: normal;
-    color: black;
-    padding: 5px 10px;
-    border-radius: 5px;
-    box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.15), 0 2px 0 2px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    display: inline-block;
-    position: absolute;
-  }
-}
-
-
 a[href^="https://github.com"]:before {
   content: "\e600";
   font-family: 'icomoon';
@@ -107,7 +87,7 @@ body, html {
 }
 
 body {
-  @include font-size(18px);
+  font-size: 1.8rem;
 
   @include respond-to(phone) {
     @include font-size($text__size--md);

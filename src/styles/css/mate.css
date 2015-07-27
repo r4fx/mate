@@ -315,7 +315,7 @@ optgroup {
   font-weight: bold; }
 
 html {
-  font-size: 62.5%; }
+  font-size: 10px; }
   html:after {
     visibility: hidden;
     position: fixed;
