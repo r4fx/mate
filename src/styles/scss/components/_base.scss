@@ -51,8 +51,8 @@ body {
   font-family: $font__base--light;
   font-size: $text__size--base;
   line-height: $text__line-height-ratio;
-  //-webkit-font-smoothing: antialiased;
-  //-moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 // BASIC COMMON COLORS

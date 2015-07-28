@@ -340,7 +340,9 @@ body {
   color: #3c3c3c;
   font-family: "lato-light", Arial, sans-serif;
   font-size: 16px;
-  line-height: 1.5; }
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
 .color--alert {
   color: #B03C1D; }
@@ -2046,4 +2048,6 @@ pre.code-example[class*="language-"] {
     -webkit-align-self: auto;
     align-self: auto; }
 
-/*# sourceMappingURL=mate-doc.css.map */
+
+
+/*# sourceMappingURL=../css/mate-doc.css.map */
