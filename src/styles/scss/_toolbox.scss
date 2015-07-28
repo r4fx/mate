@@ -265,9 +265,9 @@
 // <div class="column-2 column-1--phone column--bordered">...</div>
 
 %masonry-common {
-  -webkit-column-gap: $grid__col--gutter;
-  -moz-column-gap: $grid__col--gutter;
-  column-gap: $grid__col--gutter;
+  -webkit-column-gap: $grid__col--gutter*2;
+  -moz-column-gap: $grid__col--gutter*2;
+  column-gap: $grid__col--gutter*2;
 }
 
 @mixin masonry-count {

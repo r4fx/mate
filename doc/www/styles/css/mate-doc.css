@@ -135,9 +135,9 @@ optgroup {
   user-select: none; }
 
 [class*="masonry-"] {
-  -webkit-column-gap: 25px;
-  -moz-column-gap: 25px;
-  column-gap: 25px; }
+  -webkit-column-gap: 50px;
+  -moz-column-gap: 50px;
+  column-gap: 50px; }
 
 [class*="masonry-"] > article,
 [class*="masonry-"] > [class*="col-"] {
