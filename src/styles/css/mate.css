@@ -929,8 +929,6 @@ ul .separator, ol .separator, dl .separator {
 .btn > span ~ [class*='icon-'] {
   position: relative;
   top: -2px; }
-.btn > span ~ span:not([class*='icon-']) {
-  vertical-align: middle; }
 
 .btn-group {
   display: inline-block; }

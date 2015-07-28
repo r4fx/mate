@@ -367,7 +367,7 @@ $list__btn-sizes: (xs 0.30rem), (sm 0.8rem), (md 1rem), (lg 1.25rem), (xl 1.5rem
     }
 
     ~ span:not([class*='icon-']) {
-      vertical-align: middle;
+      //vertical-align: middle;
     }
   }
 }
