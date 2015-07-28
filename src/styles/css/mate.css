@@ -712,30 +712,30 @@ ul .separator, ol .separator, dl .separator {
   padding: 1rem 2rem; }
   .btn--xs {
     font-size: 1.2rem;
-    padding: 0.25rem 0.5rem; }
+    padding: 0.3rem 0.6rem; }
     .btn--xs.btn--arrow-l {
-      margin-left: 1.15rem; }
+      margin-left: 1.2rem; }
       .btn--xs.btn--arrow-l:before {
-        border-width: 1.15rem 1.15rem 1.15rem 0;
-        margin-left: 1.15rem; }
+        border-width: 1.2rem 1.2rem 1.2rem 0;
+        margin-left: 1.2rem; }
     .btn--xs.btn--arrow-r {
-      margin-right: 1.15rem; }
+      margin-right: 1.2rem; }
       .btn--xs.btn--arrow-r:after {
-        border-width: 1.15rem 0 1.15rem 1.15rem;
-        margin-right: 1.15rem; }
+        border-width: 1.2rem 0 1.2rem 1.2rem;
+        margin-right: 1.2rem; }
   .btn--sm {
     font-size: 1.4rem;
-    padding: 0.5rem 1rem; }
+    padding: 0.8rem 1.6rem; }
     .btn--sm.btn--arrow-l {
-      margin-left: 1.55rem; }
+      margin-left: 1.85rem; }
       .btn--sm.btn--arrow-l:before {
-        border-width: 1.55rem 1.55rem 1.55rem 0;
-        margin-left: 1.55rem; }
+        border-width: 1.85rem 1.85rem 1.85rem 0;
+        margin-left: 1.85rem; }
     .btn--sm.btn--arrow-r {
-      margin-right: 1.55rem; }
+      margin-right: 1.85rem; }
       .btn--sm.btn--arrow-r:after {
-        border-width: 1.55rem 0 1.55rem 1.55rem;
-        margin-right: 1.55rem; }
+        border-width: 1.85rem 0 1.85rem 1.85rem;
+        margin-right: 1.85rem; }
   .btn.btn--arrow-l {
     margin-left: 2.2rem; }
     .btn.btn--arrow-l:before {
