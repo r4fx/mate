@@ -7,7 +7,7 @@
 | components/_base.scss | 59 | describe in manual
 | components/_buttons.scss | 106 | make as mixin
 | components/_buttons.scss | 299 | make as mixin
-| components/_buttons.scss | 369 | gropued buttons
+| components/_buttons.scss | 376 | gropued buttons
 | components/_grid.scss | 19 | to remove because of [class*="col-"]
 | components/_grid.scss | 96 | add to docs
 | components/_helpers.scss | 3 | add to manual

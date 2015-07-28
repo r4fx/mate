@@ -360,8 +360,15 @@ $list__btn-sizes: (xs 0.25rem), (sm 0.5rem), (md 1rem), (lg 1.25rem), (xl 1.5rem
   }
 
   // ICON INSIDE BUTTON, PERFECTLY VERTICAL CENTERED
-  > span:not([class*='icon-']) {
-    vertical-align: middle;
+  > span {
+    ~ [class *= 'icon-'] {
+      position: relative;
+      top: -2px;
+    }
+
+    ~ span:not([class*='icon-']) {
+      vertical-align: middle;
+    }
   }
 }
 

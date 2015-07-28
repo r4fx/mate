@@ -918,7 +918,10 @@ ul .separator, ol .separator, dl .separator {
   right: 100%; }
 .btn--arrow-r:after {
   left: 100%; }
-.btn > span:not([class*='icon-']) {
+.btn > span ~ [class*='icon-'] {
+  position: relative;
+  top: -2px; }
+.btn > span ~ span:not([class*='icon-']) {
   vertical-align: middle; }
 
 .btn-group {
