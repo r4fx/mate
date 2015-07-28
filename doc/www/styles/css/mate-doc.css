@@ -1882,7 +1882,9 @@ main > aside {
         position: static; } }
   main > aside figure {
     text-align: right;
-    margin-bottom: 25px; }
+    margin-bottom: 25px;
+    line-height: 1;
+    font-size: 3rem; }
     @media screen and (max-width: 719px) {
       main > aside figure {
         text-align: center; } }
@@ -1892,7 +1894,8 @@ main > aside {
     main > aside figure span {
       vertical-align: middle;
       line-height: normal;
-      font-size: 3rem; }
+      margin-left: 7px;
+      font-size: 1.2rem; }
   main > aside a {
     color: #fff;
     text-decoration: none; }
