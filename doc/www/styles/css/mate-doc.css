@@ -2049,6 +2049,14 @@ pre.code-example[class*="language-"] {
     -webkit-align-self: auto;
     align-self: auto; }
 
+[class*="masonry-"] {
+  -webkit-column-gap: 25px;
+  -moz-column-gap: 25px;
+  column-gap: 25px; }
 
+[class*="masonry-"] > article {
+  margin-bottom: 25px; }
+  [class*="masonry-"] > article img {
+    display: block; }
 
-/*# sourceMappingURL=../css/mate-doc.css.map */
+/*# sourceMappingURL=mate-doc.css.map */

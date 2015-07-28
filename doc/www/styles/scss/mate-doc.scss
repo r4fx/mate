@@ -363,3 +363,17 @@ pre.code-example[class*="language-"]{
     @include flex-item;
   }
 }
+
+[class*="masonry-"] {
+  -webkit-column-gap: $grid__col--gutter;
+  -moz-column-gap: $grid__col--gutter;
+  column-gap: $grid__col--gutter;
+}
+
+[class*="masonry-"] > article {
+  margin-bottom: $grid__row--gutter;
+
+  img{
+    display: block;
+  }
+}
