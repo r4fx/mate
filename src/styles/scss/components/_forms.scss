@@ -144,7 +144,7 @@ textarea {
 
   // min. 16px on mobile devices prevent zooming to element
   @include respond-to($phone) {
-    @include font-size(16px);
+    font-size: 1.6rem;
   }
 
   &:focus {
