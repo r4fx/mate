@@ -24,22 +24,22 @@ html {
     color: #fff;
     border-top-right-radius: 5px;
 
-    @include respond-to(phone) {
+    @include respond-to($phone) {
       content: 'small';
       background-color: mediumseagreen;
     }
 
-    @include respond-to(tablet) {
+    @include respond-to($tablet) {
       content: 'medium';
       background-color: deepskyblue;
     }
 
-    @include respond-to(desktop) {
+    @include respond-to($desktop) {
       content: 'large';
       background-color: mediumpurple;
     }
 
-    @include respond-to(desktop, xl) {
+    @include respond-to($desktop--xl) {
       content: 'x-large';
       background-color: tomato;
     }

@@ -1759,7 +1759,7 @@ table tbody tr:last-child td {
   .hidden--desktop {
     display: none !important; } }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px -1) {
   .hidden--mobile {
     display: none !important; } }
 
@@ -1779,7 +1779,7 @@ table tbody tr:last-child td {
 
 a[href^="https://github.com"]:before {
   content: "\e600";
-  font-family: 'icomoon';
+  font-family: 'icomoon', sans-serif;
   margin-right: 5px; }
 
 .anchor-link {
@@ -1796,7 +1796,7 @@ a[href^="https://github.com"]:before {
   .anchor-link:before {
     display: inline-block;
     content: "\e63a";
-    font-family: 'icomoon';
+    font-family: 'icomoon', sans-serif;
     vertical-align: top; }
   .anchor-link:hover {
     color: #fff;
@@ -1880,7 +1880,7 @@ main > aside {
     padding: 50px;
     height: 100%;
     color: #fff; }
-    @media screen and (max-width: 1023px) {
+    @media screen and (max-width: 1024px -1) {
       main > aside > div[class*="col-"] {
         padding: 25px; } }
     @media screen and (max-width: 719px) {
@@ -1971,7 +1971,7 @@ h4 code {
 pre.code-example[class*="language-"] {
   margin: 0 0 25px;
   border: 0; }
-  @media screen and (max-width: 1023px) {
+  @media screen and (max-width: 1024px -1) {
     pre.code-example[class*="language-"] {
       padding: 15px; } }
 

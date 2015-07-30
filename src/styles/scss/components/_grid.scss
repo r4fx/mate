@@ -38,7 +38,7 @@
 
 // RWD COLUMNS FOR TABLET
 @mixin grid-cols-tablet {
-  @include respond-to(tablet) {
+  @include respond-to($tablet) {
     @for $i from 1 through $grid__columns {
       &-#{$i}--tablet {
         width: grid-calc($i, $grid__columns);
@@ -49,7 +49,7 @@
 
 // RWD COLUMNS FOR PHONE
 @mixin grid-cols-phone {
-  @include respond-to(phone) {
+  @include respond-to($phone) {
     @for $i from 1 through $grid__columns {
       &-#{$i}--phone {
         width: grid-calc($i, $grid__columns);
@@ -82,7 +82,7 @@
 %row-dbl-gutter {
   margin-bottom: $grid__row--gutter*2;
 
-  @include respond-to(phone) {
+  @include respond-to($phone) {
     margin-bottom: $grid__row--gutter;
   }
 }

@@ -6,7 +6,7 @@
   text-align: left;
 
   &--phone {
-    @include respond-to(phone) {
+    @include respond-to($phone) {
       text-align: left;
     }
   }
@@ -16,7 +16,7 @@
   text-align: center;
 
   &--phone {
-    @include respond-to(phone) {
+    @include respond-to($phone) {
       text-align: center;
     }
   }
@@ -26,7 +26,7 @@
   text-align: right;
 
   &--phone {
-    @include respond-to(phone) {
+    @include respond-to($phone) {
       text-align: right;
     }
   }
@@ -36,7 +36,7 @@
   text-align: justify;
 
   &--phone {
-    @include respond-to(phone) {
+    @include respond-to($phone) {
       text-align: justify;
     }
   }
@@ -97,25 +97,25 @@
 }
 
 .hidden--desktop {
-  @include respond-to(desktop) {
+  @include respond-to($desktop) {
     display: none !important;
   }
 }
 
 .hidden--mobile {
-  @include respond-to(mobile) {
+  @include respond-to($mobile) {
     display: none !important;
   }
 }
 
 .hidden--tablet {
-  @include respond-to(tablet) {
+  @include respond-to($tablet) {
     display: none !important;
   }
 }
 
 .hidden--phone {
-  @include respond-to(phone) {
+  @include respond-to($phone) {
     display: none !important;
   }
 }

@@ -143,7 +143,7 @@ textarea {
   @include font-size($text__size--md);
 
   // min. 16px on mobile devices prevent zooming to element
-  @include respond-to(phone) {
+  @include respond-to($phone) {
     @include font-size(16px);
   }
 

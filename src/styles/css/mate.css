@@ -1767,7 +1767,7 @@ table tbody tr:last-child td {
   .hidden--desktop {
     display: none !important; } }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px -1) {
   .hidden--mobile {
     display: none !important; } }
 

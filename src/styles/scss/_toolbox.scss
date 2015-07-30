@@ -74,48 +74,19 @@
 //
 // Examples:
 //
-// @include respond-to(desktop, xl) {
-//  width: 33.333%;
+// @include respond-to($desktop--xl) {
+//  font-size: 3rem;
 // }
 // ============================================================
-@mixin respond-to($point, $modifier: null) {
+$mobile:      'screen and (max-width: #{$breakPoint__desktop -1})';
+$phone:       'screen and (max-width: #{$breakPoint__phone - 1})';
+$tablet:      'screen and (max-width: #{$breakPoint__desktop - 1}) and (min-width: #{$breakPoint__phone})';
+$desktop:     '(min-width: #{$breakPoint__desktop})';
+$desktop--xl: '(min-width: #{$breakPoint__desktop--xl + 1})';
 
-  // GENERIC MOBILE (TABLETS & SMARTPHONES)
-  @if $point == mobile {
-    @media screen and (max-width: $breakPoint__desktop - 1) {
-      @content;
-    }
-  }
-
-    // SMARTPHONES
-  @else if $point == phone {
-    @media screen and (max-width: $breakPoint__phone - 1) {
-      @content;
-    }
-  }
-
-    // TABLETS
-  @else if $point == tablet {
-    @media screen and (max-width: $breakPoint__desktop - 1) and (min-width: $breakPoint__phone) {
-      @content;
-    }
-  }
-
-    // DESKTOPS & LAPTOPS
-  @else if $point == desktop {
-
-    @if $modifier == null {
-      @media (min-width: $breakPoint__desktop) {
-        @content;
-      }
-    }
-
-      // LARGE SCREENS
-    @else if $modifier == xl {
-      @media (min-width: $breakPoint__desktop--xl + 1) {
-        @content;
-      }
-    }
+@mixin respond-to($media) {
+  @media #{$media} {
+    @content;
   }
 }
 
@@ -283,7 +254,7 @@
 
 // RWD COLUMNS FOR PHONE
 @mixin masonry-phone {
-  @include respond-to(phone) {
+  @include respond-to($phone) {
     @for $i from 1 through $grid__columns {
       &-#{$i}--phone {
         -webkit-column-count: $i;
@@ -296,7 +267,7 @@
 
 // RWD COLUMNS FOR TABLET
 @mixin masonry-tablet {
-  @include respond-to(tablet) {
+  @include respond-to($tablet) {
     @for $i from 1 through $grid__columns {
       &-#{$i}--tablet {
         -webkit-column-count: $i;

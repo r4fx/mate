@@ -10,7 +10,7 @@
 // ============================================================
 a[href^="https://github.com"]:before {
   content: "\e600";
-  font-family: 'icomoon';
+  font-family: 'icomoon', sans-serif;
   margin-right: 5px;
 }
 
@@ -29,7 +29,7 @@ a[href^="https://github.com"]:before {
   &:before {
     display: inline-block;
     content: "\e63a";
-    font-family: 'icomoon';
+    font-family: 'icomoon', sans-serif;
     vertical-align: top;
   }
 
@@ -77,7 +77,7 @@ a[href^="https://github.com"]:before {
     line-height: 36px;
   }
 
-  @include respond-to(phone) {
+  @include respond-to($phone) {
     display: block;
   }
 }
@@ -89,7 +89,7 @@ body, html {
 body {
   font-size: 1.8rem;
 
-  @include respond-to(phone) {
+  @include respond-to($phone) {
     @include font-size($text__size--md);
   }
 }
@@ -115,7 +115,7 @@ main {
     height: 100%;
     padding: 0 !important;
 
-    @include respond-to(phone) {
+    @include respond-to($phone) {
       @include transform-free(translateX(-100%));
       @include transition();
       position: fixed;
@@ -140,11 +140,11 @@ main {
       height: 100%;
       color: $text__color--second;
 
-      @include respond-to(mobile) {
+      @include respond-to($mobile) {
         padding: $grid__row--gutter;
       }
 
-      @include respond-to(phone) {
+      @include respond-to($phone) {
         position: static;
       }
     }
@@ -155,7 +155,7 @@ main {
       line-height: 1;
       @include font-size(30px);
 
-      @include respond-to(phone) {
+      @include respond-to($phone) {
         text-align: center;
       }
 
@@ -184,7 +184,7 @@ main {
       line-height: normal;
       text-align: right;
 
-      @include respond-to(phone) {
+      @include respond-to($phone) {
         text-align: center;
       }
 
@@ -224,18 +224,18 @@ main {
   > section[class*="col-"] {
     padding: $grid__row--gutter*2;
 
-    @include respond-to(tablet) {
+    @include respond-to($tablet) {
       padding: $grid__row--gutter;
     }
 
-    @include respond-to(phone) {
+    @include respond-to($phone) {
       padding: 15px 15px 61px;
     }
 
     > h1 {
       font-family: $font__base--light;
 
-      @include respond-to(phone) {
+      @include respond-to($phone) {
         text-align: center;
       }
     }
@@ -275,7 +275,7 @@ pre.code-example[class*="language-"]{
   border: 0;
   @extend %clearfix;
 
-  @include respond-to(mobile) {
+  @include respond-to($mobile) {
     padding: 15px;
   }
 }

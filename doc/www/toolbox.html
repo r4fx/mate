@@ -109,36 +109,22 @@
 
 <h3>Media queries breakpoint</h3>
 <ul class="list-unstyled">
-    <li><code>respond-to($point, $modifier: null)</code></li>
+    <li><code>respond-to($media)</code></li>
 </ul>
 <p>Jeden z najważniejszych mixinów odpowiadający za media queries i breakpointy na potrzeby RWD. <br>
-    Obsługowane breakpointy: <code>mobile</code>, <code>phone</code>, <code>tablet</code>, <code>desktop</code> <br>
+    Obsługowane breakpointy: <code>$mobile</code>, <code>$phone</code>, <code>$tablet</code>, <code>$desktop</code>, <code>$desktop--xl</code> <br>
 </p>
-<p>Mobile odpowiada za zakresy phone + tablet. Desktop może przyjąć dodatkowy argument <code>xl</code>, <br>
-    przykład:</p>
+<p>Mobile odpowiada za zakresy phone + tablet.</p>
+<p>przykład:</p>
+
 <div class="code-example">
     <div data-clone class="hidden">
-        div[class*="col-"] {
-            position: fixed;
-            left: 0;
-            top: 0;
-            padding: $grid__row--gutter*2;
+        body {
+            font-size: 3rem;
 
-            @include respond-to(mobile) {
-                position: static;
-                padding: $grid__row--gutter;
+            @include respond-to($mobile) {
+                font-size: 1.6rem;
             }
-        }
-
-        ul {
-            text-align: right;
-            @include respond-to(phone) {
-                text-align: center;
-            }
-        }
-
-        @include respond-to(desktop, xl) {
-            width: 100%;
         }
     </div>
     <pre lang="scss"></pre>
