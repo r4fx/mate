@@ -27,12 +27,15 @@
   -moz-column-gap: 50px;
   column-gap: 50px; }
 
-[class*="masonry-"] > article,
-[class*="masonry-"] > [class*="col-"] {
+[class*="masonry-"] > article {
   display: inline-block;
   float: none;
   padding: 0;
   width: 100%; }
+  [class*="masonry-"] > article.masonry-span {
+    -webkit-column-span: all;
+    column-span: all;
+    display: block; }
 
 .masonry-1 {
   -webkit-column-count: 1;

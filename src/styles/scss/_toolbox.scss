@@ -259,6 +259,7 @@
 // ============================================================
 // NATIVE CSS MULTI COLUMNS
 // resources: http://caniuse.com/#search=column
+// Inpiration: http://people.opera.com/pepelsbey/experiments/multicol/
 // ============================================================
 
 // Examples:
@@ -309,16 +310,21 @@
 [class*="masonry-"] {
   @extend %masonry-common;
 
-  > article,
-  > [class*="col-"] {
+  > article {
     display: inline-block;
     float: none;
     padding: 0;
     width: 100%;
+
+    &.masonry-span {
+      -webkit-column-span: all;
+      column-span: all;
+      display: block;
+    }
   }
 }
 
-.masonry{
+.masonry {
   @include masonry-count;
   @include masonry-phone;
   @include masonry-tablet;
