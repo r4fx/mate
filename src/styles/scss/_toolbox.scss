@@ -83,6 +83,7 @@ $phone:       'screen and (max-width: #{$breakPoint__phone - 1})';
 $tablet:      'screen and (max-width: #{$breakPoint__desktop - 1}) and (min-width: #{$breakPoint__phone})';
 $desktop:     '(min-width: #{$breakPoint__desktop})';
 $desktop--xl: '(min-width: #{$breakPoint__desktop--xl + 1})';
+$print: 'print';
 
 @mixin respond-to($media) {
   @media #{$media} {
