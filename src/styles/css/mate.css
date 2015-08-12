@@ -877,7 +877,27 @@ ul .separator, ol .separator, dl .separator {
 .btn--outline {
   border-radius: 5px;
   background-color: transparent;
-  box-shadow: 0 0 0 2px inset; }
+  border: 2px solid;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem; }
+  .btn--outline.btn--xs {
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem; }
+  .btn--outline.btn--sm {
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem; }
+  .btn--outline.btn--md {
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem; }
+  .btn--outline.btn--lg {
+    padding-top: 1.05rem;
+    padding-bottom: 1.05rem; }
+  .btn--outline.btn--xl {
+    padding-top: 1.3rem;
+    padding-bottom: 1.3rem; }
+  .btn--outline.btn--xxl {
+    padding-top: 1.55rem;
+    padding-bottom: 1.55rem; }
 .btn--block {
   display: block;
   width: 100%; }

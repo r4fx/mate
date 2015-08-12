@@ -84,6 +84,28 @@ $list__btn-sizes: (xs 0.30rem), (sm 0.8rem), (md 1rem), (lg 1.25rem), (xl 1.5rem
   }
 }
 
+// Generate outline sizes
+// ------------------------------------------------------------
+@mixin generate-btn-outline($default: null) {
+
+  @each $n in $list__btn-sizes {
+    $type: nth($n, 1);
+    $padding: nth($n, 2);
+    $btn-padding-vertical: $padding;
+
+    // Generate default size
+    @if $default == $type {
+      padding-top: $btn-padding-vertical - calculateRem($btn__outline--width);
+      padding-bottom: $btn-padding-vertical - calculateRem($btn__outline--width);
+    }
+
+    &.btn--#{$type} {
+      padding-top: $btn-padding-vertical - calculateRem($btn__outline--width);
+      padding-bottom: $btn-padding-vertical - calculateRem($btn__outline--width);
+    }
+  }
+}
+
 // BUTTON: BASE
 // ============================================================
 .btn {
@@ -269,9 +291,9 @@ $list__btn-sizes: (xs 0.30rem), (sm 0.8rem), (md 1rem), (lg 1.25rem), (xl 1.5rem
   &--outline {
     border-radius: $border__radius;
     background-color: transparent;
-
-    // Magic border, border color is set by "color" property inherited from text
-    box-shadow: 0 0 0 $btn__outline--width inset;
+    //box-shadow: 0 0 0 $btn__outline--width inset;
+    border: $btn__outline--width solid;
+    @include generate-btn-outline(md);
   }
 
   // Block
