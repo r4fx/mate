@@ -1693,7 +1693,9 @@ table.table--bordered [class*="col-"]:first-child, table.table--bordered .row > 
 .table-css.table--bordered [class*="col-"]:first-child, .table-css.table--bordered .row > div:first-child {
   border-left: 0; }
 
-table tbody tr:last-child td {
+table tbody th {
+  text-align: left; }
+table tbody tr:last-child th, table tbody tr:last-child td {
   border-bottom: 0; }
 
 .table-css {

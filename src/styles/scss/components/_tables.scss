@@ -98,8 +98,12 @@ table {
   }
 
   tbody {
+    th {
+      text-align: left;
+    }
+
     tr:last-child {
-      td {
+      th, td {
         border-bottom: 0;
       }
     }
