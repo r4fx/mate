@@ -1375,6 +1375,9 @@ label > .form-error__message {
 .icon-layers:before {
   content: "\e63f"; }
 
+.icon-certificate:before {
+  content: "\e682"; }
+
 .icon-security:before {
   content: "\e640"; }
 
