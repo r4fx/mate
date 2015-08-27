@@ -1650,7 +1650,8 @@ table thead, .table-css .table-thead [class*="col-"],
 table th, table td, .table-css [class*="col-"],
 .table-css .row > div {
   padding: 0.5em 1em;
-  border-bottom: 1px solid #CCC; }
+  border-bottom: 1px solid #CCC;
+  font-weight: normal; }
 
 table.table--bordered, .table-css.table--bordered {
   border: 1px solid #CCC; }
