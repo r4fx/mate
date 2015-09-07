@@ -77,6 +77,7 @@
 // @include respond-to($desktop--xl) {
 //  font-size: 3rem;
 // }
+// todo: write abour "print"
 // ============================================================
 $mobile:      'screen and (max-width: #{$breakPoint__desktop -1})';
 $phone:       'screen and (max-width: #{$breakPoint__phone - 1})';
