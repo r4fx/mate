@@ -172,9 +172,13 @@ $print: 'print';
 // FLEX BOX
 // resources:
 // https://scotch.io/demos/visual-guide-to-css3-flexbox-flexbox-playground
-// https://css-tricks.com/snippets/css/a-guide-to-flexbox/?utm_source=dlvr.it&utm_medium=facebook
+// https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 // todo: make mixin with params
 // ============================================================
+
+// Examples:
+// <div class="box--flex">...</div>
+
 @mixin flex-wrap {
   display: -ms-flexbox;
   display: -webkit-flex;
