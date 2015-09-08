@@ -338,11 +338,11 @@ html {
       html:after {
         content: 'medium';
         background-color: deepskyblue; } }
-    @media (min-width: 1024px) {
+    @media screen and (min-width: 1024px) {
       html:after {
         content: 'large';
         background-color: mediumpurple; } }
-    @media (min-width: 1281px) {
+    @media screen and (min-width: 1281px) {
       html:after {
         content: 'x-large';
         background-color: tomato; } }
@@ -700,6 +700,22 @@ ul .separator, ol .separator, dl .separator {
   margin-right: -25px; }
   .row .row {
     clear: both; }
+
+.table--rwd-cols {
+  width: 100%; }
+  .table--rwd-cols tr {
+    display: block; }
+  .table--rwd-cols td {
+    display: block;
+    padding: 0 0 0 50px;
+    width: 50%;
+    float: left; }
+    @media screen and (max-width: 719px) {
+      .table--rwd-cols td {
+        width: 100%;
+        padding: 0 0 25px 0; } }
+    .table--rwd-cols td:first-child {
+      padding-left: 0; }
 
 .btn {
   line-height: 1.5;
@@ -1789,11 +1805,11 @@ table tbody tr:last-child th, table tbody tr:last-child td {
 .hidden {
   display: none !important; }
 
-@media (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
   .hidden--desktop {
     display: none !important; } }
 
-@media screen and (max-width: 1024px -1) {
+@media screen and (max-width: 1023px) {
   .hidden--mobile {
     display: none !important; } }
 

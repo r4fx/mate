@@ -75,19 +75,30 @@
 // Examples:
 //
 // @include respond-to($desktop--xl) {
-//  font-size: 3rem;
+//    font-size: 3rem;
 // }
-// todo: write abour "print"
+//
+// @include respond-to-free('min-width', 1750px) {
+//    bottom: 25%;
+// }
+//
 // ============================================================
-$mobile:      'screen and (max-width: #{$breakPoint__desktop -1})';
-$phone:       'screen and (max-width: #{$breakPoint__phone - 1})';
-$tablet:      'screen and (max-width: #{$breakPoint__desktop - 1}) and (min-width: #{$breakPoint__phone})';
-$desktop:     '(min-width: #{$breakPoint__desktop})';
-$desktop--xl: '(min-width: #{$breakPoint__desktop--xl + 1})';
+$mobile: 'screen and (max-width: #{$breakPoint__desktop - 1})';
+$phone: 'screen and (max-width: #{$breakPoint__phone - 1})';
+$tablet: 'screen and (max-width: #{$breakPoint__desktop - 1}) and (min-width: #{$breakPoint__phone})';
+$desktop: 'screen and (min-width: #{$breakPoint__desktop})';
+$desktop--xl: 'screen and (min-width: #{$breakPoint__desktop--xl + 1})';
 $print: 'print';
 
 @mixin respond-to($media) {
   @media #{$media} {
+    @content;
+  }
+}
+
+// TODO: add to manual
+@mixin respond-to-free($target, $media) {
+  @media screen and ($target: $media) {
     @content;
   }
 }

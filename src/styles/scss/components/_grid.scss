@@ -155,3 +155,30 @@
 
   @extend %clearfix;
 }
+
+// TABLE WITH RWD COLUMNS
+// todo: add to manual
+// ------------------------------------------------------------
+.table--rwd-cols {
+  width: 100%;
+
+  tr {
+    display: block;
+  }
+
+  td {
+    display: block;
+    padding: 0 0 0 $grid__col--gutter*2;
+    width: 50%;
+    float: left;
+
+    @include respond-to($phone) {
+      width: 100%;
+      padding: 0 0 $grid__row--gutter 0;
+    }
+
+    &:first-child {
+      padding-left: 0;
+    }
+  }
+}
