@@ -109,10 +109,10 @@ hr {
   border: 0;
   height: 1px;
   background-color: $border__color--first;
-  margin: 15px auto;
+  margin: $grid__row--gutter auto;
 
   &.mini {
     width: 150px;
-    margin: 50px auto;
+    margin: $grid__row--gutter*2 auto;
   }
 }
