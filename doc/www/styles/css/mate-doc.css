@@ -724,6 +724,9 @@ ul .separator, ol .separator, dl .separator {
   .btn--xs {
     font-size: 1.2rem;
     padding: 0.3rem 0.6rem; }
+    @media screen and (max-width: 719px) {
+      .btn--xs {
+        padding: 0.201rem 0.6rem; } }
     .btn--xs.btn--arrow-l {
       margin-left: 1.2rem; }
       .btn--xs.btn--arrow-l:before {
@@ -737,6 +740,9 @@ ul .separator, ol .separator, dl .separator {
   .btn--sm {
     font-size: 1.4rem;
     padding: 0.8rem 1.6rem; }
+    @media screen and (max-width: 719px) {
+      .btn--sm {
+        padding: 0.536rem 1.6rem; } }
     .btn--sm.btn--arrow-l {
       margin-left: 1.85rem; }
       .btn--sm.btn--arrow-l:before {
@@ -747,6 +753,9 @@ ul .separator, ol .separator, dl .separator {
       .btn--sm.btn--arrow-r:after {
         border-width: 1.85rem 0 1.85rem 1.85rem;
         margin-right: 1.85rem; }
+  @media screen and (max-width: 719px) {
+    .btn {
+      padding: 0.67rem 2rem; } }
   .btn.btn--arrow-l {
     margin-left: 2.2rem; }
     .btn.btn--arrow-l:before {
@@ -760,6 +769,9 @@ ul .separator, ol .separator, dl .separator {
   .btn--md {
     font-size: 1.6rem;
     padding: 1rem 2rem; }
+    @media screen and (max-width: 719px) {
+      .btn--md {
+        padding: 0.67rem 2rem; } }
     .btn--md.btn--arrow-l {
       margin-left: 2.2rem; }
       .btn--md.btn--arrow-l:before {
@@ -773,6 +785,9 @@ ul .separator, ol .separator, dl .separator {
   .btn--lg {
     font-size: 2.2rem;
     padding: 1.25rem 2.5rem; }
+    @media screen and (max-width: 719px) {
+      .btn--lg {
+        padding: 0.8375rem 2.5rem; } }
     .btn--lg.btn--arrow-l {
       margin-left: 2.9rem; }
       .btn--lg.btn--arrow-l:before {
@@ -786,6 +801,9 @@ ul .separator, ol .separator, dl .separator {
   .btn--xl {
     font-size: 3.4rem;
     padding: 1.5rem 3rem; }
+    @media screen and (max-width: 719px) {
+      .btn--xl {
+        padding: 1.005rem 3rem; } }
     .btn--xl.btn--arrow-l {
       margin-left: 4.05rem; }
       .btn--xl.btn--arrow-l:before {
@@ -799,6 +817,9 @@ ul .separator, ol .separator, dl .separator {
   .btn--xxl {
     font-size: 4.2rem;
     padding: 1.75rem 3.5rem; }
+    @media screen and (max-width: 719px) {
+      .btn--xxl {
+        padding: 1.1725rem 3.5rem; } }
     .btn--xxl.btn--arrow-l {
       margin-left: 4.9rem; }
       .btn--xxl.btn--arrow-l:before {
@@ -891,21 +912,49 @@ ul .separator, ol .separator, dl .separator {
   .btn--outline.btn--xs {
     padding-top: 0.1rem;
     padding-bottom: 0.1rem; }
+    @media screen and (max-width: 719px) {
+      .btn--outline.btn--xs {
+        padding-top: 0.067rem;
+        padding-bottom: 0.067rem; } }
   .btn--outline.btn--sm {
     padding-top: 0.6rem;
     padding-bottom: 0.6rem; }
+    @media screen and (max-width: 719px) {
+      .btn--outline.btn--sm {
+        padding-top: 0.402rem;
+        padding-bottom: 0.402rem; } }
+  @media screen and (max-width: 719px) {
+    .btn--outline {
+      padding-top: 0.536rem;
+      padding-bottom: 0.536rem; } }
   .btn--outline.btn--md {
     padding-top: 0.8rem;
     padding-bottom: 0.8rem; }
+    @media screen and (max-width: 719px) {
+      .btn--outline.btn--md {
+        padding-top: 0.536rem;
+        padding-bottom: 0.536rem; } }
   .btn--outline.btn--lg {
     padding-top: 1.05rem;
     padding-bottom: 1.05rem; }
+    @media screen and (max-width: 719px) {
+      .btn--outline.btn--lg {
+        padding-top: 0.7035rem;
+        padding-bottom: 0.7035rem; } }
   .btn--outline.btn--xl {
     padding-top: 1.3rem;
     padding-bottom: 1.3rem; }
+    @media screen and (max-width: 719px) {
+      .btn--outline.btn--xl {
+        padding-top: 0.871rem;
+        padding-bottom: 0.871rem; } }
   .btn--outline.btn--xxl {
     padding-top: 1.55rem;
     padding-bottom: 1.55rem; }
+    @media screen and (max-width: 719px) {
+      .btn--outline.btn--xxl {
+        padding-top: 1.0385rem;
+        padding-bottom: 1.0385rem; } }
 .btn--block {
   display: block;
   width: 100%; }

@@ -35,10 +35,9 @@ $list__btn-sizes: (xs 0.30rem), (sm 0.8rem), (md 1rem), (lg 1.25rem), (xl 1.5rem
   }
 }
 
-// Buttons common sets
+// Common arrow sets
 // ------------------------------------------------------------
-@mixin btn-common-sets($arrow-border-size, $btn-padding-vertical, $btn-padding-horizontal) {
-  padding: $btn-padding-vertical $btn-padding-horizontal;
+@mixin btn-common-arrows($arrow-border-size) {
 
   &.btn--arrow-l {
     margin-left: $arrow-border-size;
@@ -61,7 +60,16 @@ $list__btn-sizes: (xs 0.30rem), (sm 0.8rem), (md 1rem), (lg 1.25rem), (xl 1.5rem
 
 // Generate sizes
 // ------------------------------------------------------------
-@mixin generate-btn-sizes($default: null) {
+@mixin generate-btn-sizes-styles($type, $btn-padding-vertical, $btn-padding-horizontal) {
+  font-size: calculateRem(getTextSize($type));
+  padding: $btn-padding-vertical $btn-padding-horizontal;
+
+  @include respond-to($phone) {
+    padding: ($btn-padding-vertical*0.67) $btn-padding-horizontal;
+  }
+}
+
+@mixin generate-btn-sizes($default: md) {
 
   @each $n in $list__btn-sizes {
     $type: nth($n, 1);
@@ -72,22 +80,31 @@ $list__btn-sizes: (xs 0.30rem), (sm 0.8rem), (md 1rem), (lg 1.25rem), (xl 1.5rem
 
     // Generate default size
     @if $default == $type {
-      font-size: calculateRem(getTextSize($default));
-      @include btn-common-sets($arrow-border-size, $btn-padding-vertical, $btn-padding-horizontal);
+      @include generate-btn-sizes-styles($type, $btn-padding-vertical, $btn-padding-horizontal);
+      @include btn-common-arrows($arrow-border-size);
     }
 
     // Generates all button sizes
     &--#{$type} {
-      font-size: calculateRem(getTextSize($type));
-      @include btn-common-sets($arrow-border-size, $btn-padding-vertical, $btn-padding-horizontal);
+      @include generate-btn-sizes-styles($type, $btn-padding-vertical, $btn-padding-horizontal);
+      @include btn-common-arrows($arrow-border-size);
     }
   }
 }
 
 // Generate outline sizes
 // ------------------------------------------------------------
-@mixin generate-btn-outline($default: null) {
+@mixin generate-btn-outline-styles($btn-padding-vertical) {
+  padding-top: $btn-padding-vertical - calculateRem($btn__outline--width);
+  padding-bottom: $btn-padding-vertical - calculateRem($btn__outline--width);
 
+  @include respond-to($phone) {
+    padding-top: ($btn-padding-vertical - calculateRem($btn__outline--width)) * 0.67;
+    padding-bottom: ($btn-padding-vertical - calculateRem($btn__outline--width)) * 0.67;
+  }
+}
+
+@mixin generate-btn-outline($default: md) {
   @each $n in $list__btn-sizes {
     $type: nth($n, 1);
     $padding: nth($n, 2);
@@ -95,13 +112,11 @@ $list__btn-sizes: (xs 0.30rem), (sm 0.8rem), (md 1rem), (lg 1.25rem), (xl 1.5rem
 
     // Generate default size
     @if $default == $type {
-      padding-top: $btn-padding-vertical - calculateRem($btn__outline--width);
-      padding-bottom: $btn-padding-vertical - calculateRem($btn__outline--width);
+      @include generate-btn-outline-styles($btn-padding-vertical);
     }
 
     &.btn--#{$type} {
-      padding-top: $btn-padding-vertical - calculateRem($btn__outline--width);
-      padding-bottom: $btn-padding-vertical - calculateRem($btn__outline--width);
+      @include generate-btn-outline-styles($btn-padding-vertical);
     }
   }
 }
@@ -121,7 +136,7 @@ $list__btn-sizes: (xs 0.30rem), (sm 0.8rem), (md 1rem), (lg 1.25rem), (xl 1.5rem
   @extend %noselect;
 
   // Sizes
-  @include generate-btn-sizes(md); // parameter means default size
+  @include generate-btn-sizes();
 }
 
 // BUTTON: COLORS
@@ -292,7 +307,7 @@ $list__btn-sizes: (xs 0.30rem), (sm 0.8rem), (md 1rem), (lg 1.25rem), (xl 1.5rem
     border-radius: $border__radius;
     background-color: transparent;
     border: $btn__outline--width solid;
-    @include generate-btn-outline(md);
+    @include generate-btn-outline();
   }
 
   // Block
