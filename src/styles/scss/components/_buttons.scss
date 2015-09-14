@@ -291,7 +291,6 @@ $list__btn-sizes: (xs 0.30rem), (sm 0.8rem), (md 1rem), (lg 1.25rem), (xl 1.5rem
   &--outline {
     border-radius: $border__radius;
     background-color: transparent;
-    //box-shadow: 0 0 0 $btn__outline--width inset;
     border: $btn__outline--width solid;
     @include generate-btn-outline(md);
   }
