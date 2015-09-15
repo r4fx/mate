@@ -163,6 +163,10 @@ select {
   padding-right: 25px;
   background-repeat: no-repeat;
   background-position: right center;
+
+  &:-ms-expand {
+    display: none;
+  }
 }
 
 textarea {
