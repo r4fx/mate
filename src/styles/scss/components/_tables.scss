@@ -48,6 +48,11 @@
 // COMMON FOR STANDARD TABLE & CSS TABLE
 // ============================================================
 table, .table-css {
+  // RWD
+  @include respond-to($mobile) {
+    overflow-x: auto;
+    display: block;
+  }
 
   // Super wide
   &.table--wide {
