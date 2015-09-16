@@ -1754,7 +1754,8 @@ table th, table td, .table-css [class*="col-"],
 .table-css .row > div {
   padding: 0.5em 1em;
   border-bottom: 1px solid #CCC;
-  font-weight: normal; }
+  font-weight: normal;
+  line-height: normal; }
 
 table.table--bordered, .table-css.table--bordered {
   border: 1px solid #CCC; }
