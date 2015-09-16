@@ -612,6 +612,31 @@ ul .separator, ol .separator, dl .separator {
   width: 91.66667%; }
 .col-12 {
   width: 100%; }
+@media screen and (max-width: 1023px) {
+  .col-1--mobile {
+    width: 8.33333%; }
+  .col-2--mobile {
+    width: 16.66667%; }
+  .col-3--mobile {
+    width: 25%; }
+  .col-4--mobile {
+    width: 33.33333%; }
+  .col-5--mobile {
+    width: 41.66667%; }
+  .col-6--mobile {
+    width: 50%; }
+  .col-7--mobile {
+    width: 58.33333%; }
+  .col-8--mobile {
+    width: 66.66667%; }
+  .col-9--mobile {
+    width: 75%; }
+  .col-10--mobile {
+    width: 83.33333%; }
+  .col-11--mobile {
+    width: 91.66667%; }
+  .col-12--mobile {
+    width: 100%; } }
 @media screen and (max-width: 1023px) and (min-width: 720px) {
   .col-1--tablet {
     width: 8.33333%; }

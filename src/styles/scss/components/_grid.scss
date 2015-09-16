@@ -15,23 +15,22 @@
   padding-right: $grid__col--gutter;
 }
 
-// COMMON STYLES FOR ALL DEVICES
-// todo: to remove because of [class*="col-"]
-@mixin grid-cols-common {
-  @for $i from 1 through $grid__columns {
-    &-#{$i},
-    &-#{$i}--tablet,
-    &-#{$i}--phone {
-      @extend %grid-cols-common;
-    }
-  }
-}
-
 // DEFAULT COLUMNS FOR DESKTOP
 @mixin grid-cols {
   @for $i from 1 through $grid__columns {
     &-#{$i} {
       width: grid-calc($i, $grid__columns);
+    }
+  }
+}
+
+// RWD COLUMNS FOR COMMON MOBILE
+@mixin grid-cols-mobile {
+  @include respond-to($mobile) {
+    @for $i from 1 through $grid__columns {
+      &-#{$i}--mobile {
+        width: grid-calc($i, $grid__columns);
+      }
     }
   }
 }
@@ -124,8 +123,8 @@
     padding: 0;
   }
 
-  //@include grid-cols-common; // todo: to remove because of [class*="col-"]
   @include grid-cols;
+  @include grid-cols-mobile;
   @include grid-cols-tablet;
   @include grid-cols-phone;
   @include grid-cols-offset;
@@ -156,8 +155,7 @@
   @extend %clearfix;
 }
 
-// TABLE WITH RWD COLUMNS
-// todo: add to manual
+// TABLE RWD
 // ------------------------------------------------------------
 .table--rwd-cols {
   width: 100%;
