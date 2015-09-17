@@ -107,6 +107,9 @@ table {
   tbody {
     th {
       text-align: left;
+      font-family: $font__base--bold;
+      line-height: normal;
+      vertical-align: top;
     }
 
     tr:last-child {
