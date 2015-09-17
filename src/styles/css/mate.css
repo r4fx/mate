@@ -1748,14 +1748,14 @@ table thead, .table-css .table-thead [class*="col-"],
 .table-css .table-thead > div {
   background-color: #DDD;
   font-family: "lato-bold", Arial, sans-serif;
-  text-align: left; }
+  text-align: left;
+  line-height: normal; }
 
 table th, table td, .table-css [class*="col-"],
 .table-css .row > div {
   padding: 0.5em 1em;
   border-bottom: 1px solid #CCC;
-  font-weight: normal;
-  line-height: normal; }
+  font-weight: normal; }
 
 table.table--bordered, .table-css.table--bordered {
   border: 1px solid #CCC; }

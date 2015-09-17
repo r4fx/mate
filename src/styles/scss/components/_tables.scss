@@ -12,13 +12,13 @@
   background-color: $block__color--first;
   font-family: $font__base--bold;
   text-align: left;
+  line-height: normal;
 }
 
 %table-cell {
   padding: 0.5em 1em;
   border-bottom: 1px solid $border__color--first;
   font-weight: normal;
-  line-height: normal;
 }
 
 %table-bordered-frame {
