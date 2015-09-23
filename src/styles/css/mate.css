@@ -1212,9 +1212,12 @@ input[type="radio"] {
 
 input[type="checkbox"].mate-input,
 input[type="radio"].mate-input {
-  display: none;
-  position: absolute;
-  left: -9999px; }
+  opacity: 0;
+  margin: 0;
+  width: 1px;
+  height: 1px;
+  top: -10px;
+  right: -10px; }
   input[type="checkbox"].mate-input + span,
   input[type="checkbox"].mate-input + label,
   input[type="radio"].mate-input + span,
