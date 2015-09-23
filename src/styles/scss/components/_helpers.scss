@@ -123,6 +123,7 @@
 .link-neutral {
   text-decoration: none;
   color: $text__color--first;
+  word-wrap: break-word;
 
   &:hover {
     color: $text__color--link;

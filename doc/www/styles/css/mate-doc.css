@@ -1899,7 +1899,8 @@ table tbody tr:last-child th, table tbody tr:last-child td {
 
 .link-neutral {
   text-decoration: none;
-  color: #3c3c3c; }
+  color: #3c3c3c;
+  word-wrap: break-word; }
   .link-neutral:hover {
     color: #249cff; }
 
