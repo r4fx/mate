@@ -111,22 +111,6 @@ $print: 'print';
 }
 
 // ============================================================
-// REM FONT SIZE
-// Examples:
-// @include font-size(14px, 60px); - general
-// @include font-size($text__size--md, $text__line-height--md); - general
-// @include font-size(14px, 1); - for text inputs
-// ============================================================
-@mixin font-size($size, $line-height: null) {
-  font-size: calculateRem($size);
-
-  // Optional unitless line height http://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/
-  @if $line-height {
-    line-height: ceil($size / $line-height) * ($line-height / $size);
-  }
-}
-
-// ============================================================
 // TRANSFORMS
 // ============================================================
 

@@ -11,21 +11,21 @@
   &::-webkit-input-placeholder {
     color: $color;
     @if $size {
-      @include font-size($size);
+      font-size: $size;
     }
   }
 
   &::-moz-placeholder {
     color: $color;
     @if $size {
-      @include font-size($size);
+      font-size: $size;
     }
   }
 
   &:-ms-input-placeholder {
     color: $color;
     @if $size {
-      @include font-size($size);
+      font-size: $size;
     }
   }
 
@@ -33,7 +33,7 @@
   &::placeholder {
     color: $color;
     @if $size {
-      @include font-size($size);
+      font-size: $size;
     }
   }
 }
@@ -140,7 +140,7 @@ textarea {
   -moz-appearance: none;
   appearance: none;
   line-height: 1.42857143;
-  @include font-size($text__size--md);
+  font-size: $text__size--md;
 
   // min. 16px on mobile devices prevent zooming to element
   @include respond-to($phone) {
@@ -290,7 +290,7 @@ input[type="radio"].mate-input {
     color: $color__message--alert;
     display: block;
     text-transform: uppercase;
-    @include font-size($text__size--xs);
+    font-size: $text__size--xs;
   }
 
   input[type="text"],

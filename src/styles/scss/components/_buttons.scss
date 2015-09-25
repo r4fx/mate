@@ -61,7 +61,7 @@ $list__btn-sizes: (xs 0.30rem), (sm 0.8rem), (md 1rem), (lg 1.25rem), (xl 1.5rem
 // Generate sizes
 // ------------------------------------------------------------
 @mixin generate-btn-sizes-styles($type, $btn-padding-vertical, $btn-padding-horizontal) {
-  font-size: calculateRem(getTextSize($type));
+  font-size: getTextSize($type);
   padding: $btn-padding-vertical $btn-padding-horizontal;
 
   @include respond-to($phone) {
@@ -76,7 +76,7 @@ $list__btn-sizes: (xs 0.30rem), (sm 0.8rem), (md 1rem), (lg 1.25rem), (xl 1.5rem
     $padding: nth($n, 2);
     $btn-padding-vertical: $padding;
     $btn-padding-horizontal: $btn-padding-vertical*2;
-    $arrow-border-size: (calculateRem(getTextSize($type)) * $text__line-height-ratio + ($btn-padding-vertical*2)) /2;
+    $arrow-border-size: (getTextSize($type) * $text__line-height-ratio + ($btn-padding-vertical*2)) /2;
 
     // Generate default size
     @if $default == $type {

@@ -353,7 +353,7 @@ html {
 body {
   color: #3c3c3c;
   font-family: "lato-light", Arial, sans-serif;
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
@@ -430,71 +430,66 @@ strong, b {
 h1 {
   font-size: 4.2rem;
   font-family: "lato-regular", Arial, sans-serif;
-  margin: 42px 0;
+  margin: 4.2rem 0;
   line-height: 1;
   font-weight: normal; }
   @media screen and (max-width: 719px) {
     h1 {
-      font-size: 2.8rem;
-      margin: 28px 0; } }
+      margin: 2rem 0; } }
   h1:first-child {
     margin-top: 0; }
 
 h2 {
   font-size: 3.4rem;
   font-family: "lato-regular", Arial, sans-serif;
-  margin: 34px 0;
+  margin: 3.4rem 0;
   font-weight: normal;
   line-height: 1; }
   @media screen and (max-width: 719px) {
     h2 {
-      font-size: 2.2rem;
-      margin: 22px 0; } }
+      margin: 2rem 0; } }
   h2:first-child {
     margin-top: 0; }
 
 h3 {
   font-size: 2.2rem;
   font-family: "lato-regular", Arial, sans-serif;
-  margin: 22px 0;
+  margin: 2.2rem 0;
   font-weight: normal;
   line-height: 1; }
   @media screen and (max-width: 719px) {
     h3 {
-      font-size: 1.4rem;
-      margin: 14px 0; } }
+      margin: 1rem 0; } }
   h3:first-child {
     margin-top: 0; }
 
 h4 {
   font-size: 1.6rem;
   font-family: "lato-regular", Arial, sans-serif;
-  margin: 22px 0;
+  margin: 2.2rem 0;
   font-weight: normal;
   line-height: 1; }
   @media screen and (max-width: 719px) {
     h4 {
-      font-size: 1rem;
-      margin: 10px 0; } }
+      margin: 1rem 0; } }
   h4:first-child {
     margin-top: 0; }
 
 h5 {
   font-size: 1.4rem;
   font-family: "lato-regular", Arial, sans-serif;
-  margin: 14px 0;
+  margin: 1.4rem 0;
   font-weight: normal;
   line-height: normal; }
   @media screen and (max-width: 719px) {
     h5 {
-      font-size: 0.9rem;
-      margin: 9px 0; } }
+      margin: 0rem 0; } }
   h5:first-child {
     margin-top: 0; }
 
 h6 {
   font-size: 1.2rem;
-  margin: 12px 0;
+  margin: 1.2rem 0;
   font-weight: normal;
   line-height: normal; }
 
@@ -573,7 +568,8 @@ ul .separator, ol .separator, dl .separator {
 .box {
   max-width: 1024px;
   margin: 0 auto;
-  padding: 0 25px; }
+  padding-left: 25px;
+  padding-right: 25px; }
   .box--fluid {
     width: 100%; }
   .box--flex {
