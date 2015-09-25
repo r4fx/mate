@@ -323,6 +323,7 @@ html {
     html {
       font-size: 52.5%; } }
   html:after {
+    content: 'Unhide to see device size in corner';
     visibility: hidden;
     position: fixed;
     z-index: 99999;

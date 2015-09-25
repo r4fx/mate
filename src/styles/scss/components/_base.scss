@@ -17,6 +17,7 @@ html {
   // todo: describe in manual, + how to use with JS
   // todo: add var in settings to disable?
   &:after {
+    content: 'Unhide to see device size in corner';
     visibility: hidden;
     position: fixed;
     z-index: 99999;
