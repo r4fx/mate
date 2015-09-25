@@ -318,7 +318,10 @@ optgroup {
   font-weight: bold; }
 
 html {
-  font-size: 10px; }
+  font-size: 62.5%; }
+  @media screen and (max-width: 1023px) {
+    html {
+      font-size: 52.5%; } }
   html:after {
     visibility: hidden;
     position: fixed;
@@ -569,7 +572,8 @@ ul .separator, ol .separator, dl .separator {
 
 .box {
   max-width: 1024px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 0 25px; }
   .box--fluid {
     width: 100%; }
   .box--flex {
