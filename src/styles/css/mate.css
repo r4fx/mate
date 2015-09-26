@@ -353,12 +353,52 @@ html {
 
 body {
   color: #3c3c3c;
-  font-family: "lato-light", Arial, sans-serif;
+  font-family: "LatoRegular", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif, sans-serif;
   font-size: 1.6rem;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+@font-face {
+  font-family: "LatoRegular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../fonts/lato/Lato-Regular.woff2") format("woff2"), url("../../fonts/lato/Lato-Regular.woff") format("woff"); }
+@font-face {
+  font-family: "LatoMedium";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../fonts/lato/Lato-Medium.woff2") format("woff2"), url("../../fonts/lato/Lato-Medium.woff") format("woff"); }
+@font-face {
+  font-family: "LatoBold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../fonts/lato/Lato-Bold.woff2") format("woff2"), url("../../fonts/lato/Lato-Bold.woff") format("woff"); }
+@font-face {
+  font-family: "LatoLight";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../fonts/lato/Lato-Light.woff2") format("woff2"), url("../../fonts/lato/Lato-Light.woff") format("woff"); }
+@font-face {
+  font-family: "LatoItalic";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../fonts/lato/Lato-Italic.woff2") format("woff2"), url("../../fonts/lato/Lato-Italic.woff") format("woff"); }
+@font-face {
+  font-family: "LatoMediumItalic";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../fonts/lato/Lato-MediumItalic.woff2") format("woff2"), url("../../fonts/lato/Lato-MediumItalic.woff") format("woff"); }
+@font-face {
+  font-family: "LatoBoldItalic";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../fonts/lato/Lato-BoldItalic.woff2") format("woff2"), url("../../fonts/lato/Lato-BoldItalic.woff") format("woff"); }
+@font-face {
+  font-family: "LatoLightItalic";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../fonts/lato/Lato-LightItalic.woff2") format("woff2"), url("../../fonts/lato/Lato-LightItalic.woff") format("woff"); }
 .color--alert {
   color: #B03C1D; }
 
@@ -389,48 +429,18 @@ hr {
     width: 150px;
     margin: 50px auto; }
 
-@font-face {
-  font-family: "lato-regular";
-  font-style: normal;
-  font-weight: normal;
-  src: url("../../fonts/lato/lato-regular.woff2") format("woff2"), url("../../fonts/lato/lato-regular.woff") format("woff"), url("../../fonts/lato/lato-regular.svg#lato-regular") format("svg"); }
-@font-face {
-  font-family: "lato-semibold";
-  font-style: normal;
-  font-weight: normal;
-  src: url("../../fonts/lato/lato-semibold.woff2") format("woff2"), url("../../fonts/lato/lato-semibold.woff") format("woff"), url("../../fonts/lato/lato-semibold.svg#lato-semibold") format("svg"); }
-@font-face {
-  font-family: "lato-bold";
-  font-style: normal;
-  font-weight: normal;
-  src: url("../../fonts/lato/lato-bold.woff2") format("woff2"), url("../../fonts/lato/lato-bold.woff") format("woff"), url("../../fonts/lato/lato-bold.svg#lato-bold") format("svg"); }
-@font-face {
-  font-family: "lato-italic";
-  font-style: normal;
-  font-weight: normal;
-  src: url("../../fonts/lato/lato-italic.woff2") format("woff2"), url("../../fonts/lato/lato-italic.woff") format("woff"), url("../../fonts/lato/lato-italic.svg#lato-italic") format("svg"); }
-@font-face {
-  font-family: "lato-thin";
-  font-style: normal;
-  font-weight: normal;
-  src: url("../../fonts/lato/lato-thin.woff2") format("woff2"), url("../../fonts/lato/lato-thin.woff") format("woff"), url("../../fonts/lato/lato-thin.svg#lato-thin") format("svg"); }
-@font-face {
-  font-family: "lato-light";
-  font-style: normal;
-  font-weight: normal;
-  src: url("../../fonts/lato/lato-light.woff2") format("woff2"), url("../../fonts/lato/lato-light.woff") format("woff"), url("../../fonts/lato/lato-light.svg#lato-light") format("svg"); }
 p {
   margin: 0 0 15px; }
   p:last-child {
     margin-bottom: 0; }
 
 strong, b {
-  font-family: "lato-bold", Arial, sans-serif;
+  font-family: "LatoBold", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif, sans-serif;
   font-weight: normal; }
 
 h1 {
   font-size: 4.2rem;
-  font-family: "lato-regular", Arial, sans-serif;
+  font-family: "LatoRegular", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif, sans-serif;
   margin: 4.2rem 0;
   line-height: 1;
   font-weight: normal; }
@@ -442,7 +452,7 @@ h1 {
 
 h2 {
   font-size: 3.4rem;
-  font-family: "lato-regular", Arial, sans-serif;
+  font-family: "LatoRegular", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif, sans-serif;
   margin: 3.4rem 0;
   font-weight: normal;
   line-height: 1; }
@@ -454,7 +464,7 @@ h2 {
 
 h3 {
   font-size: 2.2rem;
-  font-family: "lato-regular", Arial, sans-serif;
+  font-family: "LatoRegular", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif, sans-serif;
   margin: 2.2rem 0;
   font-weight: normal;
   line-height: 1; }
@@ -466,7 +476,7 @@ h3 {
 
 h4 {
   font-size: 1.6rem;
-  font-family: "lato-regular", Arial, sans-serif;
+  font-family: "LatoRegular", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif, sans-serif;
   margin: 2.2rem 0;
   font-weight: normal;
   line-height: 1; }
@@ -478,13 +488,10 @@ h4 {
 
 h5 {
   font-size: 1.4rem;
-  font-family: "lato-regular", Arial, sans-serif;
+  font-family: "LatoRegular", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif, sans-serif;
   margin: 1.4rem 0;
   font-weight: normal;
   line-height: normal; }
-  @media screen and (max-width: 719px) {
-    h5 {
-      margin: 0rem 0; } }
   h5:first-child {
     margin-top: 0; }
 
@@ -535,7 +542,7 @@ dl {
   dl:last-child {
     margin-bottom: 0; }
   dl dt {
-    font-family: "lato-semibold", Arial, sans-serif;
+    font-family: "LatoMedium", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif, sans-serif;
     margin-top: 10px; }
     dl dt:first-child {
       margin-top: 0; }
@@ -1089,7 +1096,7 @@ fieldset {
 
 label {
   color: #3c3c3c;
-  font-family: "lato-regular", Arial, sans-serif;
+  font-family: "LatoRegular", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif, sans-serif;
   display: inline-block;
   margin-bottom: 5px; }
 
@@ -1101,7 +1108,7 @@ form em {
   vertical-align: super; }
 
 .legend, legend {
-  font-family: "lato-bold", Arial, sans-serif;
+  font-family: "LatoBold", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif, sans-serif;
   margin: 0 0 15px 0;
   display: block;
   padding: 0;
@@ -1136,7 +1143,7 @@ textarea {
   background-color: transparent;
   vertical-align: middle;
   color: #3c3c3c;
-  font-family: "lato-light", Arial, sans-serif;
+  font-family: "LatoLight", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif, sans-serif;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -1751,7 +1758,7 @@ table {
 table thead, .table-css .table-thead [class*="col-"],
 .table-css .table-thead > div {
   background-color: #DDD;
-  font-family: "lato-bold", Arial, sans-serif;
+  font-family: "LatoBold", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif, sans-serif;
   text-align: left;
   line-height: normal; }
 
@@ -1800,7 +1807,7 @@ table.table--bordered [class*="col-"]:first-child, table.table--bordered .row > 
 
 table tbody th {
   text-align: left;
-  font-family: "lato-bold", Arial, sans-serif;
+  font-family: "LatoBold", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif, sans-serif;
   line-height: normal;
   vertical-align: top; }
 table tbody tr:last-child th, table tbody tr:last-child td {

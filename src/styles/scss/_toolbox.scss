@@ -83,12 +83,12 @@
 // }
 //
 // ============================================================
-$mobile: 'screen and (max-width: #{$breakPoint__desktop - 1})';
-$phone: 'screen and (max-width: #{$breakPoint__phone - 1})';
-$tablet: 'screen and (max-width: #{$breakPoint__desktop - 1}) and (min-width: #{$breakPoint__phone})';
-$desktop: 'screen and (min-width: #{$breakPoint__desktop})';
+$mobile:      'screen and (max-width: #{$breakPoint__desktop - 1})';
+$phone:       'screen and (max-width: #{$breakPoint__phone - 1})';
+$tablet:      'screen and (max-width: #{$breakPoint__desktop - 1}) and (min-width: #{$breakPoint__phone})';
+$desktop:     'screen and (min-width: #{$breakPoint__desktop})';
 $desktop--xl: 'screen and (min-width: #{$breakPoint__desktop--xl + 1})';
-$print: 'print';
+$print:       'print';
 
 @mixin respond-to($media) {
   @media #{$media} {
@@ -100,6 +100,20 @@ $print: 'print';
 @mixin respond-to-free($target, $media) {
   @media screen and ($target: $media) {
     @content;
+  }
+}
+
+// FONT FACE
+// ============================================================
+@mixin font-face($dir, $file) {
+  @each $file-name, $font-family in $file {
+    @font-face {
+      font-family: quote($font-family);
+      font-style: normal;
+      font-weight: normal;
+      src: url($dir + $file-name + ".woff2") format('woff2'),
+      url($dir + $file-name + ".woff") format('woff');
+    }
   }
 }
 

@@ -2,10 +2,10 @@
 | Filename | line # | TODO
 |:------|:------:|:------
 | _toolbox.scss | 99 | add to manual
-| _toolbox.scss | 172 | make mixin with params
+| _toolbox.scss | 186 | make mixin with params
 | components/_base.scss | 17 | describe in manual, + how to use with JS
 | components/_base.scss | 18 | add var in settings to disable?
-| components/_base.scss | 63 | describe in manual
+| components/_base.scss | 68 | describe in manual
 | components/_buttons.scss | 143 | make as mixin
 | components/_buttons.scss | 335 | make as mixin
 | components/_buttons.scss | 412 | gropued buttons

@@ -8,6 +8,11 @@
 
 // MATE DOCUMENTATION
 // ============================================================
+body{
+  font-size: 1.8rem;
+  font-family: $font__base--light;
+}
+
 a[href^="https://github.com"]:before {
   content: "\e600";
   font-family: 'icomoon', sans-serif;
@@ -84,14 +89,6 @@ a[href^="https://github.com"]:before {
 
 body, html {
   height: 100%;
-}
-
-body {
-  font-size: 1.8rem;
-
-  @include respond-to($phone) {
-    font-size: $text__size--md;
-  }
 }
 
 header{
@@ -232,8 +229,6 @@ main {
     }
 
     > h1 {
-      font-family: $font__base--light;
-
       @include respond-to($phone) {
         text-align: center;
       }
@@ -335,6 +330,7 @@ pre.code-example[class*="language-"]{
     p{
       line-height: 1;
       font-size: $text__size--md;
+      margin-top: 5px;
     }
 
     [class^="icon-"], [class*=" icon-"] {
@@ -352,14 +348,6 @@ pre.code-example[class*="language-"]{
     .input-radio {
       max-width: 410px;
     }
-  }
-}
-
-.flex-box {
-  @include flex-wrap;
-
-  > div {
-    @include flex-item;
   }
 }
 

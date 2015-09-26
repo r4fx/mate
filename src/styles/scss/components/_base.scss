@@ -53,12 +53,16 @@ html {
 
 body {
   color: $text__color--first;
-  font-family: $font__base--light;
+  font-family: $font__base--regular;
   font-size: $text__size--base;
   line-height: $text__line-height-ratio;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+// BASE FONT FACE
+// ============================================================
+@include font-face($font__base--dir, $font__base--family);
 
 // BASIC COMMON COLORS
 // todo: describe in manual

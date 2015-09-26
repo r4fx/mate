@@ -11,20 +11,28 @@ $breakPoint__desktop--xl:   1280px;
 
 // FONTS
 // ============================================================
-// [i] --file should contain the names of the files in the specified --dir
 $font__base--dir:           "../../fonts/lato/";
-$font__base--file:          lato-regular, lato-semibold, lato-bold, lato-italic, lato-thin, lato-light; // (1,2,3,4,x)
-$font__base--safeFamily:    Arial;
-$font__base--generic:       sans-serif;
+$font__base--family:        ( // file-name: font-family
+                              Lato-Regular: LatoRegular,
+                              Lato-Medium: LatoMedium,
+                              Lato-Bold: LatoBold,
+                              Lato-Light: LatoLight,
+                              Lato-Italic: LatoItalic,
+                              Lato-MediumItalic: LatoMediumItalic,
+                              Lato-BoldItalic: LatoBoldItalic,
+                              Lato-LightItalic: LatoLightItalic
+                            );
+$font__base--simple:        'Helvetica Neue', 'Trebuchet MS', 'Arial', sans-serif;
+$font__base--book:          'Georgia', 'Cambria', 'Times New Roman', 'Times', serif;
 
-$font__base--simple:        Arial, $font__base--generic;
-$font__base--regular:       quote(nth($font__base--file, 1)), $font__base--safeFamily, $font__base--generic;
-$font__base--medium:        quote(nth($font__base--file, 2)), $font__base--safeFamily, $font__base--generic;
-$font__base--bold:          quote(nth($font__base--file, 3)), $font__base--safeFamily, $font__base--generic;
-$font__base--italic:        quote(nth($font__base--file, 4)), $font__base--safeFamily, $font__base--generic;
-$font__base--thin:          quote(nth($font__base--file, 5)), $font__base--safeFamily, $font__base--generic;
-$font__base--light:         quote(nth($font__base--file, 6)), $font__base--safeFamily, $font__base--generic;
-
+$font__base--regular:       quote(map-get($font__base--family, Lato-Regular)), $font__base--simple, sans-serif;
+$font__base--medium:        quote(map-get($font__base--family, Lato-Medium)), $font__base--simple, sans-serif;
+$font__base--bold:          quote(map-get($font__base--family, Lato-Bold)), $font__base--simple, sans-serif;
+$font__base--light:         quote(map-get($font__base--family, Lato-Light)), $font__base--simple, sans-serif;
+$font__base--italic:        quote(map-get($font__base--family, Lato-Italic)), $font__base--simple, sans-serif;
+$font__base--italic-medium: quote(map-get($font__base--family, Lato-MediumItalic)), $font__base--simple, sans-serif;
+$font__base--italic-bold:   quote(map-get($font__base--family, Lato-BoldItalic)), $font__base--simple, sans-serif;
+$font__base--italic-light:  quote(map-get($font__base--family, Lato-LightItalic)), $font__base--simple, sans-serif;
 
 // COLORS BASE PALETTE
 // [i] get your palette for quick start: https://color.adobe.com/pl/create/color-wheel/
