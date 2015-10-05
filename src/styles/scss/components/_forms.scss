@@ -302,7 +302,7 @@ input[type="radio"].mate-input {
   input[type="number"],
   select,
   textarea {
-    border-color: $color__message--alert;
+    border-color: $color__message--alert !important;
   }
 
   em {

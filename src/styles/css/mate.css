@@ -1284,7 +1284,7 @@ input[type="radio"].mate-input + span:after {
 .form-error input[type="number"],
 .form-error select,
 .form-error textarea {
-  border-color: #B03C1D; }
+  border-color: #B03C1D !important; }
 .form-error em {
   color: #B03C1D; }
 .form-error > .legend {
