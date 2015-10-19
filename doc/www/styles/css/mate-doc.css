@@ -2142,7 +2142,7 @@ pre.code-example[class*="language-"] {
   .code-example__icons [class^="icon-"], .code-example__icons [class*=" icon-"] {
     font-size: 2.4rem; }
   .code-example pre[class*="language-"] {
-    margin: 0;
+    margin: 0 -1px -1px -1px;
     border-top-left-radius: 0;
     border-top-right-radius: 0; }
   .code-example form .input-radio {
@@ -2158,6 +2158,4 @@ pre.code-example[class*="language-"] {
   [class*="masonry-"] > article img {
     display: block; }
 
-
-
-/*# sourceMappingURL=../css/mate-doc.css.map */
+/*# sourceMappingURL=mate-doc.css.map */
