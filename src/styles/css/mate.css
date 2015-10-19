@@ -1810,8 +1810,6 @@ table tbody th {
   font-family: "LatoBold", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif, sans-serif;
   line-height: normal;
   vertical-align: top; }
-table tbody tr:last-child th, table tbody tr:last-child td {
-  border-bottom: 0; }
 
 .table-css {
   display: table;
