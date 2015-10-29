@@ -119,9 +119,12 @@ $print:       'print';
 
 // ============================================================
 // GRADIENTS
+//
+// Examples:
+// @include gradient(rgba(6,30,66,1), rgba(6, 30, 66, 0), to right, 0, 50%);
 // ============================================================
-@mixin gradient($gradient-color-from, $gradient-color-to) {
-  background-image: linear-gradient($gradient-color-from, $gradient-color-to);
+@mixin gradient($gradient-color-from, $gradient-color-to, $direction: to bottom, $gradient-from-loc: null, $gradient-to-loc: null, $type: linear) {
+  background-image: linear-gradient($direction, $gradient-color-from $gradient-from-loc, $gradient-color-to $gradient-to-loc);
 }
 
 // ============================================================
