@@ -164,7 +164,7 @@ select {
   background-repeat: no-repeat;
   background-position: right center;
 
-  &:-ms-expand {
+  &::-ms-expand {
     display: none;
   }
 }

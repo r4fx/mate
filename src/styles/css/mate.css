@@ -1178,7 +1178,7 @@ select {
   padding-right: 25px;
   background-repeat: no-repeat;
   background-position: right center; }
-  select:-ms-expand {
+  select::-ms-expand {
     display: none; }
 
 textarea {

@@ -1170,7 +1170,7 @@ select {
   padding-right: 25px;
   background-repeat: no-repeat;
   background-position: right center; }
-  select:-ms-expand {
+  select::-ms-expand {
     display: none; }
 
 textarea {
@@ -2158,6 +2158,4 @@ pre.code-example[class*="language-"] {
   [class*="masonry-"] > article img {
     display: block; }
 
-
-
-/*# sourceMappingURL=../css/mate-doc.css.map */
+/*# sourceMappingURL=mate-doc.css.map */
