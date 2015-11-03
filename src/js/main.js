@@ -1,5 +1,5 @@
 /* JavaScript for simple project
-*/
+ */
 
 var globals = {
     scrollValInit: 40,
@@ -66,7 +66,7 @@ var helpers = {
         var userOS = '';
         var userBrowser = '';
 
-        var getDeviceSize = function () {
+        getDeviceSize = function () {
             var htmlTag = document.getElementsByTagName('html')[0];
             var deviceSize = window.getComputedStyle(
                 document.querySelector('html'), ':after' // Magic!
@@ -100,14 +100,14 @@ var helpers = {
 
         // Get user's browser
         var browser = function () {
-            //console.log(navigator.appVersion);
+            console.log(navigator.appVersion);
             if (navigator.appVersion.indexOf("MSIE") != -1) userBrowser = "oldIE"; // IE =< 10
 
             document.documentElement.setAttribute('data-browser', userBrowser);
         };
 
         return {
-            getDeviceSize: getDeviceSize,
+            getDeviceSize: getDeviceSize(),
             isPhone: mobile.isPhone(),
             isTablet: mobile.isTablet(),
             system: system(),
@@ -231,7 +231,7 @@ window.addEventListener('resize', function () {
     helpers.debounce(function () {
 
         // Set of function initialized on page scroll:
-        helpers.userEnvironment.getDeviceSize();
+        helpers.userEnvironment();
 
     }, 250)();
 });
@@ -240,7 +240,7 @@ window.addEventListener('resize', function () {
 // WHEN DOCUMENT READY
 // ---------------------------------------------------------
 document.addEventListener('DOMContentLoaded', function () {
-    helpers.userEnvironment.getDeviceSize();
+    helpers.userEnvironment();
     pageEvents.init();
     pageTools.init();
     vendors.init();
