@@ -579,7 +579,10 @@ ul .separator, ol .separator, dl .separator {
   padding-left: 25px;
   padding-right: 25px; }
   .box--fluid {
-    width: 100%; }
+    width: 100%;
+    max-width: none;
+    padding-left: 0;
+    padding-right: 0; }
   .box--flex {
     display: -ms-flexbox;
     display: -webkit-flex;
