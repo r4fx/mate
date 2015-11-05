@@ -5,7 +5,7 @@
 // INPUT PLACEHOLDER
 // Example:
 // .class-selector{
-//   @include placeholder(red, 14px);
+//   @include placeholder(red, 1.4rem);
 //}
 @mixin placeholder($color: $text__color--muted, $size: null) {
   &::-webkit-input-placeholder {
@@ -94,7 +94,7 @@ form em {
   font-family: serif;
   font-weight: normal;
   line-height: 0;
-  font-size: 2em;
+  font-size: 2rem;
   vertical-align: super;
 }
 
