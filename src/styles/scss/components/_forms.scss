@@ -140,7 +140,7 @@ textarea {
   -moz-appearance: none;
   appearance: none;
   line-height: 1.42857143;
-  font-size: $text__size--md;
+  font-size: $text__size--base;
 
   // min. 16px on mobile devices prevent zooming to element
   @include respond-to($phone) {
