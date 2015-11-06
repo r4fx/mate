@@ -95,7 +95,8 @@
 // todo: add to docs
 .box {
   max-width: $page__width--maxsize;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   padding-left: $grid__col--gutter;
   padding-right: $grid__col--gutter;
 

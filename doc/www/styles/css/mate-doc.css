@@ -567,7 +567,8 @@ ul .separator, ol .separator, dl .separator {
 
 .box {
   max-width: 1024px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   padding-left: 25px;
   padding-right: 25px; }
   .box--fluid {
