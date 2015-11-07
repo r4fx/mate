@@ -2123,6 +2123,8 @@ pre.code-example[class*="language-"] {
   font-size: 1.6rem; }
   .code-example > div {
     margin: 25px; }
+  .code-example--btns .btn {
+    margin-bottom: 5px; }
   .code-example--grid > div > .row {
     margin-left: 0;
     margin-right: 0; }
@@ -2168,6 +2170,4 @@ pre.code-example[class*="language-"] {
   [class*="masonry-"] > article img {
     display: block; }
 
-
-
-/*# sourceMappingURL=../css/mate-doc.css.map */
+/*# sourceMappingURL=mate-doc.css.map */
