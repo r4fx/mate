@@ -4,7 +4,7 @@ Mate is a lightweight, simple & semantic framework (CSS and HTML5) for modern we
 
 ## Some of base features
 
-* Grid system, you can define number of columns (default is 12)
+* Grid system with configurable numbers of columns
 * RWD
 * SASS
 * Namespace for CSS classes and SASS variables have been inspired by [BEM](http://www.smashingmagazine.com/2012/04/16/a-new-front-end-methodology-bem/)
