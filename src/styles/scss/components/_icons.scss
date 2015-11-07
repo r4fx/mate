@@ -41,11 +41,12 @@ $list__icon-sizes: (sm 2rem), (md 3rem), (lg 4rem), (xl 6rem), (xxl 8rem);
 
   &:before {
     font-family: 'icomoon', sans-serif;
+    display: block;
   }
 }
 
 // ICONS
-// Import your owns from http://icomoon.io
+// Import your own using http://icomoon.io
 // ============================================================
 .icon-disabled:before {
   content: "\e608";

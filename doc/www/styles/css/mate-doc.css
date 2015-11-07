@@ -750,6 +750,10 @@ ul .separator, ol .separator, dl .separator {
   line-height: 1.5;
   border-radius: 3px;
   display: inline-block;
+  -webkit-display: inline-flex;
+  -webkit-align-items: center;
+  display: inline-flex;
+  align-items: center;
   text-align: center;
   vertical-align: middle;
   text-decoration: none;
@@ -1043,9 +1047,10 @@ ul .separator, ol .separator, dl .separator {
   right: 100%; }
 .btn--arrow-r:after {
   left: 100%; }
-.btn > span ~ [class*='icon-'] {
-  position: relative;
-  top: -2px; }
+.btn > span:first-child {
+  margin-right: 5px; }
+.btn > span:last-child {
+  margin-right: 0; }
 
 .btn-group {
   display: inline-block; }
@@ -1330,7 +1335,8 @@ label > .form-error__message {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
   [class*="icon-"]:before {
-    font-family: 'icomoon', sans-serif; }
+    font-family: 'icomoon', sans-serif;
+    display: block; }
 
 .icon-disabled:before {
   content: "\e608"; }

@@ -126,7 +126,13 @@ $list__btn-sizes: (xs 0.30rem), (sm 0.8rem), (md 1rem), (lg 1.25rem), (xl 1.5rem
 .btn {
   line-height: $text__line-height-ratio;
   border-radius: $border__radius;
-  display: inline-block;
+
+  display: inline-block;          // todo: for remove in future
+  -webkit-display: inline-flex;   // todo: for remove in future
+  -webkit-align-items: center;    // todo: for remove in future
+
+  display: inline-flex;
+  align-items: center;
   text-align: center;
   vertical-align: middle;
   text-decoration: none;
@@ -395,15 +401,14 @@ $list__btn-sizes: (xs 0.30rem), (sm 0.8rem), (md 1rem), (lg 1.25rem), (xl 1.5rem
     left: 100%;
   }
 
-  // ICON INSIDE BUTTON, PERFECTLY VERTICAL CENTERED
+  // FOR ICONS INSIDE BUTTON
   > span {
-    ~ [class *= 'icon-'] {
-      position: relative;
-      top: -2px;
+    &:first-child{
+      margin-right: 5px;
     }
 
-    ~ span:not([class*='icon-']) {
-      //vertical-align: middle;
+    &:last-child{
+      margin-right: 0;
     }
   }
 }
