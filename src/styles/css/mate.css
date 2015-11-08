@@ -440,7 +440,7 @@ strong, b {
 
 h1 {
   font-size: 4.2rem;
-  font-family: "LatoRegular", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif, sans-serif;
+  font-family: "LatoMedium", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif, sans-serif;
   margin: 4.2rem 0;
   line-height: 1;
   font-weight: normal; }
@@ -452,7 +452,7 @@ h1 {
 
 h2 {
   font-size: 3.4rem;
-  font-family: "LatoRegular", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif, sans-serif;
+  font-family: "LatoMedium", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif, sans-serif;
   margin: 3.4rem 0;
   font-weight: normal;
   line-height: 1; }
@@ -464,7 +464,7 @@ h2 {
 
 h3 {
   font-size: 2.2rem;
-  font-family: "LatoRegular", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif, sans-serif;
+  font-family: "LatoMedium", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif, sans-serif;
   margin: 2.2rem 0;
   font-weight: normal;
   line-height: 1; }
