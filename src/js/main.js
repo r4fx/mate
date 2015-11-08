@@ -100,7 +100,7 @@ var helpers = {
 
         // Get user's browser
         var browser = function () {
-            console.log(navigator.appVersion);
+            //console.log(navigator.appVersion);
             if (navigator.appVersion.indexOf("MSIE") != -1) userBrowser = "oldIE"; // IE =< 10
 
             document.documentElement.setAttribute('data-browser', userBrowser);
