@@ -63,6 +63,7 @@
     <li><code>%hide-text</code></li>
     <li><code>%word-wrap</code></li>
     <li><code>%noselect</code></li>
+    <li><code>%disabled</code></li>
 </ul>
 
 <h2 id="nav-helpes">
@@ -106,12 +107,14 @@
 <h3>Media queries breakpoint</h3>
 <ul class="list-unstyled">
     <li><code>respond-to($media)</code></li>
+    <li><code>respond-to-free($target, $media)</code></li>
 </ul>
-<p>Jeden z najważniejszych mixinów odpowiadający za media queries i breakpointy na potrzeby RWD. <br>
-    Obsługowane breakpointy: <code>$mobile</code>, <code>$phone</code>, <code>$tablet</code>, <code>$desktop</code>, <code>$desktop--xl</code> <br>
+<p>One of the most important mixin responsible for media queries and breakpoints for the purpose of RWD.<br>
+    Available breakpoints: <code>$mobile</code>, <code>$phone</code>, <code>$tablet</code>, <code>$desktop</code>, <code>$desktop--xl</code> <br>
 </p>
-<p>Mobile odpowiada za zakresy phone + tablet.</p>
-<p>przykład:</p>
+<p>$mobile is responsible for range phone + tablet.</p>
+
+<p>Examples:</p>
 
 <div class="code-example">
     <div data-clone class="hidden">
@@ -120,6 +123,10 @@
 
             @include respond-to($mobile) {
                 font-size: 1.6rem;
+            }
+
+            @include respond-to-free('min-width', 1750px) {
+                bottom: 25%;
             }
         }
     </div>
@@ -159,6 +166,8 @@
     <li><code>animation($args...)</code></li>
     <li><code>filter($args...)</code> - <a href="http://html5-demos.appspot.com/static/css/filters/index.html" target="_blank">Filters preview</a></li>
     <li><code>perspective($size)</code></li>
+    <li><code>placeholder($color: $text__color--muted, $size: null)</code> - placeholder for form inputs</li>
+    <li><code>svg-bkg($color)</code> - background-image with SVG</li>
 </ul>
 
 <h2 id="nav-animations">
