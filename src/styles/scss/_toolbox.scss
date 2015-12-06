@@ -322,9 +322,15 @@ $print:       'print';
   @include masonry-tablet;
 
   &--bordered {
-    -webkit-column-rule: 1px solid $border__color--first;
-    -moz-column-rule: 1px solid $border__color--first;
-    column-rule: 1px solid $border__color--first;
+    -webkit-column-rule: 1px solid;
+    -moz-column-rule: 1px solid;
+    column-rule: 1px solid;
+
+    @if variable-exists(border__color--first) {
+      -webkit-column-rule-color: $border__color--first;
+      -moz-column-rule-color: $border__color--first;
+      column-rule-color: $border__color--first;
+    }
   }
 }
 
@@ -395,7 +401,9 @@ $print:       'print';
 
 @keyframes mate-blink {
   0% {
-    background-color: $color__message--warning;
+    @if variable-exists(color__message--warning) {
+      background-color: $color__message--warning;
+    }
   }
 
   100% {

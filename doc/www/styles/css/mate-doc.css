@@ -307,9 +307,12 @@ textarea[disabled], [disabled] label {
     -moz-column-count: 12;
     column-count: 12; } }
 .masonry--bordered {
-  -webkit-column-rule: 1px solid #CCC;
-  -moz-column-rule: 1px solid #CCC;
-  column-rule: 1px solid #CCC; }
+  -webkit-column-rule: 1px solid;
+  -moz-column-rule: 1px solid;
+  column-rule: 1px solid;
+  -webkit-column-rule-color: #CCC;
+  -moz-column-rule-color: #CCC;
+  column-rule-color: #CCC; }
 
 .mate-blink {
   animation: mate-blink 2s ease;
