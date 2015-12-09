@@ -1393,6 +1393,9 @@ label > .form-error__message {
 .icon-file:before {
   content: "\e616"; }
 
+.icon-file-outline:before {
+  content: "\e900"; }
+
 .icon-note-add:before {
   content: "\e617"; }
 

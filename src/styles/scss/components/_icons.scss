@@ -88,6 +88,10 @@ $list__icon-sizes: (sm 2rem), (md 3rem), (lg 4rem), (xl 6rem), (xxl 8rem);
   content: "\e616";
 }
 
+.icon-file-outline:before {
+  content: "\e900";
+}
+
 .icon-note-add:before {
   content: "\e617";
 }
