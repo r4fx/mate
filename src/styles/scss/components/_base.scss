@@ -105,6 +105,21 @@ a {
   }
 }
 
+.link-file[href$='.pdf'],
+.link-file.file[href$='.doc'],
+.link-file.file[href$='.xls'] {
+  color: $text__color--first;
+
+  &:before {
+    font-family: 'icomoon', sans-serif;
+    content: "\e616";
+    display: inline-block;
+    margin-right: 3px;
+    font-size: 1.8rem;
+    line-height: normal;
+  }
+}
+
 // IMAGES
 // ------------------------------------------------------------
 img {

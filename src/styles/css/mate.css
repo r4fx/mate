@@ -430,6 +430,20 @@ a {
   a:hover {
     text-decoration: none; }
 
+.link-file[href$='.pdf'],
+.link-file.file[href$='.doc'],
+.link-file.file[href$='.xls'] {
+  color: #3c3c3c; }
+  .link-file[href$='.pdf']:before,
+  .link-file.file[href$='.doc']:before,
+  .link-file.file[href$='.xls']:before {
+    font-family: 'icomoon', sans-serif;
+    content: "\e616";
+    display: inline-block;
+    margin-right: 3px;
+    font-size: 1.8rem;
+    line-height: normal; }
+
 img {
   max-width: 100%;
   height: auto; }
