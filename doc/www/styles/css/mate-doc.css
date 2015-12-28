@@ -450,9 +450,7 @@ hr {
     margin: 50px auto; }
 
 p {
-  margin: 0 0 15px; }
-  p:last-child {
-    margin-bottom: 0; }
+  margin-bottom: 15px; }
 
 strong, b {
   font-family: "LatoBold", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif, sans-serif;
@@ -461,55 +459,64 @@ strong, b {
 h1 {
   font-size: 4.2rem;
   font-family: "LatoMedium", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif, sans-serif;
-  margin: 4.2rem 0;
+  margin-top: 4.2rem;
+  margin-bottom: 4.2rem;
   line-height: 1;
   font-weight: normal; }
   @media screen and (max-width: 719px) {
     h1 {
-      margin: 2rem 0; } }
+      margin-top: 2rem;
+      margin-bottom: 2rem; } }
   h1:first-child {
     margin-top: 0; }
 
 h2 {
   font-size: 3.4rem;
   font-family: "LatoMedium", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif, sans-serif;
-  margin: 3.4rem 0;
+  margin-top: 3.4rem;
+  margin-bottom: 3.4rem;
   font-weight: normal;
   line-height: 1; }
   @media screen and (max-width: 719px) {
     h2 {
-      margin: 2rem 0; } }
+      margin-top: 2rem;
+      margin-bottom: 2rem; } }
   h2:first-child {
     margin-top: 0; }
 
 h3 {
   font-size: 2.2rem;
   font-family: "LatoMedium", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif, sans-serif;
-  margin: 2.2rem 0;
+  margin-top: 2.2rem;
+  margin-bottom: 2.2rem;
   font-weight: normal;
   line-height: 1; }
   @media screen and (max-width: 719px) {
     h3 {
-      margin: 1rem 0; } }
+      margin-top: 1rem;
+      margin-bottom: 1rem; } }
   h3:first-child {
     margin-top: 0; }
 
 h4 {
   font-size: 1.6rem;
   font-family: "LatoRegular", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif, sans-serif;
-  margin: 2.2rem 0;
+  margin-top: 2.2rem;
+  margin-bottom: 2.2rem;
   font-weight: normal;
   line-height: 1; }
   @media screen and (max-width: 719px) {
     h4 {
-      margin: 1rem 0; } }
+      margin-top: 1rem;
+      margin-bottom: 1rem; } }
   h4:first-child {
     margin-top: 0; }
 
 h5 {
   font-size: 1.4rem;
   font-family: "LatoRegular", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif, sans-serif;
-  margin: 1.4rem 0;
+  margin-top: 1.4rem;
+  margin-bottom: 1.4rem;
   font-weight: normal;
   line-height: normal; }
   h5:first-child {
@@ -517,14 +524,13 @@ h5 {
 
 h6 {
   font-size: 1.2rem;
-  margin: 1.2rem 0;
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
   font-weight: normal;
   line-height: normal; }
 
 ul, ol {
-  margin: 0 0 15px; }
-  ul:last-child, ol:last-child {
-    margin-bottom: 0; }
+  margin-bottom: 15px; }
   ul.list-inline, ol.list-inline {
     padding: 0; }
     ul.list-inline li, ol.list-inline li {
@@ -558,9 +564,7 @@ ul, ol {
       display: none; }
 
 dl {
-  margin: 0 0 15px; }
-  dl:last-child {
-    margin-bottom: 0; }
+  margin-bottom: 15px; }
   dl dt {
     font-family: "LatoMedium", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif, sans-serif;
     margin-top: 10px; }
