@@ -461,8 +461,8 @@ h1 {
   font-family: "LatoMedium", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif, sans-serif;
   margin-top: 4.2rem;
   margin-bottom: 4.2rem;
-  line-height: 1;
-  font-weight: normal; }
+  font-weight: normal;
+  line-height: normal; }
   @media screen and (max-width: 719px) {
     h1 {
       margin-top: 2rem;
@@ -476,7 +476,7 @@ h2 {
   margin-top: 3.4rem;
   margin-bottom: 3.4rem;
   font-weight: normal;
-  line-height: 1; }
+  line-height: normal; }
   @media screen and (max-width: 719px) {
     h2 {
       margin-top: 2rem;
@@ -490,7 +490,7 @@ h3 {
   margin-top: 2.2rem;
   margin-bottom: 2.2rem;
   font-weight: normal;
-  line-height: 1; }
+  line-height: normal; }
   @media screen and (max-width: 719px) {
     h3 {
       margin-top: 1rem;
@@ -504,7 +504,7 @@ h4 {
   margin-top: 2.2rem;
   margin-bottom: 2.2rem;
   font-weight: normal;
-  line-height: 1; }
+  line-height: normal; }
   @media screen and (max-width: 719px) {
     h4 {
       margin-top: 1rem;
