@@ -29,10 +29,6 @@ h1 {
     margin-top: floor($text__size--xxl / 1.5);
     margin-bottom: floor($text__size--xxl / 1.5);
   }
-
-  &:first-child {
-    margin-top: 0;
-  }
 }
 
 h2 {
@@ -46,10 +42,6 @@ h2 {
   @include respond-to($phone) {
     margin-top: floor($text__size--xl / 1.5);
     margin-bottom: floor($text__size--xl / 1.5);
-  }
-
-  &:first-child {
-    margin-top: 0;
   }
 }
 
@@ -65,10 +57,6 @@ h3 {
     margin-top: floor($text__size--lg / 1.5);
     margin-bottom: floor($text__size--lg / 1.5);
   }
-
-  &:first-child {
-    margin-top: 0;
-  }
 }
 
 h4 {
@@ -83,10 +71,6 @@ h4 {
     margin-top: floor($text__size--md / 1.5);
     margin-bottom: floor($text__size--md / 1.5);
   }
-
-  &:first-child {
-    margin-top: 0;
-  }
 }
 
 h5 {
@@ -96,10 +80,6 @@ h5 {
   margin-bottom: $text__size--sm;
   font-weight: normal;
   line-height: normal;
-
-  &:first-child {
-    margin-top: 0;
-  }
 }
 
 h6 {
