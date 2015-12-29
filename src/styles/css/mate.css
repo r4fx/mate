@@ -458,6 +458,7 @@ hr {
     margin: 50px auto; }
 
 p {
+  margin-top: 15px;
   margin-bottom: 15px; }
 
 strong, b {
@@ -528,6 +529,7 @@ h6 {
   line-height: normal; }
 
 ul, ol {
+  margin-top: 15px;
   margin-bottom: 15px; }
   ul.list-inline, ol.list-inline {
     padding: 0; }
@@ -562,6 +564,7 @@ ul, ol {
       display: none; }
 
 dl {
+  margin-top: 15px;
   margin-bottom: 15px; }
   dl dt {
     font-family: "LatoMedium", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif, sans-serif;

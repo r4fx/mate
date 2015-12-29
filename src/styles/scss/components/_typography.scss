@@ -5,6 +5,7 @@
 // TYPOGRAPHY: PARAGRAPHS
 // ============================================================
 p {
+  margin-top: 15px;
   margin-bottom: 15px;
 }
 
@@ -93,6 +94,7 @@ h6 {
 // TYPOGRAPHY: LISTS
 // ============================================================
 ul, ol {
+  margin-top: 15px;
   margin-bottom: 15px;
 
   &.list-inline {
@@ -147,6 +149,7 @@ ul, ol {
 }
 
 dl {
+  margin-top: 15px;
   margin-bottom: 15px;
 
   dt {
