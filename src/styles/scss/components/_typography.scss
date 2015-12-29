@@ -5,8 +5,8 @@
 // TYPOGRAPHY: PARAGRAPHS
 // ============================================================
 p {
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-top: $margin--typography;
+  margin-bottom: $margin--typography;
 }
 
 // TYPOGRAPHY: SPECIAL TAGS
@@ -94,8 +94,8 @@ h6 {
 // TYPOGRAPHY: LISTS
 // ============================================================
 ul, ol {
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-top: $margin--typography;
+  margin-bottom: $margin--typography;
 
   &.list-inline {
     padding: 0;
@@ -111,10 +111,10 @@ ul, ol {
   }
 
   ul, ol {
-    margin-top: 15px;
+    margin-top: $margin--typography;
 
     &:last-child {
-      margin-bottom: 15px;
+      margin-bottom: $margin--typography;
     }
   }
 }
@@ -149,8 +149,8 @@ ul, ol {
 }
 
 dl {
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-top: $margin--typography;
+  margin-bottom: $margin--typography;
 
   dt {
     font-family: $font-_base--medium;
