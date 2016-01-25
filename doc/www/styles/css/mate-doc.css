@@ -359,7 +359,7 @@ html {
 
 body {
   color: #3c3c3c;
-  font-family: "LatoRegular", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif, sans-serif;
+  font-family: "LatoRegular", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif;
   font-size: 1.6rem;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -454,12 +454,12 @@ p {
   margin-bottom: 15px; }
 
 strong, b {
-  font-family: "LatoBold", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif, sans-serif;
+  font-family: "LatoBold", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif;
   font-weight: normal; }
 
 h1 {
   font-size: 4.2rem;
-  font-family: "LatoMedium", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif, sans-serif;
+  font-family: "LatoMedium", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif;
   margin-top: 4.2rem;
   margin-bottom: 4.2rem;
   font-weight: normal;
@@ -471,7 +471,7 @@ h1 {
 
 h2 {
   font-size: 3.4rem;
-  font-family: "LatoMedium", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif, sans-serif;
+  font-family: "LatoMedium", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif;
   margin-top: 3.4rem;
   margin-bottom: 3.4rem;
   font-weight: normal;
@@ -483,7 +483,7 @@ h2 {
 
 h3 {
   font-size: 2.2rem;
-  font-family: "LatoMedium", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif, sans-serif;
+  font-family: "LatoMedium", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif;
   margin-top: 2.2rem;
   margin-bottom: 2.2rem;
   font-weight: normal;
@@ -495,7 +495,7 @@ h3 {
 
 h4 {
   font-size: 1.6rem;
-  font-family: "LatoRegular", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif, sans-serif;
+  font-family: "LatoRegular", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif;
   margin-top: 2.2rem;
   margin-bottom: 2.2rem;
   font-weight: normal;
@@ -507,7 +507,7 @@ h4 {
 
 h5 {
   font-size: 1.4rem;
-  font-family: "LatoRegular", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif, sans-serif;
+  font-family: "LatoRegular", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif;
   margin-top: 1.4rem;
   margin-bottom: 1.4rem;
   font-weight: normal;
@@ -559,7 +559,7 @@ dl {
   margin-top: 15px;
   margin-bottom: 15px; }
   dl dt {
-    font-family: "LatoMedium", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif, sans-serif;
+    font-family: "LatoMedium", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif;
     margin-top: 10px; }
     dl dt:first-child {
       margin-top: 0; }
@@ -1111,7 +1111,7 @@ fieldset {
 
 label {
   color: #3c3c3c;
-  font-family: "LatoRegular", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif, sans-serif;
+  font-family: "LatoRegular", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif;
   display: inline-block;
   margin-bottom: 5px; }
 
@@ -1123,7 +1123,7 @@ form em {
   vertical-align: super; }
 
 .legend, legend {
-  font-family: "LatoBold", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif, sans-serif;
+  font-family: "LatoBold", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif;
   margin: 0 0 15px 0;
   display: block;
   padding: 0;
@@ -1158,7 +1158,7 @@ textarea {
   background-color: transparent;
   vertical-align: middle;
   color: #3c3c3c;
-  font-family: "LatoLight", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif, sans-serif;
+  font-family: "LatoLight", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -1777,7 +1777,7 @@ table {
 table thead, .table-css .table-thead [class*="col-"],
 .table-css .table-thead > div {
   background-color: #DDD;
-  font-family: "LatoBold", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif, sans-serif;
+  font-family: "LatoBold", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif;
   text-align: left;
   line-height: normal; }
 
@@ -1826,7 +1826,7 @@ table.table--bordered [class*="col-"]:first-child, table.table--bordered .row > 
 
 table tbody th {
   text-align: left;
-  font-family: "LatoBold", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif, sans-serif;
+  font-family: "LatoBold", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif;
   line-height: normal;
   vertical-align: top; }
 
@@ -1942,7 +1942,7 @@ table tbody th {
 
 body {
   font-size: 1.8rem;
-  font-family: "LatoLight", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif, sans-serif; }
+  font-family: "LatoLight", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif; }
 
 a[href^="https://github.com"]:before {
   content: "\e600";
@@ -2187,6 +2187,4 @@ pre.code-example[class*="language-"] {
   [class*="masonry-"] > article img {
     display: block; }
 
-
-
-/*# sourceMappingURL=../css/mate-doc.css.map */
+/*# sourceMappingURL=mate-doc.css.map */
