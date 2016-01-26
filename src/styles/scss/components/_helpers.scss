@@ -1,6 +1,5 @@
 // ============================================================
 // POSITIONING
-// todo: add to manual
 // ============================================================
 .inline-left {
   text-align: left;
@@ -70,7 +69,7 @@
 }
 
 // TODO: make it dynamic, example: (top,50)
-.margin-top-50 {
+.margin-top--50 {
   margin-top: 50px;
 }
 
@@ -127,5 +126,29 @@
 
   &:hover {
     color: $text__color--link;
+  }
+}
+
+// ============================================================
+// RWD
+// ============================================================
+.img--rwd{
+  max-width: 100%;
+  height: auto;
+}
+
+.video--rwd{
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+
+  > iframe {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 }

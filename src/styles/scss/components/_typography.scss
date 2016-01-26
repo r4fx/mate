@@ -168,8 +168,24 @@ dl {
 
 // list separator
 ul, ol, dl {
-  .separator {
-    margin: 0;
-    list-style-type: none;
+
+  li, dt {
+    &.separator,
+    &.separator--line{
+      margin: 0;
+      list-style-type: none;
+
+      &:after {
+        content: '';
+        display: block;
+        min-height: $text__size--base;
+      }
+    }
+
+    &.separator--line:after {
+      border-bottom: 1px solid $border__color--first;
+      margin-bottom: $text__size--base;
+    }
+
   }
 }

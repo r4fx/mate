@@ -352,7 +352,7 @@ html {
       html:after {
         content: 'large';
         background-color: mediumpurple; } }
-    @media screen and (min-width: 1281px) {
+    @media screen and (min-width: 1181px) {
       html:after {
         content: 'x-large';
         background-color: tomato; } }
@@ -566,9 +566,16 @@ dl {
   dl dd {
     margin-bottom: 0; }
 
-ul .separator, ol .separator, dl .separator {
+ul li.separator, ul li.separator--line, ul dt.separator, ul dt.separator--line, ol li.separator, ol li.separator--line, ol dt.separator, ol dt.separator--line, dl li.separator, dl li.separator--line, dl dt.separator, dl dt.separator--line {
   margin: 0;
   list-style-type: none; }
+  ul li.separator:after, ul li.separator--line:after, ul dt.separator:after, ul dt.separator--line:after, ol li.separator:after, ol li.separator--line:after, ol dt.separator:after, ol dt.separator--line:after, dl li.separator:after, dl li.separator--line:after, dl dt.separator:after, dl dt.separator--line:after {
+    content: '';
+    display: block;
+    min-height: 1.6rem; }
+ul li.separator--line:after, ul dt.separator--line:after, ol li.separator--line:after, ol dt.separator--line:after, dl li.separator--line:after, dl dt.separator--line:after {
+  border-bottom: 1px solid #CCC;
+  margin-bottom: 1.6rem; }
 
 /*============================================================
 * GRID SYSTEM
@@ -591,7 +598,7 @@ ul .separator, ol .separator, dl .separator {
   margin: 0; }
 
 .box {
-  max-width: 1024px;
+  max-width: 1180px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 25px;
@@ -1902,7 +1909,7 @@ table tbody th {
 .float-left {
   float: left; }
 
-.margin-top-50 {
+.margin-top--50 {
   margin-top: 50px; }
 
 .no-margin {
@@ -1939,6 +1946,23 @@ table tbody th {
   word-wrap: break-word; }
   .link-neutral:hover {
     color: #249cff; }
+
+.img--rwd {
+  max-width: 100%;
+  height: auto; }
+
+.video--rwd {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden; }
+  .video--rwd > iframe {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
 
 body {
   font-size: 1.8rem;
@@ -2154,7 +2178,8 @@ pre.code-example[class*="language-"] {
     background-color: #DDD;
     padding-top: 10px;
     padding-bottom: 10px;
-    border: 1px solid #CCC; }
+    border: 1px solid #CCC;
+    white-space: nowrap; }
   .code-example__icons [class^=col-] {
     text-align: center;
     border: 2px solid white;
