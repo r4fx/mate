@@ -8,5 +8,4 @@
 | components/_buttons.scss | 149 | make as mixin
 | components/_buttons.scss | 341 | make as mixin
 | components/_buttons.scss | 417 | gropued buttons
-| components/_grid.scss | 95 | add to docs
 | components/_helpers.scss | 71 | make it dynamic, example: (top,50)
