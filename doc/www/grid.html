@@ -49,11 +49,17 @@
     <section class="col-9 col-12--phone col-9--tablet">
         <h1>Grid system</h1>
 
-        <h2 id="nav-basic">
+        <h2 id="nav-containers">
     Containers
     <a href="#nav-containers" class="anchor-link"></a>
 </h2>
-<p>Kontenery są opcjonalne w Mate. Wiersze i kolumny mogą działać bez nich.</p>
+<p>The containers are optional in Mate, rows and columns can operate without them.</p>
+<p>Available containers classes:</p>
+<ul>
+    <li><code>.box</code> - Size of container is fixed to max-width configured id settings.scss ($page__width--maxsize)</li>
+    <li><code>.box--fluid</code> - 100% width of container</li>
+    <li><code>.box--flex</code> - Container based on flex-box. This class is typicaly used to wrap items (columns), not rows.</li>
+</ul>
 
 <div class="code-example code-example--grid">
 
