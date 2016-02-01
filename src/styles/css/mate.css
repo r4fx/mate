@@ -1763,6 +1763,9 @@ label > .form-error__message {
 .icon-github:before {
   content: "\e600"; }
 
+.icon-feed:before {
+  content: "\e903"; }
+
 .icon-linkedin:before {
   content: "\e681"; }
 

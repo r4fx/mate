@@ -576,6 +576,10 @@ $list__icon-sizes: (sm 2rem), (md 3rem), (lg 4rem), (xl 6rem), (xxl 8rem);
   content: "\e600";
 }
 
+.icon-feed:before {
+  content: "\e903";
+}
+
 .icon-linkedin:before {
   content: "\e681";
 }
