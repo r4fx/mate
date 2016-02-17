@@ -211,6 +211,16 @@ textarea[disabled], [disabled] label {
     background-color: #ffb82d; }
   100% {
     background-color: transparent; } }
+hr {
+  border: 0;
+  height: 1px;
+  background-color: #CCC;
+  margin: 25px auto; }
+  hr.hr--mini {
+    width: 150px; }
+  hr.hr--half {
+    width: 50%; }
+
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%; }
@@ -447,15 +457,6 @@ a {
 img {
   max-width: 100%;
   height: auto; }
-
-hr {
-  border: 0;
-  height: 1px;
-  background-color: #CCC;
-  margin: 25px auto; }
-  hr.mini {
-    width: 150px;
-    margin: 50px auto; }
 
 p {
   margin-top: 15px;
