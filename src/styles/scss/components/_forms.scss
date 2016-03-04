@@ -181,8 +181,9 @@ input[type="radio"].mate-input {
   margin: 0;
   width: 1px;
   height: 1px;
-  top: -10px;
+  top: 10px;
   right: -10px;
+  float: left;
 
   + span,
   + label {

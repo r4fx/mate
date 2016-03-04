@@ -1247,8 +1247,9 @@ input[type="radio"].mate-input {
   margin: 0;
   width: 1px;
   height: 1px;
-  top: -10px;
-  right: -10px; }
+  top: 10px;
+  right: -10px;
+  float: left; }
   input[type="checkbox"].mate-input + span,
   input[type="checkbox"].mate-input + label,
   input[type="radio"].mate-input + span,
