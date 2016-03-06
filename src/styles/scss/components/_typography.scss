@@ -7,6 +7,10 @@
 p {
   margin-top: $margin--typography;
   margin-bottom: $margin--typography;
+
+  &:first-child {
+    margin-top: 0;
+  }
 }
 
 // TYPOGRAPHY: SPECIAL TAGS

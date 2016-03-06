@@ -461,6 +461,8 @@ img {
 p {
   margin-top: 15px;
   margin-bottom: 15px; }
+  p:first-child {
+    margin-top: 0; }
 
 strong, b {
   font-family: "LatoBold", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif;
