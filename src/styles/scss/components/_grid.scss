@@ -1,7 +1,7 @@
 /*============================================================
 * GRID SYSTEM
 * ============================================================*/
-$device: (phone: $phone, tablet: $tablet, mobile: $mobile, desktop: $desktop, desktop--xl: $desktop--xl);
+$device: (phone: $phone, tablet: $tablet, mobile: $mobile, desktop: $desktop, desktop-xl: $desktop--xl);
 
 @function grid-calc($colNumber, $grid__columns) {
   @return percentage(($colNumber / $grid__columns));
@@ -9,7 +9,6 @@ $device: (phone: $phone, tablet: $tablet, mobile: $mobile, desktop: $desktop, de
 
 // COLUMNS
 // ============================================================
-
 %grid-cols-common {
   float: left;
   padding-left: $grid__col--gutter;
@@ -86,6 +85,7 @@ $device: (phone: $phone, tablet: $tablet, mobile: $mobile, desktop: $desktop, de
   }
 }
 
+// ============================================================
 // OFFSETS RESET
 // ============================================================
 @mixin grid-cols-offset-reset {
@@ -96,29 +96,22 @@ $device: (phone: $phone, tablet: $tablet, mobile: $mobile, desktop: $desktop, de
   }
 }
 
-// ADDITIONAL GUTTERS
 // ============================================================
-@mixin grid-cols-add-gutter {
-  @each $device-type, $media in $device {
-    @include respond-to($media) {
-      &--#{$device-type}-add-gutter-bottom {
-        margin-bottom: $grid__row--gutter;
-      }
-    }
-  }
-}
-
 // GRID HELPERS
 // ============================================================
-%row-add-gutter {
-  margin-bottom: $grid__row--gutter;
-}
 
-%row-dbl-gutter {
-  margin-bottom: $grid__row--gutter*2;
-
-  @include respond-to($phone) {
-    margin-bottom: $grid__row--gutter;
+// ADDITIONAL BOTTOM GUTTERS
+// ============================================================
+// Examples:
+// @include grid-add-gutter();
+// @include grid-add-gutter($grid__row--gutter*3);
+@mixin grid-add-bottom-gutter($gutter-bottom-size: $grid__row--gutter) {
+  @each $device-type, $media in $device {
+    @include respond-to($media) {
+      .grid-#{$device-type}-add-gutter-bottom {
+        margin-bottom: $gutter-bottom-size;
+      }
+    }
   }
 }
 
@@ -126,6 +119,7 @@ $device: (phone: $phone, tablet: $tablet, mobile: $mobile, desktop: $desktop, de
   margin: 0;
 }
 
+// ============================================================
 // MOUNTING GRID
 // ============================================================
 .box {
@@ -146,15 +140,11 @@ $device: (phone: $phone, tablet: $tablet, mobile: $mobile, desktop: $desktop, de
     @include flex-wrap;
   }
 
-  &--add-gutter {
-    margin-bottom: $grid__row--gutter;
-  }
-
   @extend %clearfix;
 }
 
 // COLUMNS
-// ------------------------------------------------------------
+// ============================================================
 [class*="col-"] {
   @extend %grid-cols-common;
 }
@@ -169,22 +159,13 @@ $device: (phone: $phone, tablet: $tablet, mobile: $mobile, desktop: $desktop, de
   @include grid-cols-tablet;
   @include grid-cols-phone;
   @include grid-cols-offset-reset;
-  @include grid-cols-add-gutter;
 }
 
 // ROWS
-// ------------------------------------------------------------
+// ============================================================
 .row {
   margin-left: -$grid__col--gutter;
   margin-right: -$grid__col--gutter;
-
-  &--add-gutter {
-    @extend %row-add-gutter;
-  }
-
-  &--dbl-gutter {
-    @extend %row-dbl-gutter;
-  }
 
   &.row--no-gutter {
     @extend %row--no-gutter;
@@ -197,8 +178,12 @@ $device: (phone: $phone, tablet: $tablet, mobile: $mobile, desktop: $desktop, de
   @extend %clearfix;
 }
 
+// HELPERS
+// ============================================================
+@include grid-add-bottom-gutter;
+
 // TABLE RWD
-// ------------------------------------------------------------
+// ============================================================
 .table--rwd-cols {
   width: 100%;
 

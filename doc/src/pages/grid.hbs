@@ -212,15 +212,25 @@ title: Grid system
     <a href="#nav-helpers" class="anchor-link"></a>
 </h2>
 
+<h3>General</h3>
+<p>If you need extra space from the bottom of box, row or col, just use these classes depending od device:</p>
+<ul class="list-unstyled">
+    <li><code>.grid-phone-add-gutter-bottom</code></li>
+    <li><code>.grid-tablet-add-gutter-bottom</code></li>
+    <li><code>.grid-mobile-add-gutter-bottom</code></li>
+    <li><code>.grid-desktop-add-gutter-bottom</code></li>
+    <li><code>.grid-desktop-xl-add-gutter-bottom</code></li>
+</ul>
+
+<p>In addition there is an extra mixin to generate bottom gutter in custom place:</p>
+<ul>
+    <li>with custom size: <code>@include grid-add-bottom-gutter($grid__row--gutter*3)</code></li>
+    <li>or default size: <code>@include grid-add-bottom-gutter</code></li>
+</ul>
+
 <h3>Rows</h3>
 
 <ul class="list-unstyled">
-    <li>
-        <code>.row--add-gutter</code> - Add bottom gutter
-    </li>
-    <li>
-        <code>.row--dbl-gutter</code> - Add double bottom gutter
-    </li>
     <li>
         <code>.row--no-gutter</code> - Reset gutters (zero margins)
     </li>
@@ -229,5 +239,5 @@ title: Grid system
 <h3>Columns</h3>
 
 <ul class="list-unstyled">
-    <li><code>.col--no-gutter</code> - Reset gutters</li>
+    <li><code>.col--no-gutter</code> - Reset gutters (zero paddings)</li>
 </ul>

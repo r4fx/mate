@@ -588,15 +588,6 @@ ul li.separator--line:after, ul dt.separator--line:after, ol li.separator--line:
   padding-left: 25px;
   padding-right: 25px; }
 
-.row--add-gutter {
-  margin-bottom: 25px; }
-
-.row--dbl-gutter {
-  margin-bottom: 50px; }
-  @media screen and (max-width: 719px) {
-    .row--dbl-gutter {
-      margin-bottom: 25px; } }
-
 .row.row--no-gutter {
   margin: 0; }
 
@@ -630,8 +621,6 @@ ul li.separator--line:after, ul dt.separator--line:after, ol li.separator--line:
     -ms-align-content: flex-start;
     -webkit-align-content: flex-start;
     align-content: flex-start; }
-  .box--add-gutter {
-    margin-bottom: 25px; }
 
 .col--no-gutter {
   padding: 0; }
@@ -863,23 +852,8 @@ ul li.separator--line:after, ul dt.separator--line:after, ol li.separator--line:
   margin-left: 0; }
 .col--desktop-offset-0 {
   margin-left: 0; }
-.col--desktop--xl-offset-0 {
+.col--desktop-xl-offset-0 {
   margin-left: 0; }
-@media screen and (max-width: 719px) {
-  .col--phone-add-gutter-bottom {
-    margin-bottom: 25px; } }
-@media screen and (max-width: 1023px) and (min-width: 720px) {
-  .col--tablet-add-gutter-bottom {
-    margin-bottom: 25px; } }
-@media screen and (max-width: 1023px) {
-  .col--mobile-add-gutter-bottom {
-    margin-bottom: 25px; } }
-@media screen and (min-width: 1024px) {
-  .col--desktop-add-gutter-bottom {
-    margin-bottom: 25px; } }
-@media screen and (min-width: 1181px) {
-  .col--desktop--xl-add-gutter-bottom {
-    margin-bottom: 25px; } }
 
 .row {
   margin-left: -25px;
@@ -887,6 +861,21 @@ ul li.separator--line:after, ul dt.separator--line:after, ol li.separator--line:
   .row .row {
     clear: both; }
 
+@media screen and (max-width: 719px) {
+  .grid-phone-add-gutter-bottom {
+    margin-bottom: 25px; } }
+@media screen and (max-width: 1023px) and (min-width: 720px) {
+  .grid-tablet-add-gutter-bottom {
+    margin-bottom: 25px; } }
+@media screen and (max-width: 1023px) {
+  .grid-mobile-add-gutter-bottom {
+    margin-bottom: 25px; } }
+@media screen and (min-width: 1024px) {
+  .grid-desktop-add-gutter-bottom {
+    margin-bottom: 25px; } }
+@media screen and (min-width: 1181px) {
+  .grid-desktop-xl-add-gutter-bottom {
+    margin-bottom: 25px; } }
 .table--rwd-cols {
   width: 100%; }
   .table--rwd-cols tr {
@@ -2342,4 +2331,6 @@ pre.code-example[class*="language-"] {
   [class*="masonry-"] > article img {
     display: block; }
 
-/*# sourceMappingURL=mate-doc.css.map */
+
+
+/*# sourceMappingURL=../css/mate-doc.css.map */
