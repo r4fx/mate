@@ -869,6 +869,9 @@ ul li.separator--line:after, ul dt.separator--line:after, ol li.separator--line:
   .row .row {
     clear: both; }
 
+.grid-add-gutter-bottom {
+  margin-bottom: 25px; }
+
 @media screen and (max-width: 719px) {
   .grid-phone-add-gutter-bottom {
     margin-bottom: 25px; } }
