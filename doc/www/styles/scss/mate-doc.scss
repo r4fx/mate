@@ -27,6 +27,7 @@ a[href^="https://github.com"]:before {
   background-color: rgba($block__color--first, 0.9);
   border-radius: 50%;
   font-size: 2.1rem;
+  line-height: 1;
   padding: 5px;
   margin-left: 10px;
   @include transition();

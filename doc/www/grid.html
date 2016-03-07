@@ -55,7 +55,7 @@
 </h2>
 <p>The containers are optional in Mate, rows and columns can operate without them.</p>
 <p>Available containers classes:</p>
-<ul>
+<ul class="list-unstyled">
     <li><code>.box</code> - Size of container is fixed to max-width configured id settings.scss ($page__width--maxsize)</li>
     <li><code>.box--fluid</code> - 100% width of container</li>
     <li><code>.box--flex</code> - Container based on flex-box. This class is typicaly used to wrap items (columns), not rows.</li>
@@ -172,8 +172,10 @@
     <a href="#nav-offseting" class="anchor-link"></a>
 </h2>
 
-<div class="code-example code-example--grid">
+<p>You can use offsetting for specified device by using classes dedicated to mediums,
+    example .col--*-offset-3, where * is one of mediums (phone, tablet, mobile, desktop, desktop-xl).</p>
 
+<div class="code-example code-example--grid">
     <div data-clone>
         <div class="row">
             <div class="col-4 col--offset-4">.col-4 .col--offset-4</div>
@@ -189,6 +191,16 @@
 
     <pre lang="html"></pre>
 </div>
+
+<h3>Reset offseting</h3>
+<p>To reset offset use these classes:</p>
+<ul class="list-unstyled">
+    <li><code>.col--phone-offset-0</code></li>
+    <li><code>.col--tablet-offset-0</code></li>
+    <li><code>.col--mobile-offset-0</code></li>
+    <li><code>.col--desktop-offset-0</code></li>
+    <li><code>.col--desktop-xl-offset-0</code></li>
+</ul>
 
 
 <h2 id="nav-rwd">

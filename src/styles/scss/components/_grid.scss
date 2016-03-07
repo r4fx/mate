@@ -1,6 +1,7 @@
 /*============================================================
 * GRID SYSTEM
 * ============================================================*/
+$device: (phone: $phone, tablet: $tablet, mobile: $mobile, desktop: $desktop, desktop--xl: $desktop--xl);
 
 @function grid-calc($colNumber, $grid__columns) {
   @return percentage(($colNumber / $grid__columns));
@@ -15,11 +16,24 @@
   padding-right: $grid__col--gutter;
 }
 
-// DEFAULT COLUMNS FOR DESKTOP
+// DEFAULT COLUMNS FOR DESKTOP & NON SPECIFIED DEVICES
 @mixin grid-cols {
   @for $i from 1 through $grid__columns {
     &-#{$i} {
       width: grid-calc($i, $grid__columns);
+    }
+
+    &--offset-#{$i} {
+      margin-left: grid-calc($i, $grid__columns);
+    }
+  }
+
+  // OFFSETS
+  @include respond-to($desktop) {
+    @for $i from 1 through $grid__columns {
+      &--desktop-offset-#{$i} {
+        margin-left: grid-calc($i, $grid__columns);
+      }
     }
   }
 }
@@ -30,6 +44,11 @@
     @for $i from 1 through $grid__columns {
       &-#{$i}--mobile {
         width: grid-calc($i, $grid__columns);
+      }
+
+      // OFFSETS
+      &--mobile-offset-#{$i} {
+        margin-left: grid-calc($i, $grid__columns);
       }
     }
   }
@@ -42,6 +61,11 @@
       &-#{$i}--tablet {
         width: grid-calc($i, $grid__columns);
       }
+
+      // OFFSETS
+      &--tablet-offset-#{$i} {
+        margin-left: grid-calc($i, $grid__columns);
+      }
     }
   }
 }
@@ -52,22 +76,34 @@
     @for $i from 1 through $grid__columns {
       &-#{$i}--phone {
         width: grid-calc($i, $grid__columns);
+      }
 
-        // IF col is 100% width then add bottom gutter
-        @if $i == 12 {
-          //margin-bottom: $grid__col--gutter;
-        }
+      // OFFSETS
+      &--phone-offset-#{$i} {
+        margin-left: grid-calc($i, $grid__columns);
       }
     }
   }
 }
 
-// OFFSETS
+// OFFSETS RESET
 // ============================================================
-@mixin grid-cols-offset {
-  @for $i from 1 through $grid__columns {
-    &--offset-#{$i} {
-      margin-left: grid-calc($i, $grid__columns);
+@mixin grid-cols-offset-reset {
+  @each $device-type, $media in $device {
+    &--#{$device-type}-offset-0 {
+      margin-left: 0;
+    }
+  }
+}
+
+// ADDITIONAL GUTTERS
+// ============================================================
+@mixin grid-cols-add-gutter {
+  @each $device-type, $media in $device {
+    @include respond-to($media) {
+      &--#{$device-type}-add-gutter-bottom {
+        margin-bottom: $grid__row--gutter;
+      }
     }
   }
 }
@@ -132,7 +168,8 @@
   @include grid-cols-mobile;
   @include grid-cols-tablet;
   @include grid-cols-phone;
-  @include grid-cols-offset;
+  @include grid-cols-offset-reset;
+  @include grid-cols-add-gutter;
 }
 
 // ROWS
