@@ -190,6 +190,7 @@ input[type="radio"].mate-input {
     position: relative;
     padding-left: 40px;
     cursor: pointer;
+    display: block;
 
     &:before,
     &:after {

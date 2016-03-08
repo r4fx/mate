@@ -1380,7 +1380,8 @@ input[type="radio"].mate-input {
   input[type="radio"].mate-input + label {
     position: relative;
     padding-left: 40px;
-    cursor: pointer; }
+    cursor: pointer;
+    display: block; }
     input[type="checkbox"].mate-input + span:before, input[type="checkbox"].mate-input + span:after,
     input[type="checkbox"].mate-input + label:before,
     input[type="checkbox"].mate-input + label:after,
