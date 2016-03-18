@@ -413,38 +413,30 @@ $print:       'print';
 
 
 // INPUT PLACEHOLDER
-// Example:
-// .class-selector{
-//   @include placeholder(red, 1.4rem);
-//}
-@mixin placeholder($color: $text__color--muted, $size: null) {
-  &::-webkit-input-placeholder {
+@mixin placeholder($color: $text__color--muted, $font-size: inherit, $font-family: $font__base--regular) {
+  ::-webkit-input-placeholder {
     color: $color;
-    @if $size {
-      font-size: $size;
-    }
+    font-size: $font-size;
+    font-family: $font-family;
   }
 
-  &::-moz-placeholder {
+  ::-moz-placeholder {
     color: $color;
-    @if $size {
-      font-size: $size;
-    }
+    font-size: $font-size;
+    font-family: $font-family;
   }
 
-  &:-ms-input-placeholder {
+  :-ms-input-placeholder {
     color: $color;
-    @if $size {
-      font-size: $size;
-    }
+    font-size: $font-size;
+    font-family: $font-family;
   }
 
   // CSS4
-  &::placeholder {
+  ::placeholder {
     color: $color;
-    @if $size {
-      font-size: $size;
-    }
+    font-size: $font-size;
+    font-family: $font-family;
   }
 }
 

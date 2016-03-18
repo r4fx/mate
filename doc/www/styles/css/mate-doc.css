@@ -1256,14 +1256,25 @@ form em {
 fieldset > .row label {
   margin-bottom: 0; }
 
-[placeholder]::-webkit-input-placeholder {
-  color: #959A9D; }
-[placeholder]::-moz-placeholder {
-  color: #959A9D; }
-[placeholder]:-ms-input-placeholder {
-  color: #959A9D; }
-[placeholder]::placeholder {
-  color: #959A9D; }
+::-webkit-input-placeholder {
+  color: #959A9D;
+  font-size: inherit;
+  font-family: "LatoRegular", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif; }
+
+::-moz-placeholder {
+  color: #959A9D;
+  font-size: inherit;
+  font-family: "LatoRegular", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif; }
+
+:-ms-input-placeholder {
+  color: #959A9D;
+  font-size: inherit;
+  font-family: "LatoRegular", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif; }
+
+::placeholder {
+  color: #959A9D;
+  font-size: inherit;
+  font-family: "LatoRegular", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif; }
 
 input[type="text"],
 input[type="password"],

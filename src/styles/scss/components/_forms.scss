@@ -66,9 +66,7 @@ fieldset > .row label {
 
 // PLACEHOLDERS
 // ============================================================
-[placeholder] {
-  @include placeholder();
-}
+@include placeholder;
 
 // FIELDS
 // ============================================================
