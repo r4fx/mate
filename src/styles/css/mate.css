@@ -145,7 +145,7 @@ textarea[disabled], [disabled] label {
     -webkit-column-count: 12;
     -moz-column-count: 12;
     column-count: 12; } }
-@media screen and (max-width: 1023px) and (min-width: 720px) {
+@media screen and (min-width: 720px) and (max-width: 1023px) {
   .masonry-1--tablet {
     -webkit-column-count: 1;
     -moz-column-count: 1;
@@ -362,7 +362,7 @@ html {
       html:after {
         content: 'small';
         background-color: mediumseagreen; } }
-    @media screen and (max-width: 1023px) and (min-width: 720px) {
+    @media screen and (min-width: 720px) and (max-width: 1023px) {
       html:after {
         content: 'medium';
         background-color: deepskyblue; } }
@@ -754,7 +754,7 @@ ul li.separator--line:after, ul dt.separator--line:after, ol li.separator--line:
     width: 100%; }
   .col--mobile-offset-12 {
     margin-left: 100%; } }
-@media screen and (max-width: 1023px) and (min-width: 720px) {
+@media screen and (min-width: 720px) and (max-width: 1023px) {
   .col-1--tablet {
     width: 8.33333%; }
   .col--tablet-offset-1 {
@@ -875,7 +875,7 @@ ul li.separator--line:after, ul dt.separator--line:after, ol li.separator--line:
 @media screen and (max-width: 719px) {
   .grid-phone-add-gutter-bottom {
     margin-bottom: 25px; } }
-@media screen and (max-width: 1023px) and (min-width: 720px) {
+@media screen and (min-width: 720px) and (max-width: 1023px) {
   .grid-tablet-add-gutter-bottom {
     margin-bottom: 25px; } }
 @media screen and (max-width: 1023px) {
@@ -2073,7 +2073,7 @@ table tbody th {
   .hidden--mobile {
     display: none !important; } }
 
-@media screen and (max-width: 1023px) and (min-width: 720px) {
+@media screen and (min-width: 720px) and (max-width: 1023px) {
   .hidden--tablet {
     display: none !important; } }
 
