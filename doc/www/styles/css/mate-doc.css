@@ -2101,10 +2101,24 @@ body {
   font-size: 1.8rem;
   font-family: "LatoLight", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif; }
 
-a[href^="https://github.com"]:before {
-  content: "\e600";
-  font-family: 'icomoon', sans-serif;
-  margin-right: 5px; }
+a[href^="https://github.com"] {
+  position: relative; }
+  a[href^="https://github.com"]:after {
+    content: "\e600";
+    font-family: 'icomoon', sans-serif;
+    margin-left: 5px;
+    font-size: 1.4rem;
+    position: absolute;
+    top: 0;
+    transition: all 300ms ease-in-out 0s; }
+  a[href^="https://github.com"]:hover:after {
+    color: #1ab394; }
+
+.link-neutral {
+  border-bottom: 1px solid rgba(60, 60, 60, 0.4); }
+  .link-neutral:hover {
+    color: #3c3c3c;
+    border-bottom-color: #1ab394; }
 
 .anchor-link {
   opacity: 0.2;
@@ -2346,6 +2360,4 @@ pre.code-example[class*="language-"] {
   [class*="masonry-"] > article img {
     display: block; }
 
-
-
-/*# sourceMappingURL=../css/mate-doc.css.map */
+/*# sourceMappingURL=mate-doc.css.map */

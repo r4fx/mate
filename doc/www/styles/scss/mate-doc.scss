@@ -13,10 +13,32 @@ body{
   font-family: $font__base--light;
 }
 
-a[href^="https://github.com"]:before {
-  content: "\e600";
-  font-family: 'icomoon', sans-serif;
-  margin-right: 5px;
+
+a[href^="https://github.com"]{
+  position: relative;
+
+  &:after {
+    content: "\e600";
+    font-family: 'icomoon', sans-serif;
+    margin-left: 5px;
+    font-size: 1.4rem;
+    position: absolute;
+    top: 0;
+    @include transition;
+  }
+
+  &:hover:after{
+    color: $color__base--first;
+  }
+}
+
+.link-neutral{
+  border-bottom: 1px solid rgba(60, 60, 60, 0.40);
+
+  &:hover{
+    color: $text__color--first;
+    border-bottom-color: $color__base--first;
+  }
 }
 
 .anchor-link {
