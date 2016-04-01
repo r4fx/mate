@@ -539,8 +539,8 @@ ul, ol {
 
 .list-unstyled {
   list-style-type: none;
-  margin-left: 0;
-  padding-left: 0; }
+  margin: 0;
+  padding: 0; }
 
 .list-path {
   margin: 0;
@@ -1456,7 +1456,7 @@ label > .form-error__message {
 
 @font-face {
   font-family: 'icomoon';
-  src: url("../../fonts/icomoon/icomoon.woff") format("woff"), url("../../fonts/icomoon/icomoon.svg#icomoon") format("svg");
+  src: url("../../fonts/icomoon/icomoon.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 .icon--sm:before {
@@ -1626,6 +1626,9 @@ label > .form-error__message {
 
 .icon-link:before {
   content: "\e63a"; }
+
+.icon-link-external:before {
+  content: "\e901"; }
 
 .icon-flag:before {
   content: "\e63b"; }
@@ -2360,4 +2363,6 @@ pre.code-example[class*="language-"] {
   [class*="masonry-"] > article img {
     display: block; }
 
-/*# sourceMappingURL=mate-doc.css.map */
+
+
+/*# sourceMappingURL=../css/mate-doc.css.map */

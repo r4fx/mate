@@ -3,8 +3,7 @@
 // ============================================================
 @font-face {
   font-family: 'icomoon';
-  src: url('../../fonts/icomoon/icomoon.woff') format('woff'),
-       url('../../fonts/icomoon/icomoon.svg#icomoon') format('svg');
+  src: url('../../fonts/icomoon/icomoon.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -230,6 +229,10 @@ $list__icon-sizes: (sm 2rem), (md 3rem), (lg 4rem), (xl 6rem), (xxl 8rem);
 
 .icon-link:before {
   content: "\e63a";
+}
+
+.icon-link-external:before {
+  content: "\e901";
 }
 
 .icon-flag:before {
