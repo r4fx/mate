@@ -124,7 +124,7 @@ var pageEvents = {
     collection: function () {
 
         // Events only for mobile devices!
-        if (helpers.userEnvironment.system === 'mobile') {
+        if (helpers.userEnvironment().system === 'mobile') {
             console.log('pageTools.collection for mobile');
         }
 
