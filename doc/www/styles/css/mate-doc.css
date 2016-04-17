@@ -528,7 +528,7 @@ ul, ol {
   margin-bottom: 15px; }
   ul.list-inline, ol.list-inline {
     padding: 0; }
-    ul.list-inline li, ol.list-inline li {
+    ul.list-inline > li, ol.list-inline > li {
       display: inline-block; }
   ul li:last-child ul, ol li:last-child ul {
     margin-bottom: 0; }
