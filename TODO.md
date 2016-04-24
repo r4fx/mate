@@ -4,8 +4,7 @@
 | _toolbox.scss | 199 | make mixin with params
 | _toolbox.scss | 458 | add to manual
 | components/_base.scss | 17 | describe in manual, + how to use with JS
-| components/_base.scss | 18 | add var in settings to disable?
-| components/_base.scss | 68 | describe in manual
+| components/_base.scss | 69 | describe in manual
 | components/_buttons.scss | 149 | make as mixin
 | components/_buttons.scss | 341 | make as mixin
 | components/_buttons.scss | 417 | gropued buttons

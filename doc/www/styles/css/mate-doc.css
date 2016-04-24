@@ -338,34 +338,6 @@ html {
   @media screen and (max-width: 1023px) {
     html {
       font-size: 52.5%; } }
-  html:after {
-    content: 'Unhide to see device size in corner';
-    visibility: hidden;
-    position: fixed;
-    z-index: 99999;
-    left: 0;
-    bottom: 0;
-    padding: 5px 10px;
-    font-size: 1rem;
-    font-family: monospace;
-    color: #fff;
-    border-top-right-radius: 5px; }
-    @media screen and (max-width: 719px) {
-      html:after {
-        content: 'small';
-        background-color: mediumseagreen; } }
-    @media screen and (min-width: 720px) and (max-width: 1023px) {
-      html:after {
-        content: 'medium';
-        background-color: deepskyblue; } }
-    @media screen and (min-width: 1024px) {
-      html:after {
-        content: 'large';
-        background-color: mediumpurple; } }
-    @media screen and (min-width: 1181px) {
-      html:after {
-        content: 'x-large';
-        background-color: tomato; } }
 
 body {
   color: #3c3c3c;
