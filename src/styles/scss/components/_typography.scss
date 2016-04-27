@@ -24,7 +24,7 @@ strong, b {
 // ============================================================
 h1 {
   font-size: $text__size--xxl;
-  font-family: $font__base--medium;
+  font-family: $font__base--bold;
   margin-top: $text__size--xxl;
   margin-bottom: $text__size--xxl;
   font-weight: normal;
@@ -38,7 +38,7 @@ h1 {
 
 h2 {
   font-size: $text__size--xl;
-  font-family: $font__base--medium;
+  font-family: $font__base--bold;
   margin-top: $text__size--xl;
   margin-bottom: $text__size--xl;
   font-weight: normal;
@@ -52,7 +52,7 @@ h2 {
 
 h3 {
   font-size: $text__size--lg;
-  font-family: $font__base--medium;
+  font-family: $font__base--bold;
   margin-top: $text__size--lg;
   margin-bottom: $text__size--lg;
   font-weight: normal;
@@ -157,7 +157,7 @@ dl {
   margin-bottom: $margin--typography;
 
   dt {
-    font-family: $font-_base--medium;
+    font-family: $font__base--bold;
     margin-top: 10px;
 
     &:first-child {
