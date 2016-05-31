@@ -1309,7 +1309,7 @@ label > input[type="file"] {
   border-radius: 50%; }
 
 [data-file]:after {
-  content: attr(data-file); }
+  content: attr(data-file) !important; }
 
 [data-file-multiple]:after {
   content: attr(data-file-multiple);

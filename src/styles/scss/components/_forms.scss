@@ -145,7 +145,7 @@ label > input[type="file"] {
 }
 
 [data-file]:after {
-  content: attr(data-file);
+  content: attr(data-file) !important;
 }
 
 [data-file-multiple]:after {
