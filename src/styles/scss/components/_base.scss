@@ -127,3 +127,21 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+// MISC
+// todo: add to manual
+// ------------------------------------------------------------
+hr {
+  border: 0;
+  height: 1px;
+  background-color: $border__color--first;
+  margin: $grid__row--gutter auto;
+
+  &.hr--mini {
+    width: 150px;
+  }
+
+  &.hr--half {
+    width: 50%;
+  }
+}

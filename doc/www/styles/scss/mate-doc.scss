@@ -251,6 +251,10 @@ main {
     }
 
     > h1 {
+      &:first-child{
+        margin-top: 0;
+      }
+
       @include respond-to($phone) {
         text-align: center;
       }

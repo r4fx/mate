@@ -212,3 +212,91 @@ $device: (phone: $phone, tablet: $tablet, mobile: $mobile, desktop: $desktop, de
     }
   }
 }
+
+
+// ============================================================
+// NATIVE CSS MULTI COLUMNS
+// resources: http://caniuse.com/#search=column
+// Inpiration: http://people.opera.com/pepelsbey/experiments/multicol/
+// ============================================================
+
+// Examples:
+// <div class="column-2 column-1--phone column--bordered">...</div>
+
+%masonry-common {
+  -webkit-column-gap: $grid__col--gutter*2;
+  -moz-column-gap: $grid__col--gutter*2;
+  column-gap: $grid__col--gutter*2;
+}
+
+@mixin masonry-count {
+  @for $i from 1 through $grid__columns {
+    &-#{$i} {
+      -webkit-column-count: $i;
+      -moz-column-count: $i;
+      column-count: $i;
+
+    }
+  }
+}
+
+// RWD COLUMNS FOR PHONE
+@mixin masonry-phone {
+  @include respond-to($phone) {
+    @for $i from 1 through $grid__columns {
+      &-#{$i}--phone {
+        -webkit-column-count: $i;
+        -moz-column-count: $i;
+        column-count: $i;
+      }
+    }
+  }
+}
+
+// RWD COLUMNS FOR TABLET
+@mixin masonry-tablet {
+  @include respond-to($tablet) {
+    @for $i from 1 through $grid__columns {
+      &-#{$i}--tablet {
+        -webkit-column-count: $i;
+        -moz-column-count: $i;
+        column-count: $i;
+      }
+    }
+  }
+}
+
+[class*="masonry-"] {
+  @extend %masonry-common;
+
+  > article {
+    display: inline-block;
+    float: none;
+    padding: 0;
+    width: 100%;
+
+    &.masonry-span {
+      -webkit-column-span: all;
+      column-span: all;
+      display: block;
+    }
+  }
+}
+
+.masonry {
+  @include masonry-count;
+  @include masonry-phone;
+  @include masonry-tablet;
+
+  &--bordered {
+    -webkit-column-rule: 1px solid;
+    -moz-column-rule: 1px solid;
+    column-rule: 1px solid;
+
+    @if variable-exists(border__color--first) {
+      -webkit-column-rule-color: $border__color--first;
+      -moz-column-rule-color: $border__color--first;
+      column-rule-color: $border__color--first;
+    }
+  }
+}

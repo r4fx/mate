@@ -152,3 +152,28 @@
     height: 100%;
   }
 }
+
+// ============================================================
+// Animations
+// [i] Useful for focusing user eyes on changed element
+// ============================================================
+
+// Example:
+// add class .mate-blink to an element by JS
+// document.getElementById(yourElement).classList.add('mate-blink');
+
+.mate-blink {
+  @include animation(mate-blink 2s ease);
+}
+
+@keyframes mate-blink {
+  0% {
+    @if variable-exists(color__message--warning) {
+      background-color: $color__message--warning;
+    }
+  }
+
+  100% {
+    background-color: transparent;
+  }
+}

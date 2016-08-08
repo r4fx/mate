@@ -242,3 +242,34 @@ title: Grid system
 <ul class="list-unstyled">
     <li><code>.col--no-gutter</code> - Reset gutters (zero paddings)</li>
 </ul>
+
+<h2 id="nav-multicolumns">
+    Native CSS multi columns
+    <a href="#nav-multicolumns" class="anchor-link"></a>
+</h2>
+
+<p>You can use this technique to achieve well-known masonry effect or simple columns for different use case.</p>
+<p>There is 12 columns by default like in grid system, so you can use classes from <code>.masonry-1</code> to <code>.masonry-12</code>. <br>
+    For RWD needs just add modifier class like in grid system <code>--phone, --tablet, --mobile</code> to achieve the class like <code>.masonry-1--phone</code> and so on.</p>
+
+<ul class="list-unstyled">
+    <li>Additional classes:</li>
+    <li><code>.masonry--bordered</code> - add vertical border between columns</li>
+    <li><code>.masonry-span</code> - add to element inside masonry container which should not be divided</li>
+</ul>
+
+<p>Example:</p>
+<div class="code-example">
+    <div data-clone>
+        <div class="masonry-3 masonry-1--phone">
+            <article><img src="http://placehold.it/550x400/" alt=""></article>
+            <article><img src="http://placehold.it/550x500/" alt=""></article>
+            <article><img src="http://placehold.it/550x300/" alt=""></article>
+            <article><img src="http://placehold.it/555x300/" alt=""></article>
+            <article><img src="http://placehold.it/555x300/" alt=""></article>
+            <article><img src="http://placehold.it/550x500/" alt=""></article>
+            <article class="masonry-span"><img src="http://placehold.it/1024x200/" alt=""></article>
+        </div>
+    </div>
+    <pre lang="html"></pre>
+</div>

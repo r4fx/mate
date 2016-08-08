@@ -34,6 +34,7 @@
                 <li><a href="buttons.html">Buttons</a></li>
                 <li><a href="icons.html">Icons</a></li>
                 <li><a href="tables.html">Tables</a></li>
+                <li><a href="helpers.html">Helpers</a></li>
                 <li><a href="toolbox.html">Toolbox</a></li>
             </ul>
 
@@ -52,11 +53,13 @@
         <p>Toolbox is a collection of useful mixins, functions and classes. This file can operate independently of the framework,
     you can grab it (<code>_toolbox.scss</code>) to your project even without using Mate.</p>
 
+<p><a class="link-neutral" href="https://github.com/r4fx/mate/blob/master/src/styles/scss/_toolbox.scss" target="_blank">preview tollbox.scss on github</a></p>
+
+
 <h2 id="nav-placeholders">
     Placeholders
     <a href="#nav-placeholders" class="anchor-link"></a>
 </h2>
-<p><a class="link-neutral" href="https://github.com/r4fx/mate/blob/master/src/styles/scss/_toolbox.scss" target="_blank">preview tollbox.scss on github</a></p>
 
 <ul class="list-unstyled">
     <li><code>%clearfix</code></li>
@@ -69,66 +72,10 @@
     <li><code>%disabled</code></li>
 </ul>
 
-<h2 id="nav-helpes">
-    Helper classes
-    <a href="#nav-helpes" class="anchor-link"></a>
-</h2>
-<p><a class="link-neutral" href="https://github.com/r4fx/mate/blob/master/src/styles/scss/components/_helpers.scss" target="_blank">preview helpers.scss on github</a></p>
-
-<ul class="list-unstyled">
-    <li><code>.hidden</code></li>
-    <li><code>.hidden--mobile</code></li>
-    <li><code>.hidden--phone</code></li>
-    <li><code>.hidden--tablet</code></li>
-    <li><code>.hidden--desktop</code></li>
-
-    <li class="separator"></li>
-
-    <li><code>.img--rwd</code></li>
-    <li><code>.video--rwd</code></li>
-
-    <li class="separator"></li>
-
-    <li><code>.inline-left</code></li>
-    <li><code>.inline-left--phone</code></li>
-    <li ><code>.inline-right</code></li>
-    <li><code>.inline-right--phone</code></li>
-    <li><code>.inline-center</code></li>
-    <li><code>.inline-center--phone</code></li>
-    <li><code>.inline-justify</code></li>
-    <li><code>.inline-justify--phone</code></li>
-
-    <li class="separator"></li>
-
-    <li><code>.block-center</code></li>
-
-    <li class="separator"></li>
-
-    <li><code>.vertical-top</code></li>
-    <li><code>.vertical-middle</code></li>
-    <li><code>.vertical-bottom</code></li>
-
-    <li class="separator"></li>
-
-    <li><code>.float-right</code></li>
-    <li><code>.float-left</code></li>
-
-    <li class="separator"></li>
-
-    <li><code>.no-margin</code></li>
-    <li><code>.radius-none</code></li>
-    <li><code>.img-circle</code></li>
-
-    <li class="separator"></li>
-
-    <li><code>.link-neutral</code> - href  color as default color of text</li>
-</ul>
-
 <h2 id="nav-mixins">
     Mixins
     <a href="#nav-mixins" class="anchor-link"></a>
 </h2>
-<p><a class="link-neutral" href="https://github.com/r4fx/mate/blob/master/src/styles/scss/_toolbox.scss" target="_blank">preview tollbox.scss on github</a></p>
 
 <h3>Media queries breakpoint</h3>
 <ul class="list-unstyled">
@@ -196,46 +143,6 @@
     <li><code>placeholder($color: $text__color--muted, $font-size: inherit, $font-family: $font__base--regular)</code> - placeholder for form inputs</li>
     <li><code>svg-bkg($color)</code> - background-image with SVG</li>
 </ul>
-
-<h2 id="nav-animations">
-    Animations
-    <a href="#nav-animations" class="anchor-link"></a>
-</h2>
-
-<ul class="list-unstyled">
-    <li>Blink: add class <code>.mate-blink</code></li>
-</ul>
-
-<h2 id="nav-multicolumns">
-    Native CSS multi columns
-    <a href="#nav-multicolumns" class="anchor-link"></a>
-</h2>
-
-<p>You can use this technique to achieve well-known masonry effect or simple columns for different use case.</p>
-<p>There is 12 columns by default like in grid system, so you can use classes from <code>.masonry-1</code> to <code>.masonry-12</code>. <br>
-    For RWD needs just add modifier class like in grid system <code>--phone, --tablet, --mobile</code> to achieve the class like <code>.masonry-1--phone</code> and so on.</p>
-
-<ul class="list-unstyled">
-    <li>Additional classes:</li>
-    <li><code>.masonry--bordered</code> - add vertical border between columns</li>
-    <li><code>.masonry-span</code> - add to element inside masonry container which should not be divided</li>
-</ul>
-
-<p>Example:</p>
-<div class="code-example">
-    <div data-clone>
-        <div class="masonry-3 masonry-1--phone">
-            <article><img src="http://placehold.it/550x400/" alt=""></article>
-            <article><img src="http://placehold.it/550x500/" alt=""></article>
-            <article><img src="http://placehold.it/550x300/" alt=""></article>
-            <article><img src="http://placehold.it/555x300/" alt=""></article>
-            <article><img src="http://placehold.it/555x300/" alt=""></article>
-            <article><img src="http://placehold.it/550x500/" alt=""></article>
-            <article class="masonry-span"><img src="http://placehold.it/1024x200/" alt=""></article>
-        </div>
-    </div>
-    <pre lang="html"></pre>
-</div>
     </section>
 </main>
 </body>
