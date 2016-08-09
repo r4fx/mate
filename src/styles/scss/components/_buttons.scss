@@ -2,11 +2,6 @@
 // BUTTONS
 // ============================================================
 
-// Define sizes,
-// second parameter is a vertical padding
-// ------------------------------------------------------------
-$list__btn-sizes: (xs 0.30rem), (sm 0.8rem), (md 1rem), (lg 1.25rem), (xl 1.5rem), (xxl 1.75rem);
-
 // Return button text size
 // ------------------------------------------------------------
 @function getTextSize($value) {
@@ -71,11 +66,10 @@ $list__btn-sizes: (xs 0.30rem), (sm 0.8rem), (md 1rem), (lg 1.25rem), (xl 1.5rem
 
 @mixin generate-btn-sizes($default: md) {
 
-  @each $n in $list__btn-sizes {
+  @each $n in $btn__sizes {
     $type: nth($n, 1);
-    $padding: nth($n, 2);
-    $btn-padding-vertical: $padding;
-    $btn-padding-horizontal: $btn-padding-vertical*2;
+    $btn-padding-vertical: nth($n, 2);
+    $btn-padding-horizontal: nth($n, 3);
     $arrow-border-size: (getTextSize($type) * $text__line-height-ratio + ($btn-padding-vertical*2)) /2;
 
     // Generate default size
@@ -105,10 +99,9 @@ $list__btn-sizes: (xs 0.30rem), (sm 0.8rem), (md 1rem), (lg 1.25rem), (xl 1.5rem
 }
 
 @mixin generate-btn-outline($default: md) {
-  @each $n in $list__btn-sizes {
+  @each $n in $btn__sizes {
     $type: nth($n, 1);
-    $padding: nth($n, 2);
-    $btn-padding-vertical: $padding;
+    $btn-padding-vertical: nth($n, 2);
 
     // Generate default size
     @if $default == $type {
