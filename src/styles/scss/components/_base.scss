@@ -52,6 +52,10 @@ html {
   }
 }
 
+// BASE FONT FACE
+// ============================================================
+@include font-face($font__base--dir, $font__base--family);
+
 body {
   color: $text__color--first;
   font-family: $font__base--regular;
@@ -60,10 +64,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-// BASE FONT FACE
-// ============================================================
-@include font-face($font__base--dir, $font__base--family);
 
 // BASIC COMMON COLORS
 // todo: describe in manual

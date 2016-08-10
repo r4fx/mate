@@ -115,14 +115,14 @@ $print:       'print';
 
 // FONT FACE
 // ============================================================
-@mixin font-face($dir, $file) {
-  @each $file-name, $font-family in $file {
+@mixin font-face($dir, $family) {
+  @each $font-file-name, $font-family in $family {
     @font-face {
       font-family: quote($font-family);
       font-style: normal;
       font-weight: normal;
-      src: url($dir + $file-name + ".woff2") format('woff2'),
-            url($dir + $file-name + ".woff") format('woff');
+      src: url($dir + $font-file-name + ".woff2") format('woff2'),
+           url($dir + $font-file-name + ".woff") format('woff');
     }
   }
 }

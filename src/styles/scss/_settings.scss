@@ -12,9 +12,10 @@ $breakPoint__desktop--xl:   1180px;
 
 // FONTS
 // ============================================================
+$font__icons--dir:          "../../fonts/icomoon";
 $font__base--dir:           "../../fonts/lato/";
 $font__base--family:        (
-                              // file-name: font-family
+                              // font-file-name: font-family
                               Lato-Regular: LatoRegular,
                               Lato-Bold: LatoBold,
                               Lato-Light: LatoLight,

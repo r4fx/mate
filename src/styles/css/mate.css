@@ -159,14 +159,6 @@ html {
     html {
       font-size: 52.5%; } }
 
-body {
-  color: #3c3c3c;
-  font-family: "LatoRegular", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif;
-  font-size: 1.6rem;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
-
 @font-face {
   font-family: "LatoRegular";
   font-style: normal;
@@ -187,6 +179,14 @@ body {
   font-style: normal;
   font-weight: normal;
   src: url("../../fonts/lato/Lato-Italic.woff2") format("woff2"), url("../../fonts/lato/Lato-Italic.woff") format("woff"); }
+body {
+  color: #3c3c3c;
+  font-family: "LatoRegular", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
 .color--alert {
   color: #B03C1D; }
 
@@ -1404,11 +1404,6 @@ fieldset.form-error {
 label > .form-error__message {
   display: inline-block; }
 
-@font-face {
-  font-family: 'icomoon';
-  src: url("../../fonts/icomoon/icomoon.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
 .icon--sm:before {
   font-size: 2rem; }
 
@@ -1424,19 +1419,25 @@ label > .form-error__message {
 .icon--xxl:before {
   font-size: 8rem; }
 
-[class*="icon-"] {
+@font-face {
+  font-family: 'icomoon';
+  src: url("../../fonts/icomoon/icomoon.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon' !important;
+  speak: none;
   font-style: normal;
   font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
   display: inline-block;
   vertical-align: middle;
-  line-height: 1;
-  text-transform: none;
-  font-variant: normal;
   text-decoration: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
-  [class*="icon-"]:before {
-    font-family: 'icomoon', sans-serif;
+  [class^="icon-"]:before, [class*=" icon-"]:before {
     display: block; }
 
 .icon-disabled:before {
@@ -1469,14 +1470,14 @@ label > .form-error__message {
 .icon-file:before {
   content: "\e616"; }
 
-.icon-file-outline:before {
-  content: "\e900"; }
-
 .icon-note-add:before {
   content: "\e617"; }
 
 .icon-description:before {
   content: "\e618"; }
+
+.icon-file-outline:before {
+  content: "\e900"; }
 
 .icon-home:before {
   content: "\e619"; }
@@ -1574,11 +1575,11 @@ label > .form-error__message {
 .icon-remove-circle-outline:before {
   content: "\e639"; }
 
-.icon-link:before {
-  content: "\e63a"; }
-
 .icon-link-external:before {
   content: "\e901"; }
+
+.icon-link:before {
+  content: "\e63a"; }
 
 .icon-flag:before {
   content: "\e63b"; }
@@ -1745,11 +1746,11 @@ label > .form-error__message {
 .icon-email-alt:before {
   content: "\e607"; }
 
-.icon-email:before {
-  content: "\e66d"; }
-
 .icon-email-outline:before {
   content: "\e637"; }
+
+.icon-email:before {
+  content: "\e66d"; }
 
 .icon-search:before {
   content: "\e66e"; }
@@ -1835,14 +1836,17 @@ label > .form-error__message {
 .icon-facebook:before {
   content: "\e605"; }
 
-.icon-github:before {
-  content: "\e600"; }
+.icon-instagram:before {
+  content: "\e902"; }
+
+.icon-linkedin:before {
+  content: "\e681"; }
 
 .icon-feed:before {
   content: "\e903"; }
 
-.icon-linkedin:before {
-  content: "\e681"; }
+.icon-github:before {
+  content: "\e600"; }
 
 ul.-divided a {
   padding: 5px; }
