@@ -79,8 +79,8 @@
 
 <h3>Media queries breakpoint</h3>
 <ul class="list-unstyled">
-    <li><code>respond-to($media)</code></li>
-    <li><code>respond-to-free($target-1, $media-1, $target-2: null, $media-2: null)</code></li>
+    <li><code>@include respond-to($media)</code></li>
+    <li><code>@include respond-to-free($target-1, $media-1, $target-2: null, $media-2: null)</code></li>
 </ul>
 <p>One of the most important mixin responsible for media queries and breakpoints for the purpose of RWD.<br>
     Available media breakpoints: <code>$mobile</code>, <code>$phone</code>, <code>$tablet</code>, <code>$tablet--xs</code>, <code>$desktop</code>, <code>$desktop--xl</code> <br>
@@ -91,57 +91,76 @@
 <p>Examples:</p>
 
 <div class="code-example">
-    <div data-clone class="hidden">
+    <pre lang="scss">
         body {
             font-size: 3rem;
-
             @include respond-to($mobile) {
                 font-size: 1.6rem;
             }
-
             @include respond-to-free(min-width, 750px, max-width, 850px) {
                 bottom: 25%;
             }
         }
-    </div>
-    <pre lang="scss"></pre>
+    </pre>
+</div>
+
+
+<h3>Flex Box</h3>
+<ul class="list-unstyled">
+    <li><code>@include display-flex($direction: null, $wrap: null, $justify-content: null, $align-items: null, $align-content: null)</code></li>
+    <li><code>@include flex-item($order: null, $flex-grow: null, $flex-shrink: null, $flex-basis: null, $align-self: null)</code></li>
+</ul>
+
+<p>Examples:</p>
+
+<div class="code-example">
+    <pre lang="scss">
+        .example-flex {
+            @include display-flex;
+            > div {
+                @include flex-item($flex-grow: 1);
+            }
+        }
+
+        .example-flex-with-params {
+            @include display-flex(row, wrap, null, stretch);
+        }
+
+        .example-flex-with-one-param {
+            @include display-flex($align-items: stretch);
+        }
+    </pre>
 </div>
 
 <h3>Transforms</h3>
 <ul class="list-unstyled">
-    <li><code>transform-free($args...)</code></li>
-    <li><code>rotate($val)</code></li>
+    <li><code>@include transform-free($args...)</code></li>
+    <li><code>@include rotate($val)</code></li>
 </ul>
 
 <h3>Transitions</h3>
 <ul class="list-unstyled">
-    <li><code>transition($list: all, $duration: $trans__base--duration, $timing: $trans__base--timing, $delay: $trans__base--delay)</code></li>
-    <li><code>transition-free($args...)</code></li>
-</ul>
-
-<h3>Flex Box</h3>
-<ul class="list-unstyled">
-    <li><code>flex-wrap</code></li>
-    <li><code>flex-item</code></li>
+    <li><code>@include transition($list: all, $duration: $trans__base--duration, $timing: $trans__base--timing, $delay: $trans__base--delay)</code></li>
+    <li><code>@include transition-free($args...)</code></li>
 </ul>
 
 <h3>Positioning</h3>
 <ul class="list-unstyled">
     <li>
-        <code>centerer($axis: auto)</code>
+        <code>@include centerer($axis: auto)</code>
     </li>
-    <li><code>coverer</code></li>
+    <li><code>@include coverer</code></li>
 </ul>
 
 <h3>Others</h3>
 <ul class="list-unstyled">
-    <li><code>gradient($gradient-color-from, $gradient-color-to, $direction: to bottom, $gradient-from-loc: null, $gradient-to-loc: null, $type: linear)</code></li>
-    <li><code>font-size($size, $line-height: null)</code></li>
-    <li><code>animation($args...)</code></li>
-    <li><code>filter($args...)</code> - <a href="http://bennettfeely.com/filters/" target="_blank">Filters preview</a></li>
-    <li><code>perspective($size)</code></li>
-    <li><code>placeholder($color: $text__color--muted, $font-size: inherit, $font-family: $font__base--regular)</code> - placeholder for form inputs</li>
-    <li><code>svg-bkg($color)</code> - background-image with SVG</li>
+    <li><code>@include gradient($gradient-color-from, $gradient-color-to, $direction: to bottom, $gradient-from-loc: null, $gradient-to-loc: null, $type: linear)</code></li>
+    <li><code>@include font-size($size, $line-height: null)</code></li>
+    <li><code>@include animation($args...)</code></li>
+    <li><code>@include filter($args...)</code> - <a href="http://bennettfeely.com/filters/" target="_blank">Filters preview</a></li>
+    <li><code>@include perspective($size)</code></li>
+    <li><code>@include placeholder($color: $text__color--muted, $font-size: inherit, $font-family: $font__base--regular)</code> - placeholder for form inputs</li>
+    <li><code>@include svg-bkg($color)</code> - background-image with SVG</li>
 </ul>
     </section>
 </main>

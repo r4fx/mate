@@ -142,7 +142,7 @@ $device: (phone: $phone, tablet: $tablet, mobile: $mobile, desktop: $desktop, de
   }
 
   &--flex {
-    @include flex-wrap;
+    @include display-flex;
   }
 
   @extend %clearfix;

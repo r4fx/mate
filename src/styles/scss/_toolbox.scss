@@ -190,69 +190,87 @@ $print:       'print';
   animation: $args;
   -webkit-animation: $args;
 }
-
 // ============================================================
 // FLEX BOX
 // resources:
 // https://scotch.io/demos/visual-guide-to-css3-flexbox-flexbox-playground
 // https://css-tricks.com/snippets/css/a-guide-to-flexbox/
-// todo: make mixin with params
 // ============================================================
 
 // Examples:
-// <div class="box--flex">...</div>
+// @include display-flex;
+// @include display-flex(row, wrap, null, stretch);
+// @include display-flex($align-items: stretch);
 
-@mixin flex-wrap {
+@mixin display-flex($direction: null, $wrap: null, $justify-content: null, $align-items: null, $align-content: null) {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
 
-  // flex-direction
-  -ms-flex-direction: row;
-  -webkit-flex-direction: row;
-  flex-direction: row;
+  @if $direction {
+    -ms-flex-direction: $direction;
+    -webkit-flex-direction: $direction;
+    flex-direction: $direction;
+  }
 
-  // flex-wrap
-  -ms-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
+  @if $wrap {
+    -ms-flex-wrap: $wrap;
+    -webkit-flex-wrap: $wrap;
+    flex-wrap: $wrap;
+  }
 
-  // justify-content
-  -ms-justify-content: flex-start;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
+  @if $justify-content {
+    -ms-justify-content: $justify-content;
+    -webkit-justify-content: $justify-content;
+    justify-content: $justify-content;
+  }
 
-  // align-items
-  -ms-align-items: stretch;
-  -webkit-align-items: stretch;
-  align-items: stretch;
+  @if $align-items {
+    -ms-align-items: $align-items;
+    -webkit-align-items: $align-items;
+    align-items: $align-items;
+  }
 
-  // align-content
-  -ms-align-content: flex-start;
-  -webkit-align-content: flex-start;
-  align-content: flex-start;
+  @if $align-content {
+    -ms-align-content: $align-content;
+    -webkit-align-content: $align-content;
+    align-content: $align-content;
+  }
 }
 
-@mixin flex-item {
-  -ms-order: 0;
-  -webkit-order: 0;
-  order: 0;
+// Examples:
+// @include flex-item;
+// @include flex-item($flex-grow: 1);
+@mixin flex-item($order: null, $flex-grow: null, $flex-shrink: null, $flex-basis: null, $align-self: null) {
+  @if $order {
+    -ms-order: $order;
+    -webkit-order: $order;
+    order: $order;
+  }
 
-  -ms-flex-grow: 0;
-  -webkit-flex-grow: 0;
-  flex-grow: 0;
+  @if $flex-grow {
+    -ms-flex-grow: $flex-grow;
+    -webkit-flex-grow: $flex-grow;
+    flex-grow: $flex-grow;
+  }
 
-  -ms-flex-shrink: 1;
-  -webkit-flex-shrink: 1;
-  flex-shrink: 1;
+  @if $flex-shrink {
+    -ms-flex-shrink: $flex-shrink;
+    -webkit-flex-shrink: $flex-shrink;
+    flex-shrink: $flex-shrink;
+  }
 
-  -ms-flex-basis: auto;
-  -webkit-flex-basis: auto;
-  flex-basis: auto;
+  @if $flex-basis {
+    -ms-flex-basis: $flex-basis;
+    -webkit-flex-basis: $flex-basis;
+    flex-basis: $flex-basis;
+  }
 
-  -ms-align-self: auto;
-  -webkit-align-self: auto;
-  align-self: auto;
+  @if $align-self {
+    -ms-align-self: $align-self;
+    -webkit-align-self: $align-self;
+    align-self: $align-self;
+  }
 }
 
 // ============================================================
