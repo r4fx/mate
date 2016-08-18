@@ -290,8 +290,8 @@ h4 code{
   font-size: 1.4rem;
 }
 
-pre.code-example[class*="language-"]{
-  margin: 0 0 $grid__row--gutter;
+pre{
+  margin: $grid__row--gutter 0;
   border: 0;
   @extend %clearfix;
 
@@ -303,7 +303,7 @@ pre.code-example[class*="language-"]{
 .code-example{
   border: 1px solid $border__color--first;
   border-radius: $border__radius;
-  margin-bottom: $grid__row--gutter;
+  margin: $grid__row--gutter 0;
   font-size: 1.6rem;
 
   > div {

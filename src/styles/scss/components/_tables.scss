@@ -3,6 +3,7 @@
 // ============================================================
 
 %table-frame {
+  width: 100%;
   empty-cells: show;
   border-collapse: collapse;
   border-spacing: 0;
@@ -33,8 +34,8 @@
   background-color: lighten($block__color--first, 8);
 }
 
-%table-wide {
-  width: 100%;
+%table-natural {
+  width: auto;
 }
 
 %table-clean {
@@ -55,9 +56,9 @@ table, .table-css {
     display: block;
   }
 
-  // Super wide
-  &.table--wide {
-    @extend %table-wide;
+  // Natural wide
+  &.table--natural {
+    @extend %table-natural;
   }
 
   // Clean table
@@ -123,9 +124,7 @@ table {
 // ============================================================
 .table-css {
   display: table;
-  empty-cells: show;
-  border-collapse: collapse;
-  border-spacing: 0;
+  @extend %table-frame;
 
   // Row
   .row {

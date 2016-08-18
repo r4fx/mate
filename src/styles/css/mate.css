@@ -387,7 +387,10 @@ ul li.separator--line:after, ul dt.separator--line:after, ol li.separator--line:
   .box--flex {
     display: -ms-flexbox;
     display: -webkit-flex;
-    display: flex; }
+    display: flex;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap; }
 
 .col--no-gutter {
   padding: 0; }
@@ -1273,6 +1276,9 @@ textarea {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
   margin: 0; }
 
 input[type="file"] {
@@ -1857,7 +1863,8 @@ ul.-divided ul {
     ul.-divided ul li:first-child:before {
       content: none; }
 
-table {
+table, .table-css {
+  width: 100%;
   empty-cells: show;
   border-collapse: collapse;
   border-spacing: 0; }
@@ -1894,8 +1901,8 @@ table.table--striped .row:not(.table-thead):nth-child(odd) > div, .table-css.tab
 .table-css.table--striped .row:not(.table-thead):nth-child(odd) > div {
   background-color: #f1f1f1; }
 
-table.table--wide, .table-css.table--wide {
-  width: 100%; }
+table.table--natural, .table-css.table--natural {
+  width: auto; }
 
 table.table--clean th, table.table--clean td,
 table.table--clean [class*="col-"], table.table--clean .row > div, .table-css.table--clean th, .table-css.table--clean td,
@@ -1919,10 +1926,7 @@ table tbody th {
   vertical-align: top; }
 
 .table-css {
-  display: table;
-  empty-cells: show;
-  border-collapse: collapse;
-  border-spacing: 0; }
+  display: table; }
   .table-css .row {
     margin: 0;
     display: table-row; }
