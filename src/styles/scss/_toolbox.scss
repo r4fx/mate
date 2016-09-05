@@ -202,7 +202,7 @@ $print:       'print';
 // @include display-flex(row, wrap, null, stretch);
 // @include display-flex($align-items: stretch);
 
-@mixin display-flex($direction: null, $wrap: wrap, $justify-content: null, $align-items: null, $align-content: null) {
+@mixin display-flex($direction: null, $wrap: null, $justify-content: null, $align-items: null, $align-content: null) {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;

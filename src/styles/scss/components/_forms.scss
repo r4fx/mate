@@ -126,8 +126,8 @@ textarea {
 
 // todo: add to manual
 .fieldset-group{
-  @include display-flex;
   margin: 0;
+  @include display-flex($align-items: stretch);
 }
 
 // FILES

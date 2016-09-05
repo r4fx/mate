@@ -379,10 +379,7 @@ ul li.separator--line:after, ul dt.separator--line:after, ol li.separator--line:
   .box--flex {
     display: -ms-flexbox;
     display: -webkit-flex;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap; }
+    display: flex; }
 
 .col--no-gutter {
   padding: 0; }
@@ -1265,13 +1262,13 @@ textarea {
   height: auto; }
 
 .fieldset-group {
+  margin: 0;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  -ms-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin: 0; }
+  -ms-align-items: stretch;
+  -webkit-align-items: stretch;
+  align-items: stretch; }
 
 input[type="file"] {
   line-height: 1; }
