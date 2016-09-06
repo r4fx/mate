@@ -1,7 +1,6 @@
 /*============================================================
 * GRID SYSTEM
 * ============================================================*/
-$device: (phone: $phone, tablet: $tablet, mobile: $mobile, desktop: $desktop, desktop-xl: $desktop--xl);
 
 @function grid-calc($colNumber, $grid__columns) {
   @return percentage(($colNumber / $grid__columns));
@@ -89,7 +88,7 @@ $device: (phone: $phone, tablet: $tablet, mobile: $mobile, desktop: $desktop, de
 // OFFSETS RESET
 // ============================================================
 @mixin grid-cols-offset-reset {
-  @each $device-type, $media in $device {
+  @each $device-type, $media in $devices {
     &--#{$device-type}-offset-0 {
       margin-left: 0;
     }
@@ -111,17 +110,13 @@ $device: (phone: $phone, tablet: $tablet, mobile: $mobile, desktop: $desktop, de
     margin-bottom: $gutter-bottom-size;
   }
 
-  @each $device-type, $media in $device {
+  @each $device-type, $media in $devices {
     @include respond-to($media) {
       .grid-#{$device-type}-add-gutter-bottom {
         margin-bottom: $gutter-bottom-size;
       }
     }
   }
-}
-
-%row--no-gutter {
-  margin: 0;
 }
 
 // ============================================================
@@ -173,7 +168,7 @@ $device: (phone: $phone, tablet: $tablet, mobile: $mobile, desktop: $desktop, de
   margin-right: -$grid__col--gutter;
 
   &.row--no-gutter {
-    @extend %row--no-gutter;
+    margin: 0;
   }
 
   .row {

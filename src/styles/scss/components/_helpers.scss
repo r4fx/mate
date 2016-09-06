@@ -77,13 +77,35 @@
   float: left;
 }
 
-// TODO: make it dynamic, example: (top,50)
-.margin-top--50 {
-  margin-top: 50px;
+// ============================================================
+// MARGINS
+// TODO: add to manual (margins)
+//
+// Examples:
+//
+// .margin-bottom--x2 .margin-bottom--x2-phone
+// .margin-bottom--x4 .margin-bottom--x4-mobile
+// ============================================================
+.margin-bottom {
+  margin-bottom: $grid__row--gutter;
+}
+
+@for $i from 2 through 4 {
+  .margin-bottom--x#{$i} {
+    margin-bottom: $grid__row--gutter*$i;
+  }
+
+  @each $device-type, $media in $devices {
+    @include respond-to($media) {
+      .margin-bottom--x#{$i}-#{$device-type} {
+        margin-bottom: $grid__row--gutter*$i;
+      }
+    }
+  }
 }
 
 .no-margin {
-  margin: 0;
+  margin: 0 !important;
 }
 
 // ============================================================

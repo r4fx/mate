@@ -94,9 +94,10 @@ $tablet--xs:  'screen and (min-width: #{$breakPoint__phone}) and (max-width: #{$
 $desktop:     'screen and (min-width: #{$breakPoint__desktop})';
 $desktop--xl: 'screen and (min-width: #{$breakPoint__desktop--xl + 1})';
 $print:       'print';
+$devices:     (phone: $phone, tablet: $tablet, mobile: $mobile, desktop: $desktop, desktop-xl: $desktop--xl);
 
-@mixin respond-to($media) {
-  @media #{$media} {
+@mixin respond-to($device) {
+  @media #{$device} {
     @content;
   }
 }
