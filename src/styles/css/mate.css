@@ -1148,13 +1148,13 @@ ul li.separator--line:after, ul dt.separator--line:after, ol li.separator--line:
       border-bottom-left-radius: 0;
       padding: 0 10px; }
 
-form > .row,
-fieldset > .row {
+form .row,
+fieldset .row {
   margin-left: 0;
   margin-right: 0;
   margin-bottom: 25px; }
-  form > .row:last-child,
-  fieldset > .row:last-child {
+  form .row:last-child,
+  fieldset .row:last-child {
     margin-bottom: 0; }
 
 form.grid > .row {
