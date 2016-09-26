@@ -34,9 +34,7 @@
   .mate-panels__item:target, .mate-panels__item.active {
     display: block; }
     .mate-panels__item:target .mate-panels__item-body, .mate-panels__item.active .mate-panels__item-body {
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex; }
+      display: block; }
     .mate-panels__item:target .mate-panels__item-header:after, .mate-panels__item.active .mate-panels__item-header:after {
       content: "\e65e"; }
   .mate-panels__item-header {
