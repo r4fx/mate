@@ -81,7 +81,7 @@ select,
 textarea {
   width: 100%;
   padding: $form__field--padding;
-  line-height: $form__field--line-height;
+  line-height: normal;
   font-size: $text__size--base;
   border: $border__width--base solid $border__color--first;
   border-radius: $border__radius;

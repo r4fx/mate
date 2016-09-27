@@ -1222,7 +1222,7 @@ select,
 textarea {
   width: 100%;
   padding: 0.8rem 1rem;
-  line-height: 1.4;
+  line-height: normal;
   font-size: 1.6rem;
   border: 1px solid #CCC;
   border-radius: 3px;
