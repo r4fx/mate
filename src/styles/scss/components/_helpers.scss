@@ -78,6 +78,29 @@
 }
 
 // ============================================================
+// OBJECT FIT
+// TODO: ADD TO MANUAL
+// ============================================================
+[class*="object-fit--"]{
+  width: 100%;
+  height: 100%;
+}
+
+.object-fit{
+  &--cover{
+    object-fit: cover;
+  }
+
+  &--fill{
+    object-fit: fill;
+  }
+
+  &--contain{
+    object-fit: contain;
+  }
+}
+
+// ============================================================
 // MARGINS
 // TODO: add to manual (margins)
 //
