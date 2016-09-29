@@ -1,13 +1,72 @@
-/* Helpers makes life easier
- */
-
-var globals = {
+var mateGlobals = {
     scrollValInit: 40,
     didScroll: '',
     eventType: 'click'
 };
 
-var helpers = {
+// ---------------------------------------------------------
+// Page tools
+// ---------------------------------------------------------
+var mateTools = {
+
+    /*
+     Common js trigger, do something with target
+     "data-js-trigger" is a namespace for synchronized actions,
+     in "data-js-target" please precise class or id of target,
+     "data-js-target" can get additional attribute called "parent"
+     example use: <span class="sub-nav__close" data-js-trigger="nav-main" data-js-target="#main-nav, parent">
+     */
+    pullTheTrigger: function (el) {
+        var $triggerEl = $('[data-js-trigger]');
+
+        if (el) {
+            $triggerEl = $(el);
+        }
+
+        $triggerEl.on(mateGlobals.eventType, function (e) {
+            if (!this.getAttribute("data-js-target")) {
+                console.warn('pullTheTrigger: Na klikniętym elemencie brakuje atrybutu "data-js-target"');
+                return false
+            }
+
+            var triggerNode = this;
+            var triggerData = triggerNode.getAttribute("data-js-trigger");
+            var triggerTarget = triggerNode.getAttribute("data-js-target");
+            var triggerTargetArr = triggerNode.getAttribute("data-js-target").split(/[\s,]+/);
+            var triggerTargetEl = triggerTargetArr[0] || triggerTarget;
+            var triggerTargetType = triggerTargetArr[1];
+
+            // check if namespace for trigger is defined
+            if (triggerData) {
+                var triggerDataArr = document.querySelectorAll('[data-js-trigger=' + triggerData + ']');
+                for (var i = 0; i < triggerDataArr.length; i++) {
+                    triggerDataArr[i].classList.toggle('active');
+                }
+            }
+
+            // check if triggerTarget is for "self" only (use second attribute called "self")
+            if (triggerTargetType == 'self') {
+                var eTargetArray = e.target.getAttribute("data-js-target");
+                if ((eTargetArray) && (eTargetArray.split(/[\s,]+/)[1] === "parent")){
+                    return false
+                }
+
+                $(triggerNode).toggleClass('active');
+            }
+
+            // check if triggerTarget is for "parent" only (use second attribute called "parent")
+            if (triggerTargetType == 'parent') {
+                $(triggerNode).closest(triggerTargetEl).toggleClass('active');
+                //trigger.closest(triggerTarget).classList.toggle('active'); // Future js
+            }
+
+            if (!triggerTargetType) {
+                document.querySelector(triggerTargetEl).classList.toggle('active');
+            }
+
+            mateTools.hider(triggerTargetEl, triggerNode);
+        });
+    },
 
     // Uniwersal hider
     // ============================================================
@@ -78,7 +137,6 @@ var helpers = {
 
         // Get user's mobile data
         var mobile = {
-
             isPhone: function () {
 
             },
@@ -113,71 +171,17 @@ var helpers = {
             system: system(),
             browser: browser()
         };
-    }
-};
-
-
-// ---------------------------------------------------------
-// Page tools
-// ---------------------------------------------------------
-var pageTools = {
-
-    /*
-     Common js trigger, do something with target
-     "data-js-trigger" is a namespace for synchronized actions,
-     in "data-js-target" please precise class or id of target,
-     "data-js-target" can get additional attribute called "parent"
-     example use: <span class="sub-nav__close" data-js-trigger="nav-main" data-js-target="#main-nav, parent">
-     */
-    pullTheTrigger: function () {
-        $('[data-js-trigger]').on(globals.eventType, function () {
-            var triggerNode = this;
-            var triggerTarget = triggerNode.getAttribute("data-js-target");
-            var triggerData = triggerNode.getAttribute("data-js-trigger");
-
-            if (triggerTarget) {
-                var triggerTargetArray = triggerTarget.split(/[\s,]+/); // comas and trim
-            } else {
-                console.warn('pullTheTrigger: clicked element missed attr "data-js-target"');
-                return false
-            }
-
-            // check if namespace for trigger is defined
-            if (triggerData) {
-                var triggerDataArr = document.querySelectorAll('[data-js-trigger=' + triggerData + ']');
-                for (var i = 0; i < triggerDataArr.length; i++) {
-                    triggerDataArr[i].classList.toggle('active');
-                }
-            }
-
-            // check if triggerTarget is for parent only (use second attribute "parent")
-            if (triggerTargetArray.indexOf('parent') > -1) {
-                triggerTarget = triggerTargetArray[0];
-                $(triggerNode).closest(triggerTarget).toggleClass('active');
-                //trigger.closest(triggerTarget).classList.toggle('active'); // Future js
-            } else {
-                document.querySelector(triggerTarget).classList.toggle('active');
-            }
-
-            helpers.hider(triggerTarget, triggerNode);
-        });
-    },
-
-    somePublicMethod: function () {
-
     },
 
     init: function () {
         this.pullTheTrigger();
-        this.somePublicMethod();
     }
 };
-
 
 // ---------------------------------------------------------
 // WHEN DOCUMENT READY
 // ---------------------------------------------------------
 document.addEventListener('DOMContentLoaded', function () {
-    helpers.userEnvironment();
-    pageTools.init();
+    mateTools.userEnvironment();
+    mateTools.init();
 }, false);

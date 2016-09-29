@@ -1,8 +1,6 @@
 /* JavaScript main file
  */
 
-
-
 // ---------------------------------------------------------
 // Page events
 // ---------------------------------------------------------
@@ -11,8 +9,8 @@ var pageEvents = {
     collection: function () {
 
         // Events only for mobile devices!
-        if (helpers.userEnvironment().system === 'mobile') {
-            console.log('pageTools.collection for mobile');
+        if (mateTools.userEnvironment().system === 'mobile') {
+            console.log('mateTools.collection for mobile');
         }
 
         // a lot of events goes here
@@ -48,7 +46,7 @@ var vendors = {
 // WHEN WINDOW SCROLL
 // ---------------------------------------------------------
 window.addEventListener('scroll', function () {
-    helpers.debounce(function () {
+    mateTools.debounce(function () {
 
         // Set of function initialized on page scroll:
         pageEvents.someEvent();
@@ -60,10 +58,10 @@ window.addEventListener('scroll', function () {
 // WHEN WINDOW RESIZE
 // ---------------------------------------------------------
 window.addEventListener('resize', function () {
-    helpers.debounce(function () {
+    mateTools.debounce(function () {
 
         // Set of function initialized on page scroll:
-        helpers.userEnvironment();
+        mateTools.userEnvironment();
 
     }, 250)();
 });
