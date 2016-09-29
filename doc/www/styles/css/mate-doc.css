@@ -180,7 +180,7 @@ body {
   -moz-osx-font-smoothing: grayscale; }
 
 .color--alert {
-  color: #B03C1D; }
+  color: #d62100; }
 
 .color--warning {
   color: #ffb82d; }
@@ -1358,7 +1358,7 @@ input[type="radio"].mate-input + span:after {
 
 .form-error__message {
   margin: 0;
-  color: #B03C1D;
+  color: #d62100;
   display: block;
   text-transform: uppercase;
   font-size: 1.2rem; }
@@ -1371,9 +1371,9 @@ input[type="radio"].mate-input + span:after {
 .form-error input[type="number"],
 .form-error select,
 .form-error textarea {
-  border-color: #B03C1D !important; }
+  border-color: #d62100 !important; }
 .form-error em {
-  color: #B03C1D; }
+  color: #d62100; }
 .form-error > .legend {
   margin-bottom: 0; }
   .form-error > .legend + .form-error__message {
@@ -1381,7 +1381,7 @@ input[type="radio"].mate-input + span:after {
 
 fieldset.form-error {
   border-radius: 3px;
-  border: 1px solid #B03C1D;
+  border: 1px solid #d62100;
   padding: 15px; }
   fieldset.form-error > .form-error__message {
     margin-bottom: 15px; }
