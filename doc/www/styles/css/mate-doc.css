@@ -377,6 +377,13 @@ ul li.separator--line:after, ul dt.separator--line:after, ol li.separator--line:
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex; }
+    .box--flex--wrap {
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      -webkit-flex-wrap: wrap;
+      flex-wrap: wrap; }
 
 .col--no-gutter {
   padding: 0; }

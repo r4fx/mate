@@ -138,6 +138,10 @@
 
   &--flex {
     @include display-flex;
+
+    &--wrap{
+      @include display-flex($wrap: wrap);
+    }
   }
 
   @extend %clearfix;
