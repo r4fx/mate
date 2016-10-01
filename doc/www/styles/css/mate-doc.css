@@ -2373,9 +2373,10 @@ pre {
   .code-example__icons [class^="icon-"], .code-example__icons [class*=" icon-"] {
     font-size: 2.4rem; }
   .code-example pre[class*="language-"] {
-    margin: 0 -1px -1px -1px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0; }
+    margin: 0 -1px -1px -1px; }
+    .code-example pre[class*="language-"]:last-child:not(:first-child) {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0; }
   .code-example form .input-radio {
     max-width: 410px; }
 
@@ -2389,6 +2390,4 @@ pre {
   [class*="masonry-"] > article img {
     display: block; }
 
-
-
-/*# sourceMappingURL=../css/mate-doc.css.map */
+/*# sourceMappingURL=mate-doc.css.map */
