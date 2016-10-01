@@ -56,7 +56,7 @@ $text__size--base:          $text__size--md;
 
 // text--line-height
 // [i] find your own optimal line-height: http://www.pearsonified.com/typography/
-$text__line-height-ratio:   1.5;
+$text__line-height:         1.5;
 
 // text--colors
 $text__color--first:        #3c3c3c;
@@ -87,8 +87,8 @@ $btn__outline--width:       2px;
 // button sizes (type, top & bottom padding, left & right padding)
 $btn__sizes:                (xs, 0.3rem, 0.6rem),
                             (sm, 0.7rem, 1.4rem),
-                            (md, 0.8rem, 2rem),
-                            (lg, 1rem, 2.2rem),
+                            (md, 1.1rem, 2rem),
+                            (lg, 1.1rem, 2.2rem),
                             (xl, 1rem, 3.5rem),
                             (xxl, 1rem, 4rem);
 
@@ -122,6 +122,7 @@ $grid__document--gutter:    25px;
 // FORMS
 // ============================================================
 $form__field--padding:     (0.8rem 1rem);
+$form__pretty-input--size: 22px;
 
 
 // TRANSITIONS

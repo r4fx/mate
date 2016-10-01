@@ -70,7 +70,7 @@
     $type: nth($n, 1);
     $btn-padding-vertical: nth($n, 2);
     $btn-padding-horizontal: nth($n, 3);
-    $arrow-border-size: (getTextSize($type) * $text__line-height-ratio + ($btn-padding-vertical*2)) /2;
+    $arrow-border-size: (getTextSize($type) + ($btn-padding-vertical*2)) /2;
 
     // Generate default size
     @if $default == $type {
@@ -117,12 +117,12 @@
 // BUTTON: BASE
 // ============================================================
 .btn {
-  line-height: $text__line-height-ratio;
+  line-height: 1;
   border-radius: $border__radius;
 
-  display: inline-block;          // todo: for remove in future
-  -webkit-display: inline-flex;   // todo: for remove in future
-  -webkit-align-items: center;    // todo: for remove in future
+  display: inline-block;          // todo: to remove in future
+  -webkit-display: inline-flex;   // todo: to remove in future
+  -webkit-align-items: center;    // todo: to remove in future
 
   display: inline-flex;
   align-items: center;
@@ -394,15 +394,9 @@
     left: 100%;
   }
 
-  // FOR ICONS INSIDE BUTTON
-  > span {
-    &:first-child{
-      margin-right: 5px;
-    }
-
-    &:last-child{
-      margin-right: 0;
-    }
+  // ICON INSIDE BUTTON
+  > span:not(:last-child) {
+    margin-right: 5px;
   }
 }
 
