@@ -166,6 +166,7 @@
     // Outlined
     &.btn--outline {
       color: $btn__color--first;
+      border-color: $btn__color--first;
 
       &:hover {
         background-color: transparent;
@@ -216,6 +217,7 @@
     // Outlined
     &.btn--outline {
       color: $btn__color--second;
+      border-color: $btn__color--second;
 
       &:hover {
         background-color: transparent;
@@ -267,6 +269,7 @@
     // Outlined
     &.btn--outline {
       color: $btn__color--third;
+      border-color: $btn__color--third;
 
       &:hover {
         background-color: transparent;

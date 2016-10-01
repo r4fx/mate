@@ -831,7 +831,7 @@ ul li.separator--line:after, ul dt.separator--line:after, ol li.separator--line:
 
 .btn {
   line-height: 1;
-  border-radius: 3px;
+  border-radius: 4px;
   display: inline-block;
   -webkit-display: inline-flex;
   -webkit-align-items: center;
@@ -965,7 +965,8 @@ ul li.separator--line:after, ul dt.separator--line:after, ol li.separator--line:
     .btn--color-first:hover.btn--arrow-r:after, .btn:hover.btn--arrow-r:after {
       border-left-color: #1fd2ae; }
   .btn--color-first.btn--outline, .btn--outline.btn {
-    color: #1ab394; }
+    color: #1ab394;
+    border-color: #1ab394; }
     .btn--color-first.btn--outline:hover, .btn--outline.btn:hover {
       background-color: transparent;
       color: #1fd2ae; }
@@ -988,7 +989,8 @@ ul li.separator--line:after, ul dt.separator--line:after, ol li.separator--line:
     .btn--color-second:hover.btn--arrow-r:after {
       border-left-color: #48acff; }
   .btn--color-second.btn--outline {
-    color: #249cff; }
+    color: #249cff;
+    border-color: #249cff; }
     .btn--color-second.btn--outline:hover {
       background-color: transparent;
       border-color: #48acff;
@@ -1012,7 +1014,8 @@ ul li.separator--line:after, ul dt.separator--line:after, ol li.separator--line:
     .btn--color-third:hover.btn--arrow-r:after {
       border-left-color: #3a3b32; }
   .btn--color-third.btn--outline {
-    color: #272822; }
+    color: #272822;
+    border-color: #272822; }
     .btn--color-third.btn--outline:hover {
       background-color: transparent;
       border-color: #3a3b32;
@@ -1028,7 +1031,7 @@ ul li.separator--line:after, ul dt.separator--line:after, ol li.separator--line:
     border-left-color: #272822; }
 
 .btn--outline {
-  border-radius: 3px;
+  border-radius: 4px;
   background-color: transparent;
   border: 2px solid;
   padding-top: 0.9rem;
@@ -1222,7 +1225,7 @@ textarea {
   line-height: normal;
   font-size: 1.6rem;
   border: 1px solid #CCC;
-  border-radius: 3px;
+  border-radius: 4px;
   background-color: transparent;
   vertical-align: middle;
   color: #3c3c3c;
@@ -1385,7 +1388,7 @@ input[type="radio"].mate-input + span:after {
     margin-bottom: 15px; }
 
 fieldset.form-error {
-  border-radius: 3px;
+  border-radius: 4px;
   border: 1px solid #d62100;
   padding: 15px; }
   fieldset.form-error > .form-error__message {
@@ -2335,7 +2338,7 @@ pre {
 
 .code-example {
   border: 1px solid #CCC;
-  border-radius: 3px;
+  border-radius: 4px;
   margin: 25px 0;
   font-size: 1.6rem; }
   .code-example > div {
@@ -2390,4 +2393,6 @@ pre {
   [class*="masonry-"] > article img {
     display: block; }
 
-/*# sourceMappingURL=mate-doc.css.map */
+
+
+/*# sourceMappingURL=../css/mate-doc.css.map */
