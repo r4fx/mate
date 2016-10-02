@@ -148,7 +148,7 @@
 
     // Base
     background-color: $btn__color--first;
-    color: $text__color--second;
+    color: $btn__color--first-txt;
 
     &:hover {
       background-color: lighten($btn__color--first, 7%);
@@ -199,7 +199,7 @@
 
     // Base
     background-color: $btn__color--second;
-    color: $text__color--second;
+    color: $btn__color--second-txt;
 
     &:hover {
       background-color: lighten($btn__color--second, 7%);
@@ -251,7 +251,7 @@
 
     // Base
     background-color: $btn__color--third;
-    color: $text__color--second;
+    color: $btn__color--third-txt;
 
     &:hover {
       background-color: lighten($btn__color--third, 7%);
