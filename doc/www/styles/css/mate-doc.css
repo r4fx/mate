@@ -954,6 +954,8 @@ ul li.separator--line:after, ul dt.separator--line:after, ol li.separator--line:
       .btn--xxl.btn--arrow-r:after {
         border-width: 3.1rem 0 3.1rem 3.1rem;
         margin-right: 3.1rem; }
+  .btn[disabled] {
+    opacity: 0.3; }
 
 .btn--color-first, .btn {
   background-color: #1ab394;
@@ -2393,6 +2395,4 @@ pre {
   [class*="masonry-"] > article img {
     display: block; }
 
-
-
-/*# sourceMappingURL=../css/mate-doc.css.map */
+/*# sourceMappingURL=mate-doc.css.map */
