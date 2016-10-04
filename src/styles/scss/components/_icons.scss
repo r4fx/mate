@@ -3,9 +3,7 @@
 
 // ICON SIZE HELPER
 // ============================================================
-$list__icon-sizes: (sm 2rem), (md 3rem), (lg 4rem), (xl 6rem), (xxl 8rem);
-
-@each $n in $list__icon-sizes {
+@each $n in $icon__sizes {
   $type: nth($n, 1);
   $size: nth($n, 2);
 
