@@ -52,7 +52,7 @@
         position: relative; } }
     .mate-panels__item-header:after {
       content: "\e65d";
-      font-family: 'icomoon', sans-serif;
+      font-family: 'mate', sans-serif;
       font-size: 4rem;
       right: 5px;
       -webkit-transform: translateY(-50%);
