@@ -1399,19 +1399,19 @@ fieldset.form-error {
 label > .form-error__message {
   display: inline-block; }
 
-.icon--sm:before {
+.icon--sm {
   font-size: 2rem; }
 
-.icon--md:before {
+.icon--md {
   font-size: 3rem; }
 
-.icon--lg:before {
+.icon--lg {
   font-size: 4rem; }
 
-.icon--xl:before {
+.icon--xl {
   font-size: 6rem; }
 
-.icon--xxl:before {
+.icon--xxl {
   font-size: 8rem; }
 
 @font-face {
