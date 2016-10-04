@@ -16,14 +16,14 @@
 // ICON FONT FAMILY
 // ============================================================
 @font-face {
-  font-family: 'icomoon';
-  src: url('#{$font__icons--dir}/icomoon.woff') format('woff');
+  font-family: 'mate';
+  src: url('#{$font__icons--dir}/mate.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 [class^="icon-"], [class*=" icon-"] {
-  font-family: 'icomoon' !important;
+  font-family: 'mate' !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -206,6 +206,9 @@
 .icon-security:before {
   content: "\e640";
 }
+.icon-contrast:before {
+  content: "\e908";
+}
 .icon-brush:before {
   content: "\e641";
 }
@@ -214,9 +217,6 @@
 }
 .icon-camera:before {
   content: "\e643";
-}
-.icon-filter-vintage:before {
-  content: "\e644";
 }
 .icon-sunny:before {
   content: "\e646";
