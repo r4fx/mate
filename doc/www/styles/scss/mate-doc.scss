@@ -18,7 +18,7 @@ a[href^="https://github.com"]{
 
   &:after {
     content: "\e600";
-    font-family: 'icomoon', sans-serif;
+    font-family: 'mate', sans-serif;
     margin-left: 5px;
     font-size: 1.4rem;
     position: absolute;
@@ -56,7 +56,7 @@ a[href^="https://github.com"]{
   &:before {
     display: inline-block;
     content: "\e63a";
-    font-family: 'icomoon', sans-serif;
+    font-family: 'mate', sans-serif;
     vertical-align: top;
   }
 

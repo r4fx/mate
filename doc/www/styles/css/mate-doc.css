@@ -203,7 +203,7 @@ a {
   .link-file[href$='.pdf']:before,
   .link-file.file[href$='.doc']:before,
   .link-file.file[href$='.xls']:before {
-    font-family: 'icomoon', sans-serif;
+    font-family: 'mate', sans-serif;
     content: "\e616";
     display: inline-block;
     margin-right: 3px;
@@ -324,7 +324,7 @@ ul, ol {
     margin: 0; }
     .list-path li:after {
       content: "\e65c";
-      font-family: 'icomoon', sans-serif;
+      font-family: 'mate', sans-serif;
       color: #959A9D;
       vertical-align: bottom;
       font-size: 2rem;
@@ -1416,7 +1416,7 @@ label > .form-error__message {
 
 @font-face {
   font-family: 'mate';
-  src: url("../../fonts/icomoon/mate.woff") format("woff");
+  src: url("../../fonts/mate/mate.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 [class^="icon-"], [class*=" icon-"] {
@@ -2136,7 +2136,7 @@ a[href^="https://github.com"] {
   position: relative; }
   a[href^="https://github.com"]:after {
     content: "\e600";
-    font-family: 'icomoon', sans-serif;
+    font-family: 'mate', sans-serif;
     margin-left: 5px;
     font-size: 1.4rem;
     position: absolute;
@@ -2166,7 +2166,7 @@ a[href^="https://github.com"] {
   .anchor-link:before {
     display: inline-block;
     content: "\e63a";
-    font-family: 'icomoon', sans-serif;
+    font-family: 'mate', sans-serif;
     vertical-align: top; }
   .anchor-link:hover {
     color: #fff;
