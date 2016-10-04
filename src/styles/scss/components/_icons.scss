@@ -3,6 +3,7 @@
 
 // ICON SIZE HELPER
 // ============================================================
+
 @each $n in $icon__sizes {
   $type: nth($n, 1);
   $size: nth($n, 2);
@@ -217,9 +218,6 @@
 .icon-filter-vintage:before {
   content: "\e644";
 }
-.icon-nature:before {
-  content: "\e645";
-}
 .icon-sunny:before {
   content: "\e646";
 }
@@ -231,9 +229,6 @@
 }
 .icon-file-download:before {
   content: "\e649";
-}
-.icon-restaurant:before {
-  content: "\e64a";
 }
 .icon-apps:before {
   content: "\e64b";
@@ -267,9 +262,6 @@
 }
 .icon-account-box:before {
   content: "\e655";
-}
-.icon-plus-one:before {
-  content: "\e656";
 }
 .icon-arrow-backward:before {
   content: "\e657";
@@ -434,7 +426,7 @@
   content: "\e606";
 }
 .icon-google-plus:before {
-  content: "\e609";
+  content: "\e904";
 }
 .icon-facebook:before {
   content: "\e605";
@@ -450,4 +442,13 @@
 }
 .icon-github:before {
   content: "\e600";
+}
+.icon-android:before {
+  content: "\e905";
+}
+.icon-apple:before {
+  content: "\e906";
+}
+.icon-windows:before {
+  content: "\e907";
 }

@@ -1617,9 +1617,6 @@ label > .form-error__message {
 .icon-filter-vintage:before {
   content: "\e644"; }
 
-.icon-nature:before {
-  content: "\e645"; }
-
 .icon-sunny:before {
   content: "\e646"; }
 
@@ -1631,9 +1628,6 @@ label > .form-error__message {
 
 .icon-file-download:before {
   content: "\e649"; }
-
-.icon-restaurant:before {
-  content: "\e64a"; }
 
 .icon-apps:before {
   content: "\e64b"; }
@@ -1667,9 +1661,6 @@ label > .form-error__message {
 
 .icon-account-box:before {
   content: "\e655"; }
-
-.icon-plus-one:before {
-  content: "\e656"; }
 
 .icon-arrow-backward:before {
   content: "\e657"; }
@@ -1834,7 +1825,7 @@ label > .form-error__message {
   content: "\e606"; }
 
 .icon-google-plus:before {
-  content: "\e609"; }
+  content: "\e904"; }
 
 .icon-facebook:before {
   content: "\e605"; }
@@ -1850,6 +1841,15 @@ label > .form-error__message {
 
 .icon-github:before {
   content: "\e600"; }
+
+.icon-android:before {
+  content: "\e905"; }
+
+.icon-apple:before {
+  content: "\e906"; }
+
+.icon-windows:before {
+  content: "\e907"; }
 
 ul.-divided a {
   padding: 5px; }
