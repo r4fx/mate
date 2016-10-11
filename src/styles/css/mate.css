@@ -1279,7 +1279,7 @@ textarea {
   height: auto; }
 
 .fieldset-group {
-  margin: 0;
+  margin: 0 auto;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;

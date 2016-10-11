@@ -1271,7 +1271,7 @@ textarea {
   height: auto; }
 
 .fieldset-group {
-  margin: 0;
+  margin: 0 auto;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
@@ -2394,4 +2394,6 @@ pre {
   [class*="masonry-"] > article img {
     display: block; }
 
-/*# sourceMappingURL=mate-doc.css.map */
+
+
+/*# sourceMappingURL=../css/mate-doc.css.map */
