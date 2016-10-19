@@ -218,6 +218,7 @@ hr {
   border: 0;
   height: 1px;
   background-color: #CCC;
+  background-clip: content-box;
   margin: 25px auto; }
   hr.hr--mini {
     width: 150px; }

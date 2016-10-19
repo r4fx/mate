@@ -135,6 +135,7 @@ hr {
   border: 0;
   height: 1px;
   background-color: $border__color--first;
+  background-clip: content-box;
   margin: $grid__row--gutter auto;
 
   &.hr--mini {
