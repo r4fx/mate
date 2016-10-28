@@ -18,6 +18,12 @@
       text-align: left;
     }
   }
+
+  &--tablet {
+    @include respond-to($tablet) {
+      text-align: left;
+    }
+  }
 }
 
 .inline-center {
@@ -25,6 +31,12 @@
 
   &--phone {
     @include respond-to($phone) {
+      text-align: center;
+    }
+  }
+
+  &--tablet {
+    @include respond-to($tablet) {
       text-align: center;
     }
   }
@@ -38,6 +50,12 @@
       text-align: right;
     }
   }
+
+  &--tablet {
+    @include respond-to($tablet) {
+      text-align: right;
+    }
+  }
 }
 
 .inline-justify {
@@ -45,6 +63,12 @@
 
   &--phone {
     @include respond-to($phone) {
+      text-align: justify;
+    }
+  }
+
+  &--tablet {
+    @include respond-to($tablet) {
       text-align: justify;
     }
   }

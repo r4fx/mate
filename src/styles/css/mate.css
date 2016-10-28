@@ -1969,11 +1969,17 @@ table tbody th {
   @media screen and (max-width: 719px) {
     .inline-left--phone {
       text-align: left; } }
+  @media screen and (min-width: 720px) and (max-width: 1023px) {
+    .inline-left--tablet {
+      text-align: left; } }
 
 .inline-center {
   text-align: center; }
   @media screen and (max-width: 719px) {
     .inline-center--phone {
+      text-align: center; } }
+  @media screen and (min-width: 720px) and (max-width: 1023px) {
+    .inline-center--tablet {
       text-align: center; } }
 
 .inline-right {
@@ -1981,11 +1987,17 @@ table tbody th {
   @media screen and (max-width: 719px) {
     .inline-right--phone {
       text-align: right; } }
+  @media screen and (min-width: 720px) and (max-width: 1023px) {
+    .inline-right--tablet {
+      text-align: right; } }
 
 .inline-justify {
   text-align: justify; }
   @media screen and (max-width: 719px) {
     .inline-justify--phone {
+      text-align: justify; } }
+  @media screen and (min-width: 720px) and (max-width: 1023px) {
+    .inline-justify--tablet {
       text-align: justify; } }
 
 .block-center {
