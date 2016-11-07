@@ -68,6 +68,29 @@ var mateTools = {
         });
     },
 
+    // Example: <h4 data-js-toggle=".job-filters">Filters</h4>
+    toggler: function () {
+        var $toggleEl = $('[data-js-toggle]');
+
+        $toggleEl.on(mateGlobals.eventType, function (e) {
+            var triggerNode = this;
+            var triggerTarget = triggerNode.getAttribute("data-js-toggle");
+
+            if (triggerTarget) {
+                var triggerDataArr = document.querySelectorAll('[data-js-toggle="' + triggerTarget + '"]');
+                var triggerTargetArr = document.querySelectorAll(triggerTarget);
+
+                for (var i = 0; i < triggerDataArr.length; i++) {
+                    triggerDataArr[i].classList.toggle('active');
+                }
+
+                for (var y = 0; y < triggerTargetArr.length; y++) {
+                    triggerTargetArr[y].classList.toggle('active');
+                }
+            }
+        });
+    },
+
     // Uniwersal hider
     // ============================================================
     hider: function (targetToHide, triggerNode, e) {
@@ -175,6 +198,7 @@ var mateTools = {
 
     init: function () {
         this.pullTheTrigger();
+        this.toggler();
     }
 };
 
