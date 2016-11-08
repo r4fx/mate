@@ -1181,7 +1181,7 @@ form em {
   font-family: serif;
   font-weight: normal;
   line-height: 0;
-  font-size: 2rem;
+  font-size: 3.8rem;
   vertical-align: super; }
 
 .legend, legend {
@@ -2431,4 +2431,6 @@ pre {
   [class*="masonry-"] > article img {
     display: block; }
 
-/*# sourceMappingURL=mate-doc.css.map */
+
+
+/*# sourceMappingURL=../css/mate-doc.css.map */
