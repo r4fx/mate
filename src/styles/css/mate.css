@@ -1443,6 +1443,9 @@ label > .form-error__message {
   [class^="icon-"]:before, [class*=" icon-"]:before {
     display: block; }
 
+.icon-spinner:before {
+  content: "\e909"; }
+
 .icon-disabled:before {
   content: "\e608"; }
 
@@ -1605,9 +1608,6 @@ label > .form-error__message {
 .icon-security:before {
   content: "\e640"; }
 
-.icon-contrast:before {
-  content: "\e908"; }
-
 .icon-brush:before {
   content: "\e641"; }
 
@@ -1616,6 +1616,9 @@ label > .form-error__message {
 
 .icon-camera:before {
   content: "\e643"; }
+
+.icon-contrast:before {
+  content: "\e908"; }
 
 .icon-sunny:before {
   content: "\e646"; }

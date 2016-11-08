@@ -1435,6 +1435,9 @@ label > .form-error__message {
   [class^="icon-"]:before, [class*=" icon-"]:before {
     display: block; }
 
+.icon-spinner:before {
+  content: "\e909"; }
+
 .icon-disabled:before {
   content: "\e608"; }
 
@@ -1597,9 +1600,6 @@ label > .form-error__message {
 .icon-security:before {
   content: "\e640"; }
 
-.icon-contrast:before {
-  content: "\e908"; }
-
 .icon-brush:before {
   content: "\e641"; }
 
@@ -1608,6 +1608,9 @@ label > .form-error__message {
 
 .icon-camera:before {
   content: "\e643"; }
+
+.icon-contrast:before {
+  content: "\e908"; }
 
 .icon-sunny:before {
   content: "\e646"; }
@@ -2374,14 +2377,35 @@ pre {
     border: 1px solid #CCC;
     white-space: nowrap; }
   .code-example__icons [class^=col-] {
+    position: relative;
     text-align: center;
     border: 2px solid white;
     padding: 15px 10px;
     background-color: #DDD;
     transition: all 300ms ease-in-out 0s; }
-    .code-example__icons [class^=col-]:hover {
+    .code-example__icons [class^=col-]:hover:not([data-content]) {
+      cursor: pointer;
       background-color: #1ab394;
       color: white; }
+  .code-example__icons .content-value {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(41, 41, 41, 0.85);
+    color: #fff;
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "LatoRegular", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif; }
+    .code-example__icons .content-value i {
+      font-size: 1.8rem;
+      font-style: normal; }
+    .code-example__icons .content-value p {
+      font-size: 1.2rem; }
   .code-example__icons p {
     line-height: 1;
     font-size: 1.6rem;
@@ -2407,6 +2431,4 @@ pre {
   [class*="masonry-"] > article img {
     display: block; }
 
-
-
-/*# sourceMappingURL=../css/mate-doc.css.map */
+/*# sourceMappingURL=mate-doc.css.map */

@@ -43,6 +43,9 @@
 // ICONS TYPES
 // ============================================================
 
+.icon-spinner:before {
+  content: "\e909";
+}
 .icon-disabled:before {
   content: "\e608";
 }
@@ -205,9 +208,6 @@
 .icon-security:before {
   content: "\e640";
 }
-.icon-contrast:before {
-  content: "\e908";
-}
 .icon-brush:before {
   content: "\e641";
 }
@@ -216,6 +216,9 @@
 }
 .icon-camera:before {
   content: "\e643";
+}
+.icon-contrast:before {
+  content: "\e908";
 }
 .icon-sunny:before {
   content: "\e646";

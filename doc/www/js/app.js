@@ -6,20 +6,42 @@ var events = {
     eventType: 'click',
 
     init: function () {
-        this.firstEvent();
-        this.secondEvent();
+        this.misc();
+        this.getIconContent();
     },
 
-    firstEvent: function () {
+    misc: function () {
         $('#click-btn').unbind(events.eventType); // Don't ever keep listening for clicks !
 
         $('.aside-toggle').on(events.eventType, function(){
             $('body').toggleClass('sidebar-on');
-        })
+        });
     },
 
-    secondEvent: function () {
-        // event code
+    getIconContent: function () {
+        $('.code-example__icons').on('click', '.example__icons-item', function () {
+            var iconTag = this.getElementsByTagName('span')[0];
+            var iconContent = window.getComputedStyle(iconTag, '::before').getPropertyValue("content");
+            var char = '\\' + iconContent.charCodeAt(1).toString(16);
+
+            if ($(this).find('i').length == 0){
+                $(this).append('<div class="content-value"><i>'+ char +'</i><p>click to copy</p></div>');
+                this.setAttribute('data-content', char);
+            } else {
+                copyToClipboard(char);
+                $(this).removeAttr('data-content');
+                $(this).find('.content-value').remove();
+            }
+        });
+
+        function copyToClipboard(char) {
+            var aux = document.createElement("input"); // Create an auxiliary hidden input
+            aux.setAttribute("value", char); // Get the text from the element passed into the input
+            document.body.appendChild(aux); // Append the aux input to the body
+            aux.select(); // Highlight the content
+            document.execCommand("copy"); // Execute the copy command
+            document.body.removeChild(aux); // Remove the input from the body
+        }
     }
 };
 

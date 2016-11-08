@@ -348,15 +348,42 @@ pre{
   &__icons {
 
     [class^=col-] {
+      position: relative;
       text-align: center;
       border: 2px solid white;
       padding: 15px 10px;
       background-color: $block__color--first;
       @include transition();
 
-      &:hover{
+      &:hover:not([data-content]){
+        cursor: pointer;
         background-color: $color__base--first;
         color: white;
+      }
+    }
+
+    .content-value{
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: rgba(41, 41, 41, 0.85);
+      color: #fff;
+      display: flex;
+      cursor: pointer;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: $font__base--regular;
+
+      i {
+        font-size: 1.8rem;
+        font-style: normal;
+      }
+
+      p {
+        font-size: 1.2rem;
       }
     }
 
