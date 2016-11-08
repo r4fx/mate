@@ -231,18 +231,25 @@
 }
 
 // ============================================================
-// Animations
-// [i] Useful for focusing user eyes on changed element
+// Animations classes
 // ============================================================
 
 // Example:
 // add class .mate-blink to an element by JS
 // document.getElementById(yourElement).classList.add('mate-blink');
+// [i] Useful for focusing user eyes on changed element
 
 .mate-blink {
   @include animation(mate-blink 2s ease);
 }
 
+.mate-spin {
+  @include animation(mate-spin 2200ms linear infinite);
+}
+
+// ============================================================
+// Animations keyframes
+// ============================================================
 @keyframes mate-blink {
   0% {
     @if variable-exists(color__message--warning) {
@@ -252,5 +259,11 @@
 
   100% {
     background-color: transparent;
+  }
+}
+
+@keyframes mate-spin{
+  to {
+    transform:rotate(360deg);
   }
 }

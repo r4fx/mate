@@ -2139,11 +2139,18 @@ table tbody th {
   animation: mate-blink 2s ease;
   -webkit-animation: mate-blink 2s ease; }
 
+.mate-spin {
+  animation: mate-spin 2200ms linear infinite;
+  -webkit-animation: mate-spin 2200ms linear infinite; }
+
 @keyframes mate-blink {
   0% {
     background-color: #ffb82d; }
   100% {
     background-color: transparent; } }
+@keyframes mate-spin {
+  to {
+    transform: rotate(360deg); } }
 body {
   font-size: 1.8rem; }
 
