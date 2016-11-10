@@ -143,7 +143,7 @@ var mateTools = {
 
     // GET USER OS, BROWSER & SCREEN
     // ============================================================
-    userEnvironment: function () {
+    agent: function () {
 
         var userOS = '';
         var userBrowser = '';
@@ -206,6 +206,6 @@ var mateTools = {
 // WHEN DOCUMENT READY
 // ---------------------------------------------------------
 document.addEventListener('DOMContentLoaded', function () {
-    mateTools.userEnvironment();
+    mateTools.agent();
     mateTools.init();
 }, false);
