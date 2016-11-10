@@ -12,6 +12,11 @@
   float: left;
   padding-left: $grid__col--gutter;
   padding-right: $grid__col--gutter;
+
+  @include respond-to($phone){
+    padding-left: $grid__col--gutter-phone;
+    padding-right: $grid__col--gutter-phone;
+  }
 }
 
 // DEFAULT COLUMNS FOR DESKTOP & NON SPECIFIED DEVICES
@@ -129,6 +134,11 @@
   padding-left: $grid__col--gutter;
   padding-right: $grid__col--gutter;
 
+  @include respond-to($phone){
+    padding-left: $grid__col--gutter-phone;
+    padding-right: $grid__col--gutter-phone;
+  }
+
   &--fluid {
     width: 100%;
     max-width: none;
@@ -170,6 +180,11 @@
 .row {
   margin-left: -$grid__col--gutter;
   margin-right: -$grid__col--gutter;
+
+  @include respond-to($phone){
+    margin-left: -$grid__col--gutter-phone;
+    margin-right: -$grid__col--gutter-phone;
+  }
 
   &.row--no-gutter {
     margin: 0;

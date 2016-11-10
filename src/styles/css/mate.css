@@ -370,6 +370,10 @@ ul li.separator--line:after, ul dt.separator--line:after, ol li.separator--line:
   float: left;
   padding-left: 25px;
   padding-right: 25px; }
+  @media screen and (max-width: 719px) {
+    [class*="col-"] {
+      padding-left: 15px;
+      padding-right: 15px; } }
 
 .box {
   max-width: 1180px;
@@ -377,6 +381,10 @@ ul li.separator--line:after, ul dt.separator--line:after, ol li.separator--line:
   margin-right: auto;
   padding-left: 25px;
   padding-right: 25px; }
+  @media screen and (max-width: 719px) {
+    .box {
+      padding-left: 15px;
+      padding-right: 15px; } }
   .box--fluid {
     width: 100%;
     max-width: none;
@@ -630,6 +638,10 @@ ul li.separator--line:after, ul dt.separator--line:after, ol li.separator--line:
 .row {
   margin-left: -25px;
   margin-right: -25px; }
+  @media screen and (max-width: 719px) {
+    .row {
+      margin-left: -15px;
+      margin-right: -15px; } }
   .row.row--no-gutter {
     margin: 0; }
   .row .row {
