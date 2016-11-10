@@ -9,7 +9,7 @@ var pageEvents = {
     collection: function () {
 
         // Events only for mobile devices!
-        if (mateTools.userEnvironment().system === 'mobile') {
+        if (mateTools.agent().system === 'mobile') {
             console.log('mateTools.collection for mobile');
         }
 
@@ -61,7 +61,7 @@ window.addEventListener('resize', function () {
     mateTools.debounce(function () {
 
         // Set of function initialized on page scroll:
-        mateTools.userEnvironment();
+        mateTools.agent();
 
     }, 250)();
 });
