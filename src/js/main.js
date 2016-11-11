@@ -60,7 +60,7 @@ window.addEventListener('scroll', function () {
 window.addEventListener('resize', function () {
     mateTools.debounce(function () {
 
-        // Set of function initialized on page scroll:
+        // Set of function initialized on page resize:
         mateTools.agent();
 
     }, 250)();
