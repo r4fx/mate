@@ -94,8 +94,10 @@
 // ============================================================
 @mixin grid-cols-offset-reset {
   @each $device-type, $media in $devices {
-    &--#{$device-type}-offset-0 {
-      margin-left: 0;
+    @include respond-to($media) {
+      &--#{$device-type}-offset-0 {
+        margin-left: 0;
+      }
     }
   }
 }
