@@ -1964,7 +1964,7 @@ table tbody th {
     width: auto; }
 
 .full-width {
-  width: 100vw;
+  width: 100vw !important;
   position: relative;
   left: 50%;
   right: 50%;
@@ -2450,6 +2450,4 @@ pre {
   [class*="masonry-"] > article img {
     display: block; }
 
-
-
-/*# sourceMappingURL=../css/mate-doc.css.map */
+/*# sourceMappingURL=mate-doc.css.map */
