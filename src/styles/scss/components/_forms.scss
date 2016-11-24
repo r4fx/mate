@@ -118,6 +118,11 @@ select {
   &::-ms-expand {
     display: none;
   }
+
+  &[multiple]{
+    background: none;
+    padding: $form__field--padding;
+  }
 }
 
 textarea {

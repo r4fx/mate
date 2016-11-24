@@ -624,16 +624,21 @@ ul li.separator--line:after, ul dt.separator--line:after, ol li.separator--line:
     width: 100%; }
   .col--phone-offset-12 {
     margin-left: 100%; } }
-.col--phone-offset-0 {
-  margin-left: 0; }
-.col--tablet-offset-0 {
-  margin-left: 0; }
-.col--mobile-offset-0 {
-  margin-left: 0; }
-.col--desktop-offset-0 {
-  margin-left: 0; }
-.col--desktop-xl-offset-0 {
-  margin-left: 0; }
+@media screen and (max-width: 719px) {
+  .col--phone-offset-0 {
+    margin-left: 0; } }
+@media screen and (min-width: 720px) and (max-width: 1023px) {
+  .col--tablet-offset-0 {
+    margin-left: 0; } }
+@media screen and (max-width: 1023px) {
+  .col--mobile-offset-0 {
+    margin-left: 0; } }
+@media screen and (min-width: 1024px) {
+  .col--desktop-offset-0 {
+    margin-left: 0; } }
+@media screen and (min-width: 1181px) {
+  .col--desktop-xl-offset-0 {
+    margin-left: 0; } }
 
 .row {
   margin-left: -25px;
@@ -1287,6 +1292,9 @@ select {
   background-position: right center; }
   select::-ms-expand {
     display: none; }
+  select[multiple] {
+    background: none;
+    padding: 0.8rem 1rem; }
 
 textarea {
   height: auto; }
