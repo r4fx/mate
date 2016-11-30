@@ -1898,18 +1898,29 @@ table, .table-css {
   border-collapse: collapse;
   border-spacing: 0; }
 
+table > caption, .table-css > caption {
+  font-family: "LatoBold", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif;
+  line-height: normal;
+  padding: 1rem 1.6rem;
+  background-color: #DDD;
+  border-bottom: 1px solid #CCC; }
+
 table thead, .table-css .table-thead [class*="col-"],
 .table-css .table-thead > div {
-  background-color: #DDD;
-  font-family: "LatoBold", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif;
   text-align: left;
   line-height: normal; }
 
+table thead th, table tbody th {
+  font-family: "LatoBold", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif;
+  background-color: #DDD;
+  vertical-align: top;
+  text-align: left; }
+
 table th, table td, .table-css [class*="col-"],
 .table-css .row > div {
-  padding: 0.5em 1em;
+  padding: 1rem 1.6rem;
   border-bottom: 1px solid #CCC;
-  font-weight: normal; }
+  line-height: normal; }
 
 table.table--bordered, .table-css.table--bordered {
   border: 1px solid #CCC; }
@@ -1948,11 +1959,9 @@ table.table--bordered [class*="col-"]:first-child, table.table--bordered .row > 
 .table-css.table--bordered [class*="col-"]:first-child, .table-css.table--bordered .row > div:first-child {
   border-left: 0; }
 
-table tbody th {
-  text-align: left;
-  font-family: "LatoBold", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif;
-  line-height: normal;
-  vertical-align: top; }
+table tfoot th, table tfoot td {
+  border-bottom: 0;
+  text-align: right; }
 
 .table-css {
   display: table; }

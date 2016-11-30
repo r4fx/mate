@@ -9,17 +9,30 @@
   border-spacing: 0;
 }
 
-%table-thead {
-  background-color: $block__color--first;
+%table-caption {
   font-family: $font__base--bold;
+  line-height: normal;
+  padding: 1rem 1.6rem;
+  background-color: $block__color--first;
+  border-bottom: 1px solid $border__color--first;
+}
+
+%table-thead {
   text-align: left;
   line-height: normal;
 }
 
+%table-th {
+  font-family: $font__base--bold;
+  background-color: $block__color--first;
+  vertical-align: top;
+  text-align: left;
+}
+
 %table-cell {
-  padding: 0.5em 1em;
+  padding: 1rem 1.6rem;
   border-bottom: 1px solid $border__color--first;
-  font-weight: normal;
+  line-height: normal;
 }
 
 %table-bordered-frame {
@@ -94,6 +107,9 @@ table, .table-css {
     }
   }
 
+  > caption{
+    @extend %table-caption;
+  }
 }
 
 // STANDARD TABLE
@@ -101,23 +117,30 @@ table, .table-css {
 table {
   @extend %table-frame;
 
-  thead {
-    @extend %table-thead;
-  }
-
-  tbody {
-    th {
-      text-align: left;
-      font-family: $font__base--bold;
-      line-height: normal;
-      vertical-align: top;
-    }
-  }
-
   th, td {
     @extend %table-cell;
   }
 
+  thead {
+    @extend %table-thead;
+
+    th {
+      @extend %table-th;
+    }
+  }
+
+  tbody {
+    th {
+      @extend %table-th;
+    }
+  }
+
+  tfoot {
+    th, td {
+      border-bottom: 0;
+      text-align: right;
+    }
+  }
 }
 
 // TABLE MADE BY CSS
