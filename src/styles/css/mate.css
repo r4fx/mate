@@ -1961,7 +1961,7 @@ table.table--bordered [class*="col-"]:first-child, table.table--bordered .row > 
 
 table tfoot th, table tfoot td {
   border-bottom: 0;
-  text-align: right; }
+  color: #959A9D; }
 
 .table-css {
   display: table; }
