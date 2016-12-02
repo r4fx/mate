@@ -863,6 +863,7 @@ ul li.separator--line:after, ul dt.separator--line:after, ol li.separator--line:
   -webkit-align-items: center;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   text-align: center;
   vertical-align: middle;
   text-decoration: none;
