@@ -9,7 +9,6 @@ $breakPoint__tablet--xs:    800px;
 $breakPoint__desktop:       1024px;
 $breakPoint__desktop--xl:   1180px;
 
-
 // FONTS
 // ============================================================
 $font__icons--dir:          "../../fonts/mate";
@@ -34,24 +33,24 @@ $font__base--italic:        quote(map-get($font__base--family, Lato-Italic)), $f
 // [i] Name your colors http://name-of-color.com/
 // [i] Get your palette for quick start: https://color.adobe.com/pl/create/color-wheel/
 // ============================================================
-$color__base--first:        #1ab394;
-$color__base--second:       #272822;
+$color__base--first:        #1ab394 !default;
+$color__base--second:       #272822 !default;
 
-$color__message--alert:     #d62100;
-$color__message--warning:   #ffb82d;
-$color__message--info:      #249cff;
-$color__message--success:   #00A631;
+$color__message--alert:     #d62100 !default;
+$color__message--warning:   #ffb82d !default;
+$color__message--info:      #249cff !default;
+$color__message--success:   #00A631 !default;
 
 // TEXTS
 // ============================================================
 
 // text--sizes
-$text__size--xs:            1.2rem;
-$text__size--sm:            1.4rem;
-$text__size--md:            1.6rem;
-$text__size--lg:            2.2rem;
-$text__size--xl:            3.4rem;
-$text__size--xxl:           4.2rem;
+$text__size--xs:            1.2rem !default;
+$text__size--sm:            1.4rem !default;
+$text__size--md:            1.6rem !default;
+$text__size--lg:            2.2rem !default;
+$text__size--xl:            3.4rem !default;
+$text__size--xxl:           4.2rem !default;
 $text__size--base:          $text__size--md;
 
 // text--line-height
@@ -59,33 +58,33 @@ $text__size--base:          $text__size--md;
 $text__line-height:         1.5;
 
 // text--colors
-$text__color--first:        #3c3c3c;
-$text__color--second:       #fff;
+$text__color--first:        #3c3c3c !default;
+$text__color--second:       #ffffff !default;
 
-$text__color--muted:        #959A9D;
-$text__color--link:         #249cff;
+$text__color--muted:        #959A9D !default;
+$text__color--link:         #249cff !default;
 
 
 // BLOCKS
 // ============================================================
 
 // block--colors
-$block__color--first:       #DDD;
-$block__color--second:      #353535;
+$block__color--first:       #dddddd !default;
+$block__color--second:      #353535 !default;
 
 
 // BUTTONS
 // ============================================================
 
 // button--colors
-$btn__color--first:         #1ab394;
-$btn__color--first-txt:     #fff;
+$btn__color--first:         #1ab394 !default;
+$btn__color--first-txt:     #ffffff !default;
 
-$btn__color--second:        #249cff;
-$btn__color--second-txt:    #fff;
+$btn__color--second:        #249cff !default;
+$btn__color--second-txt:    #ffffff !default;
 
-$btn__color--third:         #272822;
-$btn__color--third-txt:     #fff;
+$btn__color--third:         #272822 !default;
+$btn__color--third-txt:     #ffffff !default;
 
 $btn__outline--width:       2px;
 
@@ -110,18 +109,10 @@ $icon__sizes:               (sm 2rem),
 $border__width--base:       1px;
 $border__style--base:       solid;
 
-$border__radius:            4px;
+$border__radius:            4px !default;
 
-$border__color--first:      #CCC;
-$border__color--second:     #249cff;
-
-
-// MARGINS
-// ============================================================
-$margin--typography:        15px;
-$margin--image:             15px;
-$margin--section:           50px;
-
+$border__color--first:      #cccccc !default;
+$border__color--second:     #249cff !default;
 
 // GRID
 // ============================================================
@@ -130,12 +121,18 @@ $grid__col--gutter:         25px;
 $grid__col--gutter-phone:   15px;
 $grid__row--gutter:         25px;
 
+// MARGINS
+// ============================================================
+$margin--typography:        15px;
+$margin--image:             15px;
+$margin--section:           $grid__row--gutter*2;
 
 // FORMS
 // ============================================================
-$form__field--padding:     (0.8rem 1rem);
-$form__pretty-input--size: 22px;
-
+$form__field--padding:      (0.8rem 1rem);
+$form__field--bkg-color:    #ffffff !default;
+$form__input-text-color:    #000000 !default;
+$form__pretty-input--size:  22px;
 
 // TRANSITIONS
 // ============================================================
@@ -143,11 +140,9 @@ $trans__base--duration:     300ms !default;
 $trans__base--timing:       ease-in-out !default;
 $trans__base--delay:        0s !default;
 
-
 // SHADOWS
 // ============================================================
-$shadow__box--first:        0 1px 3px 0 rgba(0, 0, 0, 0.3);
-
+$shadow__box--first:        0 1px 3px 0 rgba(0, 0, 0, 0.3) !default;
 
 // DEBUG OPTIONS
 // ============================================================

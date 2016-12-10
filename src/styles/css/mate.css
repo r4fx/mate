@@ -225,7 +225,7 @@ img {
 hr {
   border: 0;
   height: 1px;
-  background-color: #CCC;
+  background-color: #cccccc;
   background-clip: content-box;
   margin: 25px auto; }
   hr.hr--mini {
@@ -360,7 +360,7 @@ ul li.separator, ul li.separator--line, ul dt.separator, ul dt.separator--line, 
     display: block;
     min-height: 1.6rem; }
 ul li.separator--line:after, ul dt.separator--line:after, ol li.separator--line:after, ol dt.separator--line:after, dl li.separator--line:after, dl dt.separator--line:after {
-  border-bottom: 1px solid #CCC;
+  border-bottom: 1px solid #cccccc;
   margin-bottom: 1.6rem; }
 
 /*============================================================
@@ -851,9 +851,9 @@ ul li.separator--line:after, ul dt.separator--line:after, ol li.separator--line:
   -webkit-column-rule: 1px solid;
   -moz-column-rule: 1px solid;
   column-rule: 1px solid;
-  -webkit-column-rule-color: #CCC;
-  -moz-column-rule-color: #CCC;
-  column-rule-color: #CCC; }
+  -webkit-column-rule-color: #cccccc;
+  -moz-column-rule-color: #cccccc;
+  column-rule-color: #cccccc; }
 
 .btn {
   line-height: 1;
@@ -986,7 +986,7 @@ ul li.separator--line:after, ul dt.separator--line:after, ol li.separator--line:
 
 .btn--color-first, .btn {
   background-color: #1ab394;
-  color: #fff; }
+  color: #ffffff; }
   .btn--color-first:hover, .btn:hover {
     background-color: #1fd2ae; }
     .btn--color-first:hover.btn--arrow-l:before, .btn:hover.btn--arrow-l:before {
@@ -1010,7 +1010,7 @@ ul li.separator--line:after, ul dt.separator--line:after, ol li.separator--line:
     border-left-color: #1ab394; }
 .btn--color-second {
   background-color: #249cff;
-  color: #fff; }
+  color: #ffffff; }
   .btn--color-second:hover {
     background-color: #48acff; }
     .btn--color-second:hover.btn--arrow-l:before {
@@ -1035,7 +1035,7 @@ ul li.separator--line:after, ul dt.separator--line:after, ol li.separator--line:
     border-left-color: #249cff; }
 .btn--color-third {
   background-color: #272822;
-  color: #fff; }
+  color: #ffffff; }
   .btn--color-third:hover {
     background-color: #3a3b32; }
     .btn--color-third:hover.btn--arrow-l:before {
@@ -1253,11 +1253,11 @@ textarea {
   padding: 0.8rem 1rem;
   line-height: normal;
   font-size: 1.6rem;
-  border: 1px solid #CCC;
+  border: 1px solid #cccccc;
   border-radius: 4px;
-  background-color: transparent;
+  background-color: #ffffff;
   vertical-align: middle;
-  color: #3c3c3c;
+  color: #000000;
   font-family: "LatoRegular", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1373,7 +1373,7 @@ input[type="radio"].mate-input {
       left: 0;
       width: 22px;
       height: 22px;
-      border: 1px solid #CCC; }
+      border: 1px solid #cccccc; }
     input[type="checkbox"].mate-input + span:after,
     input[type="checkbox"].mate-input + label:after,
     input[type="radio"].mate-input + span:after,
@@ -1903,8 +1903,8 @@ table > caption, .table-css > caption {
   font-family: "LatoBold", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif;
   line-height: normal;
   padding: 1rem 1.6rem;
-  background-color: #DDD;
-  border-bottom: 1px solid #CCC; }
+  background-color: #dddddd;
+  border-bottom: 1px solid #cccccc; }
 
 table thead, .table-css .table-thead [class*="col-"],
 .table-css .table-thead > div {
@@ -1913,23 +1913,23 @@ table thead, .table-css .table-thead [class*="col-"],
 
 table thead th, table tbody th {
   font-family: "LatoBold", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif;
-  background-color: #DDD;
+  background-color: #dddddd;
   vertical-align: top;
   text-align: left; }
 
 table th, table td, .table-css [class*="col-"],
 .table-css .row > div {
   padding: 1rem 1.6rem;
-  border-bottom: 1px solid #CCC;
+  border-bottom: 1px solid #cccccc;
   line-height: normal; }
 
 table.table--bordered, .table-css.table--bordered {
-  border: 1px solid #CCC; }
+  border: 1px solid #cccccc; }
 
 table.table--bordered th, table.table--bordered td,
 table.table--bordered [class*="col-"], table.table--bordered .row > div, .table-css.table--bordered th, .table-css.table--bordered td,
 .table-css.table--bordered [class*="col-"], .table-css.table--bordered .row > div {
-  border-left: 1px solid #CCC; }
+  border-left: 1px solid #cccccc; }
 
 table.table--striped tr:nth-child(odd) td,
 table.table--striped tr:nth-child(odd) [class*="col-"], table.table--striped tr:nth-child(odd) > div,
