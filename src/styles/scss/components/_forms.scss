@@ -87,7 +87,7 @@ textarea {
   border-radius: $border__radius;
   background-color: $form__field--bkg-color;
   vertical-align: middle;
-  color: $form__input-text-color;
+  color: $form__field--text-color;
   font-family: $font__base--regular;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -106,6 +106,11 @@ textarea {
 
   &[disabled] {
     @extend %disabled;
+    background-color: $form__field--bkg-muted;
+  }
+
+  &[readonly] {
+    background-color: $form__field--bkg-muted;
   }
 }
 

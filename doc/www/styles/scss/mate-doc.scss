@@ -285,9 +285,10 @@ main {
 p code,
 ul code,
 h4 code{
-  background-color: $block__color--first;
+  background-color: rgb(255, 168, 0);
   padding: 2px;
   font-size: 1.4rem;
+  border-radius: 3px;
 }
 
 pre{

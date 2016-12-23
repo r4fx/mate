@@ -131,7 +131,8 @@ $margin--section:           $grid__row--gutter*2;
 // ============================================================
 $form__field--padding:      (0.8rem 1rem);
 $form__field--bkg-color:    #ffffff !default;
-$form__input-text-color:    #000000 !default;
+$form__field--text-color:   #000000 !default;
+$form__field--bkg-muted:    #dcdcdc !default;
 $form__pretty-input--size:  22px;
 
 // TRANSITIONS
