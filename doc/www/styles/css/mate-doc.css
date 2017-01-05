@@ -2161,6 +2161,31 @@ table tfoot th, table tfoot td {
   .hidden--phone {
     display: none !important; } }
 
+@media screen and (min-width: 720px) and (max-width: 1023px) {
+  .visible--phone {
+    display: none !important; } }
+@media screen and (min-width: 1024px) {
+  .visible--phone {
+    display: none !important; } }
+
+@media screen and (max-width: 719px) {
+  .visible--tablet {
+    display: none !important; } }
+@media screen and (min-width: 1024px) {
+  .visible--tablet {
+    display: none !important; } }
+
+@media screen and (min-width: 1024px) {
+  .visible--mobile {
+    display: none !important; } }
+
+@media screen and (max-width: 719px) {
+  .visible--desktop {
+    display: none !important; } }
+@media screen and (min-width: 720px) and (max-width: 1023px) {
+  .visible--desktop {
+    display: none !important; } }
+
 .link-neutral {
   text-decoration: none;
   color: #3c3c3c;
@@ -2489,4 +2514,6 @@ pre {
   [class*="masonry-"] > article img {
     display: block; }
 
-/*# sourceMappingURL=mate-doc.css.map */
+
+
+/*# sourceMappingURL=../css/mate-doc.css.map */

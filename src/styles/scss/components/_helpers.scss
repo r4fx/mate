@@ -166,7 +166,7 @@
 }
 
 // ============================================================
-// HIDE ELEMENTS
+// HIDE/SHOW ELEMENTS
 // ============================================================
 .hidden {
   display: none !important;
@@ -192,6 +192,42 @@
 
 .hidden--phone {
   @include respond-to($phone) {
+    display: none !important;
+  }
+}
+
+.visible--phone {
+  @include respond-to($tablet) {
+    display: none !important;
+  }
+
+  @include respond-to($desktop) {
+    display: none !important;
+  }
+}
+
+.visible--tablet {
+  @include respond-to($phone) {
+    display: none !important;
+  }
+
+  @include respond-to($desktop) {
+    display: none !important;
+  }
+}
+
+.visible--mobile {
+  @include respond-to($desktop) {
+    display: none !important;
+  }
+}
+
+.visible--desktop {
+  @include respond-to($phone) {
+    display: none !important;
+  }
+
+  @include respond-to($tablet) {
     display: none !important;
   }
 }
