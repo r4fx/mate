@@ -86,12 +86,12 @@ $btn__color--second-txt:    #ffffff !default;
 $btn__color--third:         #272822 !default;
 $btn__color--third-txt:     #ffffff !default;
 
-$btn__outline--width:       2px;
+$btn__border--width:       0.2rem;
 
-// button sizes (type, top & bottom padding, left & right padding)
+// button sizes (type, vertical padding, horizontal padding)
 $btn__sizes:                (xs, 0.3rem, 0.6rem),
                             (sm, 0.7rem, 1.4rem),
-                            (md, 1.1rem, 2rem),
+                            (md, 1rem, 2rem),
                             (lg, 1.1rem, 2.2rem),
                             (xl, 1rem, 3.5rem),
                             (xxl, 1rem, 4rem);

@@ -70,7 +70,7 @@
     $type: nth($n, 1);
     $btn-padding-vertical: nth($n, 2);
     $btn-padding-horizontal: nth($n, 3);
-    $arrow-border-size: (getTextSize($type) + ($btn-padding-vertical*2)) /2;
+    $arrow-border-size: (getTextSize($type) + ($btn-padding-vertical*2 + ($btn__border--width*2))) /2;
 
     // Generate default size
     @if $default == $type {
@@ -92,9 +92,9 @@
   line-height: 1;
   border-radius: $border__radius;
 
-  display: inline-block;          // todo: to remove in future
-  -webkit-display: inline-flex;   // todo: to remove in future
-  -webkit-align-items: center;    // todo: to remove in future
+  display: inline-block;          // todo: to remove in the future
+  -webkit-display: inline-flex;   // todo: to remove in the future
+  -webkit-align-items: center;    // todo: to remove in the future
 
   display: inline-flex;
   align-items: center;
@@ -102,7 +102,7 @@
   text-align: center;
   vertical-align: middle;
   text-decoration: none;
-  border: $btn__outline--width solid transparent;
+  border: $btn__border--width solid transparent;
   cursor: pointer;
   @include transition();
   @extend %noselect;
@@ -284,7 +284,7 @@
   &--outline {
     border-radius: $border__radius;
     background-color: transparent;
-    border: $btn__outline--width solid;
+    border: $btn__border--width solid;
     //@include generate-btn-outline();
   }
 
@@ -347,7 +347,8 @@
   &--arrow-l {
     position: relative;
     border-radius: 0;
-    border: 0;
+    border-right: 0;
+    border-left: 0;
   }
 
   &--arrow-r:after,
@@ -356,7 +357,7 @@
     width: 0;
     //height: 50%; // tip: use only when height is calculated by "line-height"
     position: absolute;
-    top: 0;
+    top: -$btn__border--width;
     bottom: 0;
     border-style: solid;
     border-color: transparent;
