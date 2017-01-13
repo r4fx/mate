@@ -86,34 +86,6 @@
   }
 }
 
-// Generate outline sizes
-// ------------------------------------------------------------
-@mixin generate-btn-outline-styles($btn-padding-vertical) {
-  padding-top: $btn-padding-vertical - calculateRem($btn__outline--width);
-  padding-bottom: $btn-padding-vertical - calculateRem($btn__outline--width);
-
-  @include respond-to($phone) {
-    padding-top: ($btn-padding-vertical - calculateRem($btn__outline--width)) * 0.67;
-    padding-bottom: ($btn-padding-vertical - calculateRem($btn__outline--width)) * 0.67;
-  }
-}
-
-@mixin generate-btn-outline($default: md) {
-  @each $n in $btn__sizes {
-    $type: nth($n, 1);
-    $btn-padding-vertical: nth($n, 2);
-
-    // Generate default size
-    @if $default == $type {
-      @include generate-btn-outline-styles($btn-padding-vertical);
-    }
-
-    &.btn--#{$type} {
-      @include generate-btn-outline-styles($btn-padding-vertical);
-    }
-  }
-}
-
 // BUTTON: BASE
 // ============================================================
 .btn {
@@ -130,7 +102,7 @@
   text-align: center;
   vertical-align: middle;
   text-decoration: none;
-  border: 0;
+  border: $btn__outline--width solid transparent;
   cursor: pointer;
   @include transition();
   @extend %noselect;
@@ -157,15 +129,15 @@
     color: $btn__color--first-txt;
 
     &:hover {
-      background-color: lighten($btn__color--first, 7%);
+      background-color: darken($btn__color--first, 7%);
 
       // Arrows
       &.btn--arrow-l:before {
-        border-right-color: lighten($btn__color--first, 7%);
+        border-right-color: darken($btn__color--first, 7%);
       }
 
       &.btn--arrow-r:after {
-        border-left-color: lighten($btn__color--first, 7%);
+        border-left-color: darken($btn__color--first, 7%);
       }
     }
 
@@ -175,8 +147,8 @@
       border-color: $btn__color--first;
 
       &:hover {
-        background-color: transparent;
-        color: lighten($btn__color--first, 7%);
+        background-color: $btn__color--first;
+        color: $btn__color--first-txt;
       }
     }
 
@@ -186,7 +158,7 @@
 
       &:hover {
         background-color: inherit;
-        color: lighten($btn__color--first, 7%);
+        color: darken($btn__color--first, 7%);
       }
     }
 
@@ -208,15 +180,15 @@
     color: $btn__color--second-txt;
 
     &:hover {
-      background-color: lighten($btn__color--second, 7%);
+      background-color: darken($btn__color--second, 7%);
 
       // Arrows
       &.btn--arrow-l:before {
-        border-right-color: lighten($btn__color--second, 7%);
+        border-right-color: darken($btn__color--second, 7%);
       }
 
       &.btn--arrow-r:after {
-        border-left-color: lighten($btn__color--second, 7%);
+        border-left-color: darken($btn__color--second, 7%);
       }
     }
 
@@ -226,9 +198,8 @@
       border-color: $btn__color--second;
 
       &:hover {
-        background-color: transparent;
-        border-color: lighten($btn__color--second, 7%);
-        color: lighten($btn__color--second, 7%);
+        background-color: $btn__color--second;
+        color: $btn__color--second-txt;
       }
     }
 
@@ -238,7 +209,7 @@
 
       &:hover {
         background-color: inherit;
-        color: lighten($btn__color--second, 7%);
+        color: darken($btn__color--second, 7%);
       }
     }
 
@@ -260,15 +231,15 @@
     color: $btn__color--third-txt;
 
     &:hover {
-      background-color: lighten($btn__color--third, 7%);
+      background-color: darken($btn__color--third, 10%);
 
       // Arrows
       &.btn--arrow-l:before {
-        border-right-color: lighten($btn__color--third, 7%);
+        border-right-color: darken($btn__color--third, 7%);
       }
 
       &.btn--arrow-r:after {
-        border-left-color: lighten($btn__color--third, 7%);
+        border-left-color: darken($btn__color--third, 7%);
       }
     }
 
@@ -278,9 +249,8 @@
       border-color: $btn__color--third;
 
       &:hover {
-        background-color: transparent;
-        border-color: lighten($btn__color--third, 7%);
-        color: lighten($btn__color--third, 7%);
+        background-color: $btn__color--third;
+        color: $btn__color--third-txt;
       }
     }
 
@@ -290,7 +260,7 @@
 
       &:hover {
         background-color: inherit;
-        color: lighten($btn__color--third, 7%);
+        color: darken($btn__color--third, 7%);
       }
     }
 
@@ -315,7 +285,7 @@
     border-radius: $border__radius;
     background-color: transparent;
     border: $btn__outline--width solid;
-    @include generate-btn-outline();
+    //@include generate-btn-outline();
   }
 
   // Block

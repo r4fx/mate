@@ -867,7 +867,7 @@ ul li.separator--line:after, ul dt.separator--line:after, ol li.separator--line:
   text-align: center;
   vertical-align: middle;
   text-decoration: none;
-  border: 0;
+  border: 2px solid transparent;
   cursor: pointer;
   transition: all 300ms ease-in-out 0s;
   font-size: 1.6rem;
@@ -988,22 +988,22 @@ ul li.separator--line:after, ul dt.separator--line:after, ol li.separator--line:
   background-color: #1ab394;
   color: #ffffff; }
   .btn--color-first:hover, .btn:hover {
-    background-color: #1fd2ae; }
+    background-color: #15947a; }
     .btn--color-first:hover.btn--arrow-l:before, .btn:hover.btn--arrow-l:before {
-      border-right-color: #1fd2ae; }
+      border-right-color: #15947a; }
     .btn--color-first:hover.btn--arrow-r:after, .btn:hover.btn--arrow-r:after {
-      border-left-color: #1fd2ae; }
+      border-left-color: #15947a; }
   .btn--color-first.btn--outline, .btn--outline.btn {
     color: #1ab394;
     border-color: #1ab394; }
     .btn--color-first.btn--outline:hover, .btn--outline.btn:hover {
-      background-color: transparent;
-      color: #1fd2ae; }
+      background-color: #1ab394;
+      color: #ffffff; }
   .btn--color-first.btn--txt, .btn--txt.btn {
     color: #1ab394; }
     .btn--color-first.btn--txt:hover, .btn--txt.btn:hover {
       background-color: inherit;
-      color: #1fd2ae; }
+      color: #15947a; }
   .btn--color-first.btn--arrow-l:before, .btn--arrow-l.btn:before {
     border-right-color: #1ab394; }
   .btn--color-first.btn--arrow-r:after, .btn--arrow-r.btn:after {
@@ -1012,23 +1012,22 @@ ul li.separator--line:after, ul dt.separator--line:after, ol li.separator--line:
   background-color: #249cff;
   color: #ffffff; }
   .btn--color-second:hover {
-    background-color: #48acff; }
+    background-color: #008cff; }
     .btn--color-second:hover.btn--arrow-l:before {
-      border-right-color: #48acff; }
+      border-right-color: #008cff; }
     .btn--color-second:hover.btn--arrow-r:after {
-      border-left-color: #48acff; }
+      border-left-color: #008cff; }
   .btn--color-second.btn--outline {
     color: #249cff;
     border-color: #249cff; }
     .btn--color-second.btn--outline:hover {
-      background-color: transparent;
-      border-color: #48acff;
-      color: #48acff; }
+      background-color: #249cff;
+      color: #ffffff; }
   .btn--color-second.btn--txt {
     color: #249cff; }
     .btn--color-second.btn--txt:hover {
       background-color: inherit;
-      color: #48acff; }
+      color: #008cff; }
   .btn--color-second.btn--arrow-l:before {
     border-right-color: #249cff; }
   .btn--color-second.btn--arrow-r:after {
@@ -1037,23 +1036,22 @@ ul li.separator--line:after, ul dt.separator--line:after, ol li.separator--line:
   background-color: #272822;
   color: #ffffff; }
   .btn--color-third:hover {
-    background-color: #3a3b32; }
+    background-color: #0c0c0b; }
     .btn--color-third:hover.btn--arrow-l:before {
-      border-right-color: #3a3b32; }
+      border-right-color: #141512; }
     .btn--color-third:hover.btn--arrow-r:after {
-      border-left-color: #3a3b32; }
+      border-left-color: #141512; }
   .btn--color-third.btn--outline {
     color: #272822;
     border-color: #272822; }
     .btn--color-third.btn--outline:hover {
-      background-color: transparent;
-      border-color: #3a3b32;
-      color: #3a3b32; }
+      background-color: #272822;
+      color: #ffffff; }
   .btn--color-third.btn--txt {
     color: #272822; }
     .btn--color-third.btn--txt:hover {
       background-color: inherit;
-      color: #3a3b32; }
+      color: #141512; }
   .btn--color-third.btn--arrow-l:before {
     border-right-color: #272822; }
   .btn--color-third.btn--arrow-r:after {
@@ -1062,55 +1060,7 @@ ul li.separator--line:after, ul dt.separator--line:after, ol li.separator--line:
 .btn--outline {
   border-radius: 4px;
   background-color: transparent;
-  border: 2px solid;
-  padding-top: 0.9rem;
-  padding-bottom: 0.9rem; }
-  .btn--outline.btn--xs {
-    padding-top: 0.1rem;
-    padding-bottom: 0.1rem; }
-    @media screen and (max-width: 719px) {
-      .btn--outline.btn--xs {
-        padding-top: 0.067rem;
-        padding-bottom: 0.067rem; } }
-  .btn--outline.btn--sm {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem; }
-    @media screen and (max-width: 719px) {
-      .btn--outline.btn--sm {
-        padding-top: 0.335rem;
-        padding-bottom: 0.335rem; } }
-  @media screen and (max-width: 719px) {
-    .btn--outline {
-      padding-top: 0.603rem;
-      padding-bottom: 0.603rem; } }
-  .btn--outline.btn--md {
-    padding-top: 0.9rem;
-    padding-bottom: 0.9rem; }
-    @media screen and (max-width: 719px) {
-      .btn--outline.btn--md {
-        padding-top: 0.603rem;
-        padding-bottom: 0.603rem; } }
-  .btn--outline.btn--lg {
-    padding-top: 0.9rem;
-    padding-bottom: 0.9rem; }
-    @media screen and (max-width: 719px) {
-      .btn--outline.btn--lg {
-        padding-top: 0.603rem;
-        padding-bottom: 0.603rem; } }
-  .btn--outline.btn--xl {
-    padding-top: 0.8rem;
-    padding-bottom: 0.8rem; }
-    @media screen and (max-width: 719px) {
-      .btn--outline.btn--xl {
-        padding-top: 0.536rem;
-        padding-bottom: 0.536rem; } }
-  .btn--outline.btn--xxl {
-    padding-top: 0.8rem;
-    padding-bottom: 0.8rem; }
-    @media screen and (max-width: 719px) {
-      .btn--outline.btn--xxl {
-        padding-top: 0.536rem;
-        padding-bottom: 0.536rem; } }
+  border: 2px solid; }
 .btn--block {
   display: block;
   width: 100%; }
