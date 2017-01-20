@@ -86,7 +86,7 @@ $btn__color--second-txt:    #ffffff !default;
 $btn__color--third:         #272822 !default;
 $btn__color--third-txt:     #ffffff !default;
 
-$btn__border--width:       0.2rem;
+$btn__border--width:        0.2rem;
 
 // button sizes (type, vertical padding, horizontal padding)
 $btn__sizes:                (xs, 0.3rem, 0.6rem),
@@ -95,6 +95,9 @@ $btn__sizes:                (xs, 0.3rem, 0.6rem),
                             (lg, 1.1rem, 2.2rem),
                             (xl, 1rem, 3.5rem),
                             (xxl, 1rem, 4rem);
+
+// button fixed sizes in px (btn--fixed-xx)
+$btn__fixed-sizes:          50,100,150,200;
 
 // ICONS
 // ============================================================
