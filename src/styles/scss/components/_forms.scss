@@ -82,7 +82,7 @@ textarea {
   width: 100%;
   padding: $form__field--padding;
   line-height: normal;
-  font-size: $text__size--base;
+  font-size: $form__field--text-size;
   border: $border__width--base solid $border__color--first;
   border-radius: $border__radius;
   background-color: $form__field--bkg-color;
