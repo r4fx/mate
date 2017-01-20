@@ -369,7 +369,8 @@ ul li.separator--line:after, ul dt.separator--line:after, ol li.separator--line:
 [class*="col-"] {
   float: left;
   padding-left: 25px;
-  padding-right: 25px; }
+  padding-right: 25px;
+  min-height: 1px; }
   @media screen and (max-width: 719px) {
     [class*="col-"] {
       padding-left: 15px;
@@ -1203,7 +1204,7 @@ textarea {
   width: 100%;
   padding: 0.8rem 1rem;
   line-height: normal;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   border: 1px solid #cccccc;
   border-radius: 4px;
   background-color: #ffffff;

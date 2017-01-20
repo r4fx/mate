@@ -86,14 +86,6 @@
   }
 }
 
-@mixin generate-btn-fixed-sizes() {
-  @each $size in $btn__fixed-sizes {
-    &--fixed-#{$size} {
-      width: #{$size}px;
-    }
-  }
-}
-
 // BUTTON: BASE
 // ============================================================
 .btn {
@@ -117,7 +109,6 @@
 
   // Sizes
   @include generate-btn-sizes();
-  @include generate-btn-fixed-sizes();
 
   // States
   &[disabled]{

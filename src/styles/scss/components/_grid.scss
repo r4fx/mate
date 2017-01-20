@@ -12,6 +12,7 @@
   float: left;
   padding-left: $grid__col--gutter;
   padding-right: $grid__col--gutter;
+  min-height: 1px;
 
   @include respond-to($phone){
     padding-left: $grid__col--gutter-phone;
