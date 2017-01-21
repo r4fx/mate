@@ -1270,7 +1270,8 @@ select {
     padding: 0.8rem 1rem; }
 
 textarea {
-  height: auto; }
+  height: auto;
+  overflow: auto; }
 
 .fieldset-group {
   margin: 0 auto;
