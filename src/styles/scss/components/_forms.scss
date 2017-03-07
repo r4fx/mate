@@ -22,6 +22,10 @@ form.grid {
   > .row {
     margin-left: -$grid__col--gutter;
     margin-right: -$grid__col--gutter;
+    @include respond-to($phone){
+      margin-left: -$grid__col--gutter-phone;
+      margin-right: -$grid__col--gutter-phone;
+    }
   }
 }
 
