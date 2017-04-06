@@ -159,21 +159,25 @@ html {
     html {
       font-size: 52.5%; } }
 
+/*test*/
 @font-face {
   font-family: "Lato-Regular";
   font-style: normal;
   font-weight: normal;
   src: url("../../fonts/lato/Lato-Regular.woff2") format("woff2"), url("../../fonts/lato/Lato-Regular.woff") format("woff"); }
+/*test*/
 @font-face {
   font-family: "Lato-Bold";
   font-style: normal;
   font-weight: normal;
   src: url("../../fonts/lato/Lato-Bold.woff2") format("woff2"), url("../../fonts/lato/Lato-Bold.woff") format("woff"); }
+/*test*/
 @font-face {
   font-family: "Lato-Light";
   font-style: normal;
   font-weight: normal;
   src: url("../../fonts/lato/Lato-Light.woff2") format("woff2"), url("../../fonts/lato/Lato-Light.woff") format("woff"); }
+/*test*/
 @font-face {
   font-family: "Lato-Italic";
   font-style: normal;
