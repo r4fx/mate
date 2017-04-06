@@ -106,8 +106,13 @@ table, .table-css {
       }
     }
   }
+ 
+  // Fixed cells
+  &.table--layout-fixed {
+    table-layout: fixed;
+  }
 
-  > caption{
+  > caption {
     @extend %table-caption;
   }
 }
