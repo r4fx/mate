@@ -10,10 +10,21 @@
 */
 
 
-// ============================================================
-// BASE IMPORTANT FILES
-// ============================================================
+@import "functions";
 @import "settings";
 @import "toolbox";
 @import "normalize";
-@import "components/all";
+
+// ============================================================
+// Mate components
+// ============================================================
+
+@import "components/base";
+@import "components/typography";
+@import "components/grid";
+@import "components/buttons";
+@import "components/forms";
+@import "components/icons";
+@import "components/navigation";
+@import "components/tables";
+@import "components/helpers";

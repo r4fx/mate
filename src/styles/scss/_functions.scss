@@ -1,0 +1,20 @@
+// FONTS
+// ============================================================
+@function font-face($font-family){
+  @return quote($font-family), ($font__core);
+}
+
+// todo: describe in manual
+@function font-face-google($font-family, $font-weight) {
+  @return quote($font-family), unquote('sans-serif;') unquote('font-weight:') ($font-weight);
+}
+
+// MISC
+// ============================================================
+@function calculateRem($size) {
+  @return ($size / 1px / 10) * 1rem;
+}
+
+@function strip-units($value) {
+  @return $value / ($value * 0 + 1);
+}

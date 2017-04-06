@@ -1,9 +1,10 @@
 ### TODOs
 | Filename | line # | TODO
 |:------|:------:|:------
-| components/_base.scss | 17 | describe in manual, + how to use with JS
-| components/_base.scss | 69 | describe in manual
-| components/_base.scss | 132 | add to manual
+| _functions.scss | 7 | describe in manual
+| _toolbox.scss | 110 | describe in manual
+| components/_base.scss | 27 | describe in manual
+| components/_base.scss | 90 | add to manual
 | components/_buttons.scss | 120 | make as mixin
 | components/_buttons.scss | 313 | make as mixin
 | components/_buttons.scss | 384 | gropued buttons

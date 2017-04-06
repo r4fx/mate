@@ -11,23 +11,15 @@ $breakPoint__desktop--xl:   1180px;
 
 // FONTS
 // ============================================================
-$font__icons--dir:          "../../fonts/mate";
-$font__base--dir:           "../../fonts/lato";
-$font__base--family:        (
-                              // font-file-name: font-family
-                              Lato-Regular: LatoRegular,
-                              Lato-Bold: LatoBold,
-                              Lato-Light: LatoLight,
-                              Lato-Italic: LatoItalic
-                            );
+$font__icons--dir:          '../../fonts/mate';
+$font__core:                'Helvetica', 'Trebuchet MS', 'Arial', sans-serif;
 
-$font__base--simple:        'Helvetica Neue', 'Trebuchet MS', 'Arial', sans-serif;
-$font__base--book:          'Georgia', 'Cambria', 'Times New Roman', 'Times', serif;
+$font__base--definition:    (dir: '../../fonts/lato', files: (Lato-Regular, Lato-Bold, Lato-Light, Lato-Italic));
+$font__base--regular:       font-face('Lato-Regular');
+$font__base--bold:          font-face('Lato-Bold');
+$font__base--light:         font-face('Lato-Light');
+$font__base--italic:        font-face('Lato-Italic');
 
-$font__base--regular:       quote(map-get($font__base--family, Lato-Regular)), $font__base--simple;
-$font__base--bold:          quote(map-get($font__base--family, Lato-Bold)), $font__base--simple;
-$font__base--light:         quote(map-get($font__base--family, Lato-Light)), $font__base--simple;
-$font__base--italic:        quote(map-get($font__base--family, Lato-Italic)), $font__base--simple;
 
 // COLORS BASE PALETTE
 // [i] Name your colors http://name-of-color.com/
@@ -145,7 +137,3 @@ $trans__base--delay:        0s !default;
 // SHADOWS
 // ============================================================
 $shadow__box--first:        0 1px 3px 0 rgba(0, 0, 0, 0.3) !default;
-
-// DEBUG OPTIONS
-// ============================================================
-$debug--show-device-size: false;

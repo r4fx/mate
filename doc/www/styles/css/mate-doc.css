@@ -1,3 +1,38 @@
+/*============================================================
+* mate front-end framework
+* https://github.com/r4fx/mate
+* ============================================================
+*
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+*/
+*, :before, :after {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.box:before, .row:before, header .col:before, pre:before, .code-example > div:before, .box:after, .row:after, header .col:after, pre:after, .code-example > div:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.btn {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+input[type="text"][disabled],
+input[type="password"][disabled],
+input[type="tel"][disabled],
+input[type="url"][disabled],
+input[type="email"][disabled],
+input[type="search"][disabled],
+input[type="number"][disabled],
+select[disabled],
+textarea[disabled], [disabled] label {
+  cursor: no-drop; }
+
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%; }
@@ -118,33 +153,6 @@ input[type="search"]::-webkit-search-decoration {
 optgroup {
   font-weight: bold; }
 
-*, :before, :after {
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-
-.box:before, .row:before, header .col:before, pre:before, .code-example > div:before, .box:after, .row:after, header .col:after, pre:after, .code-example > div:after {
-  content: '';
-  display: block;
-  clear: both; }
-
-.btn {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none; }
-
-input[type="text"][disabled],
-input[type="password"][disabled],
-input[type="tel"][disabled],
-input[type="url"][disabled],
-input[type="email"][disabled],
-input[type="search"][disabled],
-input[type="number"][disabled],
-select[disabled],
-textarea[disabled], [disabled] label {
-  cursor: no-drop; }
-
 html {
   font-size: 62.5%; }
   @media screen and (max-width: 1023px) {
@@ -152,28 +160,28 @@ html {
       font-size: 52.5%; } }
 
 @font-face {
-  font-family: "LatoRegular";
+  font-family: "Lato-Regular";
   font-style: normal;
   font-weight: normal;
   src: url("../../fonts/lato/Lato-Regular.woff2") format("woff2"), url("../../fonts/lato/Lato-Regular.woff") format("woff"); }
 @font-face {
-  font-family: "LatoBold";
+  font-family: "Lato-Bold";
   font-style: normal;
   font-weight: normal;
   src: url("../../fonts/lato/Lato-Bold.woff2") format("woff2"), url("../../fonts/lato/Lato-Bold.woff") format("woff"); }
 @font-face {
-  font-family: "LatoLight";
+  font-family: "Lato-Light";
   font-style: normal;
   font-weight: normal;
   src: url("../../fonts/lato/Lato-Light.woff2") format("woff2"), url("../../fonts/lato/Lato-Light.woff") format("woff"); }
 @font-face {
-  font-family: "LatoItalic";
+  font-family: "Lato-Italic";
   font-style: normal;
   font-weight: normal;
   src: url("../../fonts/lato/Lato-Italic.woff2") format("woff2"), url("../../fonts/lato/Lato-Italic.woff") format("woff"); }
 body {
   color: #3c3c3c;
-  font-family: "LatoRegular", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif;
+  font-family: "Lato-Regular", "Helvetica", "Trebuchet MS", "Arial", sans-serif;
   font-size: 1.6rem;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -233,12 +241,12 @@ p {
 
 strong, b {
   font-weight: normal;
-  font-family: "LatoBold", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif; }
+  font-family: "Lato-Bold", "Helvetica", "Trebuchet MS", "Arial", sans-serif; }
 
 h1 {
   font-weight: normal;
   font-size: 4.2rem;
-  font-family: "LatoBold", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif;
+  font-family: "Lato-Bold", "Helvetica", "Trebuchet MS", "Arial", sans-serif;
   margin-top: 4.2rem;
   margin-bottom: 4.2rem;
   line-height: normal; }
@@ -250,7 +258,7 @@ h1 {
 h2 {
   font-weight: normal;
   font-size: 3.4rem;
-  font-family: "LatoBold", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif;
+  font-family: "Lato-Bold", "Helvetica", "Trebuchet MS", "Arial", sans-serif;
   margin-top: 3.4rem;
   margin-bottom: 3.4rem;
   line-height: normal; }
@@ -262,7 +270,7 @@ h2 {
 h3 {
   font-weight: normal;
   font-size: 2.2rem;
-  font-family: "LatoBold", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif;
+  font-family: "Lato-Bold", "Helvetica", "Trebuchet MS", "Arial", sans-serif;
   margin-top: 2.2rem;
   margin-bottom: 2.2rem;
   line-height: normal; }
@@ -274,7 +282,7 @@ h3 {
 h4 {
   font-weight: normal;
   font-size: 1.6rem;
-  font-family: "LatoRegular", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif;
+  font-family: "Lato-Regular", "Helvetica", "Trebuchet MS", "Arial", sans-serif;
   margin-top: 2.2rem;
   margin-bottom: 2.2rem;
   line-height: normal; }
@@ -286,7 +294,7 @@ h4 {
 h5 {
   font-weight: normal;
   font-size: 1.4rem;
-  font-family: "LatoRegular", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif;
+  font-family: "Lato-Regular", "Helvetica", "Trebuchet MS", "Arial", sans-serif;
   margin-top: 1.4rem;
   margin-bottom: 1.4rem;
   line-height: normal; }
@@ -337,7 +345,7 @@ dl {
   margin-top: 15px;
   margin-bottom: 15px; }
   dl dt {
-    font-family: "LatoBold", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif;
+    font-family: "Lato-Bold", "Helvetica", "Trebuchet MS", "Arial", sans-serif;
     margin-top: 10px; }
     dl dt:first-child {
       margin-top: 0; }
@@ -1143,7 +1151,7 @@ fieldset {
 
 label {
   color: #3c3c3c;
-  font-family: "LatoRegular", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif;
+  font-family: "Lato-Regular", "Helvetica", "Trebuchet MS", "Arial", sans-serif;
   display: inline-block;
   margin-bottom: 5px; }
 
@@ -1155,7 +1163,7 @@ form em {
   vertical-align: super; }
 
 .legend, legend {
-  font-family: "LatoBold", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif;
+  font-family: "Lato-Bold", "Helvetica", "Trebuchet MS", "Arial", sans-serif;
   margin: 0 0 15px 0;
   display: block;
   padding: 0;
@@ -1167,22 +1175,22 @@ fieldset > .row label {
 ::-webkit-input-placeholder {
   color: #959A9D;
   font-size: inherit;
-  font-family: "LatoRegular", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif; }
+  font-family: "Lato-Regular", "Helvetica", "Trebuchet MS", "Arial", sans-serif; }
 
 ::-moz-placeholder {
   color: #959A9D;
   font-size: inherit;
-  font-family: "LatoRegular", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif; }
+  font-family: "Lato-Regular", "Helvetica", "Trebuchet MS", "Arial", sans-serif; }
 
 :-ms-input-placeholder {
   color: #959A9D;
   font-size: inherit;
-  font-family: "LatoRegular", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif; }
+  font-family: "Lato-Regular", "Helvetica", "Trebuchet MS", "Arial", sans-serif; }
 
 ::placeholder {
   color: #959A9D;
   font-size: inherit;
-  font-family: "LatoRegular", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif; }
+  font-family: "Lato-Regular", "Helvetica", "Trebuchet MS", "Arial", sans-serif; }
 
 input[type="text"],
 input[type="password"],
@@ -1202,7 +1210,7 @@ textarea {
   background-color: #ffffff;
   vertical-align: middle;
   color: #000000;
-  font-family: "LatoRegular", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif;
+  font-family: "Lato-Regular", "Helvetica", "Trebuchet MS", "Arial", sans-serif;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none; }
@@ -1865,7 +1873,7 @@ table, .table-css {
   border-spacing: 0; }
 
 table > caption, .table-css > caption {
-  font-family: "LatoBold", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif;
+  font-family: "Lato-Bold", "Helvetica", "Trebuchet MS", "Arial", sans-serif;
   line-height: normal;
   padding: 1rem 1.6rem;
   background-color: #dddddd;
@@ -1877,7 +1885,7 @@ table thead, .table-css .table-thead [class*="col-"],
   line-height: normal; }
 
 table thead th, table tbody th {
-  font-family: "LatoBold", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif;
+  font-family: "Lato-Bold", "Helvetica", "Trebuchet MS", "Arial", sans-serif;
   background-color: #dddddd;
   vertical-align: top;
   text-align: left; }
@@ -2424,7 +2432,7 @@ pre {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-family: "LatoRegular", "Helvetica Neue", "Trebuchet MS", "Arial", sans-serif; }
+    font-family: "Lato-Regular", "Helvetica", "Trebuchet MS", "Arial", sans-serif; }
     .code-example__icons .content-value i {
       font-size: 1.8rem;
       font-style: normal; }

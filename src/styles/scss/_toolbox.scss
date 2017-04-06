@@ -56,17 +56,6 @@
 }
 
 // ============================================================
-// FUNCTIONS
-// ============================================================
-@function calculateRem($size) {
-  @return ($size / 1px / 10) * 1rem;
-}
-
-@function strip-units($value) {
-  @return $value / ($value * 0 + 1);
-}
-
-// ============================================================
 // MIXINS
 // ============================================================
 
@@ -114,16 +103,20 @@ $devices:     (phone: $phone, tablet: $tablet, mobile: $mobile, desktop: $deskto
   }
 }
 
-// FONT FACE
 // ============================================================
-@mixin font-face($dir, $family) {
-  @each $font-file-name, $font-family in $family {
+// FONT FACE
+// Example:
+// @include font-face($font__base--definition);
+// todo: describe in manual
+// ============================================================
+@mixin font-face($definition) {
+  @each $font-family in map-get($definition, files) {
     @font-face {
       font-family: quote($font-family);
       font-style: normal;
       font-weight: normal;
-      src: url($dir + "/" + $font-file-name + ".woff2") format('woff2'),
-           url($dir + "/" + $font-file-name + ".woff") format('woff');
+      src: url(map-get($definition, dir) + "/" + $font-family + ".woff2") format('woff2'),
+      url(map-get($definition, dir) + "/" + $font-family + ".woff") format('woff');
     }
   }
 }

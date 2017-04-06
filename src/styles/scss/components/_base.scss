@@ -1,7 +1,3 @@
-// ============================================================
-// BASE SKELETON
-// ============================================================
-
 *, :before, :after {
   @extend %box-sizing--border;
 }
@@ -12,49 +8,11 @@ html {
   @include respond-to($mobile) {
     font-size: 62.5% - 10%;
   }
-
-  // Breakpoint helper
-  // todo: describe in manual, + how to use with JS
-  @if $debug--show-device-size {
-    &:after {
-      content: 'Unhide to see device size in corner';
-      visibility: hidden;
-      position: fixed;
-      z-index: 99999;
-      left: 0;
-      bottom: 0;
-      padding: 5px 10px;
-      font-size: 1rem;
-      font-family: monospace;
-      color: #fff;
-      border-top-right-radius: 5px;
-
-      @include respond-to($phone) {
-        content: 'small';
-        background-color: mediumseagreen;
-      }
-
-      @include respond-to($tablet) {
-        content: 'medium';
-        background-color: deepskyblue;
-      }
-
-      @include respond-to($desktop) {
-        content: 'large';
-        background-color: mediumpurple;
-      }
-
-      @include respond-to($desktop--xl) {
-        content: 'x-large';
-        background-color: tomato;
-      }
-    }
-  }
 }
 
 // BASE FONT FACE
-// ============================================================
-@include font-face($font__base--dir, $font__base--family);
+// ------------------------------------------------------------
+@include font-face($font__base--definition);
 
 body {
   color: $text__color--first;
