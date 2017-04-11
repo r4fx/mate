@@ -17,9 +17,6 @@ a[href^="https://github.com"]{
     content: "\e600";
     font-family: 'mate', sans-serif;
     margin-left: 5px;
-    font-size: 1.4rem;
-    position: absolute;
-    top: 0;
     @include transition;
   }
 

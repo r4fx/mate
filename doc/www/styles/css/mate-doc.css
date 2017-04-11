@@ -2221,9 +2221,6 @@ a[href^="https://github.com"] {
     content: "\e600";
     font-family: 'mate', sans-serif;
     margin-left: 5px;
-    font-size: 1.4rem;
-    position: absolute;
-    top: 0;
     transition: all 300ms ease-in-out 0s; }
   a[href^="https://github.com"]:hover:after {
     color: #1ab394; }
@@ -2488,6 +2485,4 @@ pre {
   [class*="masonry-"] > article img {
     display: block; }
 
-
-
-/*# sourceMappingURL=../css/mate-doc.css.map */
+/*# sourceMappingURL=mate-doc.css.map */
