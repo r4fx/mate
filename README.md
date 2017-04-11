@@ -1,6 +1,6 @@
 # Mate
 
-Mate is a lightweight, simple & semantic framework (CSS and HTML5) for modern websites.
+Mate is a simple, lightweight, modern and strong front-end framework which honor native elements names and BEM methodology.
 
 ## Some of base features
 
