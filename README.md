@@ -4,7 +4,7 @@ Mate is a simple, lightweight, modern and strong front-end framework which honor
 
 ## Some of base features
 
-* Namespace for CSS classes and SASS variables have been inspired by [BEM methodology](http://www.smashingmagazine.com/2012/04/16/a-new-front-end-methodology-bem/)
+* Namespace for CSS classes and SASS variables has been inspired by [BEM methodology](http://www.smashingmagazine.com/2012/04/16/a-new-front-end-methodology-bem/)
 * REM based sizes
 * Grid system with configurable numbers of columns
 * RWD
