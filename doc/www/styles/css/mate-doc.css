@@ -1208,7 +1208,7 @@ textarea {
   width: 100%;
   padding: 0.8rem 1rem;
   line-height: normal;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   border: 1px solid #cccccc;
   border-radius: 4px;
   background-color: #ffffff;
@@ -1282,9 +1282,28 @@ textarea {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+  -ms-justify-content: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   -ms-align-items: stretch;
   -webkit-align-items: stretch;
   align-items: stretch; }
+  .fieldset-group > label {
+    margin: 0 10px;
+    align-self: center;
+    white-space: nowrap; }
+    .fieldset-group > label:first-child {
+      margin-left: 0; }
+  .fieldset-group--sticked input[type="text"],
+  .fieldset-group--sticked input[type="search"],
+  .fieldset-group--sticked input[type="password"] {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0; }
+    .fieldset-group--sticked input[type="text"] + .btn,
+    .fieldset-group--sticked input[type="search"] + .btn,
+    .fieldset-group--sticked input[type="password"] + .btn {
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0; }
 
 input[type="file"] {
   line-height: 1; }

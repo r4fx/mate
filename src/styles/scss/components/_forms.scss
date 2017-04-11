@@ -139,10 +139,35 @@ textarea {
   overflow: auto;
 }
 
-// todo: add to manual
+// GROUPED FIELDS
+// ============================================================
 .fieldset-group{
   margin: 0 auto;
-  @include display-flex($align-items: stretch);
+  @include display-flex($align-items: stretch, $justify-content: center);
+
+  > label {
+    margin: 0 10px;
+    align-self: center;
+    white-space: nowrap;
+
+    &:first-child{
+      margin-left: 0;
+    }
+  }
+
+  &--sticked {
+    input[type="text"],
+    input[type="search"],
+    input[type="password"] {
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+
+      + .btn {
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+      }
+    }
+  }
 }
 
 // FILES

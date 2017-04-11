@@ -8,5 +8,4 @@
 | components/_buttons.scss | 120 | make as mixin
 | components/_buttons.scss | 313 | make as mixin
 | components/_buttons.scss | 384 | gropued buttons
-| components/_forms.scss | 142 | add to manual
 | components/_helpers.scss | 128 | add to manual (margins)

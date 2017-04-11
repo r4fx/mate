@@ -159,25 +159,21 @@ html {
     html {
       font-size: 52.5%; } }
 
-/*test*/
 @font-face {
   font-family: "Lato-Regular";
   font-style: normal;
   font-weight: normal;
   src: url("../../fonts/lato/Lato-Regular.woff2") format("woff2"), url("../../fonts/lato/Lato-Regular.woff") format("woff"); }
-/*test*/
 @font-face {
   font-family: "Lato-Bold";
   font-style: normal;
   font-weight: normal;
   src: url("../../fonts/lato/Lato-Bold.woff2") format("woff2"), url("../../fonts/lato/Lato-Bold.woff") format("woff"); }
-/*test*/
 @font-face {
   font-family: "Lato-Light";
   font-style: normal;
   font-weight: normal;
   src: url("../../fonts/lato/Lato-Light.woff2") format("woff2"), url("../../fonts/lato/Lato-Light.woff") format("woff"); }
-/*test*/
 @font-face {
   font-family: "Lato-Italic";
   font-style: normal;
@@ -1145,6 +1141,10 @@ fieldset .row {
 form.grid > .row {
   margin-left: -25px;
   margin-right: -25px; }
+  @media screen and (max-width: 719px) {
+    form.grid > .row {
+      margin-left: -15px;
+      margin-right: -15px; } }
 
 fieldset {
   border: 0;
@@ -1208,7 +1208,7 @@ textarea {
   width: 100%;
   padding: 0.8rem 1rem;
   line-height: normal;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   border: 1px solid #cccccc;
   border-radius: 4px;
   background-color: #ffffff;
@@ -1282,9 +1282,28 @@ textarea {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+  -ms-justify-content: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   -ms-align-items: stretch;
   -webkit-align-items: stretch;
   align-items: stretch; }
+  .fieldset-group > label {
+    margin: 0 10px;
+    align-self: center;
+    white-space: nowrap; }
+    .fieldset-group > label:first-child {
+      margin-left: 0; }
+  .fieldset-group--sticked input[type="text"],
+  .fieldset-group--sticked input[type="search"],
+  .fieldset-group--sticked input[type="password"] {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0; }
+    .fieldset-group--sticked input[type="text"] + .btn,
+    .fieldset-group--sticked input[type="search"] + .btn,
+    .fieldset-group--sticked input[type="password"] + .btn {
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0; }
 
 input[type="file"] {
   line-height: 1; }
@@ -1936,6 +1955,8 @@ table.table--bordered th:first-child, table.table--bordered td:first-child,
 table.table--bordered [class*="col-"]:first-child, table.table--bordered .row > div:first-child, .table-css.table--bordered th:first-child, .table-css.table--bordered td:first-child,
 .table-css.table--bordered [class*="col-"]:first-child, .table-css.table--bordered .row > div:first-child {
   border-left: 0; }
+table.table--layout-fixed, .table-css.table--layout-fixed {
+  table-layout: fixed; }
 
 table tfoot th, table tfoot td {
   border-bottom: 0;
