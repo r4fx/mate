@@ -2172,11 +2172,11 @@ table tfoot th, table tfoot td {
   .visible--desktop {
     display: none !important; } }
 
-.link-neutral {
+.link-neutral, [href^='tel:'] {
   text-decoration: none;
   color: #3c3c3c;
   word-wrap: break-word; }
-  .link-neutral:hover {
+  .link-neutral:hover, [href^='tel:']:hover {
     color: #249cff; }
 
 .img--rwd {
@@ -2225,9 +2225,9 @@ a[href^="https://github.com"] {
   a[href^="https://github.com"]:hover:after {
     color: #1ab394; }
 
-.link-neutral {
+.link-neutral, [href^='tel:'] {
   border-bottom: 1px solid rgba(60, 60, 60, 0.4); }
-  .link-neutral:hover {
+  .link-neutral:hover, [href^='tel:']:hover {
     color: #3c3c3c;
     border-bottom-color: #1ab394; }
 

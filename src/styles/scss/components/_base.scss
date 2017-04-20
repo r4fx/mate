@@ -64,6 +64,10 @@ a {
   }
 }
 
+[href^='tel:']{
+  @extend .link-neutral;
+}
+
 .link-file[href$='.pdf'],
 .link-file.file[href$='.doc'],
 .link-file.file[href$='.xls'] {

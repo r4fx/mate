@@ -2172,11 +2172,11 @@ table tfoot th, table tfoot td {
   .visible--desktop {
     display: none !important; } }
 
-.link-neutral {
+.link-neutral, [href^='tel:'] {
   text-decoration: none;
   color: #3c3c3c;
   word-wrap: break-word; }
-  .link-neutral:hover {
+  .link-neutral:hover, [href^='tel:']:hover {
     color: #249cff; }
 
 .img--rwd {
