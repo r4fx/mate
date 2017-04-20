@@ -2174,10 +2174,10 @@ table tfoot th, table tfoot td {
 
 .link-neutral, [href^='tel:'] {
   text-decoration: none;
-  color: #3c3c3c;
+  color: inherit;
   word-wrap: break-word; }
   .link-neutral:hover, [href^='tel:']:hover {
-    color: #249cff; }
+    color: inherit; }
 
 .img--rwd {
   max-width: 100%;
