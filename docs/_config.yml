@@ -1,0 +1,29 @@
+baseurl: /mate/docs
+title:   Mate
+
+defaults:
+  # pages
+  - scope:
+      path: "pages"
+      type: "pages"
+    values:
+      layout: "page"
+      permalink: /:basename/
+
+nav:
+  - title: Home
+    url: "/"
+  - title: Tags
+    url: "/tags/"
+  - title: Search
+    url: "/search/"
+
+include:
+  - "_assets"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+
+source:      ./
+destination: _site

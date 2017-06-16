@@ -1,0 +1,17 @@
+<head>
+
+    {% include metadata.liquid %}
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <title>{% if page_title %}{{ page_title }} &mdash; {{ site_title }}{% else %}{{ site_title }}{% endif %}</title>
+    <meta name="title" content="{% if page_title %}{{ page_title }}{% else %}{{ site_title }}{% endif %}">
+    <meta name="description" content="{{ page_description }}">
+
+    <link rel="stylesheet" href="../../dist/assets/styles/mate.min.css?v={{ build_version }}">
+
+    <link rel="stylesheet" href="{{ site.baseurl }}/_assets/styles/css/mate-doc.css?v={{ build_version }}">
+
+    <link rel="stylesheet" href="_assets/styles/css/mate-doc.css">
+    <link rel="stylesheet" href="_assets/js/vendors/prism/prism.css">
+</head>

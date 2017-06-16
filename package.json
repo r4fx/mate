@@ -1,12 +1,17 @@
 {
   "name": "mate",
   "description": "A lightweight front end framework",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "scripts": {
-    "build": "webpack"
+    "build-styles": "webpack --progress --hide-modules"
   },
-  "devDependencies": {
-    "assemble": "git://github.com/assemble/assemble",
+  "dependencies": {
+    "css-loader": "^0.28.4",
+    "extract-text-webpack-plugin": "2.1.2",
+    "file-loader": "^0.11.2",
+    "node-sass": "^4.3.0",
+    "resolve-url-loader": "^2.0.3",
+    "sass-loader": "^4.1.1",
     "webpack": "^2.6.1"
   },
   "repository": {

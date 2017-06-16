@@ -1,4 +1,4 @@
-// INCLUDE FILES FROM MATE
+// INCLUDE FILES FROM MATE SOURCE
 // ============================================================
 @import "../../../../src/styles/scss/settings";
 @import "../../../../src/styles/scss/toolbox";
@@ -6,10 +6,10 @@
 
 // MATE DOCUMENTATION
 // ============================================================
+
 body{
   font-size: 1.8rem;
 }
-
 
 a[href^="https://github.com"]{
   position: relative;
@@ -18,7 +18,7 @@ a[href^="https://github.com"]{
     content: "\e600";
     font-family: 'mate', sans-serif;
     margin-left: 5px;
-    @include transition;
+    @include transition();
   }
 
   &:hover:after{

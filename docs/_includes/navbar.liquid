@@ -1,0 +1,32 @@
+<header class="navbar navbar-static-top" itemscope itemtype="https://schema.org/WPHeader">
+  <div class="container">
+      <div class="navbar-header page-scroll">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-top-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+
+          {% assign site_title = site.title | default: site.name %}
+          {% if site_title %}
+            {% assign site_title = site_title | smartify | strip_html | strip_newlines | escape_once %}
+          {% endif %}
+          <a class="navbar-brand" itemprop="url" href="{{ site.baseurl }}/">
+            <span itemprop="name">{{ site_title }}</span>
+          </a>
+      </div>
+
+      <nav class="collapse navbar-collapse navbar-top-collapse" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <ul class="nav navbar-nav navbar-right">
+          {% for nav_item in site.nav %}
+            <li>
+              <a itemprop="url" href="{{ site.baseurl }}{{ nav_item.url }}">
+                <span itemprop="name">{{ nav_item.title | smartify | strip_html | strip_newlines | escape_once }}</span>
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+  </div>
+</header>
