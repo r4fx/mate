@@ -8,9 +8,6 @@ var extname = require('gulp-extname');
 var todo = require('gulp-todo');
 var sourcemaps = require('gulp-sourcemaps');
 var sassRuby = require('gulp-ruby-sass');
-//var sass = require('gulp-sass');
-//var concat = require('gulp-concat');
-//var uglify = require('gulp-uglify');
 
 
 /* Configuration
@@ -56,16 +53,8 @@ gulp.task('assemble', function () {
         .pipe(gulp.dest(paths.build.www));
 });
 
-// Compile SASS files
-//gulp.task('sass', function () {
-//    gulp.src('doc/www/styles/scss/*.scss')
-//        .pipe(sass())
-//        .pipe(gulp.dest(paths.build.stylesDir));
-//});
-
 // Compile SASS files by sass-ruby
 gulp.task('sassRuby', function () {
-    //return sassRuby('doc/www/styles/scss/*.scss')
     return sassRuby('doc/www/styles/scss/mate-doc.scss', {sourcemap: true})
         .on('error', function (err) {
         console.error('Error!', err.message);
@@ -85,13 +74,6 @@ gulp.task('scripts', function () {
         .pipe(uglify())
         .pipe(gulp.dest(paths.build.www));
 });
-
-// Copy files
-//gulp.task('copy', function () {
-//    // Copy css files compiled by IDE
-//    gulp.src([paths.sources.stylesFiles])
-//        .pipe(gulp.dest(paths.build.stylesDir));
-//});
 
 // Generate to-do list (mate/src/TODO.md)
 gulp.task('todo', function () {
