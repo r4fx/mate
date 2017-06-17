@@ -137,12 +137,12 @@ main > aside {
       margin: 5px 0; }
       main > aside ul li > hr {
         background-color: white; }
+    main > aside ul li.active > a,
+    main > aside ul a:hover {
+      background-color: #1ab394; }
     main > aside ul a {
       display: block;
-      padding: 5px 10px;
-      transition: background-color 300ms ease-in-out 0s, color 300ms ease-in-out 0s; }
-      main > aside ul a.act, main > aside ul a:hover {
-        background-color: #1ab394; }
+      padding: 5px 10px; }
   main > aside .aside__footer {
     position: absolute;
     width: 100%;

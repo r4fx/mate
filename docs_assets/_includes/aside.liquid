@@ -2,21 +2,36 @@
 <aside class="col-3 col-12--phone col-3--tablet">
     <div class="col-3 col-12--phone col-3--tablet">
         <figure>
-            {{ site_title }}<span>beta</span>
+            <a href="{{ site.baseurl }}/docs/">{{ site.title }}<span>beta</span></a>
         </figure>
 
         <ul class="list-unstyled">
+            {% assign page_slug = page.url | split: '/' | last %}
+
             {% for nav_item in site.nav %}
-                <li>
-                    <a href="{{ site.baseurl }}/docs/{{ nav_item.title | slugify }}">
-                        {{ nav_item.title | smartify | strip_html | strip_newlines | escape_once }}
+                {% assign nav_item_slug = nav_item.title | slugify %}
+                {% assign nav_item_title = nav_item.title %}
+                {% assign active = nil %}
+
+                {% if nav_item_slug == 'index' %}
+                    {% assign nav_item_slug == '' %}
+                    {% assign nav_item_title = 'Start' %}
+                {% endif %}
+
+                {% if page_slug == nav_item_slug  %}
+                    {% assign active = 'class="active"' %}
+                {% endif %}
+
+                <li {{ active }}>
+                    <a href="{{ site.baseurl }}/docs/{{ nav_item_slug }}">
+                        {{ nav_item_title }}
                     </a>
                 </li>
             {% endfor %}
         </ul>
 
         <div class="aside__footer col-3">
-            <a href="https://github.com/r4fx/mate" target="_blank">GitHub Page</a>
+            <a href="{{ site.repository_url }}" target="_blank">GitHub Page</a>
         </div>
     </div>
 </aside>

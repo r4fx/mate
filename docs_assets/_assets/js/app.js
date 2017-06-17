@@ -1,19 +1,8 @@
-/* JavaScript for simple project
- */
-
-// Page events
 var events = {
-    eventType: 'click',
-
-    init: function () {
-        this.misc();
-        this.getIconContent();
-    },
-
     misc: function () {
-        $('#click-btn').unbind(events.eventType); // Don't ever keep listening for clicks !
+        $('#click-btn').unbind('click'); // Don't ever keep listening for clicks !
 
-        $('.aside-toggle').on(events.eventType, function(){
+        $('.aside-toggle').on('click', function(){
             $('body').toggleClass('sidebar-on');
         });
     },
@@ -42,6 +31,10 @@ var events = {
             document.execCommand("copy"); // Execute the copy command
             document.body.removeChild(aux); // Remove the input from the body
         }
+    },
+    init: function () {
+        this.misc();
+        this.getIconContent();
     }
 };
 

@@ -1,6 +1,10 @@
-<head>
-    {% include metadata.liquid %}
+{% if site.github.build_revision %}
+    {% assign build_version = site.github.build_revision %}
+{% else %}
+    {% assign build_version = site.time | date: '%Y%m%d%H%M%S' %}
+{% endif %}
 
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <title>{% if page_title %}{{ page_title }} &mdash; {{ site_title }}{% else %}{{ site_title }}{% endif %}</title>

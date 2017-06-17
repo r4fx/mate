@@ -191,15 +191,14 @@ main {
         }
       }
 
+      li.active > a,
+      a:hover{
+        background-color:  $color__base--first;
+      }
+
       a {
         display: block;
         padding: 5px 10px;
-        @include transition((background-color, color));
-
-        &.act,
-        &:hover {
-          background-color: $color__base--first;
-        }
       }
     }
 
