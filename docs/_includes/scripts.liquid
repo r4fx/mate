@@ -1,9 +1,0 @@
-{% if site.github.build_revision %}
-  {% assign build_version = site.github.build_revision %}
-{% else %}
-  {% assign build_version = site.time | date: '%Y%m%d%H%M%S' %}
-{% endif %}
-
-<script charset="utf-8" src="{{ site.baseurl }}/_assets/js/vendors/jquery-2.1.3.min.js"></script>
-<script charset="utf-8" src="{{ site.baseurl }}/_assets/js/vendors/prism/prism.js"></script>
-<script charset="utf-8" src="{{ site.baseurl }}/_assets/js/app.js?v={{ build_version }}" async></script>

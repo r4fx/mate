@@ -1,0 +1,22 @@
+<span class="aside-toggle icon-menu"></span>
+<aside class="col-3 col-12--phone col-3--tablet">
+    <div class="col-3 col-12--phone col-3--tablet">
+        <figure>
+            {{ site_title }}<span>beta</span>
+        </figure>
+
+        <ul class="list-unstyled">
+            {% for nav_item in site.nav %}
+                <li>
+                    <a href="{{ site.baseurl }}/docs/{{ nav_item.title | slugify }}">
+                        {{ nav_item.title | smartify | strip_html | strip_newlines | escape_once }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+
+        <div class="aside__footer col-3">
+            <a href="https://github.com/r4fx/mate" target="_blank">GitHub Page</a>
+        </div>
+    </div>
+</aside>

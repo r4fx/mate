@@ -1,0 +1,32 @@
+baseurl:          /mate
+title:            Mate
+port:             9001
+current_version:  0.2
+
+source:           ./docs_assets
+destination:      ./docs
+assets:           /docs_assets/_assets
+
+defaults:
+  # pages
+  - scope:
+      path: "pages"
+      type: "pages"
+    values:
+      layout: "default"
+      permalink: /:basename/
+
+nav:
+  - title: Index
+  - title: Grid
+  - title: Typography
+  - title: Forms
+  - title: Buttons
+  - title: Icons
+  - title: Tables
+  - title: Helpers
+  - title: Toolbox
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
