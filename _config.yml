@@ -5,7 +5,7 @@ current_version:  0.2
 
 source:           ./docs_assets
 destination:      ./docs
-assets:           /docs_assets/_assets
+assets:           /docs_assets/assets
 
 defaults:
   - scope:
