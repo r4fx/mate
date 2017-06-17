@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <title></title>
+    <meta name="title" content="">
+    <meta name="description" content="">
+
+    <link rel="stylesheet" href="/mate/dist/assets/styles/mate.min.css?v=20170617231927">
+    <link rel="stylesheet" href="/mate/docs_assets/_assets/styles/css/mate-doc.css?v=20170617231927">
+    <link rel="stylesheet" href="/mate/docs_assets/_assets/js/vendors/prism/prism.css?v=20170617231927">
+</head>
+
+<body>
+  <main>
+    <span class="aside-toggle icon-menu"></span>
+<aside class="col-3 col-12--phone col-3--tablet">
+    <div class="col-3 col-12--phone col-3--tablet">
+        <figure>
+            <a href="/mate/docs/">Mate<span>beta</span></a>
+        </figure>
+
+        <ul class="list-unstyled">
+            
+
+            
+                
+                
+                
+
+                
+
+                
+
+                <li >
+                    <a href="/mate/docs/">
+                        Start
+                    </a>
+                </li>
+            
+                
+                
+                
+
+                
+
+                
+
+                <li >
+                    <a href="/mate/docs/grid">
+                        Grid
+                    </a>
+                </li>
+            
+                
+                
+                
+
+                
+
+                
+
+                <li >
+                    <a href="/mate/docs/typography">
+                        Typography
+                    </a>
+                </li>
+            
+                
+                
+                
+
+                
+
+                
+
+                <li >
+                    <a href="/mate/docs/forms">
+                        Forms
+                    </a>
+                </li>
+            
+                
+                
+                
+
+                
+
+                
+
+                <li class="active">
+                    <a href="/mate/docs/buttons">
+                        Buttons
+                    </a>
+                </li>
+            
+                
+                
+                
+
+                
+
+                
+
+                <li >
+                    <a href="/mate/docs/icons">
+                        Icons
+                    </a>
+                </li>
+            
+                
+                
+                
+
+                
+
+                
+
+                <li >
+                    <a href="/mate/docs/tables">
+                        Tables
+                    </a>
+                </li>
+            
+                
+                
+                
+
+                
+
+                
+
+                <li >
+                    <a href="/mate/docs/helpers">
+                        Helpers
+                    </a>
+                </li>
+            
+                
+                
+                
+
+                
+
+                
+
+                <li >
+                    <a href="/mate/docs/toolbox">
+                        Toolbox
+                    </a>
+                </li>
+            
+        </ul>
+
+        <div class="aside__footer col-3">
+            <a href="https://github.com/r4fx/mate" target="_blank">GitHub Page</a>
+        </div>
+    </div>
+</aside>
+
+    <section class="col-9 col-12--phone col-9--tablet">
+      <h1>Buttons</h1>
+      <h2 id="nav-tags">
+    <a href="#nav-tags">#</a> Tags
+</h2>
+
+<p>When you use the tag <code>a</code> consider adding an attribute <code>role="button"</code> to take care of availability.
+</p>
+
+<p>
+    For the default appearance of a button just use class <code>.btn</code>
+</p>
+
+<div class="code-example code-example--btns">
+    <div class="inline-center" data-clone>
+        <a href="#" class="btn" role="button">Link</a>
+        <button class="btn" type="button">Button - type button</button>
+        <button class="btn" type="submit">Button - type submit</button>
+        <input class="btn" type="button" value="Input - type button">
+        <input class="btn" type="submit" value="Input - type submit">
+        <span class="btn">Span button</span>
+    </div>
+    <pre lang="html"></pre>
+</div>
+
+<h2 id="nav-sizes">
+    <a href="#nav-sizes">#</a> Sizes
+</h2>
+<p>Default size is connected with medium size.</p>
+<div class="code-example code-example--btns">
+    <div>
+        <div class="col-12 inline-center" data-clone>
+            <a href="#" class="btn">Default size</a>
+            <a href="#" class="btn btn--xs">XS size</a>
+            <a href="#" class="btn btn--sm">Small size</a>
+            <a href="#" class="btn btn--md">Medium size</a>
+            <a href="#" class="btn btn--lg">Large size</a>
+            <a href="#" class="btn btn--xl">XL size</a>
+            <a href="#" class="btn btn--xxl">XXL size</a>
+        </div>
+    </div>
+    <pre lang="html"></pre>
+</div>
+
+<h2 id="nav-colors">
+    <a href="#nav-colors">#</a> Colors
+</h2>
+<p>Default color is connected with first color.</p>
+<div class="code-example code-example--btns">
+    <div class="inline-center" data-clone>
+        <a href="#" class="btn btn--color-first">First color</a>
+        <a href="#" class="btn btn--color-second">Second color</a>
+        <a href="#" class="btn btn--color-third">Third color</a>
+        <a href="#" class="btn">Default color</a>
+    </div>
+    <pre lang="html"></pre>
+</div>
+
+<h2 id="nav-variants">
+    <a href="#nav-variants">#</a> Types and variants
+
+</h2>
+
+<h3>Simple types</h3>
+<p>Text buttons inherit paddings to achieve "vertical rhythm" with other buttons.</p>
+<div class="code-example">
+    <div class="inline-center" data-clone>
+        <a href="#" class="btn">Default type</a>
+        <a href="#" class="btn btn--outline">Outline</a>
+        <a href="#" class="btn btn--txt">Text button</a>
+    </div>
+    <pre lang="html"></pre>
+</div>
+
+<h3>With icons</h3>
+<div class="code-example">
+    <div class="inline-center" data-clone>
+        <a href="#" class="btn"><span class="icon-checkmark"></span> <span>Button with icon from the right</span></a>
+        <a href="#" class="btn"><span>Button with icon from the left</span> <span class="icon-checkmark"></span></a>
+    </div>
+    <pre lang="html"></pre>
+</div>
+
+<h3>Block button</h3>
+<div class="code-example">
+    <div class="inline-center" data-clone>
+        <a href="#" class="btn btn--block">Block button</a>
+    </div>
+    <pre lang="html"></pre>
+</div>
+
+<h3>Circle button</h3>
+<div class="code-example">
+    <div class="inline-center" data-clone>
+        <a href="#" class="btn btn--circle btn--xs"><span>xs</span></a>
+        <a href="#" class="btn btn--circle btn--sm"><span>Small circle</span></a>
+        <a href="#" class="btn btn--circle btn--md"><span>Medium circle</span></a>
+        <a href="#" class="btn btn--circle btn--lg"><span>Large circle</span></a>
+        <a href="#" class="btn btn--circle btn--xl"><span>XL circle</span></a>
+        <a href="#" class="btn btn--circle btn--xxl btn--outline"><span>Outlined XXL circle</span></a>
+    </div>
+    <pre lang="html"></pre>
+</div>
+
+<h3>Arrow buttons</h3>
+<p>Scalable arrow buttons! Try to add some size class to the button for example <code>.btn--lg</code></p>
+
+<div class="code-example">
+    <div class="inline-center" data-clone>
+        <a href="#" class="btn btn--arrow-l">Arrow left</a>
+        <a href="#" class="btn radius-none">Button in the middle</a>
+        <a href="#" class="btn btn--arrow-r">Arrow right</a>
+    </div>
+    <pre lang="html"></pre>
+</div>
+    </section>
+  </main>
+
+  <script src="/mate/docs_assets/_assets/js/vendors/jquery-2.1.3.min.js"></script>
+<script src="/mate/docs_assets/_assets/js/vendors/prism/prism.js"></script>
+<script src="/mate/docs_assets/_assets/js/app.js?v=20170617231927"></script>
+</body>
+</html>

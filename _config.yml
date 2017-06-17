@@ -1,0 +1,30 @@
+baseurl:          /mate
+repository_url:   https://github.com/r4fx/mate
+title:            Mate
+current_version:  0.2
+
+source:           ./docs_assets
+destination:      ./docs
+assets:           /docs_assets/_assets
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+      permalink: /:basename/
+
+nav:
+  - title: Index
+  - title: Grid
+  - title: Typography
+  - title: Forms
+  - title: Buttons
+  - title: Icons
+  - title: Tables
+  - title: Helpers
+  - title: Toolbox
+
+exclude:
+  - Gemfile
+  - Gemfile.lock

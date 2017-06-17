@@ -1,17 +1,19 @@
 {
   "name": "mate",
   "description": "A lightweight front end framework",
-  "version": "0.1.1",
-  "devDependencies": {
-    "assemble": "git://github.com/assemble/assemble.git#v0.6.0",
-    "gulp": "^3.8.11",
-    "gulp-assemble": "git://github.com/assemble/gulp-assemble",
-    "gulp-concat": "^2.5.2",
-    "gulp-extname": "^0.2.0",
-    "gulp-ruby-sass": "^1.0.1",
-    "gulp-sourcemaps": "^1.5.1",
-    "gulp-todo": "^2.5.1",
-    "gulp-uglify": "^1.1.0"
+  "version": "0.2.0",
+  "scripts": {
+    "build-styles": "webpack --progress --hide-modules",
+    "build-docs": "jekyll build --watch"
+  },
+  "dependencies": {
+    "css-loader": "^0.28.4",
+    "extract-text-webpack-plugin": "2.1.2",
+    "file-loader": "^0.11.2",
+    "node-sass": "^4.3.0",
+    "resolve-url-loader": "^2.0.3",
+    "sass-loader": "^4.1.1",
+    "webpack": "^2.6.1"
   },
   "repository": {
     "type": "git",

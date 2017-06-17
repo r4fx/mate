@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <title></title>
+    <meta name="title" content="">
+    <meta name="description" content="">
+
+    <link rel="stylesheet" href="/mate/dist/assets/styles/mate.min.css?v=20170617231927">
+    <link rel="stylesheet" href="/mate/docs_assets/_assets/styles/css/mate-doc.css?v=20170617231927">
+    <link rel="stylesheet" href="/mate/docs_assets/_assets/js/vendors/prism/prism.css?v=20170617231927">
+</head>
+
+<body>
+  <main>
+    <span class="aside-toggle icon-menu"></span>
+<aside class="col-3 col-12--phone col-3--tablet">
+    <div class="col-3 col-12--phone col-3--tablet">
+        <figure>
+            <a href="/mate/docs/">Mate<span>beta</span></a>
+        </figure>
+
+        <ul class="list-unstyled">
+            
+
+            
+                
+                
+                
+
+                
+
+                
+
+                <li >
+                    <a href="/mate/docs/">
+                        Start
+                    </a>
+                </li>
+            
+                
+                
+                
+
+                
+
+                
+
+                <li >
+                    <a href="/mate/docs/grid">
+                        Grid
+                    </a>
+                </li>
+            
+                
+                
+                
+
+                
+
+                
+
+                <li >
+                    <a href="/mate/docs/typography">
+                        Typography
+                    </a>
+                </li>
+            
+                
+                
+                
+
+                
+
+                
+
+                <li class="active">
+                    <a href="/mate/docs/forms">
+                        Forms
+                    </a>
+                </li>
+            
+                
+                
+                
+
+                
+
+                
+
+                <li >
+                    <a href="/mate/docs/buttons">
+                        Buttons
+                    </a>
+                </li>
+            
+                
+                
+                
+
+                
+
+                
+
+                <li >
+                    <a href="/mate/docs/icons">
+                        Icons
+                    </a>
+                </li>
+            
+                
+                
+                
+
+                
+
+                
+
+                <li >
+                    <a href="/mate/docs/tables">
+                        Tables
+                    </a>
+                </li>
+            
+                
+                
+                
+
+                
+
+                
+
+                <li >
+                    <a href="/mate/docs/helpers">
+                        Helpers
+                    </a>
+                </li>
+            
+                
+                
+                
+
+                
+
+                
+
+                <li >
+                    <a href="/mate/docs/toolbox">
+                        Toolbox
+                    </a>
+                </li>
+            
+        </ul>
+
+        <div class="aside__footer col-3">
+            <a href="https://github.com/r4fx/mate" target="_blank">GitHub Page</a>
+        </div>
+    </div>
+</aside>
+
+    <section class="col-9 col-12--phone col-9--tablet">
+      <h1>Forms</h1>
+      <p>Always use <code>fieldset</code> tag for grouping checkboxes and radios, native <code>fieldset</code> tag
+    has an <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset" target="_blank">additional benefits</a>.
+</p>
+
+<h2 id="nav-basic">
+    <a href="#nav-basic">#</a> Basic form
+</h2>
+<p>If you need multiline label beside checkbox (or radio) use the additional <code>span</code> tag</p>
+
+<div class="code-example">
+    <div data-clone>
+        <form>
+            <div class="row">
+                <label>Text field</label>
+                <input type="text" placeholder="First name">
+            </div>
+
+            <div class="row">
+                <label>Select</label>
+                <select>
+                    <option value="0">---</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                </select>
+            </div>
+
+            <div class="row">
+                <label>Textarea</label>
+                <textarea rows="3"></textarea>
+            </div>
+
+            <fieldset>
+                <legend>Checkboxes</legend>
+                <div class="row">
+                    <label>
+                        <input type="checkbox" checked>
+                        Checked by default first checkbox
+                    </label>
+                </div>
+
+                <div class="row">
+                    <label>
+                        <input type="checkbox">
+                        Second checkbox
+                    </label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Radio buttons</legend>
+                <div class="row">
+                    <label>
+                        <input type="radio" name="form-radios">
+                        First radio
+                    </label>
+                </div>
+
+                <div class="row">
+                    <label>
+                        <input type="radio" name="form-radios">
+                        <span>Fusce commodo aliquam arcu. Pellentesque egestas, neque sit amet convallis pulvinar, <br>
+                        justo nulla eleifend augue, ac auctor orci leo non est. Praesent turpis. Suspendisse faucibus, <br>
+                        nunc et pellentesque egestas, lacus ante convallis tellus, vitaeiaculis lacus elit id tortor.
+                        </span>
+                    </label>
+                </div>
+            </fieldset>
+
+            <div class="row">
+                <p class="legend">Attachments</p>
+                <input type="file">
+            </div>
+
+            <button type="submit" class="btn btn--block">Submit</button>
+        </form>
+    </div>
+
+    <pre lang="html"></pre>
+</div>
+
+
+<h2 id="nav-columns">
+    <a href="#nav-columns">#</a> Form divided by columns
+</h2>
+<p>Add class <code>.grid</code> to the form and use standard grid columns as wrapper for fields.</p>
+
+<div class="code-example">
+    <div data-clone>
+        <form class="grid">
+            <div class="row">
+                <div class="col-6">
+                    <label>First name</label>
+                    <input type="text">
+                </div>
+                <div class="col-6">
+                    <label>Options</label>
+                    <select>
+                        <option value="0">---</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <label>Email</label>
+                    <input type="text">
+                </div>
+            </div>
+
+            <fieldset>
+                <legend>Checkboxes</legend>
+                <div class="row">
+                    <label>
+                        <input type="checkbox" checked>
+                        Checked by default first checkbox
+                    </label>
+                </div>
+
+                <div class="row">
+                    <label>
+                        <input type="checkbox">
+                        Second checkbox
+                    </label>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+    <pre lang="html"></pre>
+</div>
+
+<h2 id="nav-disabling">
+    <a href="#nav-grouping">#</a> Grouping fields
+</h2>
+<p>Use class <code>.fieldset-group</code> for grouping sets of fields and display them inline.</p>
+
+<div class="code-example">
+    <div>
+        <form data-clone>
+            <div class="fieldset-group fieldset-group--sticked">
+                <label>Search website:</label>
+                <input type="text" placeholder="Enter search phrase">
+                <button class="btn">
+                    <span class="icon icon-search"></span>
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <pre lang="html"></pre>
+</div>
+
+<h2 id="nav-disabling">
+    <a href="#nav-disabling">#</a> Disabling fields
+</h2>
+<p>Use <code>disabled</code> attribute on tag <code>fieldset</code> to disable group of fields.</p>
+<p>To disable single elements just do it in classic way by using attribute <code>readonly</code> or <code>disabled</code></p>
+
+<div class="code-example">
+    <div>
+        <form data-clone>
+            <div class="row">
+                <label>Text field</label>
+                <input type="text" placeholder="First name" disabled>
+            </div>
+
+            <fieldset disabled>
+                <p class="legend">Disabled specific field</p>
+
+                <div class="row">
+                    <label>
+                        <input type="checkbox" checked>
+                        Checkbox 1
+                    </label>
+                </div>
+
+                <div class="row">
+                    <label>
+                        <input type="checkbox">
+                        Checkbox 2
+                    </label>
+                </div>
+
+                <div class="row">
+                    <label>
+                        <input type="checkbox">
+                        Checkbox 3
+                    </label>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+    <pre lang="html"></pre>
+</div>
+
+<h2 id="nav-validation">
+    <a href="#nav-validation">#</a> Form validation
+</h2>
+
+<div class="code-example">
+    <div>
+        <form data-clone>
+            <div class="row form-error">
+                <label>Text field <em>.</em></label>
+                <strong class="form-error__message">This field is required</strong>
+                <input type="text">
+            </div>
+        </form>
+    </div>
+
+    <pre lang="html"></pre>
+</div>
+
+<div class="code-example">
+    <div>
+        <form data-clone>
+            <div class="row form-error">
+                <label>Drop down field <em>.</em></label>
+                <strong class="form-error__message">This field is required</strong>
+                <select>
+                    <option value="0">---</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                </select>
+            </div>
+        </form>
+    </div>
+
+    <pre lang="html"></pre>
+</div>
+
+<div class="code-example">
+    <div>
+        <form data-clone>
+            <fieldset>
+                <div class="row form-error">
+                    <label>
+                        <input type="checkbox">
+                        First checkbox <em>.</em>
+                        <strong class="form-error__message">This field is required</strong>
+                    </label>
+                </div>
+
+                <div class="row">
+                    <label>
+                        <input type="checkbox" checked>
+                        Second checkbox <em>.</em>
+                    </label>
+                </div>
+
+                <div class="row">
+                    <label>
+                        <input type="checkbox">
+                        Second checkbox
+                    </label>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+    <pre lang="html"></pre>
+</div>
+
+<h3>Validation for group of fields</h3>
+<div class="code-example">
+    <div>
+        <form data-clone>
+
+            <p class="legend">In hac habitasse platea dictumst <em>.</em></p>
+
+            <fieldset class="form-error">
+                <strong class="form-error__message">Minimum one field is required</strong>
+
+                <div class="row">
+                    <label>
+                        <input type="checkbox">
+                        First checkbox
+                    </label>
+                </div>
+
+                <div class="row">
+                    <label>
+                        <input type="checkbox">
+                        Second checkbox
+                    </label>
+                </div>
+
+                <div class="row">
+                    <label>
+                        <input type="checkbox">
+                        Third checkbox
+                    </label>
+                </div>
+            </fieldset>
+
+        </form>
+    </div>
+
+    <pre lang="html"></pre>
+</div>
+
+<h2 id="nav-pretty-inputs">
+    <a href="#nav-pretty-inputs">#</a> Pure CSS pretty checkboxes and radios
+</h2>
+<p>Just add only one class for input <code>input class="mate-input"</code>, put the input inside <code>label</code> if you want.</p>
+
+<div class="code-example">
+    <div>
+        <form data-clone>
+            <div class="row">
+                <input class="mate-input" type="checkbox" name="terms" id="form-terms">
+                <label for="form-terms">I accept <a href="#">the terms of use</a></label>
+            </div>
+
+            <!-- Inputs inside labels -->
+
+            <div class="row">
+                <label>
+                    <input class="mate-input" type="checkbox" name="pretty-checkbox">
+                    <span>Fusce commodo aliquam arcutellus</span>
+                </label>
+            </div>
+            <div class="row">
+                <label>
+                    <input class="mate-input" type="radio" name="pretty-radio">
+                    <span>Fusce commodo aliquam arcu. Pellentesque egestas, neque sit amet convallis pulvinar, justo nulla eleifend augue, ac auctor orci leo non est. Praesent turpis. Suspendisse faucibus, nunc et pellentesque egestas, lacus ante convallis tellus, vitae iaculis lacus elit id tortor. Maecenas malesuada.</span>
+                </label>
+            </div>
+            <div class="row">
+                <label>
+                    <input class="mate-input" type="radio" name="pretty-radio">
+                    <span>Etiam sit amet orci eget eros faucibus tincidunt.</span>
+                </label>
+            </div>
+        </form>
+    </div>
+
+    <pre lang="html"></pre>
+</div>
+
+<h2 id="nav-elegant-file-input">
+    <a href="#nav-elegant-file-input">#</a> Elegant input file with only one line (inline) of JavaScript!
+</h2>
+<p><strong>Important:</strong> Input file must be placed inside <code>form</code> and then in <code>label</code> tag!</p>
+
+<h3>Single file</h3>
+<div class="code-example">
+    <div>
+        <form data-clone>
+            <label>
+                <span class="btn btn--color-second btn--file">Choose file</span>
+                <input type="file" onchange="parentNode.setAttribute('data-file', this.files[0].name)">
+            </label>
+        </form>
+    </div>
+
+    <pre lang="html"></pre>
+</div>
+
+<h3>Multiple files</h3>
+<p>Select several files to see effect</p>
+
+<div class="code-example">
+    <div>
+        <form data-clone>
+            <label>
+                <span class="btn btn--color-second btn--file">Choose several files</span>
+                <input multiple type="file" onchange="parentNode.setAttribute('data-file-multiple', this.files.length)">
+            </label>
+        </form>
+    </div>
+
+    <pre lang="html"></pre>
+</div>
+    </section>
+  </main>
+
+  <script src="/mate/docs_assets/_assets/js/vendors/jquery-2.1.3.min.js"></script>
+<script src="/mate/docs_assets/_assets/js/vendors/prism/prism.js"></script>
+<script src="/mate/docs_assets/_assets/js/app.js?v=20170617231927"></script>
+</body>
+</html>
