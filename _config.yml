@@ -26,5 +26,3 @@ nav:
   - title: Toolbox
 
 exclude: [docs_assets, node_modules, Gemfile, Gemfile.lock]
-include: [dist]
-keep_files: [dist, docs_assets]
