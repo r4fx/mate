@@ -5,7 +5,7 @@ current_version:  0.2
 
 source:           ./docs_assets
 destination:      ./docs
-assets:           /docs_assets/assets
+assets:           /docs_assets
 
 defaults:
   - scope:
@@ -25,6 +25,6 @@ nav:
   - title: Helpers
   - title: Toolbox
 
-exclude:
-  - Gemfile
-  - Gemfile.lock
+exclude: [docs_assets, node_modules, Gemfile, Gemfile.lock]
+include: [dist]
+keep_files: [dist, docs_assets]
