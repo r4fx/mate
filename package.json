@@ -1,7 +1,23 @@
 {
   "name": "mate",
-  "description": "A lightweight front end framework",
+  "description": "Mate is a simple, modern and strong front-end framework which honor native elements names and BEM methodology.",
   "version": "0.2.0",
+  "keywords": [
+    "css",
+    "scss",
+    "html",
+    "front-end",
+    "framework",
+    "bem",
+    "mate"
+  ],
+  "homepage": "http://r4fx.github.io/mate/",
+  "author": "Mate Authors (https://github.com/r4fx/mate/graphs/contributors)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/r4fx/mate.git"
+  },
   "scripts": {
     "build-styles": "webpack --progress --hide-modules",
     "build-docs": "jekyll build --watch"
@@ -14,9 +30,5 @@
     "resolve-url-loader": "^2.0.3",
     "sass-loader": "^4.1.1",
     "webpack": "^2.6.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/r4fx/mate.git"
   }
 }
