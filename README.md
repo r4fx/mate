@@ -14,6 +14,6 @@ Mate is a simple, lightweight, modern and strong front-end framework which honor
 * CSS flex-box inside
 
 Mate currently is in beta state, it's mean that some basic things may be change during development.
-Documentation and demos are available at website: http://r4fx.github.io/mate/doc/www/
+Documentation and demos are available at website: https://r4fx.github.io/mate/
 
 Browser support: Chrome 36+, Firefox 36+, Opera 25+, Safari 8+, EDGE 12+, IE 10+
