@@ -25,4 +25,4 @@ nav:
   - title: Helpers
   - title: Toolbox
 
-exclude: [js, styles]
+exclude: [js, styles, Gemfile, Gemfile.lock]
