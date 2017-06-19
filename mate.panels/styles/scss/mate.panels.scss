@@ -1,0 +1,105 @@
+@import "../../../../styles/scss/settings";
+@import "../../../../styles/scss/toolbox";
+
+.mate-panels {
+  position: relative;
+  @extend %clearfix;
+
+  // TABS NAV
+
+  &__nav {
+    padding: 0;
+    @extend %clearfix;
+
+    @include respond-to($mobile) {
+      display: none;
+    }
+
+    li {
+      list-style-type: none;
+      display: inline-block;
+      float: left;
+
+      &:not(:last-child) {
+        margin-right: 25px;
+      }
+
+      &.active a{
+        border-bottom: 1px solid;
+        opacity: 1;
+      }
+    }
+
+    a {
+      line-height: normal;
+      text-decoration: none;
+      opacity: 0.5;
+
+      &:hover{
+        opacity: 1;
+      }
+    }
+  }
+
+  // PANEL ITEM
+
+  &__item {
+    display: none;
+
+    @include respond-to($mobile){
+      display: block;
+      margin-bottom: 15px;
+    }
+  }
+
+  // PANEL ITEM ACTIVE
+
+  &__item:target,
+  &__item.active {
+    display: block;
+
+    .mate-panels__item-body {
+      display: block;
+    }
+
+    .mate-panels__item-header {
+      &:after {
+        content: "\e65e";
+      }
+    }
+  }
+
+  // ACCORDION HEADER
+
+  &__item-header {
+    text-decoration: none;
+    display: none;
+
+    @include respond-to($mobile){
+      display: block;
+      width: 100%;
+      background: black;
+      color: white;
+      line-height: 1;
+      padding: 15px;
+      margin-bottom: 15px;
+      position: relative;
+    }
+
+    &:after{
+      content: "\e65d";
+      font-family: 'mate', sans-serif;
+      font-size: 4rem;
+      right: 5px;
+      @include centerer(y);
+    }
+  }
+
+  // PANEL BODY
+
+  &__item-body {
+    @include respond-to($mobile) {
+      display: none;
+    }
+  }
+}
