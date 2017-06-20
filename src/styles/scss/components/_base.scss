@@ -4,10 +4,6 @@
 
 html {
   font-size: 62.5%;
-
-  @include respond-to($mobile) {
-    font-size: 62.5% - 10%;
-  }
 }
 
 // BASE FONT FACE

@@ -92,13 +92,21 @@
   vertical-align: bottom;
 }
 
-// [i] Use floats for positioning image with text
+// [i] Use floats for positioning images with text
+
 .float-right {
   float: right;
 }
 
 .float-left {
   float: left;
+}
+
+// ============================================================
+// TEXT
+// ============================================================
+.truncate {
+  @extend %truncate;
 }
 
 // ============================================================
