@@ -6,8 +6,6 @@ html {
   font-size: 62.5%;
 }
 
-// BASE FONT FACE
-// ------------------------------------------------------------
 @include font-face($font__base--definition);
 
 body {

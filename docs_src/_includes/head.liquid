@@ -1,22 +1,22 @@
-{% if site.github.build_revision %}
-    {% assign build_version = site.github.build_revision %}
-{% else %}
-    {% assign build_version = site.time | date: '%Y%m%d%H%M%S' %}
-{% endif %}
+{%- if site.github.build_revision -%}
+    {%- assign build_version = site.github.build_revision -%}
+{%- else -%}
+    {%- assign build_version = site.time | date: '%Y%m%d%H%M%S' -%}
+{%- endif -%}
 
-{% assign page_slug = page.url | split: '/' | last %}
+{%- assign page_slug = page.url | split: '/' | last -%}
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-    {% if page_slug %}
-        <title>{% if page.title %}{{ page.title }} &mdash; {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
-    {% else %}
-        <title>{{ page.title }}</title>
-    {% endif %}
-
     <meta name="title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
     <meta name="description" content="{{ page.description }}">
+
+    {%- if page_slug -%}
+        <title>{% if page.title %}{{ page.title }} &mdash; {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+    {%- else -%}
+        <title>{{ page.title }}</title>
+    {%- endif %}
 
     <link rel="stylesheet" href="{{ site.baseurl }}/dist/assets/styles/mate.min.css">
     <link rel="stylesheet" href="{{ site.baseurl }}{{ site.assets }}/styles/css/mate-doc.css">

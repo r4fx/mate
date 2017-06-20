@@ -9,7 +9,7 @@ ruby RUBY_VERSION
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem "jekyll", "3.4.3"
+gem "jekyll", "3.5"
 
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
@@ -18,5 +18,5 @@ gem "jekyll", "3.4.3"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-   #gem "jekyll-feed", "~> 0.6"
+   #gem 'jekyll-minifier'
 end
