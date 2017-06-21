@@ -157,9 +157,10 @@ main {
       }
 
       img {
-        display: inline-block;
+        display: block;
         vertical-align: middle;
         margin-bottom: 10px;
+        margin-left: auto;
 
         @include respond-to($phone) {
           width: 50px;

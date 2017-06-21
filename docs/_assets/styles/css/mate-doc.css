@@ -116,9 +116,10 @@ main > aside {
         text-align: center;
         margin-bottom: 12.5px; } }
     main > aside figure img {
-      display: inline-block;
+      display: block;
       vertical-align: middle;
-      margin-bottom: 10px; }
+      margin-bottom: 10px;
+      margin-left: auto; }
       @media screen and (max-width: 719px) {
         main > aside figure img {
           width: 50px; } }
