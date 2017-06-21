@@ -1,7 +1,7 @@
 baseurl:          /mate
 repository_url:   https://github.com/r4fx/mate
 title:            Mate
-current_version:  0.2
+current_version:  beta
 
 source:           ./docs_src
 destination:      ./docs

@@ -113,10 +113,15 @@ main > aside {
     font-size: 3rem; }
     @media screen and (max-width: 719px) {
       main > aside figure {
-        text-align: center; } }
+        text-align: center;
+        margin-bottom: 12.5px; } }
     main > aside figure img {
       display: inline-block;
-      vertical-align: middle; }
+      vertical-align: middle;
+      margin-bottom: 10px; }
+      @media screen and (max-width: 719px) {
+        main > aside figure img {
+          width: 50px; } }
     main > aside figure span {
       vertical-align: middle;
       line-height: normal;

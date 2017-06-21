@@ -1,7 +1,7 @@
 // INCLUDE FILES FROM MATE SOURCE
 // ============================================================
-@import "../../../src/styles/scss/settings";
-@import "../../../src/styles/scss/toolbox";
+@import "../../../../src/styles/scss/settings";
+@import "../../../../src/styles/scss/toolbox";
 
 // MATE DOCUMENTATION
 // ============================================================
@@ -153,11 +153,17 @@ main {
 
       @include respond-to($phone) {
         text-align: center;
+        margin-bottom: $grid__row--gutter/2;
       }
 
       img {
         display: inline-block;
         vertical-align: middle;
+        margin-bottom: 10px;
+
+        @include respond-to($phone) {
+          width: 50px;
+        }
       }
 
       span {
