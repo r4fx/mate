@@ -1,6 +1,11 @@
-# Mate
-
-Mate is a simple, lightweight, modern and strong front-end framework which honor native elements names and BEM methodology.
+<p align="center">
+  <a href="https://r4fx.github.io/mate/"><img src="https://r4fx.github.io/mate/docs/_assets/img/mate_logo_dark.svg" width="90"></a>
+</p>
+<p align="center">
+  <h3 align="center">Mate</h3>
+  <p align="center">Mate is a simple, lightweight, modern and strong front-end framework <br>
+  which honor native elements names and BEM methodology.</p>
+</p>
 
 ## Some of base features
 

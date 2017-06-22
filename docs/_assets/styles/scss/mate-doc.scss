@@ -157,13 +157,13 @@ main {
       }
 
       img {
-        display: block;
         vertical-align: middle;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
         margin-left: auto;
 
         @include respond-to($phone) {
           width: 50px;
+          margin-right: auto;
         }
       }
 
