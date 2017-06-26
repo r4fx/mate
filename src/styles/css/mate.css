@@ -116,7 +116,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: monospace, monospace;
+  font-family: monospace;
   font-size: 1em; }
 
 button,
@@ -185,7 +185,7 @@ html {
   src: url("../../fonts/lato/Lato-Italic.woff2") format("woff2"), url("../../fonts/lato/Lato-Italic.woff") format("woff"); }
 body {
   color: #3c3c3c;
-  font-family: "Lato-Regular", "Helvetica", "Trebuchet MS", "Arial", sans-serif;
+  font-family: "Lato-Regular", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 1.6rem;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -204,7 +204,7 @@ body {
   color: #00A631; }
 
 a {
-  color: #249cff; }
+  color: #42b983; }
   a:hover {
     text-decoration: none; }
 
@@ -245,12 +245,12 @@ p {
 
 strong, b {
   font-weight: normal;
-  font-family: "Lato-Bold", "Helvetica", "Trebuchet MS", "Arial", sans-serif; }
+  font-family: "Lato-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
 
 h1 {
   font-weight: normal;
   font-size: 4.2rem;
-  font-family: "Lato-Bold", "Helvetica", "Trebuchet MS", "Arial", sans-serif;
+  font-family: "Lato-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   margin-top: 4.2rem;
   margin-bottom: 4.2rem;
   line-height: normal; }
@@ -262,7 +262,7 @@ h1 {
 h2 {
   font-weight: normal;
   font-size: 3.4rem;
-  font-family: "Lato-Bold", "Helvetica", "Trebuchet MS", "Arial", sans-serif;
+  font-family: "Lato-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   margin-top: 3.4rem;
   margin-bottom: 3.4rem;
   line-height: normal; }
@@ -274,7 +274,7 @@ h2 {
 h3 {
   font-weight: normal;
   font-size: 2.2rem;
-  font-family: "Lato-Bold", "Helvetica", "Trebuchet MS", "Arial", sans-serif;
+  font-family: "Lato-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   margin-top: 2.2rem;
   margin-bottom: 2.2rem;
   line-height: normal; }
@@ -286,7 +286,7 @@ h3 {
 h4 {
   font-weight: normal;
   font-size: 1.6rem;
-  font-family: "Lato-Regular", "Helvetica", "Trebuchet MS", "Arial", sans-serif;
+  font-family: "Lato-Regular", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   margin-top: 2.2rem;
   margin-bottom: 2.2rem;
   line-height: normal; }
@@ -298,7 +298,7 @@ h4 {
 h5 {
   font-weight: normal;
   font-size: 1.4rem;
-  font-family: "Lato-Regular", "Helvetica", "Trebuchet MS", "Arial", sans-serif;
+  font-family: "Lato-Regular", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   margin-top: 1.4rem;
   margin-bottom: 1.4rem;
   line-height: normal; }
@@ -349,7 +349,7 @@ dl {
   margin-top: 15px;
   margin-bottom: 15px; }
   dl dt {
-    font-family: "Lato-Bold", "Helvetica", "Trebuchet MS", "Arial", sans-serif;
+    font-family: "Lato-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     margin-top: 10px; }
     dl dt:first-child {
       margin-top: 0; }
@@ -990,29 +990,29 @@ ul li.separator--line:after, ul dt.separator--line:after, ol li.separator--line:
     opacity: 0.3; }
 
 .btn--color-first, .btn {
-  background-color: #1ab394;
+  background-color: #42b983;
   color: #ffffff; }
   .btn--color-first:hover, .btn:hover {
-    background-color: #15947a; }
+    background-color: #399f70; }
     .btn--color-first:hover.btn--arrow-l:before, .btn:hover.btn--arrow-l:before {
-      border-right-color: #15947a; }
+      border-right-color: #399f70; }
     .btn--color-first:hover.btn--arrow-r:after, .btn:hover.btn--arrow-r:after {
-      border-left-color: #15947a; }
+      border-left-color: #399f70; }
   .btn--color-first.btn--outline, .btn--outline.btn {
-    color: #1ab394;
-    border-color: #1ab394; }
+    color: #42b983;
+    border-color: #42b983; }
     .btn--color-first.btn--outline:hover, .btn--outline.btn:hover {
-      background-color: #1ab394;
+      background-color: #42b983;
       color: #ffffff; }
   .btn--color-first.btn--txt, .btn--txt.btn {
-    color: #1ab394; }
+    color: #42b983; }
     .btn--color-first.btn--txt:hover, .btn--txt.btn:hover {
       background-color: inherit;
-      color: #15947a; }
+      color: #399f70; }
   .btn--color-first.btn--arrow-l:before, .btn--arrow-l.btn:before {
-    border-right-color: #1ab394; }
+    border-right-color: #42b983; }
   .btn--color-first.btn--arrow-r:after, .btn--arrow-r.btn:after {
-    border-left-color: #1ab394; }
+    border-left-color: #42b983; }
 .btn--color-second {
   background-color: #249cff;
   color: #ffffff; }
@@ -1159,7 +1159,7 @@ fieldset {
 
 label {
   color: #3c3c3c;
-  font-family: "Lato-Regular", "Helvetica", "Trebuchet MS", "Arial", sans-serif;
+  font-family: "Lato-Regular", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   display: inline-block;
   margin-bottom: 5px; }
 
@@ -1171,7 +1171,7 @@ form em {
   vertical-align: super; }
 
 .legend, legend {
-  font-family: "Lato-Bold", "Helvetica", "Trebuchet MS", "Arial", sans-serif;
+  font-family: "Lato-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   margin: 0 0 15px 0;
   display: block;
   padding: 0;
@@ -1183,22 +1183,22 @@ fieldset > .row label {
 ::-webkit-input-placeholder {
   color: #959A9D;
   font-size: inherit;
-  font-family: "Lato-Regular", "Helvetica", "Trebuchet MS", "Arial", sans-serif; }
+  font-family: "Lato-Regular", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
 
 ::-moz-placeholder {
   color: #959A9D;
   font-size: inherit;
-  font-family: "Lato-Regular", "Helvetica", "Trebuchet MS", "Arial", sans-serif; }
+  font-family: "Lato-Regular", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
 
 :-ms-input-placeholder {
   color: #959A9D;
   font-size: inherit;
-  font-family: "Lato-Regular", "Helvetica", "Trebuchet MS", "Arial", sans-serif; }
+  font-family: "Lato-Regular", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
 
 ::placeholder {
   color: #959A9D;
   font-size: inherit;
-  font-family: "Lato-Regular", "Helvetica", "Trebuchet MS", "Arial", sans-serif; }
+  font-family: "Lato-Regular", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
 
 input[type="text"],
 input[type="password"],
@@ -1218,7 +1218,7 @@ textarea {
   background-color: #ffffff;
   vertical-align: middle;
   color: #000000;
-  font-family: "Lato-Regular", "Helvetica", "Trebuchet MS", "Arial", sans-serif;
+  font-family: "Lato-Regular", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none; }
@@ -1886,7 +1886,7 @@ ul.-divided ul {
     list-style-type: none; }
     ul.-divided ul li:before {
       content: '';
-      border-left: 1px solid #1ab394;
+      border-left: 1px solid #42b983;
       margin: 0 5px;
       font-size: 70%;
       vertical-align: middle; }
@@ -1900,7 +1900,7 @@ table, .table-css {
   border-spacing: 0; }
 
 table > caption, .table-css > caption {
-  font-family: "Lato-Bold", "Helvetica", "Trebuchet MS", "Arial", sans-serif;
+  font-family: "Lato-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   line-height: normal;
   padding: 1rem 1.6rem;
   background-color: #dddddd;
@@ -1912,7 +1912,7 @@ table thead, .table-css .table-thead [class*="col-"],
   line-height: normal; }
 
 table thead th, table tbody th {
-  font-family: "Lato-Bold", "Helvetica", "Trebuchet MS", "Arial", sans-serif;
+  font-family: "Lato-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   background-color: #dddddd;
   vertical-align: top;
   text-align: left; }

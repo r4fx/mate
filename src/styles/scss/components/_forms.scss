@@ -250,7 +250,7 @@ input[type="radio"].mate-input {
       border: 0;
       opacity: 0;
       background-color: $color__message--info;
-      @include transform-free(scale(0));
+      @include transform-custom(scale(0));
       @include transition();
     }
   }
@@ -260,7 +260,7 @@ input[type="radio"].mate-input {
     + span:after,
     + label:after {
       opacity: 1;
-      @include transform-free(scale(0.6));
+      @include transform-custom(scale(0.6));
     }
   }
 }

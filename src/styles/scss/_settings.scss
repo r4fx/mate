@@ -12,7 +12,7 @@ $breakPoint__desktop--xl:   1180px;
 // FONTS
 // ============================================================
 $font__icons--dir:          '../../fonts/mate';
-$font__core:                'Helvetica', 'Trebuchet MS', 'Arial', sans-serif;
+$font__core:                -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
 
 $font__base--definition:    (dir: '../../fonts/lato', files: (Lato-Regular, Lato-Bold, Lato-Light, Lato-Italic));
 $font__base--regular:       font-face('Lato-Regular');
@@ -25,7 +25,7 @@ $font__base--italic:        font-face('Lato-Italic');
 // [i] Name your colors http://name-of-color.com/
 // [i] Get your palette for quick start: https://color.adobe.com/pl/create/color-wheel/
 // ============================================================
-$color__base--first:        #1ab394 !default;
+$color__base--first:        #42b983 !default;
 $color__base--second:       #272822 !default;
 
 $color__message--alert:     #d62100 !default;
@@ -54,7 +54,7 @@ $text__color--first:        #3c3c3c !default;
 $text__color--second:       #ffffff !default;
 
 $text__color--muted:        #959A9D !default;
-$text__color--link:         #249cff !default;
+$text__color--link:         $color__base--first !default;
 
 
 // BLOCKS
@@ -69,7 +69,7 @@ $block__color--second:      #353535 !default;
 // ============================================================
 
 // button--colors
-$btn__color--first:         #1ab394 !default;
+$btn__color--first:         $color__base--first !default;
 $btn__color--first-txt:     #ffffff !default;
 
 $btn__color--second:        #249cff !default;

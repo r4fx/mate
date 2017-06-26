@@ -7,6 +7,14 @@
 // ============================================================
 body{
   font-size: 1.8rem;
+  font-family: $font__core;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-size: 1.6rem;
 }
 
 a[href^="https://github.com"]{
@@ -49,7 +57,7 @@ h2 > [href^="#"] {
   overflow: hidden;
 
   aside {
-    @include transform-free(translateX(0));
+    @include transform-custom(translateX(0));
   }
 
   .aside-toggle {
@@ -73,7 +81,7 @@ h2 > [href^="#"] {
   text-align: center;
   font-size: 2.4rem;
   border-radius: 50%;
-  @include transition-free(all 300ms ease-in-out 300ms);
+  @include transition-custom(all 300ms ease-in-out 300ms);
 
   &:before {
     vertical-align: middle;
@@ -104,6 +112,10 @@ ul, ol {
   margin-bottom: 20px;
 }
 
+.list-unstyled > li {
+  margin-bottom: 5px;
+}
+
 main {
   > aside {
     position: relative;
@@ -112,7 +124,7 @@ main {
     padding: 0 !important;
 
     @include respond-to($phone) {
-      @include transform-free(translateX(-100%));
+      @include transform-custom(translateX(-100%));
       @include transition();
       position: fixed;
       z-index: 1000;
@@ -268,10 +280,10 @@ main {
 p code,
 ul code,
 h4 code{
-  background-color: #272822;
-  color: #fff;
+  background-color: $block__color--first;
+  color: $text__color--first;
   padding: 1px 5px;
-  font-size: 1.4rem;
+  font-size: 1.9rem;
   border-radius: 3px;
   display: inline-block;
 }

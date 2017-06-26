@@ -4,7 +4,14 @@ header .col:before, pre:before, .code-example > div:before, header .col:after, p
   clear: both; }
 
 body {
-  font-size: 1.8rem; }
+  font-size: 1.8rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+
+code,
+kbd,
+pre,
+samp {
+  font-size: 1.6rem; }
 
 a[href^="https://github.com"] {
   position: relative; }
@@ -14,13 +21,13 @@ a[href^="https://github.com"] {
     margin-left: 5px;
     transition: all 300ms ease-in-out 0s; }
   a[href^="https://github.com"]:hover:after {
-    color: #1ab394; }
+    color: #42b983; }
 
 .link-neutral {
   border-bottom: 1px solid rgba(60, 60, 60, 0.4); }
   .link-neutral:hover {
     color: #3c3c3c;
-    border-bottom-color: #1ab394; }
+    border-bottom-color: #42b983; }
 
 h2 > [href^="#"] {
   opacity: 0.2;
@@ -46,7 +53,7 @@ h2 > [href^="#"] {
   bottom: 15px;
   right: 15px;
   display: none;
-  background-color: #1ab394;
+  background-color: #42b983;
   width: 36px;
   height: 36px;
   text-align: center;
@@ -72,6 +79,9 @@ header {
 
 ul, ol {
   margin-bottom: 20px; }
+
+.list-unstyled > li {
+  margin-bottom: 5px; }
 
 main > aside {
   position: relative;
@@ -145,7 +155,7 @@ main > aside {
         background-color: white; }
     main > aside ul li.active > a,
     main > aside ul a:hover {
-      background-color: #1ab394; }
+      background-color: #42b983; }
     main > aside ul a {
       display: block;
       padding: 5px 10px; }
@@ -190,10 +200,10 @@ main > section[class*="col-"] {
 p code,
 ul code,
 h4 code {
-  background-color: #272822;
-  color: #fff;
+  background-color: #dddddd;
+  color: #3c3c3c;
   padding: 1px 5px;
-  font-size: 1.4rem;
+  font-size: 1.9rem;
   border-radius: 3px;
   display: inline-block; }
 
@@ -217,10 +227,10 @@ pre {
     margin-left: 0;
     margin-right: 0; }
   .code-example--grid .row:hover [class^="col-"] {
-    background-color: #1ab394;
+    background-color: #42b983;
     color: white; }
     .code-example--grid .row:hover [class^="col-"]:hover {
-      background-color: #15947a; }
+      background-color: #399f70; }
   .code-example--grid [class^="col-"] {
     background-color: #dddddd;
     padding-top: 10px;
@@ -236,7 +246,7 @@ pre {
     transition: all 300ms ease-in-out 0s; }
     .code-example__icons [class^=col-]:hover:not([data-content]) {
       cursor: pointer;
-      background-color: #1ab394;
+      background-color: #42b983;
       color: white; }
   .code-example__icons .content-value {
     position: absolute;

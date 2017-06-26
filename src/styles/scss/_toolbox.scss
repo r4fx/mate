@@ -71,7 +71,12 @@
 //    font-size: 3rem;
 // }
 //
-// @include respond-to-free(min-width, 720px, max-width, 960px) {
+// @include respond-to($phone, $tablet--xs){
+//   height: auto;
+//   overflow: initial;
+// }
+//
+// @include respond-to-custom(min-width, 720px, max-width, 960px) {
 //    width: 95vw;
 // }
 //
@@ -85,13 +90,15 @@ $desktop--xl: 'screen and (min-width: #{$breakPoint__desktop--xl + 1})';
 $print:       'print';
 $devices:     (phone: $phone, tablet: $tablet, mobile: $mobile, desktop: $desktop, desktop-xl: $desktop--xl);
 
-@mixin respond-to($device) {
-  @media #{$device} {
-    @content;
+@mixin respond-to($device...) {
+  @each $target in $device {
+    @media #{$target} {
+      @content;
+    }
   }
 }
 
-@mixin respond-to-free($target-1, $media-1, $target-2: null, $media-2: null) {
+@mixin respond-to-custom($target-1, $media-1, $target-2: null, $media-2: null) {
   @if $target-2 {
     @media screen and ($target-1: $media-1) and ($target-2: $media-2) {
       @content;
@@ -136,9 +143,9 @@ $devices:     (phone: $phone, tablet: $tablet, mobile: $mobile, desktop: $deskto
 // ============================================================
 
 // Examples:
-// @include transform-free(rotate(180deg) scale(1.4));
-// @include transform-free(scale(1.4));
-@mixin transform-free($args...) {
+// @include transform-custom(rotate(180deg) scale(1.4));
+// @include transform-custom(scale(1.4));
+@mixin transform-custom($args...) {
   -webkit-transform: $args;
   transform: $args;
 }
@@ -153,9 +160,9 @@ $devices:     (phone: $phone, tablet: $tablet, mobile: $mobile, desktop: $deskto
 // ============================================================
 
 // Examples:
-// @include transition-free(background-color .4s ease, width 1s ease-out);
-// @include transition-free(0.5s ease);
-@mixin transition-free($args...) {
+// @include transition-custom(background-color .4s ease, width 1s ease-out);
+// @include transition-custom(0.5s ease);
+@mixin transition-custom($args...) {
   transition: $args;
 }
 
@@ -171,7 +178,7 @@ $devices:     (phone: $phone, tablet: $tablet, mobile: $mobile, desktop: $deskto
     $properties: append($properties, $transition, comma);
   }
 
-  @include transition-free(#{$properties});
+  @include transition-custom(#{$properties});
 }
 
 // ============================================================
@@ -278,15 +285,15 @@ $devices:     (phone: $phone, tablet: $tablet, mobile: $mobile, desktop: $deskto
 @mixin centerer($axis: auto) {
 
   @if $axis == x {
-    @include transform-free(translateX(-50%));
+    @include transform-custom(translateX(-50%));
     left: 50%;
 
   } @else if $axis == y {
-    @include transform-free(translateY(-50%));
+    @include transform-custom(translateY(-50%));
     top: 50%;
 
   } @else {
-    @include transform-free(translate(-50%, -50%));
+    @include transform-custom(translate(-50%, -50%));
     top: 50%;
     left: 50%;
   }
