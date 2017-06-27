@@ -1952,7 +1952,7 @@ table.table--clean [class*="col-"], table.table--clean .row > div, .table-css.ta
   border: 0; }
 
 @media screen and (max-width: 1023px) {
-  table, .table-css {
+  table.table--rwd, .table-css.table--rwd {
     overflow-x: auto;
     display: block; } }
 table.table--bordered th:first-child, table.table--bordered td:first-child,

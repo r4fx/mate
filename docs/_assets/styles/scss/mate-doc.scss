@@ -10,13 +10,6 @@ body{
   font-family: $font__core;
 }
 
-code,
-kbd,
-pre,
-samp {
-  font-size: 1.6rem;
-}
-
 a[href^="https://github.com"]{
   position: relative;
 
@@ -114,6 +107,21 @@ ul, ol {
 
 .list-unstyled > li {
   margin-bottom: 5px;
+}
+
+.table--docs{
+  td:first-child > code {
+    white-space: nowrap;
+  }
+  
+  tr:not(:first-child) th {
+    padding-top: 25px;
+  }
+  
+  tr th {
+    border-bottom-width: 2px;
+    background-color: transparent;
+  }
 }
 
 main {
@@ -277,13 +285,10 @@ main {
 
 // MATE EXAMPLES
 // ============================================================
-p code,
-ul code,
-h4 code{
+code{
   background-color: $block__color--first;
   color: $text__color--first;
   padding: 1px 5px;
-  font-size: 1.9rem;
   border-radius: 3px;
   display: inline-block;
 }
@@ -295,6 +300,17 @@ pre{
 
   @include respond-to($mobile) {
     padding: 15px;
+  }
+}
+
+.code-example-heading{
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-top: $grid__row--gutter;
+  text-transform: uppercase;
+  
+  + .code-example{
+    margin-top: $margin--typography;
   }
 }
 

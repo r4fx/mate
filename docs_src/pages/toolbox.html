@@ -38,8 +38,7 @@ title: Toolbox
 <p><code>$mobile</code> is responsible for range phone + tablet.</p>
 <p>Breakpoints are defined in <a class="link-neutral" href="https://github.com/r4fx/mate/blob/master/src/styles/scss/_settings.scss" target="_blank">main settings file</a></p>
 
-<p>Examples:</p>
-
+<p class="code-example-heading">EXAMPLES:</p>
 <div class="code-example">
     <pre lang="scss">
         .element {
@@ -68,8 +67,7 @@ title: Toolbox
     <li><code>@include flex-item($order: null, $flex-grow: null, $flex-shrink: null, $flex-basis: null, $align-self: null)</code></li>
 </ul>
 
-<p>Examples:</p>
-
+<p class="code-example-heading">EXAMPLES:</p>
 <div class="code-example">
     <pre lang="scss">
         .example-flex {
@@ -100,6 +98,51 @@ title: Toolbox
     <li><code>@include transition($list: all, $duration: $trans__base--duration, $timing: $trans__base--timing, $delay: $trans__base--delay)</code></li>
     <li><code>@include transition-custom($args...)</code></li>
 </ul>
+
+<p class="code-example-heading">EXAMPLES:</p>
+<div class="code-example">
+    <pre lang="scss">
+        .element {
+            height: 500px;
+            padding: 15px;
+            margin-left: 90px;
+            top: 50px;
+            @include transition(margin-left);
+        
+            &:hover{
+                margin-left: 180px
+            }
+        }
+        
+        .element {
+            height: 500px;
+            padding: 15px;
+            margin-left: 90px;
+            top: 50px;
+            @include transition((height, top));
+        
+            &:hover{
+                height: 700px;
+                top: 55px;
+                padding: 0;
+            }
+        }
+        
+        .element {
+            height: 500px;
+            padding: 15px;
+            margin-left: 90px;
+            top: 50px;
+            @include transition((height, top), .25s, ease, .5s);
+        
+            &:hover{
+                height: 700px;
+                top: 55px;
+                padding: 0;
+            }
+        }
+    </pre>
+</div>
 
 <h3>Positioning</h3>
 <ul class="list-unstyled">

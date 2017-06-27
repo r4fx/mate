@@ -167,8 +167,9 @@ $devices:     (phone: $phone, tablet: $tablet, mobile: $mobile, desktop: $deskto
 }
 
 // Examples:
-// @include transition( (height, padding, top));
-// @include transition( (height, padding, top), .25s, ease, .5s );
+// @include transition(margin-left);
+// @include transition((height, padding, top));
+// @include transition((height, padding, top), .25s, ease, .5s);
 // @include transition;
 @mixin transition($list: all, $duration: $trans__base--duration, $timing: $trans__base--timing, $delay: $trans__base--delay) {
   $properties: ();
