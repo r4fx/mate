@@ -19,7 +19,7 @@
     "url": "git://github.com/r4fx/mate.git"
   },
   "scripts": {
-    "build-styles": "webpack --progress --hide-modules",
+    "build-styles": "webpack --hide-modules",
     "build-docs": "jekyll build --watch"
   },
   "dependencies": {
