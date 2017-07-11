@@ -36,6 +36,7 @@ input[type="url"][disabled],
 input[type="email"][disabled],
 input[type="search"][disabled],
 input[type="number"][disabled],
+input[type^="date"][disabled],
 select[disabled],
 textarea[disabled], [disabled] label {
   cursor: no-drop; }
@@ -1207,6 +1208,7 @@ input[type="url"],
 input[type="email"],
 input[type="search"],
 input[type="number"],
+input[type^="date"],
 select,
 textarea {
   width: 100%;
@@ -1230,6 +1232,7 @@ textarea {
     input[type="email"],
     input[type="search"],
     input[type="number"],
+    input[type^="date"],
     select,
     textarea {
       font-size: 1.6rem; } }
@@ -1240,6 +1243,7 @@ textarea {
   input[type="email"]:focus,
   input[type="search"]:focus,
   input[type="number"]:focus,
+  input[type^="date"]:focus,
   select:focus,
   textarea:focus {
     outline: 0;
@@ -1252,6 +1256,7 @@ textarea {
   input[type="email"][disabled],
   input[type="search"][disabled],
   input[type="number"][disabled],
+  input[type^="date"][disabled],
   select[disabled],
   textarea[disabled] {
     background-color: #dcdcdc; }
@@ -1262,6 +1267,7 @@ textarea {
   input[type="email"][readonly],
   input[type="search"][readonly],
   input[type="number"][readonly],
+  input[type^="date"][readonly],
   select[readonly],
   textarea[readonly] {
     background-color: #dcdcdc; }
