@@ -39,10 +39,6 @@
   border: 1px solid $border__color--first;
 }
 
-%table-bordered-cell {
-  border-left: 1px solid $border__color--first;
-}
-
 %table-striped {
   background-color: lighten($block__color--first, 8);
 }
@@ -88,14 +84,14 @@ table, .table-css {
   // Bordered
   &.table--bordered {
     @extend %table-bordered-frame;
+  
+    @include respond-to($mobile) {
+      border: 0;
+    }
 
     th, td,
     [class*="col-"], .row > div {
-      @extend %table-bordered-cell;
-
-      &:first-child {
-        border-left: 0;
-      }
+      @extend %table-bordered-frame;
     }
   }
 
