@@ -78,7 +78,7 @@ $btn__color--second-txt:    #ffffff !default;
 $btn__color--third:         #272822 !default;
 $btn__color--third-txt:     #ffffff !default;
 
-$btn__border--width:       0.2rem;
+$btn__border--width:        0.2rem;
 
 // button sizes (type, vertical padding, horizontal padding)
 $btn__sizes:                (xs, 0.3rem, 0.6rem),
@@ -98,10 +98,10 @@ $icon__sizes:               (sm 2rem),
 
 // BORDERS
 // ============================================================
-$border__width--base:       1px;
+$border__width--base:       .1rem;
 $border__style--base:       solid;
 
-$border__radius:            4px !default;
+$border__radius:            .4rem !default;
 
 $border__color--first:      #cccccc !default;
 $border__color--second:     #249cff !default;
@@ -109,14 +109,14 @@ $border__color--second:     #249cff !default;
 // GRID
 // ============================================================
 $grid__columns:             12;
-$grid__col--gutter:         25px;
-$grid__col--gutter-phone:   15px;
-$grid__row--gutter:         25px;
+$grid__col--gutter:         2.5rem;
+$grid__col--gutter-phone:   1.5rem;
+$grid__row--gutter:         2.5rem;
 
 // MARGINS
 // ============================================================
-$margin--typography:        15px;
-$margin--image:             15px;
+$margin--typography:        1.5rem;
+$margin--image:             1.5rem;
 $margin--section:           $grid__row--gutter*2;
 
 // FORMS
@@ -126,7 +126,7 @@ $form__field--bkg-color:    #ffffff !default;
 $form__field--text-color:   #000000 !default;
 $form__field--text-size:    1.6rem !default;
 $form__field--bkg-muted:    #dcdcdc !default;
-$form__pretty-input--size:  22px;
+$form__pretty-input--size:  2.2rem;
 
 // TRANSITIONS
 // ============================================================
@@ -136,4 +136,4 @@ $trans__base--delay:        0s !default;
 
 // SHADOWS
 // ============================================================
-$shadow__box--first:        0 1px 3px 0 rgba(0, 0, 0, 0.3) !default;
+$shadow__box--first:        0 .1rem .3rem 0 rgba(0, 0, 0, 0.3) !default;
